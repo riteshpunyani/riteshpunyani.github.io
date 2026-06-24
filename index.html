@@ -1,48 +1,612 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Redirecting to Ritesh Punyani's Website.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: "Open Sans", Arial, sans-serif;
-      background-color: #f4f6f8;
-      color: #0a2342;
-      text-align: center;
-      padding: 80px 20px;
-    }
-    h1 {
-      color: #0a2342;
-      font-size: 28px;
-    }
-    p {
-      font-size: 18px;
-      margin-top: 20px;
-    }
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      background-color: #0a2342;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-    a:hover {
-      background-color: #009688;
-    }
-  </style>
-  <script>
-    setTimeout(function(){
-      window.location.href = "https://sites.google.com/view/riteshpunyani";
-    }, 1000); // redirect after 1 seconds
-  </script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Ritesh Punyani</title>
+<style>
+:root{
+  --navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;
+  --gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);
+  --text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;
+  --blue:rgba(37,99,235,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);overflow-x:hidden;line-height:1.65;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.6);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;letter-spacing:.5px;}
+.nav-links{display:flex;gap:1.4rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:.3px;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;transition:.3s;}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding:5.5rem 2rem 3rem;position:relative;overflow:hidden;}
+canvas#ptc{position:absolute;inset:0;pointer-events:none;}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 65% 50% at 55% 15%,rgba(37,99,235,.13),transparent 65%),radial-gradient(ellipse 50% 35% at 90% 85%,rgba(201,168,76,.07),transparent 60%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;display:flex;align-items:center;gap:4.5rem;max-width:1160px;margin:auto;width:100%;}
+/* photo */
+.photo-wrap{flex-shrink:0;position:relative;width:185px;height:185px;}
+.photo-ring{position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2),rgba(201,168,76,.3),var(--gold));padding:3px;border-radius:50%;}
+.photo-inner{position:absolute;inset:3px;border-radius:50%;overflow:hidden;background:var(--navy3);}
+.photo-inner img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+.pulse{position:absolute;border-radius:50%;border:1px solid rgba(201,168,76,.3);animation:pulse 3s ease-out infinite;}
+.p1{inset:-8px;}
+.p2{inset:-17px;animation-delay:.9s;}
+@keyframes pulse{0%{opacity:.7;transform:scale(1);}100%{opacity:0;transform:scale(1.12);}}
+/* text */
+.hero-text{flex:1;}
+.badge{display:inline-flex;gap:.5rem;align-items:center;background:var(--gold3);border:1px solid rgba(201,168,76,.28);color:var(--gold);font-size:.7rem;padding:.3rem .85rem;border-radius:999px;letter-spacing:.9px;text-transform:uppercase;margin-bottom:1.1rem;animation:fadeUp .6s ease both;}
+h1.name{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.07;margin-bottom:.65rem;animation:fadeUp .6s .1s ease both;}
+h1.name span{color:inherit;}
+.creds{font-size:.8rem;color:var(--gold);letter-spacing:1.3px;margin-bottom:.9rem;animation:fadeUp .6s .18s ease both;}
+.role-line{font-size:.95rem;color:var(--muted);margin-bottom:.6rem;animation:fadeUp .6s .24s ease both;}
+.typed-wrap{font-size:.9rem;color:var(--muted);min-height:1.4em;margin-bottom:1.7rem;animation:fadeUp .6s .3s ease both;}
+#typed{color:var(--text);}
+.cursor{display:inline-block;width:2px;height:.9em;background:var(--gold);vertical-align:middle;margin-left:1px;animation:blink 1s step-end infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;animation:fadeUp .6s .38s ease both;}
+.btn{padding:.62rem 1.5rem;border-radius:8px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .22s;letter-spacing:.2px;}
+.btn-g{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07111a;}
+.btn-g:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.38);}
+.btn-o{border:1px solid var(--border);color:var(--muted);}
+.btn-o:hover{border-color:var(--gold);color:var(--gold);}
+.stats{display:flex;gap:2.5rem;margin-top:2.6rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap;animation:fadeUp .6s .46s ease both;}
+.sv{font-size:1.85rem;font-weight:900;color:var(--gold);line-height:1;}
+.sl{font-size:.7rem;color:var(--muted);margin-top:.2rem;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+
+/* SECTIONS */
+section{padding:5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--gold);display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.95rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.88rem;max-width:540px;margin-bottom:2.8rem;}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+.rl{opacity:0;transform:translateX(-28px);transition:opacity .65s,transform .65s;}
+.rl.up{opacity:1;transform:none;}
+.rr{opacity:0;transform:translateX(28px);transition:opacity .65s,transform .65s;}
+.rr.up{opacity:1;transform:none;}
+
+/* ABOUT */
+#about{background:var(--navy2);}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;}
+.ab p{color:var(--muted);font-size:.88rem;margin-bottom:.85rem;}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.2rem;}
+.tag{background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.18);color:var(--gold);padding:.24rem .65rem;border-radius:999px;font-size:.71rem;transition:background .2s;}
+.tag:hover{background:rgba(201,168,76,.17);}
+.mbox{background:var(--card);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:1.2rem 1.4rem;margin-top:1.7rem;}
+.mbox p{color:var(--muted);font-size:.84rem;font-style:italic;line-height:1.75;}
+.tl{position:relative;padding-left:1.6rem;}
+.tl::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:1.5px;background:linear-gradient(to bottom,var(--gold),rgba(201,168,76,.05));}
+.tli{margin-bottom:1.7rem;position:relative;}
+.tld{position:absolute;left:-1.75rem;top:.35rem;width:11px;height:11px;border-radius:50%;background:var(--gold);border:2px solid var(--navy2);box-shadow:0 0 0 4px rgba(201,168,76,.12);}
+.tlr{font-weight:700;font-size:.92rem;}
+.tlo{color:var(--gold);font-size:.82rem;}
+.tlp{color:var(--muted);font-size:.74rem;margin-top:.08rem;}
+.tln{color:var(--muted);font-size:.78rem;margin-top:.22rem;}
+.tll{display:inline-block;margin-top:.6rem;font-size:.74rem;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);}
+.tll:hover{border-color:var(--gold);}
+
+/* ACH */
+.ach-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-top:2rem;}
+.ach{background:var(--card);border:1px solid var(--border);border-left:2px solid var(--gold);border-radius:0 10px 10px 0;padding:1.1rem 1.2rem;transition:transform .22s;}
+.ach:hover{transform:translateX(4px);}
+.ach-t{font-weight:700;font-size:.87rem;margin-bottom:.25rem;}
+.ach-d{color:var(--muted);font-size:.8rem;line-height:1.55;}
+
+/* EXPERTISE */
+#expertise{background:var(--navy);}
+.exp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.3rem;}
+.ec{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:1.7rem;transition:transform .25s,border-color .25s,box-shadow .25s;position:relative;overflow:hidden;}
+.ec::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .3s;}
+.ec:hover{transform:translateY(-5px);border-color:rgba(201,168,76,.3);box-shadow:0 14px 36px rgba(0,0,0,.45);}
+.ec:hover::after{transform:scaleX(1);}
+.ei{font-size:1.9rem;margin-bottom:.8rem;}
+.et{font-weight:700;font-size:.97rem;margin-bottom:.4rem;}
+.ed{color:var(--muted);font-size:.82rem;line-height:1.6;}
+.el{display:inline-block;margin-top:.8rem;font-size:.74rem;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.25);transition:border-color .2s;}
+.el:hover{border-color:var(--gold);}
+
+/* ANALYTICS FRAMEWORK */
+#analytics{background:var(--navy2);}
+.af-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.2rem;}
+.afc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;transition:transform .22s,border-color .22s;}
+.afc:hover{transform:translateY(-4px);border-color:rgba(201,168,76,.3);}
+.afc-top{display:flex;align-items:center;gap:.7rem;margin-bottom:.75rem;}
+.afc-icon{font-size:1.6rem;}
+.afc-title{font-weight:700;font-size:.9rem;}
+.afc-items{list-style:none;}
+.afc-items li{color:var(--muted);font-size:.79rem;padding:.22rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:flex-start;gap:.4rem;}
+.afc-items li:last-child{border:none;}
+.afc-items li::before{content:'›';color:var(--gold);flex-shrink:0;}
+.lib-strip{background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.05));border:1px solid rgba(201,168,76,.25);border-radius:12px;padding:1.5rem 2rem;margin-top:2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.lib-text strong{font-size:1rem;color:var(--text);}
+.lib-text p{color:var(--muted);font-size:.83rem;margin-top:.25rem;}
+.lib-quote{font-style:italic;color:var(--muted);font-size:.82rem;border-left:2px solid var(--gold);padding-left:.9rem;max-width:340px;}
+
+/* PROMPT ENGINEERING */
+#prompt{background:var(--navy);}
+.pe-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;}
+.pe-cards{display:grid;gap:1rem;}
+.pec{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.3rem;transition:border-color .2s,transform .2s;}
+.pec:hover{border-color:rgba(201,168,76,.3);transform:translateX(4px);}
+.pec-num{font-size:.68rem;color:var(--gold);font-weight:700;letter-spacing:1px;margin-bottom:.3rem;text-transform:uppercase;}
+.pec-title{font-weight:700;font-size:.9rem;margin-bottom:.3rem;}
+.pec-desc{color:var(--muted);font-size:.8rem;line-height:1.55;}
+.hacks{display:grid;gap:1rem;}
+.hack{background:linear-gradient(135deg,var(--navy3),var(--card));border:1px solid rgba(201,168,76,.18);border-radius:11px;padding:1.3rem;transition:transform .22s;}
+.hack:hover{transform:translateY(-3px);}
+.hack-h{display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem;}
+.hack-icon{font-size:1.3rem;}
+.hack-title{font-weight:700;font-size:.9rem;}
+.hack-desc{color:var(--muted);font-size:.8rem;line-height:1.55;}
+.prompt-lib-btn{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.5rem;background:var(--gold3);border:1px solid rgba(201,168,76,.28);color:var(--gold);padding:.6rem 1.2rem;border-radius:8px;text-decoration:none;font-size:.82rem;font-weight:600;transition:background .2s;}
+.prompt-lib-btn:hover{background:rgba(201,168,76,.2);}
+
+/* AUTOMATION HUB */
+#automation{background:var(--navy2);}
+.auto-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:1rem;}
+.acard{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.2rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:.8rem;transition:transform .22s,border-color .22s,background .22s;}
+.acard:hover{transform:translateY(-3px);border-color:rgba(201,168,76,.3);background:var(--navy3);}
+.acard:hover .at{color:var(--gold);}
+.ai{font-size:1.5rem;flex-shrink:0;}
+.at{font-size:.84rem;font-weight:600;transition:color .2s;}
+.n8n{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.3rem;background:var(--gold3);border:1px solid rgba(201,168,76,.22);border-radius:8px;padding:.65rem 1.2rem;text-decoration:none;color:var(--gold);font-size:.82rem;font-weight:600;transition:background .2s;}
+.n8n:hover{background:rgba(201,168,76,.18);}
+
+/* CASE STUDIES */
+#casestudies{background:var(--navy);}
+.cs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.3rem;}
+.csc{background:var(--card);border:1px solid var(--border);border-radius:13px;overflow:hidden;text-decoration:none;color:inherit;display:block;transition:transform .25s,box-shadow .25s;}
+.csc:hover{transform:translateY(-5px);box-shadow:0 14px 38px rgba(0,0,0,.45);}
+.csbar{height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));}
+.csb{padding:1.5rem;}
+.csl{font-size:.67rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin-bottom:.45rem;}
+.cst{font-weight:700;font-size:.96rem;margin-bottom:.45rem;}
+.csd{color:var(--muted);font-size:.82rem;line-height:1.6;}
+.cpills{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem;}
+.cp{font-size:.66rem;padding:.18rem .52rem;border-radius:999px;border:1px solid var(--border);color:var(--muted);}
+.ca{display:inline-block;margin-top:.8rem;font-size:.77rem;color:var(--gold);}
+
+/* TOOLS */
+#tools{background:var(--navy2);}
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:1.3rem;}
+.tc{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:1.5rem;display:flex;gap:.9rem;align-items:flex-start;transition:transform .25s,border-color .25s;}
+.tc:hover{transform:translateY(-4px);border-color:rgba(201,168,76,.28);}
+.tci{font-size:1.8rem;flex-shrink:0;}
+.tcn{font-weight:700;font-size:.92rem;margin-bottom:.28rem;}
+.tcd{color:var(--muted);font-size:.8rem;line-height:1.55;}
+.tcb{display:inline-block;margin-top:.5rem;font-size:.67rem;padding:.17rem .52rem;border-radius:999px;background:rgba(37,99,235,.16);color:#93c5fd;border:1px solid rgba(37,99,235,.25);}
+.tcl{display:block;margin-top:.6rem;font-size:.74rem;color:var(--gold);text-decoration:none;}
+.tcl:hover{text-decoration:underline;}
+
+/* CERTS */
+#certs{background:var(--navy);}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:.9rem;}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.1rem;text-align:center;transition:border-color .22s,transform .22s;}
+.cc:hover{border-color:var(--gold);transform:translateY(-3px);}
+.cc a{text-decoration:none;color:inherit;display:block;}
+.ca2{font-size:1.35rem;font-weight:900;color:var(--gold);letter-spacing:1px;}
+.cb{font-size:.76rem;font-weight:600;margin-top:.25rem;}
+.co{font-size:.68rem;color:var(--muted);margin-top:.15rem;}
+.cy{font-size:.66rem;color:var(--muted);opacity:.6;margin-top:.12rem;}
+
+/* TRAINING */
+#training{background:var(--navy2);}
+.trg{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:.9rem;}
+.trc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.05rem 1.25rem;transition:border-color .2s,transform .2s;}
+.trc:hover{border-color:rgba(201,168,76,.28);transform:translateY(-2px);}
+.trc a{color:var(--text);text-decoration:none;display:block;}
+.trc a:hover .trct{color:var(--gold);}
+.trcy{font-size:.67rem;color:var(--gold);font-weight:600;margin-bottom:.25rem;letter-spacing:.4px;}
+.trct{font-size:.84rem;font-weight:600;margin-bottom:.18rem;transition:color .2s;}
+.trco{font-size:.74rem;color:var(--muted);}
+
+/* CONTACT */
+#contact{background:var(--navy);}
+.cbox{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.8rem;max-width:660px;margin:0 auto;text-align:center;position:relative;overflow:hidden;}
+.cbox::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:180px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.ctit{font-size:1.4rem;font-weight:800;margin-bottom:.45rem;}
+.csub{color:var(--muted);font-size:.86rem;margin-bottom:.35rem;}
+.cmeta{color:var(--muted);font-size:.75rem;margin-bottom:1.8rem;opacity:.72;}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.cl{display:flex;align-items:center;justify-content:center;gap:.45rem;background:var(--navy3);border:1px solid var(--border);color:var(--text);padding:.6rem 1rem;border-radius:9px;text-decoration:none;font-size:.82rem;font-weight:500;transition:all .22s;}
+.cl:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.05);}
+
+/* FOOTER */
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:1.8rem 2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+
+/* MOBILE */
+@media(max-width:820px){
+  .hero-inner{flex-direction:column;text-align:center;}
+  .btns,.stats{justify-content:center;}
+  .ag,.pe-grid{grid-template-columns:1fr;}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+  .cgrid{grid-template-columns:1fr;}
+}
+</style>
 </head>
 <body>
-  <h1>Thank you for checking!</h1>
-  <p>You’re being redirected to my professional website shortly.</p>
-  <a href="https://sites.google.com/view/riteshpunyani">Go Now</a>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://sites.google.com/view/riteshpunyani/home" target="_blank">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#analytics">Analytics</a></li>
+      <li><a href="#prompt">Prompting</a></li>
+      <li><a href="#automation">Automation</a></li>
+      <li><a href="#casestudies">Case Studies</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#certs">Credentials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="ptc"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="photo-wrap">
+      <div class="pulse p1"></div>
+      <div class="pulse p2"></div>
+      <div class="photo-ring">
+        <div class="photo-inner">
+          <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUBSPKOt4sti51MgTXsotGhD6oCc2wRh0ZO5IPwisyfbnfMKRW5AnQ0NtlsgIThOhOzSEin8iwCyYNuHNs0ZR65UqQAECQ3WDwoLXmiFGs-GFjhkVZ6ODm9Emdg236qjtUYM-tx2xzZA4dUUQ0NSJ9uTPuZFXH4No3hzJ2n3k7iUTFBGi1zueVyZznThTL0=w1280" alt="Ritesh Punyani" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;\'>👨‍💼</div>'"/>
+        </div>
+      </div>
+    </div>
+    <div class="hero-text">
+      <div class="badge">⚖️ Ethics · Compliance · Fraud Risk · AI &amp; Automation</div>
+      <h1 class="name">Ritesh Punyani</h1>
+      <div class="creds">CA &nbsp;·&nbsp; DISA &nbsp;·&nbsp; CISA &nbsp;·&nbsp; CIA &nbsp;·&nbsp; CFE &nbsp;·&nbsp; AML Specialist &nbsp;·&nbsp; CIPPE</div>
+      <div class="role-line">COBC Lead · Reliance Consumer Products Ltd (RCPL) · Gurugram, India</div>
+      <div class="typed-wrap"><span id="typed"></span><span class="cursor"></span></div>
+      <div class="btns">
+        <a href="https://sites.google.com/view/riteshpunyani/home" target="_blank" class="btn btn-g">Explore Full Site</a>
+        <a href="#about" class="btn btn-o">About Me</a>
+      </div>
+      <div class="stats">
+        <div><div class="sv"><span data-c="20">0</span>+</div><div class="sl">Years Experience</div></div>
+        <div><div class="sv"><span data-c="12">0</span></div><div class="sl">Years at Coca-Cola</div></div>
+        <div><div class="sv"><span data-c="1700">0</span>+</div><div class="sl">Analytics Tests</div></div>
+        <div><div class="sv"><span data-c="7">0</span></div><div class="sl">Certifications</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="ag">
+      <div class="ab rl">
+        <div class="stag">About Me</div>
+        <h2 class="sh">Integrity with Innovation</h2>
+        <p>I am a Chartered Accountant with over 18 years of experience in corporate audit, fraud investigations, ethics, and compliance. I served 12 years at Coca-Cola, leading the Fraud Management Framework for the INSWA region — and in my last role there, drove internal controls, policy compliance, and SOX controls for the Microsoft Dynamics 365 ERP rollout in international markets.</p>
+        <p>I then served as Senior Manager, Ethics &amp; Compliance at PwC, before joining Reliance Consumer Products Limited (RCPL) to set up the Code of Business Conduct (COBC) function from the ground up and drive an ethical culture across the organisation.</p>
+        <p>Beyond my corporate role, I am passionate about AI, automation, and developing practical tools that empower professionals to simplify complexity, detect and mitigate fraud more effectively, and automate processes to save time and improve efficiency exponentially.</p>
+        <div class="tags">
+          <span class="tag">Fraud Investigations</span><span class="tag">Ethics &amp; Compliance</span><span class="tag">AI &amp; Automation</span><span class="tag">Forensic Accounting</span><span class="tag">Cross-Border Risk</span><span class="tag">Fraud Detection Frameworks</span><span class="tag">AML</span><span class="tag">GDPR / Data Privacy</span><span class="tag">Data Analytics</span><span class="tag">Prompt Engineering</span><span class="tag">Python</span><span class="tag">Machine Learning</span>
+        </div>
+        <div class="mbox">
+          <p>"From leading Coca-Cola's regional fraud and compliance vertical across India, Nepal, Bangladesh, and Sri Lanka — managing diverse risks and cultural nuances — to driving innovation at a Big4 Consulting firm, my mission remains constant: combining ethics, compliance, and technology to build trust in business."</p>
+        </div>
+      </div>
+      <div class="rr">
+        <div class="tl">
+          <div class="tli"><div class="tld"></div>
+            <div class="tlr">COBC Lead</div>
+            <div class="tlo">Reliance Consumer Products Limited (RCPL)</div>
+            <div class="tlp">Current</div>
+            <div class="tln">Setting up the COBC function &amp; driving ethical culture across RCPL</div>
+            <a class="tll" href="https://sites.google.com/view/riteshpunyani/home/my-portfolio" target="_blank">View Full Portfolio →</a>
+          </div>
+          <div class="tli"><div class="tld"></div>
+            <div class="tlr">Senior Manager – Ethics &amp; Compliance</div>
+            <div class="tlo">PwC</div>
+            <div class="tlp">Previous</div>
+          </div>
+          <div class="tli"><div class="tld"></div>
+            <div class="tlr">Lead – Fraud &amp; Compliance, South-West Asia</div>
+            <div class="tlo">The Coca-Cola Company</div>
+            <div class="tlp">12 Years</div>
+            <div class="tln">India · Nepal · Bangladesh · Sri Lanka</div>
+          </div>
+          <div class="tli"><div class="tld"></div>
+            <div class="tlr">Fraud Investigations &amp; Compliance Reviews</div>
+            <div class="tlo">Deloitte &amp; Aviva Life Insurance</div>
+            <div class="tlp">Early Career</div>
+          </div>
+        </div>
+        <div class="ach-row rv" style="transition-delay:.15s">
+          <div class="ach"><div class="ach-t">🏆 Multi-Million Dollar Fraud</div><div class="ach-d">Detected, investigated and implemented preventive controls using advanced data analytics across four countries.</div></div>
+          <div class="ach"><div class="ach-t">🌐 Cross-Border Risk Management</div><div class="ach-d">Navigated varying legal systems, ethical standards, and cultural contexts across four South-West Asian markets.</div></div>
+          <div class="ach"><div class="ach-t">⚡ Automation-Driven Compliance</div><div class="ach-d">Integrated automation tools and techniques into tasks and processes, improving efficiency and accuracy.</div></div>
+          <div class="ach"><div class="ach-t">💡 Thought Leadership</div><div class="ach-d">Published insights and delivered sessions on the intersection of ethics, compliance, and emerging technologies.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="wrap">
+    <div class="rv"><div class="stag">What I Do</div><h2 class="sh">Areas of Expertise</h2><p class="ss">Two decades of applied experience across integrity, technology, and governance.</p></div>
+    <div class="exp-grid">
+      <a class="ec rv" href="https://sites.google.com/view/riteshpunyani/home/my-portfolio" target="_blank" style="transition-delay:.05s;text-decoration:none;color:inherit;display:block;"><div class="ei">🔍</div><div class="et">Fraud Investigations &amp; Forensics</div><div class="ed">End-to-end forensic investigations, fraud detection frameworks, and forensic accounting — built on 20 years of hands-on experience across multinationals.</div></a>
+      <a class="ec rv" href="https://sites.google.com/view/riteshpunyani/home/my-portfolio" target="_blank" style="transition-delay:.1s;text-decoration:none;color:inherit;display:block;"><div class="ei">⚖️</div><div class="et">Ethics &amp; Compliance</div><div class="ed">Designing and running compliance programmes, ethics investigations, and governance frameworks across large multinationals in multiple jurisdictions.</div></a>
+      <a class="ec rv" href="https://sites.google.com/view/riteshpunyani/home/data-analytics-in-fraud-compliance" target="_blank" style="transition-delay:.15s;text-decoration:none;color:inherit;display:block;"><div class="ei">📊</div><div class="et">Data Analytics in Fraud &amp; Compliance</div><div class="ed">1700+ analytics tests spanning Finance, HR, Procurement, and Compliance. Applying Benford's Law, anomaly detection, network mapping, and more to uncover risk.</div></a>
+      <a class="ec rv" href="https://sites.google.com/view/riteshpunyani/home/automation-hub" target="_blank" style="transition-delay:.2s;text-decoration:none;color:inherit;display:block;"><div class="ei">🤖</div><div class="et">AI &amp; Automation</div><div class="ed">Building AI-powered tools, voice assistants, n8n workflows, and automation pipelines that streamline compliance, operations, and professional workflows.</div></a>
+      <a class="ec rv" href="https://sites.google.com/view/riteshpunyani/home/prompt-engineering" target="_blank" style="transition-delay:.25s;text-decoration:none;color:inherit;display:block;"><div class="ei">💬</div><div class="et">Prompt Engineering</div><div class="ed">Advanced prompting techniques — Master Prompts, Chain-of-Thought, Few-Shot, Two-Model Review loops — with a growing library of prompts for compliance and investigations.</div></a>
+      <a class="ec rv" href="https://sites.google.com/view/riteshpunyani/home/predictive-analytics" target="_blank" style="transition-delay:.3s;text-decoration:none;color:inherit;display:block;"><div class="ei">📈</div><div class="et">Predictive Analytics &amp; ML</div><div class="ed">Applying predictive analytics, classification models, ROC analysis, and data science techniques to fraud detection, risk scoring, and compliance monitoring at scale.</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ANALYTICS FRAMEWORK -->
+<section id="analytics">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Data Analytics</div><h2 class="sh">Fraud Analytics Framework</h2><p class="ss">Specialized analytical tests and use cases applied across industries. Fraud analytics goes beyond detection — it helps prevent and predict misconduct.</p></div>
+    <div class="af-grid">
+      <div class="afc rv" style="transition-delay:.05s">
+        <div class="afc-top"><div class="afc-icon">💰</div><div class="afc-title">Accounts Payable &amp; Procurement</div></div>
+        <ul class="afc-items">
+          <li>Duplicate Payment Test — same amount/date/vendor</li>
+          <li>Benford's Law — abnormal number distributions</li>
+          <li>Vendor–Employee Link Analysis</li>
+          <li>Price Variance Analysis — consistent overpricing</li>
+          <li>Three-Way Match Exceptions</li>
+        </ul>
+      </div>
+      <div class="afc rv" style="transition-delay:.1s">
+        <div class="afc-top"><div class="afc-icon">🏦</div><div class="afc-title">Banking &amp; AML</div></div>
+        <ul class="afc-items">
+          <li>Transaction Pattern Deviation Test</li>
+          <li>Geo-Velocity &amp; IP Analysis</li>
+          <li>Structuring / Smurfing Detection</li>
+          <li>Entity Link Analysis — shell entities</li>
+          <li>Rapid In-and-Out Movement Detection</li>
+        </ul>
+      </div>
+      <div class="afc rv" style="transition-delay:.15s">
+        <div class="afc-top"><div class="afc-icon">🧾</div><div class="afc-title">Expense &amp; Reimbursement</div></div>
+        <ul class="afc-items">
+          <li>Employee Behavior Profiling vs. dept norms</li>
+          <li>Weekend / Off-Day Claims Test</li>
+          <li>Round-Amount Expense Check</li>
+          <li>Split Expense Test — below threshold</li>
+          <li>Duplicate Invoice Scan</li>
+        </ul>
+      </div>
+      <div class="afc rv" style="transition-delay:.2s">
+        <div class="afc-top"><div class="afc-icon">🌐</div><div class="afc-title">Third-Party &amp; Vendor Integrity</div></div>
+        <ul class="afc-items">
+          <li>Beneficial Ownership Matching</li>
+          <li>Sanctions &amp; Watchlist Screening (OFAC, UNSC)</li>
+          <li>Vendor Network Mapping</li>
+          <li>Geolocation Risk Indexing</li>
+          <li>Payment Frequency Analysis</li>
+        </ul>
+      </div>
+      <div class="afc rv" style="transition-delay:.25s">
+        <div class="afc-top"><div class="afc-icon">⚖️</div><div class="afc-title">Compliance Monitoring</div></div>
+        <ul class="afc-items">
+          <li>Hotline Data Text Mining</li>
+          <li>Investigation Closure Time Trend</li>
+          <li>Sentiment Analysis on Survey Comments</li>
+          <li>Policy Exception Tracking</li>
+          <li>Control Effectiveness Metrics</li>
+        </ul>
+      </div>
+      <div class="afc rv" style="transition-delay:.3s">
+        <div class="afc-top"><div class="afc-icon">👥</div><div class="afc-title">HR &amp; Sales Analytics</div></div>
+        <ul class="afc-items">
+          <li>Employee–Vendor Match Tests (PAN / address)</li>
+          <li>Duplicate Bank Accounts detection</li>
+          <li>End-of-Period Sales Spike Analysis</li>
+          <li>Credit Note Reversal Tests</li>
+          <li>High Overtime Analysis</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lib-strip rv">
+      <div>
+        <div class="lib-text"><strong>📎 1,700+ Analytics Test Library</strong><p>A comprehensive, ready-to-use repository covering Finance, HR, Procurement, and Compliance — tagged by process, risk area, and logic technique.</p></div>
+        <a href="https://docs.google.com/spreadsheets/d/1BUjdArryqoEJed8iCwTU6j7-YjR8czSq1eOyTWQponE/edit#gid=0" target="_blank" class="btn btn-g" style="display:inline-block;margin-top:1rem;font-size:.8rem;padding:.55rem 1.3rem;">Access the Library →</a>
+      </div>
+      <div class="lib-quote">"Every fraud leaves a trace. Analytics helps us find it — faster, smarter, and more reliably."</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMPT ENGINEERING -->
+<section id="prompt">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Prompt Engineering</div><h2 class="sh">The Art of Talking to AI</h2><p class="ss">AI models are powerful, but their effectiveness depends heavily on how you talk to them. A precise prompt delivers accurate, tailored, professional results.</p></div>
+    <div class="pe-grid">
+      <div class="pe-cards rl">
+        <div class="pec"><div class="pec-num">Essential 01</div><div class="pec-title">Clarity &amp; Context</div><div class="pec-desc">Be specific. Provide background and assumptions. E.g., "Assume Indian corporate regulations and professional communication standards."</div></div>
+        <div class="pec"><div class="pec-num">Essential 02</div><div class="pec-title">Role Assignment</div><div class="pec-desc">Tell the AI who it should be. E.g., "You are a fraud investigator. Draft a case summary…" — this shapes the entire output quality.</div></div>
+        <div class="pec"><div class="pec-num">Essential 03</div><div class="pec-title">Chain-of-Thought</div><div class="pec-desc">Ask AI to explain its reasoning step by step. Especially useful for audits, logic-heavy tasks, and investigation scenarios.</div></div>
+        <div class="pec"><div class="pec-num">Essential 04</div><div class="pec-title">Few-Shot Prompting</div><div class="pec-desc">Provide 2–3 examples of Q&amp;A before your real question — like a mini-training set — to get precisely calibrated outputs.</div></div>
+        <a href="https://sites.google.com/view/riteshpunyani/home/prompt-engineering" target="_blank" class="prompt-lib-btn">📚 View Full Prompt Engineering Guide →</a>
+        <a href="https://docs.google.com/document/d/1oOzd8raA9jjTigpXWK3CCmmElyOzbTLw-TVYmZ7tUXM/edit" target="_blank" class="prompt-lib-btn" style="margin-top:.6rem;">⬇️ Download Personal Prompt Library →</a>
+      </div>
+      <div class="hacks rr">
+        <div class="hack"><div class="hack-h"><div class="hack-icon">🧑‍💻</div><div class="hack-title">Hack 1: Prompt Engineer Mode</div></div><div class="hack-desc">Make AI act as your prompt consultant. It asks clarifying questions and rewrites your rough query into a sharper, more powerful prompt — reducing vagueness and avoiding hallucinations.</div></div>
+        <div class="hack"><div class="hack-h"><div class="hack-icon">🔁</div><div class="hack-title">Hack 2: Two-Model Review Loop</div></div><div class="hack-desc">Model A generates the response. Model B reviews it for accuracy and completeness. Adds a peer-review layer — great for compliance drafts, professional documents, and financial analysis.</div></div>
+        <div class="hack"><div class="hack-h"><div class="hack-icon">🎛️</div><div class="hack-title">Master Prompt</div></div><div class="hack-desc">A single, reusable prompt capturing your style, rules, and preferences — your personal AI operating system. Think: "You are my productivity co-pilot. Always respond with clarity and professionalism."</div></div>
+        <div class="hack"><div class="hack-h"><div class="hack-icon">🕴️</div><div class="hack-title">Meeting Minutes (MoM) Prompt</div></div><div class="hack-desc">Makes AI act as a corporate MoM drafter with zero assumptions. Guarantees meeting records that are complete, neutral, and audit-proof — ideal for compliance and investigation work.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTOMATION HUB -->
+<section id="automation">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Automation Hub</div><h2 class="sh">Automation Domains</h2><p class="ss">Practical automation across the full spectrum — from desktop and mobile to cloud and AI copilots.</p></div>
+    <div class="auto-grid rv">
+      <a class="acard" href="https://sites.google.com/view/riteshpunyani/home/automation-hub/ms-office-automation" target="_blank"><div class="ai">📊</div><div class="at">MS Office &amp; Automation</div></a>
+      <a class="acard" href="https://sites.google.com/view/riteshpunyani/home/automation-hub/windows-desktop-automation" target="_blank"><div class="ai">🖥️</div><div class="at">Windows &amp; Desktop</div></a>
+      <a class="acard" href="https://sites.google.com/view/riteshpunyani/home/automation-hub/browser-web-automation" target="_blank"><div class="ai">🌐</div><div class="at">Browser &amp; Web</div></a>
+      <a class="acard" href="https://sites.google.com/view/riteshpunyani/home/automation-hub/mobile-automation" target="_blank"><div class="ai">📱</div><div class="at">Mobile Automation</div></a>
+      <a class="acard" href="https://sites.google.com/view/riteshpunyani/home/automation-hub/cloud-integration-platforms" target="_blank"><div class="ai">☁️</div><div class="at">Cloud &amp; Integration</div></a>
+      <a class="acard" href="https://sites.google.com/view/riteshpunyani/home/automation-hub/ai-copilots" target="_blank"><div class="ai">🧠</div><div class="at">AI &amp; Copilots</div></a>
+    </div>
+    <a class="n8n rv" href="https://sites.google.com/view/riteshpunyani/home/free-lifetime-n8n-automation" target="_blank">⚙️ &nbsp;Free Lifetime n8n Automation — Guides &amp; Resources →</a>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="casestudies">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Case Studies</div><h2 class="sh">Analytics &amp; Automation in Action</h2><p class="ss">How automation and predictive analytics simplify complex compliance, fraud, and business challenges.</p></div>
+    <div class="cs-grid">
+      <a class="csc rv" href="https://sites.google.com/view/riteshpunyani/home/case-studies/automation-in-actions" target="_blank" style="transition-delay:.05s"><div class="csbar"></div><div class="csb"><div class="csl">🛠️ Automation</div><div class="cst">Automation in Action</div><div class="csd">Transforming repetitive manual processes — eliminating tracking using VBA and Python, auto-generating compliance dashboards, reducing turnaround time by over 70%.</div><div class="cpills"><span class="cp">VBA</span><span class="cp">Python</span><span class="cp">Dashboards</span></div><span class="ca">Explore →</span></div></a>
+      <a class="csc rv" href="https://sites.google.com/view/riteshpunyani/home/case-studies/customer-purchase-propensity" target="_blank" style="transition-delay:.1s"><div class="csbar"></div><div class="csb"><div class="csl">📊 Predictive Analytics</div><div class="cst">Customer Purchase Propensity</div><div class="csd">Classification models to identify high-value customer segments, lift curves and ROC analysis for model validation, and data-driven insights for smarter decisions.</div><div class="cpills"><span class="cp">ML</span><span class="cp">ROC</span><span class="cp">Lift Curves</span></div><span class="ca">Explore →</span></div></a>
+      <a class="csc rv" href="https://sites.google.com/view/riteshpunyani/home/case-studies/fraud-detection-prevention-using-machine-learning" target="_blank" style="transition-delay:.15s"><div class="csbar"></div><div class="csb"><div class="csl">🤖 Machine Learning</div><div class="cst">Fraud Detection &amp; Prevention using ML</div><div class="csd">Predictive fraud analytics using Python — pandas, scikit-learn, matplotlib — for model design, accuracy measurement, fraud-likelihood scoring, and anomaly detection.</div><div class="cpills"><span class="cp">Python</span><span class="cp">scikit-learn</span><span class="cp">Anomaly Detection</span></div><span class="ca">Explore →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Free Tools &amp; Resources</div><h2 class="sh">Practical Tools I've Built</h2><p class="ss">Curated tools, templates, and resources from professional experience in fraud analytics, compliance, and automation.</p></div>
+    <div class="tg">
+      <a class="tc rv" href="https://sites.google.com/view/riteshpunyani/home/tools-free-resources/ai-appointment-assistant-emily" target="_blank" style="transition-delay:.05s;text-decoration:none;color:inherit;"><div class="tci">🤖</div><div><div class="tcn">Emily — AI Appointment Assistant</div><div class="tcd">AI voice receptionist for Smile Dental Clinic — handles appointment booking, FAQs, and patient interactions autonomously.</div><span class="tcb">Voice AI</span></div></a>
+      <a class="tc rv" href="https://sites.google.com/view/riteshpunyani/home/tools-free-resources/ai-order-taking-assistant-sophia" target="_blank" style="transition-delay:.1s;text-decoration:none;color:inherit;"><div class="tci">🛒</div><div><div class="tcn">Sophia — AI Order-Taking Assistant</div><div class="tcd">AI-powered order-taking assistant for Urban Fruit Mart — conversational ordering experience for customers.</div><span class="tcb">Conversational AI</span></div></a>
+      <a class="tc rv" href="https://sites.google.com/view/riteshpunyani/home/prompt-engineering" target="_blank" style="transition-delay:.15s;text-decoration:none;color:inherit;"><div class="tci">📘</div><div><div class="tcn">Prompt Library for Professionals</div><div class="tcd">Tried-and-tested prompts for investigators, compliance professionals, and data analysts — covering resets, MoM drafting, role assignment, and more.</div><span class="tcb">Prompt Engineering</span></div></a>
+      <a class="tc rv" href="https://sites.google.com/view/riteshpunyani/home/tools-free-resources/custom-gpts" target="_blank" style="transition-delay:.2s;text-decoration:none;color:inherit;"><div class="tci">🧠</div><div><div class="tcn">Custom GPTs</div><div class="tcd">Purpose-built Custom GPTs for compliance professionals, fraud investigators, and data practitioners.</div><span class="tcb">Custom GPT</span></div></a>
+      <a class="tc rv" href="https://sites.google.com/view/riteshpunyani/home/tools-free-resources" target="_blank" style="transition-delay:.25s;text-decoration:none;color:inherit;"><div class="tci">⚙️</div><div><div class="tcn">Excel VBA Utilities</div><div class="tcd">Excel Data Merge Tool, Bulk File Renaming Utility, Duplicate File &amp; Folder Identifier — simplifying routine tasks for finance and compliance professionals.</div><span class="tcb">VBA / Automation</span></div></a>
+      <a class="tc rv" href="https://sites.google.com/view/riteshpunyani/home/free-lifetime-n8n-automation" target="_blank" style="transition-delay:.3s;text-decoration:none;color:inherit;"><div class="tci">🔄</div><div><div class="tcn">Free Lifetime n8n Automation</div><div class="tcd">Guides and resources for setting up free lifetime n8n automation workflows for compliance and business processes.</div><span class="tcb">Workflow Automation</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Credentials</div><h2 class="sh">Education &amp; Certifications</h2><p class="ss">A strong academic foundation and continuous learning mindset across fraud, audit, privacy, and data science.</p></div>
+    <div class="cg rv">
+      <div class="cc"><div class="ca2">CA</div><div class="cb">Chartered Accountant</div><div class="co">ICAI</div><div class="cy">2000–2004</div></div>
+      <div class="cc"><a href="https://www.credly.com/badges/926f39dc-d874-465e-a54f-cc3c9d92e85f" target="_blank"><div class="ca2">CISA</div><div class="cb">Certified Info. Systems Auditor</div><div class="co">ISACA, USA</div><div class="cy">2006</div></a></div>
+      <div class="cc"><a href="https://www.credly.com/badges/55ebbf67-cfc9-48ee-929b-37a5a19813fa" target="_blank"><div class="ca2">CIA</div><div class="cb">Certified Internal Auditor</div><div class="co">IIA, USA</div><div class="cy">2007</div></a></div>
+      <div class="cc"><a href="https://www.credly.com/badges/50d9cb80-4b2f-4fd2-b2c0-964ffc8a9f40" target="_blank"><div class="ca2">CFE</div><div class="cb">Certified Fraud Examiner</div><div class="co">ACFE, USA</div><div class="cy">2008</div></a></div>
+      <div class="cc"><div class="ca2">DISA</div><div class="cb">Diploma in IS Audit</div><div class="co">ICAI</div><div class="cy">2005</div></div>
+      <div class="cc"><div class="ca2">AML</div><div class="cb">AML Specialist</div><div class="co">ICAI</div><div class="cy">2021</div></div>
+      <div class="cc"><a href="https://www.credential.net/bb12599d-92b7-4920-a74b-d783c78d8cd5" target="_blank"><div class="ca2">CIPPE</div><div class="cb">Certified Info. Privacy Professional / Europe</div><div class="co">IAPP, USA</div><div class="cy">2024</div></a></div>
+    </div>
+    <div style="margin-top:3rem" id="training">
+      <div class="stag rv">Continuous Learning</div>
+      <h3 class="sh rv" style="font-size:1.35rem;margin-bottom:.4rem;">Technical &amp; Data Science Training</h3>
+      <p class="ss rv">Selected certifications in AI, data science, and analytics.</p>
+      <div class="trg rv">
+        <div class="trc"><a href="https://www.linkedin.com/learning/certificates/c0d611608c02f5db3bbbc11be0e1c21a3840e2365a83f7f9fdcb27adb30b0545" target="_blank"><div class="trcy">2024 · LinkedIn Learning</div><div class="trct">Improving Insights with OpenAI's Advanced Data Analysis</div><div class="trco">Data analysis, AI for business</div></a></div>
+        <div class="trc"><a href="https://www.udemy.com/certificate/UC-d4b94ab4-a041-4013-8a34-d39ced0a7395/" target="_blank"><div class="trcy">2023 · Udemy</div><div class="trct">Data Science A–Z™: Hands-On + ChatGPT Bonus</div><div class="trco">Predictive modelling, Python, real-life data exercises</div></a></div>
+        <div class="trc"><a href="https://www.linkedin.com/learning/certificates/c3cd6ef707b51fdaa4b6ad3a7980e607b18f34d9f2209ffdf6b2535e0fbddf17" target="_blank"><div class="trcy">2023 · LinkedIn Learning</div><div class="trct">Excel &amp; ChatGPT: Data Analysis Power Tips</div><div class="trco">Excel automation, AI-based analytics</div></a></div>
+        <div class="trc"><a href="https://verify.skilljar.com/c/6yz7mve58v22" target="_blank"><div class="trcy">2023 · Fastpath Solutions</div><div class="trct">Access Certifications / Security Designer / Change Tracking</div><div class="trco">D365 security, access control, risk management</div></a></div>
+        <div class="trc"><a href="https://www.udemy.com/certificate/UC-fa175236-6c0e-4592-b8f7-f04b7477970a/" target="_blank"><div class="trcy">2022 · Udemy</div><div class="trct">Intro to Data Science</div><div class="trco">Data visualisation, statistical interpretation</div></a></div>
+        <div class="trc"><a href="https://www.linkedin.com/learning/certificates/ec76ae7effcff273e8e3b2f76036844bfb897d9a015e1adbe8b3b2dcc78d1e23" target="_blank"><div class="trcy">2022 · LinkedIn Learning</div><div class="trct">Learning No-Code AI</div><div class="trco">Practical AI without programming</div></a></div>
+        <div class="trc"><a href="https://www.coursera.org/account/accomplishments/certificate/BZWGVQQ5RF84" target="_blank"><div class="trcy">2020 · Coursera</div><div class="trct">The Power of Machine Learning</div><div class="trco">Fraud detection, predictive modelling, customer analytics</div></a></div>
+        <div class="trc"><a href="https://www.coursera.org/account/accomplishments/certificate/8Z6UPCW6Y36C" target="_blank"><div class="trcy">2020 · Coursera</div><div class="trct">Statistical Analysis &amp; Business Applications (4-Course Spec.)</div><div class="trco">Hypothesis testing, distributions, Excel-based analytics</div></a></div>
+        <div class="trc"><a href="https://drive.google.com/file/d/1IJTzjkCM0Ip8VbspcEzcn548XhXAuCn2/view" target="_blank"><div class="trcy">2006 · Harvard Business School</div><div class="trct">Stepping Up to Management</div><div class="trco">Managerial effectiveness and strategic leadership</div></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="cbox rv">
+      <div class="ctit">📩 Let's Connect</div>
+      <div class="csub">Whether it's fraud investigations, ethics &amp; compliance, AI, or automation — feel free to reach out.</div>
+      <div class="cmeta">📍 Gurugram, India &nbsp;·&nbsp; Usually responds within 12–24 hours</div>
+      <div class="cgrid">
+        <a href="https://www.linkedin.com/in/riteshpunyani/" target="_blank" class="cl">🔗 LinkedIn</a>
+        <a href="https://sites.google.com/view/riteshpunyani/home" target="_blank" class="cl">🌐 Google Sites</a>
+        <a href="https://forms.gle/JLQN4QcBZ134iTsE7" target="_blank" class="cl">📝 Contact Form</a>
+        <a href="https://sites.google.com/view/riteshpunyani/home/contact-me" target="_blank" class="cl">📬 Full Contact Page</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Ritesh Punyani. All rights reserved.</p>
+  <p style="margin-top:.3rem;opacity:.6;">All materials are created for knowledge-sharing and non-commercial use only. No external business or paid services are offered. Unauthorised copying is prohibited. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+
+<script>
+/* NAV */
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>40));
+
+/* PARTICLES */
+(()=>{
+  const c=document.getElementById('ptc'),x=c.getContext('2d');
+  const hero=document.getElementById('hero');
+  let W,H,pts=[];
+  const resize=()=>{W=c.width=window.innerWidth;H=c.height=hero.offsetHeight;};
+  resize();window.addEventListener('resize',resize);
+  for(let i=0;i<80;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.1+.3,a:Math.random()*.5+.15});
+  const draw=()=>{
+    x.clearRect(0,0,W,H);
+    pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle=`rgba(201,168,76,${p.a})`;x.fill();});
+    for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const d=Math.hypot(pts[i].x-pts[j].x,pts[i].y-pts[j].y);if(d<95){x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);x.strokeStyle=`rgba(201,168,76,${.1*(1-d/95)})`;x.lineWidth=.5;x.stroke();}}
+    requestAnimationFrame(draw);
+  };draw();
+})();
+
+/* TYPED */
+(()=>{
+  const el=document.getElementById('typed');
+  const lines=["Bridging Corporate Integrity with AI & Automation","Chartered Accountant · Fraud Investigator · Big4 Consulting","1700+ Analytics Tests · Prompt Engineering · ML · n8n","Every fraud leaves a trace. Analytics helps us find it."];
+  let pi=0,ci=0,del=false;
+  const tick=()=>{
+    const p=lines[pi];
+    if(!del){el.textContent=p.slice(0,++ci);if(ci===p.length){del=true;setTimeout(tick,2000);return;}}
+    else{el.textContent=p.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%lines.length;}}
+    setTimeout(tick,del?38:55);
+  };setTimeout(tick,700);
+})();
+
+/* COUNTERS */
+let counted=false;
+const startCount=()=>{
+  document.querySelectorAll('[data-c]').forEach(el=>{
+    const t=+el.dataset.c,dur=1500,s=performance.now();
+    const step=now=>{const p=Math.min((now-s)/dur,1);el.textContent=Math.floor(p*t);if(p<1)requestAnimationFrame(step);else el.textContent=t;};
+    requestAnimationFrame(step);
+  });
+};
+new IntersectionObserver(e=>{if(e[0].isIntersecting&&!counted){counted=true;startCount();}},{threshold:.25}).observe(document.getElementById('hero'));
+
+/* SCROLL REVEAL */
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.09});
+document.querySelectorAll('.rv,.rl,.rr').forEach(el=>ro.observe(el));
+</script>
 </body>
 </html>
