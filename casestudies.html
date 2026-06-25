@@ -65,23 +65,10 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
   .hbg{display:flex;}
 }
 </style>
+<link rel="stylesheet" href="assets/nav.css"/>
 </head>
 <body>
-<nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">Ritesh P.</a>
-    <ul class="nav-links" id="nl">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="analytics.html">Analytics</a></li>
-      <li><a href="casestudies.html" class="active">Case Studies</a></li>
-      <li><a href="tools.html">Tools</a></li>
-      <li><a href="blogs.html">Blogs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
-  </div>
-</nav>
+<div id="snav"></div>
 <div class="breadcrumb">
   <div class="bc-inner"><a href="index.html">Home</a><span class="bc-sep">›</span><span class="bc-current">Case Studies</span></div>
 </div>
@@ -138,11 +125,12 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
   <div class="footer-links">
     <a href="index.html">Home</a><a href="analytics.html">Analytics</a><a href="predictive.html">Predictive</a><a href="ml.html">ML & DS</a><a href="tools.html">Tools</a><a href="blogs.html">Blogs</a><a href="contact.html">Contact</a>
   </div>
-  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+  <p>© 2026 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
 </footer>
 <script>
 const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
 </script>
+<script src="assets/nav.js"></script>
 </body>
 </html>

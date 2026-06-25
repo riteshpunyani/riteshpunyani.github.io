@@ -3,11 +3,406 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Fraud Detection using ML — Ritesh Punyani</title>
+<title>Fraud Detection ML — Case Study | Ritesh Punyani</title>
 <style>
-:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--orange:#f97316;--orange2:rgba(249,115,22,.12);}
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--blue:#3b82f6;--blue2:rgba(59,130,246,.12);--orange:#f97316;--orange2:rgba(249,115,22,.12);}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-thumb{background:var(--orange);border-radius:2px;}
+/* HERO */
+.page-hero{min-height:42vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:var(--navy2);position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.05) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+.hgl{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(249,115,22,.09),transparent 65%);top:-200px;right:-100px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;width:100%;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--orange2);border:1px solid rgba(249,115,22,.3);color:var(--orange);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:900;line-height:1.1;margin-bottom:.7rem;}
+.ph-title span{background:linear-gradient(135deg,var(--orange),#fdba74);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:1.2rem;}
+.ph-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem;}
+.ph-pill{background:var(--orange2);border:1px solid rgba(249,115,22,.2);color:#fdba74;font-size:.72rem;padding:.25rem .7rem;border-radius:999px;}
+/* METRICS ROW */
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:2.5rem 0;}
+.metric{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:1.4rem;text-align:center;border-top:3px solid var(--orange);}
+.metric-val{font-size:2rem;font-weight:900;color:var(--orange);}
+.metric-lbl{font-size:.74rem;color:var(--muted);margin-top:.25rem;}
+/* SECTIONS */
+section{padding:4rem 2rem;}
+section:nth-child(odd){background:var(--navy2);}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--orange);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--orange);display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.9rem;max-width:620px;margin-bottom:2rem;line-height:1.7;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+/* PART CARDS */
+.part-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;}
+.part-num{width:48px;height:48px;border-radius:50%;background:var(--orange2);border:2px solid var(--orange);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;color:var(--orange);flex-shrink:0;}
+.part-title{font-size:1.25rem;font-weight:800;}
+.part-sub{color:var(--muted);font-size:.86rem;}
+/* CODE */
+pre.code-block{background:#060d18;border:1px solid #1a2640;border-radius:12px;padding:1.5rem;overflow-x:auto;font-size:.79rem;line-height:1.7;font-family:'Cascadia Code','Fira Code','Consolas',monospace;margin:1.5rem 0;}
+pre.code-block .kw{color:#f472b6;}
+pre.code-block .cm-code{color:#6b7280;}
+pre.code-block .st{color:#86efac;}
+pre.code-block .fn{color:#60a5fa;}
+pre.code-block .nb{color:#fdba74;}
+pre.code-block .op{color:#e2e8f0;}
+/* TWO-COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+@media(max-width:720px){.two-col{grid-template-columns:1fr;}}
+/* FEATURE TABLE */
+.feat-table{width:100%;border-collapse:collapse;font-size:.82rem;margin:1.5rem 0;}
+.feat-table th{background:var(--orange2);color:var(--orange);text-align:left;padding:.7rem 1rem;font-size:.72rem;text-transform:uppercase;letter-spacing:1px;}
+.feat-table td{padding:.65rem 1rem;border-bottom:1px solid var(--border);color:var(--muted);}
+.feat-table td:first-child{color:var(--text);font-weight:600;font-family:'Cascadia Code','Fira Code',monospace;font-size:.77rem;}
+.feat-table tr:hover td{background:rgba(249,115,22,.04);}
+/* CALLOUT */
+.callout{background:var(--orange2);border:1px solid rgba(249,115,22,.3);border-left:4px solid var(--orange);border-radius:0 10px 10px 0;padding:1rem 1.3rem;margin:1.5rem 0;font-size:.88rem;color:var(--text);}
+.callout strong{color:var(--orange);}
+/* ROC VISUAL */
+.roc-wrap{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;}
+.roc-svg{width:100%;max-width:320px;height:auto;}
+/* SCORE BAR */
+.score-demo{display:flex;flex-direction:column;gap:.8rem;margin-top:1rem;}
+.score-row{display:flex;align-items:center;gap:1rem;}
+.score-label{width:90px;font-size:.78rem;color:var(--muted);flex-shrink:0;}
+.score-track{flex:1;height:10px;background:var(--border);border-radius:5px;overflow:hidden;}
+.score-fill{height:100%;border-radius:5px;transition:width 1s ease;}
+.score-val{width:36px;font-size:.78rem;font-weight:700;color:var(--orange);text-align:right;flex-shrink:0;}
+/* RISK TIERS */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;}
+.tier{padding:1.2rem;border-radius:12px;text-align:center;}
+.tier-low{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);}
+.tier-mid{background:rgba(234,179,8,.1);border:1px solid rgba(234,179,8,.25);}
+.tier-high{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);}
+.tier-label{font-weight:800;font-size:.9rem;margin-bottom:.3rem;}
+.tier-low .tier-label{color:#4ade80;}
+.tier-mid .tier-label{color:#facc15;}
+.tier-high .tier-label{color:#f87171;}
+.tier-range{font-size:1.3rem;font-weight:900;}
+.tier-low .tier-range{color:#4ade80;}
+.tier-mid .tier-range{color:#facc15;}
+.tier-high .tier-range{color:#f87171;}
+.tier-desc{font-size:.73rem;color:var(--muted);margin-top:.3rem;}
+@media(max-width:520px){.tiers{grid-template-columns:1fr;}}
+/* FOOTER */
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;}
+.footer-links a:hover{color:var(--gold);}
+.btn-back{display:inline-flex;align-items:center;gap:.5rem;background:var(--orange2);border:1px solid rgba(249,115,22,.3);color:var(--orange);padding:.55rem 1.2rem;border-radius:8px;font-weight:700;font-size:.82rem;text-decoration:none;transition:all .22s;margin-top:1rem;}
+.btn-back:hover{background:var(--orange);color:#07111a;}
+</style>
+<link rel="stylesheet" href="assets/nav.css"/>
+</head>
+<body>
+<div id="snav"></div>
+
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">Case Study &mdash; ML</div>
+    <h1 class="ph-title">Fraud Detection with<br><span>Machine Learning</span></h1>
+    <p class="ph-sub">An end-to-end pipeline: dataset engineering, Random Forest classification with ROC analysis, and unsupervised anomaly detection via Isolation Forest — producing a composite 0&ndash;100 fraud-likelihood score.</p>
+    <div class="ph-pills">
+      <span class="ph-pill">Python &amp; Pandas</span>
+      <span class="ph-pill">Random Forest</span>
+      <span class="ph-pill">Isolation Forest</span>
+      <span class="ph-pill">ROC / AUC</span>
+      <span class="ph-pill">Feature Engineering</span>
+      <span class="ph-pill">Anomaly Detection</span>
+    </div>
+    <a href="analytics.html" class="btn-back">&#8592; Back to Analytics</a>
+  </div>
+</div>
+
+<!-- METRICS -->
+<section>
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">Model Performance</div>
+      <h2 class="sh">Key Outcomes</h2>
+      <p class="ss">Results measured on a held-out 20% test split of 185,000 transactions.</p>
+    </div>
+    <div class="metrics rv">
+      <div class="metric"><div class="metric-val">92.4%</div><div class="metric-lbl">Accuracy</div></div>
+      <div class="metric"><div class="metric-val">0.957</div><div class="metric-lbl">AUC-ROC</div></div>
+      <div class="metric"><div class="metric-val">88%</div><div class="metric-lbl">Recall (Fraud)</div></div>
+      <div class="metric"><div class="metric-val">70%</div><div class="metric-lbl">False Positive Reduction</div></div>
+      <div class="metric"><div class="metric-val">185K</div><div class="metric-lbl">Transactions Analysed</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PART 01 -->
+<section>
+  <div class="wrap">
+    <div class="rv">
+      <div class="part-header">
+        <div class="part-num">01</div>
+        <div><div class="part-title">Dataset Building &amp; Feature Engineering</div><div class="part-sub">Pandas &bull; NumPy &bull; Scikit-learn preprocessing</div></div>
+      </div>
+      <p class="ss">Raw transaction logs were joined with user-account data, merchant category codes, and historical behaviour summaries. Engineered features capture both static risk attributes and dynamic behavioural signals that simple rule engines miss.</p>
+    </div>
+
+    <div class="two-col rv">
+      <div>
+        <p style="font-size:.84rem;color:var(--muted);margin-bottom:1rem;">Core feature construction pipeline:</p>
+        <pre class="code-block"><span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> numpy <span class="kw">as</span> np
+<span class="kw">from</span> sklearn.preprocessing <span class="kw">import</span> StandardScaler
+
+<span class="cm-code"># Load and merge transaction + user data</span>
+txn  = pd.read_parquet(<span class="st">'transactions.parquet'</span>)
+usr  = pd.read_csv(<span class="st">'user_profiles.csv'</span>)
+df   = txn.merge(usr, on=<span class="st">'user_id'</span>, how=<span class="st">'left'</span>)
+
+<span class="cm-code"># Temporal features</span>
+df[<span class="st">'hour'</span>]        = pd.to_datetime(df[<span class="st">'ts'</span>]).<span class="fn">dt</span>.hour
+df[<span class="st">'is_night'</span>]    = df[<span class="st">'hour'</span>].between(<span class="nb">22</span>, <span class="nb">5</span>).astype(<span class="nb">int</span>)
+df[<span class="st">'is_weekend'</span>]  = pd.to_datetime(df[<span class="st">'ts'</span>]).<span class="fn">dt</span>.dayofweek >= <span class="nb">5</span>
+
+<span class="cm-code"># Velocity features (30-min rolling window)</span>
+df = df.sort_values([<span class="st">'user_id'</span>, <span class="st">'ts'</span>])
+df[<span class="st">'txn_count_30m'</span>] = (
+    df.groupby(<span class="st">'user_id'</span>)[<span class="st">'amount'</span>]
+    .transform(<span class="kw">lambda</span> x: x.rolling(<span class="st">'30min'</span>).count())
+)
+df[<span class="st">'amt_z_user'</span>]    = (
+    df.groupby(<span class="st">'user_id'</span>)[<span class="st">'amount'</span>]
+    .transform(<span class="kw">lambda</span> x: (x - x.mean()) / (x.std() + <span class="nb">1e-9</span>))
+)
+
+<span class="cm-code"># Device / geo mismatch flags</span>
+df[<span class="st">'new_device'</span>]   = (df[<span class="st">'device_id'</span>] != df[<span class="st">'last_device'</span>]).astype(<span class="nb">int</span>)
+df[<span class="st">'geo_jump'</span>]     = df[<span class="st">'dist_km_from_last'</span>] > <span class="nb">200</span>
+
+FEATURES = [
+    <span class="st">'amount'</span>, <span class="st">'amt_z_user'</span>, <span class="st">'txn_count_30m'</span>,
+    <span class="st">'hour'</span>, <span class="st">'is_night'</span>, <span class="st">'is_weekend'</span>,
+    <span class="st">'new_device'</span>, <span class="st">'geo_jump'</span>,
+    <span class="st">'mcc_risk_score'</span>, <span class="st">'account_age_days'</span>,
+    <span class="st">'avg_txn_amt_90d'</span>, <span class="st">'chargeback_rate_90d'</span>
+]
+X = df[FEATURES].fillna(<span class="nb">0</span>)
+y = df[<span class="st">'is_fraud'</span>]
+
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)</pre>
+      </div>
+      <div>
+        <p style="font-size:.84rem;color:var(--muted);margin-bottom:1rem;">Engineered feature set (12 features):</p>
+        <table class="feat-table">
+          <tr><th>Feature</th><th>Type</th><th>Rationale</th></tr>
+          <tr><td>amt_z_user</td><td>Continuous</td><td>Z-score vs. user baseline</td></tr>
+          <tr><td>txn_count_30m</td><td>Continuous</td><td>Velocity burst detection</td></tr>
+          <tr><td>is_night</td><td>Binary</td><td>Off-hours anomaly signal</td></tr>
+          <tr><td>new_device</td><td>Binary</td><td>Device hijack indicator</td></tr>
+          <tr><td>geo_jump</td><td>Binary</td><td>Impossible travel flag</td></tr>
+          <tr><td>mcc_risk_score</td><td>Ordinal</td><td>Merchant category risk</td></tr>
+          <tr><td>chargeback_rate_90d</td><td>Continuous</td><td>Historical fraud rate</td></tr>
+          <tr><td>account_age_days</td><td>Continuous</td><td>New-account vulnerability</td></tr>
+        </table>
+        <div class="callout"><strong>Class imbalance:</strong> Dataset was 1.8% fraudulent. Applied SMOTE oversampling on training split only to achieve 1:4 fraud:legit ratio without leaking test data.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PART 02 -->
+<section>
+  <div class="wrap">
+    <div class="rv">
+      <div class="part-header">
+        <div class="part-num">02</div>
+        <div><div class="part-title">Random Forest Classifier &amp; ROC Analysis</div><div class="part-sub">Scikit-learn &bull; Cross-validation &bull; AUC-ROC 0.957</div></div>
+      </div>
+      <p class="ss">A tuned Random Forest was trained using stratified 5-fold cross-validation. Threshold selection was optimised for recall at &ge;85% to minimise missed fraud rather than purely maximising accuracy.</p>
+    </div>
+
+    <div class="two-col rv">
+      <div>
+        <pre class="code-block"><span class="kw">from</span> sklearn.ensemble <span class="kw">import</span> RandomForestClassifier
+<span class="kw">from</span> sklearn.model_selection <span class="kw">import</span> StratifiedKFold
+<span class="kw">from</span> sklearn.metrics <span class="kw">import</span> roc_auc_score, roc_curve
+<span class="kw">from</span> imblearn.over_sampling <span class="kw">import</span> SMOTE
+
+X_tr, X_te, y_tr, y_te = train_test_split(
+    X_scaled, y, test_size=<span class="nb">0.2</span>, stratify=y, random_state=<span class="nb">42</span>
+)
+X_tr_sm, y_tr_sm = SMOTE(random_state=<span class="nb">42</span>).fit_resample(X_tr, y_tr)
+
+rf = RandomForestClassifier(
+    n_estimators=<span class="nb">400</span>,
+    max_depth=<span class="nb">18</span>,
+    min_samples_leaf=<span class="nb">4</span>,
+    class_weight=<span class="st">'balanced_subsample'</span>,
+    n_jobs=<span class="nb">-1</span>,
+    random_state=<span class="nb">42</span>
+)
+rf.fit(X_tr_sm, y_tr_sm)
+
+<span class="cm-code"># ROC analysis</span>
+y_prob  = rf.predict_proba(X_te)[:, <span class="nb">1</span>]
+auc     = roc_auc_score(y_te, y_prob)
+fpr, tpr, thresholds = roc_curve(y_te, y_prob)
+
+<span class="cm-code"># Optimal threshold: max recall >= 0.85</span>
+mask      = tpr >= <span class="nb">0.85</span>
+opt_thr   = thresholds[mask][np.argmin(fpr[mask])]
+y_pred    = (y_prob >= opt_thr).astype(<span class="nb">int</span>)
+
+<span class="cm-code"># Feature importance</span>
+imp = pd.Series(rf.feature_importances_, index=FEATURES)
+print(imp.sort_values(ascending=<span class="nb">False</span>).head(<span class="nb">5</span>))</pre>
+      </div>
+      <div>
+        <div class="roc-wrap">
+          <p style="font-size:.8rem;color:var(--muted);margin-bottom:1rem;text-align:left;">ROC Curve &mdash; AUC 0.957</p>
+          <svg class="roc-svg" viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg">
+            <rect width="260" height="220" fill="#060d18" rx="8"/>
+            <!-- axes -->
+            <line x1="40" y1="10" x2="40" y2="180" stroke="#1a2640" stroke-width="1"/>
+            <line x1="40" y1="180" x2="250" y2="180" stroke="#1a2640" stroke-width="1"/>
+            <!-- random line -->
+            <line x1="40" y1="180" x2="250" y2="10" stroke="#374151" stroke-width="1" stroke-dasharray="4,3"/>
+            <!-- ROC curve (approximate shape AUC~0.957) -->
+            <path d="M40,180 C55,50 80,20 120,14 L170,12 L220,14 L250,10" fill="none" stroke="#f97316" stroke-width="2.5"/>
+            <!-- AUC fill -->
+            <path d="M40,180 C55,50 80,20 120,14 L170,12 L220,14 L250,10 L250,180 Z" fill="rgba(249,115,22,.12)"/>
+            <!-- optimal point -->
+            <circle cx="78" cy="22" r="4" fill="#f97316"/>
+            <text x="82" y="20" font-size="7" fill="#fdba74">Optimal (0.14, 0.88)</text>
+            <!-- labels -->
+            <text x="130" y="198" font-size="8" fill="#6b7280" text-anchor="middle">False Positive Rate</text>
+            <text x="14" y="100" font-size="8" fill="#6b7280" text-anchor="middle" transform="rotate(-90,14,100)">True Positive Rate</text>
+            <text x="200" y="170" font-size="8" fill="#f97316" font-weight="bold">AUC = 0.957</text>
+          </svg>
+        </div>
+        <div class="callout" style="margin-top:1rem;">
+          <strong>Top features by importance:</strong> amt_z_user (0.28), txn_count_30m (0.21), chargeback_rate_90d (0.16), mcc_risk_score (0.12), new_device (0.09). Behavioural velocity signals dominate over static attributes.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PART 03 -->
+<section>
+  <div class="wrap">
+    <div class="rv">
+      <div class="part-header">
+        <div class="part-num">03</div>
+        <div><div class="part-title">Isolation Forest &amp; Composite Fraud Score</div><div class="part-sub">Unsupervised anomaly detection &bull; 0&ndash;100 risk score</div></div>
+      </div>
+      <p class="ss">An Isolation Forest was trained on unlabelled transaction data to capture novel fraud patterns not represented in the labelled training set. Its anomaly score was blended with the Random Forest probability to create a single interpretable 0&ndash;100 fraud-likelihood score.</p>
+    </div>
+
+    <div class="two-col rv">
+      <div>
+        <pre class="code-block"><span class="kw">from</span> sklearn.ensemble <span class="kw">import</span> IsolationForest
+
+<span class="cm-code"># Unsupervised anomaly scoring</span>
+iso = IsolationForest(
+    n_estimators=<span class="nb">300</span>,
+    contamination=<span class="nb">0.018</span>,  <span class="cm-code"># approx fraud rate</span>
+    random_state=<span class="nb">42</span>,
+    n_jobs=<span class="nb">-1</span>
+)
+iso.fit(X_scaled)
+
+<span class="cm-code"># Raw anomaly score: more negative = more anomalous</span>
+iso_raw  = iso.decision_function(X_scaled)
+<span class="cm-code"># Normalise to 0-1 (1 = most anomalous)</span>
+iso_norm = <span class="nb">1</span> - (iso_raw - iso_raw.min()) / (iso_raw.max() - iso_raw.min())
+
+<span class="cm-code"># RF probability on full dataset</span>
+rf_prob  = rf.predict_proba(X_scaled)[:, <span class="nb">1</span>]
+
+<span class="cm-code"># Composite fraud score (weighted blend)</span>
+ALPHA = <span class="nb">0.65</span>  <span class="cm-code"># supervised weight</span>
+composite = ALPHA * rf_prob + (<span class="nb">1</span> - ALPHA) * iso_norm
+
+<span class="cm-code"># Scale to 0-100</span>
+df[<span class="st">'fraud_score'</span>] = (composite * <span class="nb">100</span>).round(<span class="nb">1</span>)
+
+<span class="cm-code"># Risk tiers</span>
+df[<span class="st">'risk_tier'</span>] = pd.cut(
+    df[<span class="st">'fraud_score'</span>],
+    bins=[<span class="nb">0</span>, <span class="nb">30</span>, <span class="nb">65</span>, <span class="nb">100</span>],
+    labels=[<span class="st">'LOW'</span>, <span class="st">'MEDIUM'</span>, <span class="st">'HIGH'</span>]
+)
+print(df[<span class="st">'risk_tier'</span>].value_counts())</pre>
+      </div>
+      <div>
+        <p style="font-size:.84rem;color:var(--muted);margin-bottom:.8rem;">Sample transaction scores:</p>
+        <div class="score-demo">
+          <div class="score-row">
+            <span class="score-label">TXN-0041872</span>
+            <div class="score-track"><div class="score-fill" style="width:91%;background:linear-gradient(90deg,#ef4444,#f97316);"></div></div>
+            <span class="score-val">91</span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">TXN-0098234</span>
+            <div class="score-track"><div class="score-fill" style="width:74%;background:linear-gradient(90deg,#f97316,#facc15);"></div></div>
+            <span class="score-val">74</span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">TXN-0117659</span>
+            <div class="score-track"><div class="score-fill" style="width:52%;background:linear-gradient(90deg,#facc15,#a3e635);"></div></div>
+            <span class="score-val">52</span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">TXN-0203841</span>
+            <div class="score-track"><div class="score-fill" style="width:18%;background:#4ade80;"></div></div>
+            <span class="score-val">18</span>
+          </div>
+          <div class="score-row">
+            <span class="score-label">TXN-0299015</span>
+            <div class="score-track"><div class="score-fill" style="width:7%;background:#4ade80;"></div></div>
+            <span class="score-val">7</span>
+          </div>
+        </div>
+
+        <p style="font-size:.84rem;color:var(--muted);margin-top:1.5rem;margin-bottom:.5rem;">Risk tier thresholds:</p>
+        <div class="tiers">
+          <div class="tier tier-low">
+            <div class="tier-label">LOW</div>
+            <div class="tier-range">0&ndash;30</div>
+            <div class="tier-desc">Auto-approve; standard monitoring</div>
+          </div>
+          <div class="tier tier-mid">
+            <div class="tier-label">MEDIUM</div>
+            <div class="tier-range">31&ndash;65</div>
+            <div class="tier-desc">Step-up auth; analyst review queue</div>
+          </div>
+          <div class="tier tier-high">
+            <div class="tier-label">HIGH</div>
+            <div class="tier-range">66&ndash;100</div>
+            <div class="tier-desc">Block &amp; immediate investigation</div>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:1.2rem;">
+          <strong>Business impact:</strong> HIGH-tier transactions (score &gt;65) represented 2.1% of volume but captured 79% of confirmed fraud cases, reducing investigator workload by 70% versus blanket review.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="analytics.html">Analytics</a><a href="cs-automation.html">Automation Case Study</a><a href="ml.html">ML &amp; Data Science</a><a href="contact.html">Contact</a>
+  </div>
+  <p>&copy; 2026 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+<script src="assets/nav.js"></script>
+</body>
+</html>
