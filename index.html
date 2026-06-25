@@ -600,11 +600,11 @@ window.addEventListener('scroll',()=>document.getElementById('nav').classList.to
 </script>
 
 <script>
-/* REVEAL ANIMATION */
+/* REVEAL ANIMATION — observes .rv, .rl, .rr */
 const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:0});
-document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
-/* fallback: ensure all .rv become visible after 1s */
-setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('up')),1000);
+document.querySelectorAll('.rv,.rl,.rr').forEach(el=>ro.observe(el));
+/* fallback: ensure everything becomes visible after 1s */
+setTimeout(()=>document.querySelectorAll('.rv,.rl,.rr').forEach(el=>el.classList.add('up')),1000);
 </script>
 <script src="assets/nav.js"></script>
 </body>
