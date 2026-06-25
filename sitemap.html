@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Site Map — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+
+/* HERO */
+.page-hero{padding:7rem 2rem 3.5rem;background:linear-gradient(135deg,#070c18,#0d1423);position:relative;overflow:hidden;text-align:center;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:50px 50px;}
+.ph-inner{position:relative;z-index:1;}
+.ph-tag{display:inline-block;background:var(--gold3);border:1px solid rgba(201,168,76,.28);color:var(--gold);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;margin-bottom:.5rem;}
+.ph-title span{background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.9rem;max-width:500px;margin:0 auto;}
+
+/* MAIN */
+.main{padding:3.5rem 2rem 5rem;}
+.wrap{max-width:1100px;margin:auto;}
+
+/* SECTION GROUPS */
+.sm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
+.sm-group{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .22s;}
+.sm-group:hover{border-color:rgba(201,168,76,.25);}
+.sm-group-header{padding:1.2rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem;}
+.sm-group-icon{font-size:1.5rem;}
+.sm-group-title{font-weight:700;font-size:.95rem;}
+.sm-group-sub{color:var(--muted);font-size:.74rem;margin-top:.1rem;}
+.sm-links{padding:.5rem 0;}
+.sm-link{display:flex;align-items:center;gap:.7rem;padding:.6rem 1.5rem;text-decoration:none;color:var(--muted);font-size:.83rem;transition:background .18s,color .18s;border-left:2px solid transparent;}
+.sm-link:hover{background:rgba(201,168,76,.05);color:var(--gold);border-left-color:var(--gold);}
+.sm-link-icon{font-size:.9rem;flex-shrink:0;}
+.sm-link-new{display:inline-block;margin-left:.4rem;font-size:.6rem;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.25);color:#6ee7b7;padding:.08rem .4rem;border-radius:999px;vertical-align:middle;}
+.sm-sub-link{padding-left:3rem;font-size:.8rem;}
+.sm-sub-link::before{content:'└ ';color:var(--border);font-size:.7rem;}
+
+/* STATS ROW */
+.stats-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.stat-pill{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.7rem 1.2rem;display:flex;align-items:center;gap:.6rem;}
+.stat-val{font-size:1.2rem;font-weight:800;color:var(--gold);}
+.stat-label{font-size:.74rem;color:var(--muted);}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+
+@media(max-width:760px){
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="automation.html">Automation</a></li>
+      <li><a href="prompts.html">Prompting</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="casestudies.html">Case Studies</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hg"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">🗺️ Site Map</div>
+    <h1 class="ph-title">Everything on <span>This Site</span></h1>
+    <p class="ph-sub">A complete map of all pages — find what you're looking for quickly.</p>
+  </div>
+</div>
+
+<div class="main">
+  <div class="wrap">
+
+    <div class="stats-row rv">
+      <div class="stat-pill"><div class="stat-val">28</div><div class="stat-label">Total Pages</div></div>
+      <div class="stat-pill"><div class="stat-val">6</div><div class="stat-label">Automation Sub-pages</div></div>
+      <div class="stat-pill"><div class="stat-val">4</div><div class="stat-label">Tools Sub-pages</div></div>
+      <div class="stat-pill"><div class="stat-val">3</div><div class="stat-label">Case Studies</div></div>
+      <div class="stat-pill"><div class="stat-val">3</div><div class="stat-label">Blog Posts</div></div>
+    </div>
+
+    <div class="sm-grid">
+
+      <!-- HOME & PORTFOLIO -->
+      <div class="sm-group rv">
+        <div class="sm-group-header"><div class="sm-group-icon">🏠</div><div><div class="sm-group-title">Core Pages</div><div class="sm-group-sub">Home, Portfolio & Contact</div></div></div>
+        <div class="sm-links">
+          <a class="sm-link" href="index.html"><span class="sm-link-icon">🏠</span>Home</a>
+          <a class="sm-link" href="portfolio.html"><span class="sm-link-icon">🌐</span>My Portfolio</a>
+          <a class="sm-link" href="contact.html"><span class="sm-link-icon">📩</span>Contact Me</a>
+          <a class="sm-link" href="sitemap.html"><span class="sm-link-icon">🗺️</span>Site Map</a>
+        </div>
+      </div>
+
+      <!-- AUTOMATION HUB -->
+      <div class="sm-group rv" style="transition-delay:.05s">
+        <div class="sm-group-header"><div class="sm-group-icon">⚙️</div><div><div class="sm-group-title">Automation Hub</div><div class="sm-group-sub">6 domains of practical automation</div></div></div>
+        <div class="sm-links">
+          <a class="sm-link" href="automation.html"><span class="sm-link-icon">⚙️</span>Automation Hub Overview</a>
+          <a class="sm-link sm-sub-link" href="automation-office.html"><span class="sm-link-icon">📊</span>MS Office & Automation</a>
+          <a class="sm-link sm-sub-link" href="automation-desktop.html"><span class="sm-link-icon">🖥️</span>Windows & Desktop</a>
+          <a class="sm-link sm-sub-link" href="automation-browser.html"><span class="sm-link-icon">🌐</span>Browser & Web</a>
+          <a class="sm-link sm-sub-link" href="automation-mobile.html"><span class="sm-link-icon">📱</span>Mobile Automation</a>
+          <a class="sm-link sm-sub-link" href="automation-cloud.html"><span class="sm-link-icon">☁️</span>Cloud & Integration</a>
+          <a class="sm-link sm-sub-link" href="automation-ai.html"><span class="sm-link-icon">🤖</span>AI & Copilots</a>
+        </div>
+      </div>
+
+      <!-- DATA & ANALYTICS -->
+      <div class="sm-group rv" style="transition-delay:.1s">
+        <div class="sm-group-header"><div class="sm-group-icon">📊</div><div><div class="sm-group-title">Data & Analytics</div><div class="sm-group-sub">Fraud analytics, ML & predictive models</div></div></div>
+        <div class="sm-links">
+          <a class="sm-link" href="analytics.html"><span class="sm-link-icon">💼</span>Data Analytics in Fraud & Compliance</a>
+          <a class="sm-link" href="ml.html"><span class="sm-link-icon">📊</span>Machine Learning & Data Science</a>
+          <a class="sm-link" href="predictive.html"><span class="sm-link-icon">📈</span>Predictive Analytics</a>
+        </div>
+      </div>
+
+      <!-- AI & PROMPTING -->
+      <div class="sm-group rv" style="transition-delay:.15s">
+        <div class="sm-group-header"><div class="sm-group-icon">🤖</div><div><div class="sm-group-title">AI & Prompt Engineering</div><div class="sm-group-sub">Prompting techniques & library</div></div></div>
+        <div class="sm-links">
+          <a class="sm-link" href="prompts.html"><span class="sm-link-icon">🤖</span>Prompt Engineering</a>
+          <a class="sm-link" href="n8n.html"><span class="sm-link-icon">🔄</span>Free Lifetime n8n Automation</a>
+        </div>
+      </div>
+
+      <!-- TOOLS -->
+      <div class="sm-group rv" style="transition-delay:.2s">
+        <div class="sm-group-header"><div class="sm-group-icon">🛠️</div><div><div class="sm-group-title">Tools & Free Resources</div><div class="sm-group-sub">AI tools, utilities & downloads</div></div></div>
+        <div class="sm-links">
+          <a class="sm-link" href="tools.html"><span class="sm-link-icon">🛠️</span>Tools & Free Resources Overview</a>
+          <a class="sm-link sm-sub-link" href="tools-emily.html"><span class="sm-link-icon">🤖</span>Emily — AI Appointment Assistant <span class="sm-link-new">new</span></a>
+          <a class="sm-link sm-sub-link" href="tools-sophia.html"><span class="sm-link-icon">🤖</span>Sophia — AI Order-Taking Assistant <span class="sm-link-new">new</span></a>
+          <a class="sm-link sm-sub-link" href="tools-common-ai.html"><span class="sm-link-icon">🤖</span>Common AI Tools — Quick Reference</a>
+          <a class="sm-link sm-sub-link" href="tools-custom-gpts.html"><span class="sm-link-icon">🤖</span>Custom GPTs</a>
+        </div>
+      </div>
+
+      <!-- CASE STUDIES -->
+      <div class="sm-group rv" style="transition-delay:.25s">
+        <div class="sm-group-header"><div class="sm-group-icon">🧩</div><div><div class="sm-group-title">Case Studies</div><div class="sm-group-sub">Analytics & automation in action</div></div></div>
+        <div class="sm-links">
+          <a class="sm-link" href="casestudies.html"><span class="sm-link-icon">🧩</span>Case Studies Overview</a>
+          <a class="sm-link sm-sub-link" href="cs-automation.html"><span class="sm-link-icon">🛠️</span>Automation in Action</a>
+          <a class="sm-link sm-sub-link" href="cs-propensity.html"><span class="sm-link-icon">📊</span>Customer Purchase Propensity</a>
+          <a class="sm-link sm-sub-link" href="cs-fraud-ml.html"><span class="sm-link-icon">🤖</span>Fraud Detection using ML</a>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="sm-group rv" style="transition-delay:.3s">
+        <div class="sm-group-header"><div class="sm-group-icon">📰</div><div><div class="sm-group-title">Content & Updates</div><div class="sm-group-sub">Blogs, news & YouTube picks</div></div></div>
+        <div class="sm-links">
+          <a class="sm-link" href="blogs.html"><span class="sm-link-icon">✍️</span>My Blogs</a>
+          <a class="sm-link" href="news.html"><span class="sm-link-icon">📰</span>News & Updates</a>
+          <a class="sm-link" href="youtube.html"><span class="sm-link-icon">▶️</span>YouTube Picks</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="portfolio.html">Portfolio</a><a href="analytics.html">Analytics</a><a href="automation.html">Automation</a><a href="prompts.html">Prompting</a><a href="tools.html">Tools</a><a href="blogs.html">Blogs</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

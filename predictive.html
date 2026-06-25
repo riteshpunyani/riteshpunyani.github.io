@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Predictive Analytics — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--cyan:#06b6d4;--cyan2:rgba(6,182,212,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--cyan);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+
+/* HERO */
+.page-hero{min-height:44vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:linear-gradient(135deg,#070c18,#070f18,#070c18);position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(6,182,212,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,.06) 1px,transparent 1px);background-size:45px 45px;}
+.hgl{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.13),transparent 65%);top:-200px;right:-100px;border-radius:50%;}
+.hgl2{position:absolute;width:350px;height:350px;background:radial-gradient(circle,rgba(201,168,76,.07),transparent 65%);bottom:-100px;left:-50px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;width:100%;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--cyan2);border:1px solid rgba(6,182,212,.3);color:var(--cyan);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:.8rem;}
+.ph-title span{background:linear-gradient(135deg,var(--cyan),#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.95rem;max-width:600px;margin-bottom:1.5rem;}
+.ph-pills{display:flex;gap:.5rem;flex-wrap:wrap;}
+.ph-pill{background:var(--cyan2);border:1px solid rgba(6,182,212,.2);color:var(--cyan);font-size:.72rem;padding:.25rem .75rem;border-radius:999px;}
+
+/* STATS */
+.stats-bar{background:var(--navy3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stats-inner{max-width:1160px;margin:auto;display:flex;padding:0 2rem;}
+.sbi{flex:1;padding:1.2rem 1rem;text-align:center;border-right:1px solid var(--border);}
+.sbi:last-child{border-right:none;}
+.sbi-val{font-size:1.6rem;font-weight:900;color:var(--cyan);}
+.sbi-label{font-size:.68rem;color:var(--muted);margin-top:.15rem;}
+
+section{padding:4.5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--cyan);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--cyan);display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.88rem;max-width:560px;margin-bottom:2.5rem;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+
+/* BENEFITS */
+#benefits{background:var(--navy2);}
+.ben-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;}
+.bc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:transform .22s,border-color .22s;}
+.bc:hover{transform:translateY(-4px);border-color:rgba(6,182,212,.3);}
+.bc-icon{font-size:2rem;margin-bottom:.7rem;}
+.bc-title{font-weight:700;font-size:.92rem;margin-bottom:.4rem;}
+.bc-desc{color:var(--muted);font-size:.82rem;line-height:1.6;}
+
+/* VARIABLES */
+#variables{background:var(--navy);}
+.var-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.var-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;position:relative;overflow:hidden;}
+.var-box::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;}
+.var-dep::before{background:linear-gradient(to bottom,var(--cyan),#67e8f9);}
+.var-ind::before{background:linear-gradient(to bottom,var(--gold),var(--gold2));}
+.var-label{font-size:.7rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:.5rem;}
+.var-dep .var-label{color:var(--cyan);}
+.var-ind .var-label{color:var(--gold);}
+.var-title{font-weight:800;font-size:1rem;margin-bottom:.5rem;}
+.var-sub{color:var(--muted);font-size:.82rem;margin-bottom:1rem;line-height:1.6;}
+.var-example{background:var(--navy3);border-radius:8px;padding:.9rem 1rem;}
+.var-ex-label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:.4rem;}
+.var-ex-text{font-size:.84rem;line-height:1.6;}
+.var-ex-arrow{color:var(--muted);font-size:.75rem;margin:.3rem 0;}
+
+/* MODELS */
+#models{background:var(--navy2);}
+.models-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.1rem;}
+.mc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;transition:transform .22s,border-color .22s;}
+.mc:hover{transform:translateY(-3px);border-color:rgba(6,182,212,.3);}
+.mc-type{font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--cyan);font-weight:600;margin-bottom:.4rem;}
+.mc-title{font-weight:700;font-size:.92rem;margin-bottom:.4rem;}
+.mc-models{color:var(--gold);font-size:.78rem;margin-bottom:.4rem;}
+.mc-desc{color:var(--muted);font-size:.8rem;line-height:1.55;}
+.mc-when{margin-top:.7rem;font-size:.76rem;background:var(--cyan2);border:1px solid rgba(6,182,212,.15);border-radius:6px;padding:.4rem .7rem;color:var(--cyan);}
+
+/* USE CASES */
+#usecases{background:var(--navy);}
+.uc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;}
+.uc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;position:relative;overflow:hidden;transition:transform .22s,border-color .22s;}
+.uc:hover{transform:translateY(-4px);border-color:rgba(6,182,212,.3);}
+.uc-num{position:absolute;top:1rem;right:1.2rem;font-size:2rem;font-weight:900;color:rgba(6,182,212,.1);line-height:1;}
+.uc-icon{font-size:1.8rem;margin-bottom:.7rem;}
+.uc-title{font-weight:700;font-size:.92rem;margin-bottom:.5rem;}
+.uc-vars{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.6rem;}
+.uc-var{background:var(--navy3);border-radius:6px;padding:.5rem .7rem;}
+.uc-var-label{font-size:.62rem;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:.2rem;}
+.uc-var-val{font-size:.76rem;color:var(--text);}
+.uc-impact{font-size:.78rem;color:var(--cyan);background:var(--cyan2);border-radius:6px;padding:.4rem .7rem;border:1px solid rgba(6,182,212,.15);}
+
+/* CTA */
+#cta{background:var(--navy2);}
+.cta-box{background:linear-gradient(135deg,var(--cyan2),rgba(201,168,76,.06));border:1px solid rgba(6,182,212,.2);border-radius:16px;padding:3rem;text-align:center;}
+.cta-box h3{font-size:1.4rem;font-weight:800;margin-bottom:.6rem;}
+.cta-box p{color:var(--muted);font-size:.88rem;max-width:500px;margin:0 auto 1.5rem;}
+.btn-c{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.6rem;border-radius:8px;font-weight:700;font-size:.86rem;text-decoration:none;transition:all .22s;margin:.3rem;}
+.btn-c1{background:linear-gradient(135deg,var(--cyan),#67e8f9);color:#070c18;}
+.btn-c1:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(6,182,212,.3);}
+.btn-c2{border:1px solid rgba(6,182,212,.3);color:var(--cyan);}
+.btn-c2:hover{background:var(--cyan2);}
+
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+@media(max-width:760px){
+  .var-grid{grid-template-columns:1fr;}
+  .stats-inner{flex-wrap:wrap;}
+  .sbi{min-width:50%;border-bottom:1px solid var(--border);}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="automation.html">Automation</a></li>
+      <li><a href="prompts.html">Prompting</a></li>
+      <li><a href="predictive.html" class="active">Predictive</a></li>
+      <li><a href="ml.html">ML & DS</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div><div class="hgl2"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">📈 Predictive Analytics</div>
+    <h1 class="ph-title">Turning Data into<br><span>Foresight</span></h1>
+    <p class="ph-sub">The science of using historical data, statistics, and machine learning to forecast future outcomes — moving organisations from reactive firefighting to proactive decision-making.</p>
+    <div class="ph-pills">
+      <span class="ph-pill">Fraud Detection</span><span class="ph-pill">Customer Behaviour</span><span class="ph-pill">Risk Scoring</span><span class="ph-pill">Healthcare Predictions</span><span class="ph-pill">Supply Chain</span>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="sbi"><div class="sbi-val">5%</div><div class="sbi-label">Avg Revenue Lost to Fraud (ACFE)</div></div>
+    <div class="sbi"><div class="sbi-val">4</div><div class="sbi-label">Model Types Covered</div></div>
+    <div class="sbi"><div class="sbi-val">4</div><div class="sbi-label">Real-World Use Cases</div></div>
+    <div class="sbi"><div class="sbi-val">∞</div><div class="sbi-label">Industries Applicable</div></div>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section id="benefits">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Why It Matters</div><h2 class="sh">Benefits of Predictive Analytics</h2><p class="ss">Predictive analytics empowers leaders to act before problems occur — not after.</p></div>
+    <div class="ben-grid">
+      <div class="bc rv" style="transition-delay:.05s"><div class="bc-icon">🔍</div><div class="bc-title">Fraud Detection & Risk Management</div><div class="bc-desc">Spot unusual behaviours early, identify high-risk transactions, and reduce financial and compliance exposure before incidents escalate.</div></div>
+      <div class="bc rv" style="transition-delay:.1s"><div class="bc-icon">⚡</div><div class="bc-title">Operational Efficiency</div><div class="bc-desc">Predict demand, optimise resource allocation, and reduce wastage — improving throughput without increasing costs.</div></div>
+      <div class="bc rv" style="transition-delay:.15s"><div class="bc-icon">💰</div><div class="bc-title">Customer Insights</div><div class="bc-desc">Forecast customer churn, buying behaviour, and purchase propensity — enabling precision targeting that maximises revenue. <em>(My personal favourite!)</em></div></div>
+      <div class="bc rv" style="transition-delay:.2s"><div class="bc-icon">🧭</div><div class="bc-title">Strategic Decision-Making</div><div class="bc-desc">Use data to anticipate market trends, competitor actions, and workforce needs — giving leaders a genuine competitive edge.</div></div>
+      <div class="bc rv" style="transition-delay:.25s"><div class="bc-icon">🏥</div><div class="bc-title">Healthcare & Social Impact</div><div class="bc-desc">Predict patient risks, treatment outcomes, and disease outbreaks — enabling early intervention and better healthcare outcomes.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VARIABLES -->
+<section id="variables">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Foundations</div><h2 class="sh">Dependent vs. Independent Variables</h2><p class="ss">Every predictive model answers one key question: "What factors influence the outcome?"</p></div>
+    <div class="var-grid rv">
+      <div class="var-box var-dep">
+        <div class="var-label">Dependent Variable</div>
+        <div class="var-title">Target / Outcome</div>
+        <div class="var-sub">The variable you want to predict. It changes in response to other factors. This is the "answer" your model is trying to find.</div>
+        <div class="var-example">
+          <div class="var-ex-label">Examples</div>
+          <div class="var-ex-text">Will this transaction be fraudulent? <span style="color:var(--cyan)">(Yes/No)</span></div>
+          <div class="var-ex-arrow">→</div>
+          <div class="var-ex-text">What will monthly sales revenue be? <span style="color:var(--cyan)">(Numeric)</span></div>
+          <div class="var-ex-arrow">→</div>
+          <div class="var-ex-text">Will this customer churn? <span style="color:var(--cyan)">(Yes/No)</span></div>
+        </div>
+      </div>
+      <div class="var-box var-ind">
+        <div class="var-label">Independent Variables</div>
+        <div class="var-title">Features / Predictors</div>
+        <div class="var-sub">The factors that influence or explain the dependent variable. These are your inputs — the data points the model learns from.</div>
+        <div class="var-example">
+          <div class="var-ex-label">Examples</div>
+          <div class="var-ex-text">Transaction amount, location, device used <span style="color:var(--gold)">(Fraud)</span></div>
+          <div class="var-ex-arrow">→</div>
+          <div class="var-ex-text">Ad spend, seasonality, product discounts <span style="color:var(--gold)">(Sales)</span></div>
+          <div class="var-ex-arrow">→</div>
+          <div class="var-ex-text">Age, contract type, support tickets <span style="color:var(--gold)">(Churn)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELS -->
+<section id="models">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Model Selection</div><h2 class="sh">Choosing the Right Model</h2><p class="ss">The choice of model depends on the type of dependent variable, data size, and whether accuracy or explainability is the priority.</p></div>
+    <div class="models-grid">
+      <div class="mc rv" style="transition-delay:.05s">
+        <div class="mc-type">Continuous Output</div>
+        <div class="mc-title">Regression Models</div>
+        <div class="mc-models">Linear Regression · Random Forest Regression</div>
+        <div class="mc-desc">Used when the outcome is a number — revenue, risk score, time to resolution.</div>
+        <div class="mc-when">Use when: Dependent variable is numeric</div>
+      </div>
+      <div class="mc rv" style="transition-delay:.1s">
+        <div class="mc-type">Yes/No · Categories</div>
+        <div class="mc-title">Classification Models</div>
+        <div class="mc-models">Logistic Regression · Decision Trees · SVM · XGBoost</div>
+        <div class="mc-desc">Used when the outcome is a category — fraud/legitimate, buy/not buy, high/medium/low risk.</div>
+        <div class="mc-when">Use when: Dependent variable is categorical</div>
+      </div>
+      <div class="mc rv" style="transition-delay:.15s">
+        <div class="mc-type">Time-Based Patterns</div>
+        <div class="mc-title">Time Series Models</div>
+        <div class="mc-models">ARIMA · Prophet · LSTM</div>
+        <div class="mc-desc">Used for forecasting trends over time — sales forecasts, demand planning, seasonal patterns.</div>
+        <div class="mc-when">Use when: Data has a time dimension</div>
+      </div>
+      <div class="mc rv" style="transition-delay:.2s">
+        <div class="mc-type">Segmentation</div>
+        <div class="mc-title">Clustering Models</div>
+        <div class="mc-models">K-Means · Hierarchical Clustering · DBSCAN</div>
+        <div class="mc-desc">Used to discover natural groupings in data — customer segments, vendor risk tiers, anomaly clusters.</div>
+        <div class="mc-when">Use when: No predefined labels exist</div>
+      </div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem 2rem;margin-top:1.5rem;" class="rv">
+      <div style="font-weight:700;margin-bottom:.5rem;">⚖️ Accuracy vs. Explainability Trade-off</div>
+      <div style="color:var(--muted);font-size:.84rem;line-height:1.7;">For compliance and ethics decisions, prefer <span style="color:var(--cyan)">interpretable models</span> (Logistic Regression, Decision Trees) — decision-makers need to understand why a decision was made. For pure prediction accuracy (churn, propensity), advanced ML models (XGBoost, Neural Networks) deliver higher performance but are "black-box" — unsuitable where explainability is legally required.</div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section id="usecases">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Real-World Applications</div><h2 class="sh">Use Cases Across Industries</h2><p class="ss">Predictive analytics in action — where the theory meets real business impact.</p></div>
+    <div class="uc-grid">
+      <div class="uc rv" style="transition-delay:.05s">
+        <div class="uc-num">01</div>
+        <div class="uc-icon">💳</div>
+        <div class="uc-title">Fraud Detection</div>
+        <div class="uc-vars">
+          <div class="uc-var"><div class="uc-var-label">Predict</div><div class="uc-var-val">Fraudulent / Legit</div></div>
+          <div class="uc-var"><div class="uc-var-label">Using</div><div class="uc-var-val">Amount, location, device, frequency</div></div>
+        </div>
+        <div class="uc-impact">💡 Prevents fraud before it happens — ACFE estimates 5% of annual revenue lost to fraud</div>
+      </div>
+      <div class="uc rv" style="transition-delay:.1s">
+        <div class="uc-num">02</div>
+        <div class="uc-icon">🛒</div>
+        <div class="uc-title">Customer Purchase Propensity</div>
+        <div class="uc-vars">
+          <div class="uc-var"><div class="uc-var-label">Predict</div><div class="uc-var-val">Buy / Not Buy</div></div>
+          <div class="uc-var"><div class="uc-var-label">Using</div><div class="uc-var-val">Past purchases, age, preferences, browsing</div></div>
+        </div>
+        <div class="uc-impact">💡 Lower ad spend, higher conversion — think billions saved in marketing budgets</div>
+      </div>
+      <div class="uc rv" style="transition-delay:.15s">
+        <div class="uc-num">03</div>
+        <div class="uc-icon">🏥</div>
+        <div class="uc-title">Healthcare Risk Prediction</div>
+        <div class="uc-vars">
+          <div class="uc-var"><div class="uc-var-label">Predict</div><div class="uc-var-val">Disease Risk (Yes/No)</div></div>
+          <div class="uc-var"><div class="uc-var-label">Using</div><div class="uc-var-val">Blood pressure, age, genetic history</div></div>
+        </div>
+        <div class="uc-impact">💡 Early intervention saves lives and reduces treatment costs significantly</div>
+      </div>
+      <div class="uc rv" style="transition-delay:.2s">
+        <div class="uc-num">04</div>
+        <div class="uc-icon">📦</div>
+        <div class="uc-title">Supply Chain & Inventory</div>
+        <div class="uc-vars">
+          <div class="uc-var"><div class="uc-var-label">Predict</div><div class="uc-var-val">Product Demand</div></div>
+          <div class="uc-var"><div class="uc-var-label">Using</div><div class="uc-var-val">Season, location, sales history</div></div>
+        </div>
+        <div class="uc-impact">💡 Prevents overstocking and stockouts — directly improves working capital efficiency</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <h3>👉 See Predictive Analytics in Action</h3>
+      <p>Explore a live case study applying classification models, ROC analysis, and propensity scoring to real customer data using Python.</p>
+      <div>
+        <a href="cs-propensity.html" class="btn-c btn-c1">📊 Customer Propensity Case Study</a>
+        <a href="cs-fraud-ml.html" class="btn-c btn-c2">🤖 Fraud Detection using ML</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="analytics.html">Analytics</a><a href="ml.html">ML & Data Science</a><a href="casestudies.html">Case Studies</a><a href="tools.html">Tools</a><a href="blogs.html">Blogs</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

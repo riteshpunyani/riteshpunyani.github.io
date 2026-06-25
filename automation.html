@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Automation Hub — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--green:#10b981;--green2:rgba(16,185,129,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+
+/* HERO */
+.page-hero{min-height:44vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:linear-gradient(135deg,#070c18,#071a12,#070c18);position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(16,185,129,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,.06) 1px,transparent 1px);background-size:45px 45px;}
+.hgl{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(16,185,129,.12),transparent 65%);top:-200px;right:-50px;border-radius:50%;}
+.hgl2{position:absolute;width:350px;height:350px;background:radial-gradient(circle,rgba(201,168,76,.07),transparent 65%);bottom:-100px;left:-50px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;width:100%;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--green2);border:1px solid rgba(16,185,129,.3);color:var(--green);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:.8rem;}
+.ph-title span{background:linear-gradient(135deg,var(--green),#6ee7b7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.95rem;max-width:600px;margin-bottom:1.5rem;}
+.ph-pills{display:flex;gap:.5rem;flex-wrap:wrap;}
+.ph-pill{background:var(--green2);border:1px solid rgba(16,185,129,.2);color:var(--green);font-size:.72rem;padding:.25rem .75rem;border-radius:999px;}
+
+/* STATS */
+.stats-bar{background:var(--navy3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stats-inner{max-width:1160px;margin:auto;display:flex;padding:0 2rem;}
+.sbi{flex:1;padding:1.2rem 1rem;text-align:center;border-right:1px solid var(--border);}
+.sbi:last-child{border-right:none;}
+.sbi-val{font-size:1.6rem;font-weight:900;color:var(--green);}
+.sbi-label{font-size:.68rem;color:var(--muted);margin-top:.15rem;}
+
+/* SECTIONS */
+section{padding:4.5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--green);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--green);display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.88rem;max-width:560px;margin-bottom:2.5rem;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+
+/* DOMAINS GRID */
+#domains{background:var(--navy2);}
+.domain-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.3rem;}
+.dc{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .25s,border-color .25s,box-shadow .25s;display:block;}
+.dc:hover{transform:translateY(-5px);border-color:rgba(16,185,129,.3);box-shadow:0 14px 36px rgba(0,0,0,.45);}
+.dc-top{height:4px;background:linear-gradient(90deg,var(--green),#6ee7b7);}
+.dc-body{padding:1.5rem;}
+.dc-header{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;}
+.dc-icon{font-size:1.8rem;}
+.dc-title{font-weight:700;font-size:.96rem;}
+.dc-sub{color:var(--muted);font-size:.76rem;margin-top:.1rem;}
+.dc-items{list-style:none;}
+.dc-items li{color:var(--muted);font-size:.8rem;padding:.28rem 0;border-bottom:1px solid rgba(255,255,255,.03);display:flex;align-items:flex-start;gap:.5rem;}
+.dc-items li:last-child{border:none;}
+.dc-items li::before{content:'→';color:var(--green);flex-shrink:0;font-size:.75rem;margin-top:.1rem;}
+.dc-footer{margin-top:.9rem;padding-top:.8rem;border-top:1px solid var(--border);font-size:.72rem;color:var(--green);display:flex;align-items:center;gap:.3rem;}
+
+/* N8N */
+#n8n{background:var(--navy);}
+.n8n-box{background:linear-gradient(135deg,rgba(16,185,129,.1),rgba(201,168,76,.06));border:1px solid rgba(16,185,129,.2);border-radius:16px;padding:3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.n8n-left h3{font-size:1.4rem;font-weight:800;margin-bottom:.6rem;}
+.n8n-left p{color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:1rem;}
+.n8n-steps{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.n8n-step{display:flex;align-items:flex-start;gap:.8rem;background:var(--card);border:1px solid var(--border);border-radius:9px;padding:.85rem 1rem;}
+.n8n-step-num{background:var(--green2);color:var(--green);font-size:.7rem;font-weight:800;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(16,185,129,.3);}
+.n8n-step-text{color:var(--muted);font-size:.82rem;line-height:1.5;}
+.n8n-step-text strong{color:var(--text);}
+.btn-n8n{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;background:linear-gradient(135deg,var(--green),#6ee7b7);color:#070c18;padding:.7rem 1.6rem;border-radius:8px;font-weight:700;font-size:.86rem;text-decoration:none;transition:all .22s;}
+.btn-n8n:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,185,129,.3);}
+
+/* WHY */
+#why{background:var(--navy2);}
+.why-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:14px;overflow:hidden;}
+.wi{background:var(--card);padding:2rem;text-align:center;transition:background .22s;}
+.wi:hover{background:var(--navy3);}
+.wi-icon{font-size:2rem;margin-bottom:.7rem;}
+.wi-title{font-weight:700;font-size:.92rem;margin-bottom:.4rem;}
+.wi-desc{color:var(--muted);font-size:.8rem;line-height:1.6;}
+
+/* AI BOOST */
+#aiboost{background:var(--navy);}
+.ai-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;}
+.ai-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.3rem;transition:border-color .22s,transform .22s;}
+.ai-card:hover{border-color:rgba(16,185,129,.3);transform:translateY(-3px);}
+.ai-icon{font-size:1.5rem;margin-bottom:.6rem;}
+.ai-title{font-weight:700;font-size:.88rem;margin-bottom:.3rem;}
+.ai-desc{color:var(--muted);font-size:.8rem;line-height:1.55;}
+.ai-example{margin-top:.7rem;background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.15);border-radius:6px;padding:.55rem .8rem;font-size:.75rem;color:#6ee7b7;font-style:italic;}
+
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+
+@media(max-width:760px){
+  .n8n-box,.why-row{grid-template-columns:1fr;}
+  .stats-inner{flex-wrap:wrap;}
+  .sbi{min-width:50%;border-bottom:1px solid var(--border);}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="automation.html" class="active">Automation</a></li>
+      <li><a href="prompts.html">Prompting</a></li>
+      <li><a href="predictive.html">Predictive</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="casestudies.html">Case Studies</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div><div class="hgl2"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">⚙️ Automation Hub</div>
+    <h1 class="ph-title">Work Smarter,<br><span>Not Harder</span></h1>
+    <p class="ph-sub">A one-stop library of automation tools spanning 6 domains — from Excel macros to AI copilots. Discover practical ways to save time, cut errors, and simplify your workday.</p>
+    <div class="ph-pills">
+      <span class="ph-pill">MS Office</span><span class="ph-pill">Desktop</span><span class="ph-pill">Browser</span><span class="ph-pill">Mobile</span><span class="ph-pill">Cloud</span><span class="ph-pill">AI Copilots</span>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="sbi"><div class="sbi-val">6</div><div class="sbi-label">Automation Domains</div></div>
+    <div class="sbi"><div class="sbi-val">20+</div><div class="sbi-label">Tools Covered</div></div>
+    <div class="sbi"><div class="sbi-val">∞</div><div class="sbi-label">Hours Saved Potential</div></div>
+    <div class="sbi"><div class="sbi-val">0</div><div class="sbi-label">Coding Background Needed</div></div>
+  </div>
+</div>
+
+<section id="domains">
+  <div class="wrap">
+    <div class="rv"><div class="stag">6 Domains</div><h2 class="sh">Automation Domains</h2><p class="ss">Click any domain to explore tools, tutorials, and use cases in detail.</p></div>
+    <div class="domain-grid">
+      <a class="dc rv" href="automation-office.html" style="transition-delay:.05s">
+        <div class="dc-top"></div>
+        <div class="dc-body">
+          <div class="dc-header"><div class="dc-icon">📊</div><div><div class="dc-title">MS Office &amp; Automation</div><div class="dc-sub">Work smarter in Excel and related tools</div></div></div>
+          <ul class="dc-items">
+            <li>Excel Formulae — dynamic solutions without coding</li>
+            <li>Excel Macros &amp; VBA — automate repetitive workflows</li>
+            <li>Power Query (M Code) — transform &amp; merge datasets</li>
+            <li>Power BI &amp; DAX — automated dashboards &amp; KPIs</li>
+            <li>Python in Excel — data science inside spreadsheets</li>
+          </ul>
+          <div class="dc-footer">🤖 AI Boost: GPT generates formulas, DAX &amp; VBA on demand → Explore</div>
+        </div>
+      </a>
+      <a class="dc rv" href="automation-desktop.html" style="transition-delay:.1s">
+        <div class="dc-top"></div>
+        <div class="dc-body">
+          <div class="dc-header"><div class="dc-icon">🖥️</div><div><div class="dc-title">Windows &amp; Desktop Automation</div><div class="dc-sub">Simplify repetitive desktop actions</div></div></div>
+          <ul class="dc-items">
+            <li>PowerShell — command-line superpower for professionals</li>
+            <li>AutoHotkey — custom keyboard shortcuts &amp; macros</li>
+            <li>RPA Tools — workflows that click &amp; act like you do</li>
+            <li>Power Automate — Outlook, Excel, Teams workflows</li>
+            <li>Portable Apps — automation without installation</li>
+          </ul>
+          <div class="dc-footer">🤖 AI Boost: GPT writes AutoHotkey &amp; PowerShell scripts → Explore</div>
+        </div>
+      </a>
+      <a class="dc rv" href="automation-browser.html" style="transition-delay:.15s">
+        <div class="dc-top"></div>
+        <div class="dc-body">
+          <div class="dc-header"><div class="dc-icon">🌐</div><div><div class="dc-title">Browser &amp; Web Automation</div><div class="dc-sub">Control online workflows in your browser</div></div></div>
+          <ul class="dc-items">
+            <li>Chrome Extensions — auto-fill, capture data, schedule actions</li>
+            <li>Tampermonkey — run custom JavaScript on webpages</li>
+            <li>Webhooks — trigger cross-app workflows from browser</li>
+            <li>Agentic Browsers — get work done in plain language</li>
+            <li>Webalert XP — instant alerts for webpage updates</li>
+          </ul>
+          <div class="dc-footer">🤖 AI Boost: GPT generates Tampermonkey scripts instantly → Explore</div>
+        </div>
+      </a>
+      <a class="dc rv" href="automation-mobile.html" style="transition-delay:.2s">
+        <div class="dc-top"></div>
+        <div class="dc-body">
+          <div class="dc-header"><div class="dc-icon">📱</div><div><div class="dc-title">Mobile Automation</div><div class="dc-sub">Automate everyday smartphone tasks</div></div></div>
+          <ul class="dc-items">
+            <li>Tasker / Automate / Macroid — create smart rules</li>
+            <li>IFTTT — connect apps, devices &amp; workflows</li>
+            <li>Samsung Bixby / Flow / Routines — device automation</li>
+            <li>Smart Things — smart home &amp; IoT automation</li>
+          </ul>
+          <div class="dc-footer">🤖 AI Boost: GPT generates Tasker tasks from plain language → Explore</div>
+        </div>
+      </a>
+      <a class="dc rv" href="automation-cloud.html" style="transition-delay:.25s">
+        <div class="dc-top"></div>
+        <div class="dc-body">
+          <div class="dc-header"><div class="dc-icon">☁️</div><div><div class="dc-title">Cloud &amp; Integration Platforms</div><div class="dc-sub">Connect services &amp; data across platforms</div></div></div>
+          <ul class="dc-items">
+            <li>Zapier — automate workflows across 5,000+ apps</li>
+            <li>Make.com (Integromat) — AI-enabled workflow builder</li>
+            <li>n8n — open-source automation &amp; AI agent design</li>
+            <li>MultCloud / FolderSync — sync files across cloud platforms</li>
+          </ul>
+          <div class="dc-footer">🤖 AI Boost: GPT drafts workflow recipes in plain English → Explore</div>
+        </div>
+      </a>
+      <a class="dc rv" href="automation-ai.html" style="transition-delay:.3s">
+        <div class="dc-top"></div>
+        <div class="dc-body">
+          <div class="dc-header"><div class="dc-icon">🧠</div><div><div class="dc-title">AI &amp; Copilots</div><div class="dc-sub">Harness AI for writing, analysis &amp; creativity</div></div></div>
+          <ul class="dc-items">
+            <li>ChatGPT / Claude / Gemini / Copilot / DeepSeek</li>
+            <li>Replit AI / CrewAI / n8n AI — build AI agents</li>
+            <li>Adobe Firefly — generate images from text prompts</li>
+            <li>hcompany AI — live AI agent tools</li>
+          </ul>
+          <div class="dc-footer">🤖 AI copilots cut thinking time &amp; simplify problem-solving → Explore</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Why Automate</div><h2 class="sh">Why This Matters</h2><p class="ss">Automation is not about replacing jobs — it's about reclaiming time.</p></div>
+    <div class="why-row rv">
+      <div class="wi"><div class="wi-icon">⏱️</div><div class="wi-title">Save Time</div><div class="wi-desc">Eliminate repetitive tasks that consume hours every week. One automation can save you hundreds of hours annually.</div></div>
+      <div class="wi"><div class="wi-icon">✅</div><div class="wi-title">Reduce Errors</div><div class="wi-desc">Manual processes introduce human error. Automation runs the same logic perfectly every time.</div></div>
+      <div class="wi"><div class="wi-icon">🧠</div><div class="wi-title">Focus on Strategy</div><div class="wi-desc">Free your brain from repetitive tasks so you can focus on strategy, creativity, and problem-solving.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="n8n">
+  <div class="wrap">
+    <div class="n8n-box rv">
+      <div class="n8n-left">
+        <div class="stag" style="margin-bottom:.5rem;">Featured</div>
+        <h3>⚙️ Free Lifetime n8n Automation</h3>
+        <p>n8n is a powerful open-source automation platform — think Zapier, but free forever and far more customizable. Build workflows that connect apps, trigger AI agents, and automate complex multi-step processes without a single line of code.</p>
+        <a href="n8n.html" class="btn-n8n">Explore n8n Guides →</a>
+      </div>
+      <div>
+        <ul class="n8n-steps">
+          <li class="n8n-step"><div class="n8n-step-num">1</div><div class="n8n-step-text"><strong>Install free forever</strong> — self-host on your own machine or use n8n Cloud free tier</div></li>
+          <li class="n8n-step"><div class="n8n-step-num">2</div><div class="n8n-step-text"><strong>Connect your apps</strong> — 400+ integrations including Gmail, Sheets, Slack, OpenAI</div></li>
+          <li class="n8n-step"><div class="n8n-step-num">3</div><div class="n8n-step-text"><strong>Build workflows visually</strong> — drag-and-drop nodes, no coding required</div></li>
+          <li class="n8n-step"><div class="n8n-step-num">4</div><div class="n8n-step-text"><strong>Add AI agents</strong> — embed GPT into your workflows for intelligent automation</div></li>
+          <li class="n8n-step"><div class="n8n-step-num">5</div><div class="n8n-step-text"><strong>Run 24/7</strong> — workflows execute automatically, even while you sleep</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aiboost">
+  <div class="wrap">
+    <div class="rv"><div class="stag">AI Boost</div><h2 class="sh">AI-Powered Automation Examples</h2><p class="ss">Every automation domain gets supercharged with AI. Here's how.</p></div>
+    <div class="ai-grid">
+      <div class="ai-card rv" style="transition-delay:.05s"><div class="ai-icon">📊</div><div class="ai-title">Excel / VBA</div><div class="ai-desc">Generate complex formulas and VBA macros from plain English descriptions.</div><div class="ai-example">"Write a VBA macro that formats my monthly compliance report in one click."</div></div>
+      <div class="ai-card rv" style="transition-delay:.1s"><div class="ai-icon">🌐</div><div class="ai-title">Browser Scripts</div><div class="ai-desc">Create Tampermonkey scripts to automate repetitive browser tasks.</div><div class="ai-example">"Auto-skip YouTube ads and save article text to Notion."</div></div>
+      <div class="ai-card rv" style="transition-delay:.15s"><div class="ai-icon">☁️</div><div class="ai-title">Cloud Workflows</div><div class="ai-desc">Draft Zapier / Make / n8n workflow recipes from plain language prompts.</div><div class="ai-example">"When file added in Dropbox, copy to OneDrive and alert me on Teams."</div></div>
+      <div class="ai-card rv" style="transition-delay:.2s"><div class="ai-icon">📱</div><div class="ai-title">Mobile Rules</div><div class="ai-desc">Generate ready-to-import Tasker tasks from natural language instructions.</div><div class="ai-example">"Turn Wi-Fi off when I leave home, on when I arrive at office."</div></div>
+      <div class="ai-card rv" style="transition-delay:.25s"><div class="ai-icon">🖥️</div><div class="ai-title">Desktop Scripts</div><div class="ai-desc">Write AutoHotkey or PowerShell scripts for Windows automation.</div><div class="ai-example">"Insert today's date and my signature when I press F5."</div></div>
+      <div class="ai-card rv" style="transition-delay:.3s"><div class="ai-icon">🐍</div><div class="ai-title">Python in Excel</div><div class="ai-desc">Generate ready-to-run Python scripts for analytics inside Excel cells.</div><div class="ai-example">"Analyse this dataset for anomalies and plot a Benford's Law chart."</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="portfolio.html">Portfolio</a><a href="analytics.html">Analytics</a><a href="prompts.html">Prompting</a><a href="tools.html">Tools</a><a href="casestudies.html">Case Studies</a><a href="blogs.html">Blogs</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

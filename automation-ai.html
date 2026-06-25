@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>AI & Copilots — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--green:#10b981;--green2:rgba(16,185,129,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+.breadcrumb{padding:4.5rem 2rem 0;max-width:1160px;margin:auto;}
+.bc-inner{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted);}
+.bc-inner a{color:var(--muted);text-decoration:none;}
+.bc-inner a:hover{color:var(--gold);}
+.bc-sep{opacity:.4;}
+.bc-current{color:var(--green);}
+.page-hero{padding:2rem 2rem 3.5rem;position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(16,185,129,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,.05) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+.hgl{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(16,185,129,.1),transparent 65%);top:-150px;right:-100px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--green2);border:1px solid rgba(16,185,129,.3);color:var(--green);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.1;margin-bottom:.6rem;}
+.ph-title span{background:linear-gradient(135deg,var(--green),#6ee7b7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.92rem;max-width:620px;}
+section{padding:3.5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--green);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--green);display:inline-block;}
+h2.sh{font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.88rem;max-width:560px;margin-bottom:2.5rem;}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .55s,transform .55s;}
+.rv.up{opacity:1;transform:none;}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.2rem;}
+.tc{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .22s,border-color .22s;}
+.tc:hover{transform:translateY(-4px);border-color:rgba(16,185,129,.3);}
+.tc-top{height:3px;background:linear-gradient(90deg,var(--green),#6ee7b7);}
+.tc-body{padding:1.5rem;}
+.tc-num{font-size:.68rem;color:var(--green);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:.3rem;}
+.tc-icon{font-size:1.8rem;margin-bottom:.6rem;}
+.tc-title{font-weight:700;font-size:.96rem;margin-bottom:.5rem;}
+.tc-desc{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:.8rem;}
+.tc-uses{list-style:none;margin-bottom:.9rem;}
+.tc-uses li{color:var(--muted);font-size:.79rem;padding:.25rem 0;display:flex;align-items:flex-start;gap:.5rem;border-bottom:1px solid rgba(255,255,255,.03);}
+.tc-uses li:last-child{border:none;}
+.tc-uses li::before{content:'→';color:var(--green);flex-shrink:0;font-size:.75rem;}
+.tc-tip{background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.15);border-radius:6px;padding:.55rem .8rem;font-size:.75rem;color:#6ee7b7;margin-bottom:.6rem;}
+.tc-tip strong{color:var(--green);}
+.tc-why{font-size:.77rem;color:var(--muted);background:var(--navy3);border-radius:6px;padding:.45rem .7rem;}
+.summary-box{background:linear-gradient(135deg,var(--green2),rgba(201,168,76,.06));border:1px solid rgba(16,185,129,.2);border-radius:14px;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:2rem;}
+.sum-text h3{font-size:1.05rem;font-weight:800;margin-bottom:.3rem;}
+.sum-text p{color:var(--muted);font-size:.84rem;max-width:500px;}
+.btn-back{display:inline-flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,var(--green),#6ee7b7);color:#04120a;padding:.65rem 1.4rem;border-radius:8px;font-weight:700;font-size:.84rem;text-decoration:none;}
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;}
+.footer-links a:hover{color:var(--gold);}
+@media(max-width:760px){
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="automation.html" class="active">Automation Hub</a></li>
+      <li><a href="prompts.html">Prompting</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <div class="bc-inner"><a href="index.html">Home</a><span class="bc-sep">›</span><a href="automation.html">Automation Hub</a><span class="bc-sep">›</span><span class="bc-current">AI & Copilots</span></div>
+</div>
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">🤖 AI & Copilots</div>
+    <h1 class="ph-title">Your Digital <span>Productivity Partners</span></h1>
+    <p class="ph-sub">AI is no longer futuristic — it's already here, helping professionals write smarter, analyse faster, and automate complex tasks. These tools handle tasks that used to take hours in just minutes.</p>
+  </div>
+</div>
+<section>
+  <div class="wrap">
+    <div class="rv"><div class="stag">7 AI Tools</div><h2 class="sh">AI Copilots & Assistants</h2><p class="ss">From general-purpose chatbots to specialised AI agents — the tools reshaping how professionals work.</p></div>
+    <div class="tools-grid">
+      <div class="tc rv" style="transition-delay:.04s"><div class="tc-top"></div><div class="tc-body"><div class="tc-num">Copilot 01</div><div class="tc-icon">💬</div><div class="tc-title">ChatGPT (OpenAI)</div><div class="tc-desc">The world's most popular AI — helps with writing, coding, analysis, summarisation, and idea generation.</div><ul class="tc-uses"><li>Write professional emails or LinkedIn posts in seconds</li><li>Generate Excel formulas, VBA scripts, or Python code</li><li>Summarise long reports, contracts, or meeting notes</li></ul><div class="tc-tip"><strong>💡 Pro Tip:</strong> "Explain this Excel error in simple terms" or "Draft a compliance report introduction." No technical background needed.</div><div class="tc-why"><strong>✅ Why it matters:</strong> Saves time across almost every knowledge-based task.</div></div></div>
+      <div class="tc rv" style="transition-delay:.08s"><div class="tc-top"></div><div class="tc-body"><div class="tc-num">Copilot 02</div><div class="tc-icon">🪄</div><div class="tc-title">Microsoft Copilot</div><div class="tc-desc">AI built directly into Word, Excel, Outlook, and PowerPoint — no switching apps, no copy-paste.</div><ul class="tc-uses"><li>Summarise hundreds of unread Outlook emails</li><li>Generate data insights and charts directly inside Excel</li><li>Turn bullet points into a polished PowerPoint presentation</li></ul><div class="tc-tip"><strong>✨ AI Magic:</strong> Think of Copilot as ChatGPT living inside your Office tools — always available, always contextual.</div><div class="tc-why"><strong>✅ Why it matters:</strong> Enhances the tools you already use daily — zero friction.</div></div></div>
+      <div class="tc rv" style="transition-delay:.12s"><div class="tc-top"></div><div class="tc-body"><div class="tc-num">Copilot 03</div><div class="tc-icon">🦉</div><div class="tc-title">Claude (Anthropic)</div><div class="tc-desc">An AI focused on safety, context, and deep analysis — particularly strong for long documents and professional writing.</div><ul class="tc-uses"><li>Analyse 50–100+ page compliance documents</li><li>Brainstorm ethical frameworks for AI adoption</li><li>Write policies or training content with clarity</li></ul><div class="tc-tip"><strong>💡 Best for:</strong> Complex documents, sensitive contexts, and structured professional outputs.</div><div class="tc-why"><strong>✅ Why it matters:</strong> The preferred choice for compliance, governance, and long-form analysis.</div></div></div>
+      <div class="tc rv" style="transition-delay:.16s"><div class="tc-top"></div><div class="tc-body"><div class="tc-num">Copilot 04</div><div class="tc-icon">🌐</div><div class="tc-title">Gemini (Google)</div><div class="tc-desc">Google's AI integrated with Search, Gmail, and Google Docs — combines real-time Google Search with AI reasoning.</div><ul class="tc-uses"><li>Research new regulations or fraud case studies with live data</li><li>Draft responses inside Gmail as you read emails</li><li>Analyse trends by combining Google Sheets + Gemini</li></ul><div class="tc-tip"><strong>🚀 Best for:</strong> Research that requires current, up-to-date information.</div><div class="tc-why"><strong>✅ Why it matters:</strong> Real-time search + AI reasoning = excellent for fast research workflows.</div></div></div>
+      <div class="tc rv" style="transition-delay:.20s"><div class="tc-top"></div><div class="tc-body"><div class="tc-num">Copilot 05</div><div class="tc-icon">👥</div><div class="tc-title">CrewAI & AI Agents</div><div class="tc-desc">Teams of AI "agents" working together — one extracts, one analyses, one delivers. True workflow automation beyond chatbots.</div><ul class="tc-uses"><li>One AI extracts fraud news, another summarises, another emails you the digest</li><li>Build specialised AI assistants for compliance and ethics workflows</li><li>Multi-agent research and document processing pipelines</li></ul><div class="tc-tip"><strong>🔧 Tools:</strong> CrewAI · n8n AI · Make.com AI · Replit AI Agent</div><div class="tc-why"><strong>✅ Why it matters:</strong> Enables true end-to-end workflow automation.</div></div></div>
+      <div class="tc rv" style="transition-delay:.24s"><div class="tc-top"></div><div class="tc-body"><div class="tc-num">Copilot 06</div><div class="tc-icon">🎨</div><div class="tc-title">Adobe Firefly</div><div class="tc-desc">Generate high-quality visuals and graphics from text prompts — perfect for presentations, infographics, and compliance reports.</div><ul class="tc-uses"><li>Generate professional images for presentations from a text description</li><li>Create text effects and branded visuals instantly</li><li>Design infographics without a designer</li></ul><div class="tc-tip"><strong>💡 Example:</strong> "Create a professional blue-toned infographic about fraud risk in procurement."</div><div class="tc-why"><strong>✅ Why it matters:</strong> Makes every professional a visual designer.</div></div></div>
+      <div class="tc rv" style="transition-delay:.28s"><div class="tc-top"></div><div class="tc-body"><div class="tc-num">Copilot 07</div><div class="tc-icon">🔍</div><div class="tc-title">DeepSeek & Perplexity</div><div class="tc-desc">Research-focused AI tools — ideal for digging deep into niche topics and getting cited, source-backed answers.</div><ul class="tc-uses"><li>DeepSeek: Deep research into niche technical or regulatory topics</li><li>Perplexity: AI-powered search with source citations</li><li>Both: Fact-checking and regulatory research with references</li></ul><div class="tc-tip"><strong>💡 Best for:</strong> When you need accurate, sourced, verifiable research — not just AI-generated answers.</div><div class="tc-why"><strong>✅ Why it matters:</strong> Reliable research with accountability — essential for compliance work.</div></div></div>
+    </div>
+    <div class="summary-box rv"><div class="sum-text"><h3>🚀 AI Copilots Multiply Efficiency</h3><p>AI isn't replacing professionals — it's multiplying our efficiency. By integrating these tools into your workflow, you become a forward-thinking professional who blends ethics + AI + automation.</p></div><a href="automation.html" class="btn-back">← Back to Automation Hub</a></div>
+  </div>
+</section>
+<footer>
+  <div class="footer-links"><a href="index.html">Home</a><a href="automation.html">Automation Hub</a><a href="automation-cloud.html">Cloud</a><a href="automation-mobile.html">Mobile</a><a href="prompts.html">Prompting</a><a href="contact.html">Contact</a></div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

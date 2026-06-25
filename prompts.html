@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Prompt Engineering — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--purple:#8b5cf6;--purple2:rgba(139,92,246,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--purple);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+
+/* HERO */
+.page-hero{min-height:44vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:linear-gradient(135deg,#070c18,#0d0718,#070c18);position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(139,92,246,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.06) 1px,transparent 1px);background-size:45px 45px;}
+.hgl{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(139,92,246,.14),transparent 65%);top:-200px;right:-100px;border-radius:50%;}
+.hgl2{position:absolute;width:350px;height:350px;background:radial-gradient(circle,rgba(201,168,76,.07),transparent 65%);bottom:-100px;left:-50px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;width:100%;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--purple2);border:1px solid rgba(139,92,246,.3);color:#c4b5fd;font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:.8rem;}
+.ph-title span{background:linear-gradient(135deg,var(--purple),#c4b5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.95rem;max-width:600px;margin-bottom:1.5rem;}
+.ph-gigo{display:inline-flex;align-items:center;gap:.7rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:10px;padding:.9rem 1.2rem;}
+.ph-gigo-text{color:var(--muted);font-size:.84rem;line-height:1.6;}
+.ph-gigo-text strong{color:var(--gold);}
+
+/* STATS */
+.stats-bar{background:var(--navy3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stats-inner{max-width:1160px;margin:auto;display:flex;padding:0 2rem;}
+.sbi{flex:1;padding:1.2rem 1rem;text-align:center;border-right:1px solid var(--border);}
+.sbi:last-child{border-right:none;}
+.sbi-val{font-size:1.6rem;font-weight:900;color:var(--purple);}
+.sbi-label{font-size:.68rem;color:var(--muted);margin-top:.15rem;}
+
+section{padding:4.5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--purple);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--purple);display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.88rem;max-width:560px;margin-bottom:2.5rem;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+
+/* ESSENTIALS */
+#essentials{background:var(--navy2);}
+.ess-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;}
+.esc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color .22s,transform .22s;position:relative;overflow:hidden;}
+.esc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple),#c4b5fd);transform:scaleX(0);transition:transform .3s;}
+.esc:hover{border-color:rgba(139,92,246,.3);transform:translateY(-4px);}
+.esc:hover::before{transform:scaleX(1);}
+.esc-num{font-size:.68rem;font-weight:700;color:var(--purple);letter-spacing:1px;text-transform:uppercase;margin-bottom:.5rem;}
+.esc-title{font-weight:700;font-size:.95rem;margin-bottom:.5rem;}
+.esc-desc{color:var(--muted);font-size:.82rem;line-height:1.6;}
+.esc-example{margin-top:.8rem;background:var(--purple2);border:1px solid rgba(139,92,246,.2);border-radius:6px;padding:.6rem .8rem;font-size:.75rem;color:#c4b5fd;font-style:italic;}
+
+/* TECHNIQUES */
+#techniques{background:var(--navy);}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem;}
+.tc{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .22s,transform .22s;}
+.tc:hover{border-color:rgba(139,92,246,.3);transform:translateY(-4px);}
+.tc-top{height:3px;background:linear-gradient(90deg,var(--purple),#c4b5fd);}
+.tc-body{padding:1.4rem;}
+.tc-icon{font-size:1.8rem;margin-bottom:.7rem;}
+.tc-title{font-weight:700;font-size:.95rem;margin-bottom:.4rem;}
+.tc-desc{color:var(--muted);font-size:.82rem;line-height:1.6;}
+.tc-use{margin-top:.7rem;font-size:.76rem;color:#c4b5fd;background:var(--purple2);border-radius:6px;padding:.45rem .7rem;}
+
+/* HACKS */
+#hacks{background:var(--navy2);}
+.hacks-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.hack{background:linear-gradient(135deg,var(--navy3),var(--card));border:1px solid rgba(139,92,246,.2);border-radius:14px;padding:1.8rem;transition:transform .22s,border-color .22s;}
+.hack:hover{transform:translateY(-4px);border-color:rgba(139,92,246,.35);}
+.hack-header{display:flex;align-items:center;gap:.8rem;margin-bottom:.9rem;}
+.hack-num{width:32px;height:32px;background:var(--purple2);border:1px solid rgba(139,92,246,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;color:#c4b5fd;flex-shrink:0;}
+.hack-icon{font-size:1.5rem;}
+.hack-title{font-weight:700;font-size:.95rem;}
+.hack-desc{color:var(--muted);font-size:.84rem;line-height:1.65;margin-bottom:.9rem;}
+.hack-steps{list-style:none;display:flex;flex-direction:column;gap:.4rem;}
+.hack-steps li{color:var(--muted);font-size:.8rem;display:flex;align-items:flex-start;gap:.5rem;}
+.hack-steps li::before{content:'→';color:var(--purple);flex-shrink:0;}
+.hack-benefit{margin-top:.9rem;background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.15);border-radius:6px;padding:.55rem .8rem;font-size:.76rem;color:#6ee7b7;}
+
+/* PROMPT LIBRARY */
+#library{background:var(--navy);}
+.lib-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;}
+.lc{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.2rem;transition:border-color .22s,transform .22s;}
+.lc:hover{border-color:rgba(139,92,246,.3);transform:translateY(-3px);}
+.lc-icon{font-size:1.3rem;margin-bottom:.5rem;}
+.lc-title{font-weight:700;font-size:.88rem;margin-bottom:.3rem;}
+.lc-desc{color:var(--muted);font-size:.79rem;line-height:1.55;}
+.lib-cta{background:linear-gradient(135deg,var(--purple2),rgba(201,168,76,.06));border:1px solid rgba(139,92,246,.2);border-radius:14px;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:2rem;}
+.lib-cta-text h3{font-size:1.1rem;font-weight:800;margin-bottom:.4rem;}
+.lib-cta-text p{color:var(--muted);font-size:.85rem;}
+.lib-btns{display:flex;gap:.8rem;flex-wrap:wrap;}
+.btn-p{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.3rem;border-radius:8px;font-weight:700;font-size:.83rem;text-decoration:none;transition:all .22s;}
+.btn-p1{background:linear-gradient(135deg,var(--purple),#c4b5fd);color:#07111a;}
+.btn-p1:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(139,92,246,.3);}
+.btn-p2{border:1px solid rgba(139,92,246,.3);color:#c4b5fd;}
+.btn-p2:hover{background:var(--purple2);}
+
+/* GUIDELINES */
+#guidelines{background:var(--navy2);}
+.gl-row{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+.gl-list{list-style:none;display:flex;flex-direction:column;gap:.7rem;}
+.gl-item{display:flex;align-items:flex-start;gap:.8rem;padding:1rem;background:var(--card);border:1px solid var(--border);border-radius:10px;transition:border-color .2s;}
+.gl-item:hover{border-color:rgba(139,92,246,.25);}
+.gl-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem;}
+.gl-text{font-size:.83rem;color:var(--muted);line-height:1.55;}
+.gl-text strong{color:var(--text);}
+.final-quote{background:linear-gradient(135deg,var(--purple2),rgba(201,168,76,.06));border:1px solid rgba(139,92,246,.2);border-radius:14px;padding:2rem 2.5rem;font-style:italic;color:var(--muted);font-size:.92rem;line-height:1.8;}
+.final-quote strong{color:#c4b5fd;}
+
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+@media(max-width:760px){
+  .hacks-grid,.gl-row{grid-template-columns:1fr;}
+  .stats-inner{flex-wrap:wrap;}
+  .sbi{min-width:50%;border-bottom:1px solid var(--border);}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="automation.html">Automation</a></li>
+      <li><a href="prompts.html" class="active">Prompting</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="casestudies.html">Case Studies</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div><div class="hgl2"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">💬 Prompt Engineering</div>
+    <h1 class="ph-title">The Art of<br><span>Talking to AI</span></h1>
+    <p class="ph-sub">AI models are powerful, but their effectiveness depends entirely on how you talk to them. The way you frame a request determines the quality of the answer.</p>
+    <div class="ph-gigo">
+      <div style="font-size:1.5rem">⚡</div>
+      <div class="ph-gigo-text"><strong>GIGO principle:</strong> A vague prompt = vague, generic answer. A precise, structured prompt = accurate, tailored, professional result. <strong>Prompting is a skill — and it's learnable.</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="sbi"><div class="sbi-val">5</div><div class="sbi-label">Core Techniques</div></div>
+    <div class="sbi"><div class="sbi-val">2</div><div class="sbi-label">Advanced Hacks</div></div>
+    <div class="sbi"><div class="sbi-val">16+</div><div class="sbi-label">Prompt Templates</div></div>
+    <div class="sbi"><div class="sbi-val">∞</div><div class="sbi-label">Time Saved Potential</div></div>
+  </div>
+</div>
+
+<!-- ESSENTIALS -->
+<section id="essentials">
+  <div class="wrap">
+    <div class="rv"><div class="stag">The Basics</div><h2 class="sh">Essentials of a Good Prompt</h2><p class="ss">Five building blocks that turn an average prompt into a professional, reliable one.</p></div>
+    <div class="ess-grid">
+      <div class="esc rv" style="transition-delay:.05s">
+        <div class="esc-num">Essential 01</div>
+        <div class="esc-title">🎯 Clarity</div>
+        <div class="esc-desc">Be specific in your request. The more precise your instruction, the more targeted the output.</div>
+        <div class="esc-example">❌ "Write me a report." → ✅ "Draft a 500-word compliance report for senior management with: background, findings, risks, and recommendations."</div>
+      </div>
+      <div class="esc rv" style="transition-delay:.1s">
+        <div class="esc-num">Essential 02</div>
+        <div class="esc-title">🌍 Context</div>
+        <div class="esc-desc">Provide background, assumptions, and environment so AI can tailor its response appropriately.</div>
+        <div class="esc-example">"Assume Indian corporate regulations, professional communication standards, and a Big4 consulting context."</div>
+      </div>
+      <div class="esc rv" style="transition-delay:.15s">
+        <div class="esc-num">Essential 03</div>
+        <div class="esc-title">🔒 Constraints</div>
+        <div class="esc-desc">Add limits — word count, tone, format — to keep outputs focused and usable.</div>
+        <div class="esc-example">"Keep it under 200 words, bullet points only, formal tone, no jargon."</div>
+      </div>
+      <div class="esc rv" style="transition-delay:.2s">
+        <div class="esc-num">Essential 04</div>
+        <div class="esc-title">👤 Role Assignment</div>
+        <div class="esc-desc">Tell AI who it should be. Assigning a role dramatically improves response quality and relevance.</div>
+        <div class="esc-example">"You are a Senior Fraud Investigator with 20 years of experience. Draft a case summary for..."</div>
+      </div>
+      <div class="esc rv" style="transition-delay:.25s">
+        <div class="esc-num">Essential 05</div>
+        <div class="esc-title">🔄 Iteration</div>
+        <div class="esc-desc">Refine by asking follow-ups — just like you would with a colleague. Great outputs rarely come from a single prompt.</div>
+        <div class="esc-example">"Make it more concise." / "Add a risk section." / "Rewrite in a more formal tone."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNIQUES -->
+<section id="techniques">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Techniques</div><h2 class="sh">Prompting Techniques</h2><p class="ss">Advanced methods used by professionals to consistently get reliable, high-quality AI outputs.</p></div>
+    <div class="tech-grid">
+      <div class="tc rv" style="transition-delay:.05s">
+        <div class="tc-top"></div>
+        <div class="tc-body">
+          <div class="tc-icon">🎛️</div>
+          <div class="tc-title">Master Prompt</div>
+          <div class="tc-desc">A single, reusable prompt that captures your style, rules, and preferences — your personal AI operating system. Set it once, use it every session.</div>
+          <div class="tc-use">💡 "You are my productivity co-pilot. Always respond with clarity and professionalism. Use Indian business context. Ask clarifying questions if my request is vague."</div>
+        </div>
+      </div>
+      <div class="tc rv" style="transition-delay:.1s">
+        <div class="tc-top"></div>
+        <div class="tc-body">
+          <div class="tc-icon">🧾</div>
+          <div class="tc-title">System Prompt</div>
+          <div class="tc-desc">Instructions that guide AI behaviour behind the scenes. Use when you want consistency and guardrails across an entire session.</div>
+          <div class="tc-use">💡 "Always act as an Ethics & Compliance advisor. Never fabricate data. Prioritize accuracy over creativity."</div>
+        </div>
+      </div>
+      <div class="tc rv" style="transition-delay:.15s">
+        <div class="tc-top"></div>
+        <div class="tc-body">
+          <div class="tc-icon">📚</div>
+          <div class="tc-title">Few-Shot Prompting</div>
+          <div class="tc-desc">Provide 2–3 examples of Q&A before your real question. This trains the model on-the-fly to match your expected format and style.</div>
+          <div class="tc-use">💡 Give AI examples of the output you want, then ask it to produce the real one in the same pattern.</div>
+        </div>
+      </div>
+      <div class="tc rv" style="transition-delay:.2s">
+        <div class="tc-top"></div>
+        <div class="tc-body">
+          <div class="tc-icon">🧠</div>
+          <div class="tc-title">Chain-of-Thought</div>
+          <div class="tc-desc">Ask AI to explain its reasoning step by step before giving the final answer. Especially useful for audits, investigations, and logic-heavy tasks.</div>
+          <div class="tc-use">💡 "Think through this step by step before giving your conclusion."</div>
+        </div>
+      </div>
+      <div class="tc rv" style="transition-delay:.25s">
+        <div class="tc-top"></div>
+        <div class="tc-body">
+          <div class="tc-icon">🎯</div>
+          <div class="tc-title">Resetting & Refining</div>
+          <div class="tc-desc">When AI drifts or gets "too trained" on past context, use a soft reset (remove a specific instruction) or hard reset (start completely fresh).</div>
+          <div class="tc-use">💡 Soft: "Ignore my earlier instruction about tone." Hard: "Reset all context. Respond as if I'm a completely new user."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANCED HACKS -->
+<section id="hacks">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Advanced Hacks</div><h2 class="sh">Power User Hacks</h2><p class="ss">Two advanced techniques that take prompting to a professional level.</p></div>
+    <div class="hacks-grid">
+      <div class="hack rv">
+        <div class="hack-header">
+          <div class="hack-num">01</div>
+          <div class="hack-icon">🧑‍💻</div>
+          <div class="hack-title">Prompt Engineer Mode</div>
+        </div>
+        <div class="hack-desc">Instead of asking AI for answers, make it act like a Prompt Engineer. It asks clarifying questions and rewrites your rough query into a sharper, more powerful prompt. You then copy-paste that refined prompt into another AI model for more accurate, reliable outputs.</div>
+        <ul class="hack-steps">
+          <li>Start a new chat with AI</li>
+          <li>Paste the special "Prompt Engineer Mode" prompt from the library below</li>
+          <li>Share your rough idea or question</li>
+          <li>Get a refined, ready-to-use master prompt back</li>
+          <li>Use that prompt in your main AI session</li>
+        </ul>
+        <div class="hack-benefit">✅ Why it works: Reduces vagueness, avoids hallucinations, and ensures outputs align with your real goals.</div>
+      </div>
+      <div class="hack rv" style="transition-delay:.1s">
+        <div class="hack-header">
+          <div class="hack-num">02</div>
+          <div class="hack-icon">🔁</div>
+          <div class="hack-title">Two-Model Review Loop</div>
+        </div>
+        <div class="hack-desc">Use two AI models in a peer-review loop for extra assurance. Model A generates the response. Model B reviews it for accuracy, clarity, and completeness. Optionally, send the revised output back to Model A for final refinement.</div>
+        <ul class="hack-steps">
+          <li>Copy your question into Model A (ChatGPT, Claude, etc.)</li>
+          <li>Take the answer and feed it into Model B with: "Review this for errors, missing details, and clarity"</li>
+          <li>Compare both versions — choose or merge the best</li>
+          <li>For critical documents, send back to Model A for final polish</li>
+        </ul>
+        <div class="hack-benefit">✅ Why it works: Adds a peer-review layer, reduces bias, and is ideal for compliance drafts and professional documents.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMPT LIBRARY -->
+<section id="library">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Prompt Library</div><h2 class="sh">Personal Prompt Library</h2><p class="ss">Tried-and-tested prompts used daily across compliance, automation, and communication.</p></div>
+    <div class="lib-grid rv">
+      <div class="lc"><div class="lc-icon">🔄</div><div class="lc-title">Reset All Context</div><div class="lc-desc">Wipes all prior session instructions — ensures a clean slate when AI drifts or gets over-trained on past context.</div></div>
+      <div class="lc"><div class="lc-icon">👤</div><div class="lc-title">About Me (Personalized Setup)</div><div class="lc-desc">Introduces your role and context so AI tailors responses to Indian regulatory, professional, and cultural norms.</div></div>
+      <div class="lc"><div class="lc-icon">📥</div><div class="lc-title">Export Session Instructions</div><div class="lc-desc">Summarises all instructions from a session into a checklist — creates a reusable master prompt for next time.</div></div>
+      <div class="lc"><div class="lc-icon">🧹</div><div class="lc-title">Soft Reset</div><div class="lc-desc">Removes one specific instruction without restarting the whole session. Surgical correction.</div></div>
+      <div class="lc"><div class="lc-icon">🎓</div><div class="lc-title">Few-Shot (Supervised Learning)</div><div class="lc-desc">Feed AI 2–3 examples, then ask the real question. Trains the model on-the-fly for your specific format.</div></div>
+      <div class="lc"><div class="lc-icon">✍️</div><div class="lc-title">Human-Type Writing</div><div class="lc-desc">Forces AI to write like a real human — varied sentence length, natural tone, subtle imperfections. Perfect for emails and LinkedIn posts.</div></div>
+      <div class="lc"><div class="lc-icon">🕴️</div><div class="lc-title">MoM Drafter</div><div class="lc-desc">Makes AI act as a corporate MoM drafter with zero assumptions — complete, neutral, and audit-proof meeting records.</div></div>
+      <div class="lc"><div class="lc-icon">🌐</div><div class="lc-title">Adaptive Expert</div><div class="lc-desc">Makes AI automatically switch roles (lawyer, analyst, investigator, teacher) based on your query — expert-level advice without rewriting context.</div></div>
+      <div class="lc"><div class="lc-icon">🎯</div><div class="lc-title">Get Accurate Information</div><div class="lc-desc">Instructs AI to avoid fabrications, state uncertainty clearly, and stick to facts. Essential for compliance and investigation work.</div></div>
+    </div>
+    <div class="lib-cta rv">
+      <div class="lib-cta-text">
+        <h3>📚 Download the Full Prompt Library</h3>
+        <p>16+ tried-and-tested prompts for compliance professionals, investigators, and data analysts — all in one document.</p>
+      </div>
+      <div class="lib-btns">
+        <a href="https://docs.google.com/document/d/1oOzd8raA9jjTigpXWK3CCmmElyOzbTLw-TVYmZ7tUXM/edit" target="_blank" class="btn-p btn-p1">⬇️ Download Free</a>
+        <a href="tools.html" class="btn-p btn-p2">🛠️ More Tools</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDELINES -->
+<section id="guidelines">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Best Practices</div><h2 class="sh">Guidelines for Better Prompting</h2></div>
+    <div class="gl-row">
+      <ul class="gl-list rv">
+        <li class="gl-item"><div class="gl-icon">🚀</div><div class="gl-text"><strong>Start with action verbs:</strong> summarise, draft, analyse, compare, extract, rewrite.</div></li>
+        <li class="gl-item"><div class="gl-icon">🎯</div><div class="gl-text"><strong>State audience or purpose:</strong> "for senior leadership", "for a LinkedIn post", "for an automation workflow".</div></li>
+        <li class="gl-item"><div class="gl-icon">🧩</div><div class="gl-text"><strong>Break down multi-step tasks</strong> into structured parts rather than one massive prompt.</div></li>
+        <li class="gl-item"><div class="gl-icon">🔁</div><div class="gl-text"><strong>Test, refine, and reuse</strong> prompts that work well — build your personal library over time.</div></li>
+        <li class="gl-item"><div class="gl-icon">📌</div><div class="gl-text"><strong>Use XML or JSON structures</strong> when you need consistently formatted outputs like tables or reports.</div></li>
+      </ul>
+      <div class="rr">
+        <div class="final-quote rv">"Prompting is like giving instructions to your smartest colleague — if you are <strong>clear, precise, and structured</strong>, the results are exceptional and will save a lot of time.<br><br>With the right prompts, AI becomes a co-pilot for compliance, automation, and communication."<br><br>— Ritesh Punyani</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="portfolio.html">Portfolio</a><a href="analytics.html">Analytics</a><a href="automation.html">Automation</a><a href="tools.html">Tools</a><a href="casestudies.html">Case Studies</a><a href="blogs.html">Blogs</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv,.rr').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

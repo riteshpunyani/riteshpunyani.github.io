@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Free Lifetime n8n Automation — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--green:#10b981;--green2:rgba(16,185,129,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+.page-hero{min-height:44vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:linear-gradient(135deg,#070c18,#04120a,#070c18);position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(16,185,129,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,.06) 1px,transparent 1px);background-size:45px 45px;}
+.hgl{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(16,185,129,.13),transparent 65%);top:-200px;right:-100px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;width:100%;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--green2);border:1px solid rgba(16,185,129,.3);color:var(--green);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:.8rem;}
+.ph-title span{background:linear-gradient(135deg,var(--green),#6ee7b7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.95rem;max-width:600px;margin-bottom:1.5rem;}
+.ph-quote{display:inline-flex;align-items:flex-start;gap:.7rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:10px;padding:.9rem 1.2rem;max-width:580px;}
+.ph-quote-text{color:var(--muted);font-size:.84rem;font-style:italic;line-height:1.65;}
+.ph-quote-text strong{color:var(--gold);}
+section{padding:4.5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--green);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--green);display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.88rem;max-width:560px;margin-bottom:2.5rem;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+
+/* STORY */
+#story{background:var(--navy2);}
+.story-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border-radius:14px;overflow:hidden;}
+.sg{background:var(--card);padding:2rem;position:relative;}
+.sg-num{font-size:3rem;font-weight:900;color:rgba(16,185,129,.1);line-height:1;margin-bottom:.5rem;}
+.sg-icon{font-size:1.8rem;margin-bottom:.6rem;}
+.sg-title{font-weight:700;font-size:.95rem;margin-bottom:.4rem;}
+.sg-desc{color:var(--muted);font-size:.83rem;line-height:1.65;}
+.sg-problem{border-left:3px solid #ef4444;}
+.sg-insight{border-left:3px solid var(--gold);}
+.sg-solution{border-left:3px solid var(--green);}
+
+/* ARCHITECTURE */
+#arch{background:var(--navy);}
+.arch-visual{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem;max-width:700px;margin:0 auto;}
+.arch-title{text-align:center;font-size:.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--green);margin-bottom:2rem;}
+.arch-flow{display:flex;flex-direction:column;align-items:center;gap:0;}
+.arch-node{background:var(--navy3);border:1px solid var(--border);border-radius:12px;padding:1rem 2rem;text-align:center;width:100%;max-width:400px;transition:border-color .2s;}
+.arch-node:hover{border-color:rgba(16,185,129,.3);}
+.arch-node-icon{font-size:1.5rem;margin-bottom:.3rem;}
+.arch-node-title{font-weight:700;font-size:.9rem;}
+.arch-node-sub{color:var(--muted);font-size:.75rem;margin-top:.2rem;}
+.arch-arrow{color:var(--green);font-size:1.2rem;margin:.5rem 0;line-height:1;}
+.arch-highlight{border-color:rgba(16,185,129,.35);background:rgba(16,185,129,.06);}
+.arch-note{background:var(--gold3);border:1px solid rgba(201,168,76,.2);border-radius:8px;padding:.8rem 1.2rem;margin-top:1.5rem;font-size:.8rem;color:var(--gold);text-align:center;}
+
+/* COMPONENTS */
+#components{background:var(--navy2);}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.3rem;}
+.comp{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s;}
+.comp:hover{border-color:rgba(16,185,129,.3);transform:translateY(-4px);}
+.comp-top{height:3px;background:linear-gradient(90deg,var(--green),#6ee7b7);}
+.comp-body{padding:1.5rem;}
+.comp-num{font-size:.7rem;color:var(--green);font-weight:700;letter-spacing:1px;margin-bottom:.4rem;text-transform:uppercase;}
+.comp-icon{font-size:1.8rem;margin-bottom:.7rem;}
+.comp-title{font-weight:700;font-size:.96rem;margin-bottom:.5rem;}
+.comp-desc{color:var(--muted);font-size:.83rem;line-height:1.65;}
+.comp-code{background:var(--navy3);border-radius:8px;padding:.9rem 1rem;margin-top:.9rem;font-family:'Courier New',monospace;font-size:.72rem;color:#6ee7b7;line-height:1.7;}
+
+/* WHY MATTERS */
+#why{background:var(--navy);}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;}
+.wc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;transition:border-color .22s,transform .22s;}
+.wc:hover{border-color:rgba(16,185,129,.3);transform:translateY(-3px);}
+.wc-icon{font-size:1.8rem;margin-bottom:.6rem;}
+.wc-title{font-weight:700;font-size:.9rem;margin-bottom:.35rem;}
+.wc-desc{color:var(--muted);font-size:.82rem;line-height:1.6;}
+
+/* CTA */
+.cta-strip{background:linear-gradient(135deg,var(--green2),rgba(201,168,76,.06));border:1px solid rgba(16,185,129,.2);border-radius:14px;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:2rem;}
+.cta-text h3{font-size:1.05rem;font-weight:800;margin-bottom:.3rem;}
+.cta-text p{color:var(--muted);font-size:.84rem;}
+.btn-g{display:inline-flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,var(--green),#6ee7b7);color:#04120a;padding:.65rem 1.4rem;border-radius:8px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .22s;}
+.btn-g:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,185,129,.3);}
+
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+@media(max-width:760px){
+  .story-grid{grid-template-columns:1fr;}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="automation.html">Automation Hub</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="casestudies.html">Case Studies</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">⚙️ Free Lifetime n8n</div>
+    <h1 class="ph-title">Free Lifetime<br><span>n8n Automation</span></h1>
+    <p class="ph-sub">How I engineered a fully functional AI automation infrastructure that runs indefinitely — at zero cost — using open-source tools and cloud infrastructure.</p>
+    <div class="ph-quote">
+      <div style="font-size:1.3rem;flex-shrink:0">✨</div>
+      <div class="ph-quote-text"><strong>Curiosity drives innovation.</strong> When powerful tools meet experimentation, unexpected solutions emerge. What began as a limitation became an opportunity to build a more resilient, cost-efficient architecture.</div>
+    </div>
+  </div>
+</div>
+
+<!-- THE STORY -->
+<section id="story">
+  <div class="wrap">
+    <div class="rv"><div class="stag">The Journey</div><h2 class="sh">From Problem to Solution</h2><p class="ss">An engineering journey that turned a recurring infrastructure limitation into a permanently free automation system.</p></div>
+    <div class="story-grid rv">
+      <div class="sg sg-problem">
+        <div class="sg-num">01</div>
+        <div class="sg-icon">❌</div>
+        <div class="sg-title">The Initial Problem</div>
+        <div class="sg-desc">First attempt used a cloud hosting platform with a free PostgreSQL database — but only for one month. Once it expired, all workflows disappeared, credentials were erased, and the entire automation system lost its memory. Had to rebuild from scratch every time.</div>
+      </div>
+      <div class="sg sg-insight">
+        <div class="sg-num">02</div>
+        <div class="sg-icon">💡</div>
+        <div class="sg-title">The Core Insight</div>
+        <div class="sg-desc">n8n itself wasn't the issue. The real dependency was the database layer. n8n stores everything inside a database — workflows, credentials, execution logs, configurations. Without a persistent database, the system behaves like temporary memory that resets repeatedly.</div>
+      </div>
+      <div class="sg sg-solution">
+        <div class="sg-num">03</div>
+        <div class="sg-icon">✅</div>
+        <div class="sg-title">The Solution Engineered</div>
+        <div class="sg-desc">Oracle Cloud Free Tier provides <em>always-free</em> virtual machines — unlike most providers that offer only temporary trials. By hosting PostgreSQL on an Oracle VM, the database layer became permanently persistent, making the entire automation system free forever.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="arch">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Architecture</div><h2 class="sh">The System Architecture</h2><p class="ss">Two separated components — automation engine and persistent database — working together seamlessly.</p></div>
+    <div class="arch-visual rv">
+      <div class="arch-title">🔁 FREE LIFETIME n8n ARCHITECTURE</div>
+      <div class="arch-flow">
+        <div class="arch-node">
+          <div class="arch-node-icon">👤</div>
+          <div class="arch-node-title">User / API Requests</div>
+          <div class="arch-node-sub">Triggers from apps, webhooks, or manual runs</div>
+        </div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-node">
+          <div class="arch-node-icon">⚙️</div>
+          <div class="arch-node-title">n8n Automation Engine</div>
+          <div class="arch-node-sub">Workflow orchestration · AI agent integration · API connections</div>
+        </div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-node arch-highlight">
+          <div class="arch-node-icon">🗄️</div>
+          <div class="arch-node-title">PostgreSQL Database</div>
+          <div class="arch-node-sub">Hosted on Oracle Cloud Free Tier VM — Always Free · Always Persistent</div>
+        </div>
+      </div>
+      <div class="arch-note">✔ Workflows saved &nbsp;·&nbsp; ✔ Credentials persist &nbsp;·&nbsp; ✔ History preserved &nbsp;·&nbsp; ✔ Zero cost forever</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPONENTS -->
+<section id="components">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Technical Setup</div><h2 class="sh">Three Core Components</h2><p class="ss">The complete technical implementation — replicable by anyone with basic cloud knowledge.</p></div>
+    <div class="comp-grid">
+      <div class="comp rv" style="transition-delay:.05s">
+        <div class="comp-top"></div>
+        <div class="comp-body">
+          <div class="comp-num">Component 01</div>
+          <div class="comp-icon">☁️</div>
+          <div class="comp-title">Oracle Cloud Free Tier VM</div>
+          <div class="comp-desc">Oracle provides always-free compute instances that run continuously without expiry. I used this VM to host the PostgreSQL database server — giving the system a permanent, stable home at zero cost.</div>
+        </div>
+      </div>
+      <div class="comp rv" style="transition-delay:.1s">
+        <div class="comp-top"></div>
+        <div class="comp-body">
+          <div class="comp-num">Component 02</div>
+          <div class="comp-icon">🗄️</div>
+          <div class="comp-title">PostgreSQL Database</div>
+          <div class="comp-desc">Stores all n8n data — workflow definitions, API credentials, execution logs, and automation configurations. This is the persistent backbone that makes the system survive restarts and redeployments.</div>
+        </div>
+      </div>
+      <div class="comp rv" style="transition-delay:.15s">
+        <div class="comp-top"></div>
+        <div class="comp-body">
+          <div class="comp-num">Component 03</div>
+          <div class="comp-icon">⚙️</div>
+          <div class="comp-title">n8n Connected to VM Database</div>
+          <div class="comp-desc">The automation engine connects to the database via environment variables. Once connected, all data is permanently stored in the Oracle VM.</div>
+          <div class="comp-code">DB_TYPE=postgresdb<br>DB_POSTGRESDB_HOST=&lt;oracle_vm_ip&gt;<br>DB_POSTGRESDB_PORT=5432<br>DB_POSTGRESDB_DATABASE=n8n<br>DB_POSTGRESDB_USER=&lt;username&gt;<br>DB_POSTGRESDB_PASSWORD=&lt;password&gt;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT MATTERS -->
+<section id="why">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Why It Matters</div><h2 class="sh">Why This Architecture Matters for AI</h2><p class="ss">Modern AI workflows require persistent infrastructure. This setup makes that possible — for free.</p></div>
+    <div class="why-grid">
+      <div class="wc rv" style="transition-delay:.05s"><div class="wc-icon">🤖</div><div class="wc-title">LLM Integrations</div><div class="wc-desc">Connect AI models like ChatGPT, Claude, or Gemini to automated workflows that trigger, process, and respond intelligently.</div></div>
+      <div class="wc rv" style="transition-delay:.1s"><div class="wc-icon">🔗</div><div class="wc-title">AI Decision Pipelines</div><div class="wc-desc">Build multi-step workflows where AI analyses data, makes decisions, and triggers actions across multiple services automatically.</div></div>
+      <div class="wc rv" style="transition-delay:.15s"><div class="wc-icon">🔄</div><div class="wc-title">Long-Running Agents</div><div class="wc-desc">Support AI agents that run continuously over days or weeks — maintaining state, context, and workflow history throughout.</div></div>
+      <div class="wc rv" style="transition-delay:.2s"><div class="wc-icon">💰</div><div class="wc-title">Zero Recurring Cost</div><div class="wc-desc">No SaaS subscriptions, no database fees, no hosting costs — a fully functional automation platform that costs nothing to operate indefinitely.</div></div>
+    </div>
+    <div class="cta-strip rv">
+      <div class="cta-text">
+        <h3>⚙️ Explore the Automation Hub</h3>
+        <p>See all 6 automation domains — from Excel macros to AI copilots — with practical examples and AI-boosted tips.</p>
+      </div>
+      <a href="automation.html" class="btn-g">Go to Automation Hub →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="automation.html">Automation Hub</a><a href="tools.html">Tools</a><a href="analytics.html">Analytics</a><a href="casestudies.html">Case Studies</a><a href="blogs.html">Blogs</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

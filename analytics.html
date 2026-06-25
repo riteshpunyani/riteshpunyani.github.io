@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Data Analytics in Fraud & Compliance — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+
+/* HERO — unique teal/blue accent for this page */
+.page-hero{min-height:42vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:linear-gradient(135deg,#070c18 0%,#071423 50%,#070f1e 100%);position:relative;overflow:hidden;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.07) 1px,transparent 1px);background-size:45px 45px;}
+.hero-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(37,99,235,.15),transparent 65%);top:-200px;right:-100px;border-radius:50%;pointer-events:none;}
+.hero-glow2{position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,.08),transparent 65%);bottom:-100px;left:-50px;border-radius:50%;pointer-events:none;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;width:100%;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.3);color:#93c5fd;font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:.8rem;}
+.ph-title span{background:linear-gradient(135deg,#60a5fa,#93c5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.95rem;max-width:600px;margin-bottom:1.5rem;}
+.ph-quote{display:inline-flex;align-items:flex-start;gap:.7rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:10px;padding:1rem 1.2rem;max-width:580px;}
+.ph-quote-icon{color:var(--gold);font-size:1.2rem;flex-shrink:0;margin-top:.1rem;}
+.ph-quote-text{color:var(--muted);font-size:.84rem;font-style:italic;line-height:1.65;}
+.ph-quote-text strong{color:var(--gold);}
+
+/* STATS BAR */
+.stats-bar{background:var(--navy3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stats-inner{max-width:1160px;margin:auto;display:flex;padding:0 2rem;}
+.sbi{flex:1;padding:1.2rem 1rem;text-align:center;border-right:1px solid var(--border);position:relative;}
+.sbi:last-child{border-right:none;}
+.sbi-val{font-size:1.6rem;font-weight:900;color:var(--gold);}
+.sbi-label{font-size:.68rem;color:var(--muted);letter-spacing:.4px;margin-top:.15rem;}
+
+/* SECTIONS */
+section{padding:4.5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:#60a5fa;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:#60a5fa;display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.88rem;max-width:560px;margin-bottom:2.5rem;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+
+/* WHY ANALYTICS — 3 col intro */
+#why{background:var(--navy2);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.why-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center;transition:transform .22s,border-color .22s;}
+.why-card:hover{transform:translateY(-4px);border-color:rgba(96,165,250,.3);}
+.why-icon{font-size:2.2rem;margin-bottom:.8rem;}
+.why-title{font-weight:700;font-size:.92rem;margin-bottom:.4rem;}
+.why-desc{color:var(--muted);font-size:.82rem;line-height:1.6;}
+
+/* FRAMEWORK — accordion style */
+#framework{background:var(--navy);}
+.framework-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem;}
+.fw-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .22s;}
+.fw-card:hover{border-color:rgba(96,165,250,.3);}
+.fw-header{padding:1.2rem 1.4rem;display:flex;align-items:center;gap:.9rem;cursor:pointer;user-select:none;}
+.fw-icon{font-size:1.6rem;flex-shrink:0;}
+.fw-title-wrap{flex:1;}
+.fw-title{font-weight:700;font-size:.92rem;}
+.fw-subtitle{color:var(--muted);font-size:.74rem;margin-top:.15rem;}
+.fw-toggle{color:var(--muted);font-size:.8rem;transition:transform .3s;flex-shrink:0;}
+.fw-body{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.fw-body.open{max-height:400px;}
+.fw-divider{height:1px;background:var(--border);margin:0 1.4rem;}
+.fw-list{padding:1rem 1.4rem 1.4rem;list-style:none;}
+.fw-list li{color:var(--muted);font-size:.81rem;padding:.35rem 0;border-bottom:1px solid rgba(255,255,255,.03);display:flex;align-items:flex-start;gap:.6rem;line-height:1.5;}
+.fw-list li:last-child{border:none;}
+.fw-list li::before{content:'›';color:#60a5fa;flex-shrink:0;font-weight:700;}
+.fw-impact{background:rgba(96,165,250,.07);border-top:1px solid rgba(96,165,250,.15);padding:.8rem 1.4rem;font-size:.76rem;color:#93c5fd;}
+.fw-impact strong{color:#60a5fa;}
+
+/* TOOLS */
+#tools{background:var(--navy2);}
+.tools-compare{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.tool-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem;}
+.tool-box-header{display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem;padding-bottom:1rem;border-bottom:1px solid var(--border);}
+.tool-box-icon{font-size:1.8rem;}
+.tool-box-name{font-weight:800;font-size:1rem;}
+.tool-box-sub{color:var(--muted);font-size:.75rem;margin-top:.1rem;}
+.tool-tag{display:inline-block;font-size:.67rem;padding:.15rem .5rem;border-radius:999px;margin-top:.3rem;}
+.tag-excel{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:#86efac;}
+.tag-python{background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.2);color:#93c5fd;}
+.tool-list{list-style:none;}
+.tool-list li{color:var(--muted);font-size:.82rem;padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.03);display:flex;align-items:center;gap:.6rem;}
+.tool-list li:last-child{border:none;}
+.tool-list li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;}
+.lib-item{color:var(--muted);font-size:.82rem;padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.03);display:flex;align-items:center;gap:.6rem;}
+.lib-item code{background:rgba(96,165,250,.1);color:#93c5fd;padding:.1rem .4rem;border-radius:4px;font-size:.75rem;}
+
+/* LIBRARY CTA */
+#library{background:var(--navy);}
+.lib-cta{background:linear-gradient(135deg,rgba(37,99,235,.12),rgba(201,168,76,.08));border:1px solid rgba(201,168,76,.2);border-radius:16px;padding:3rem;display:flex;align-items:center;gap:3rem;flex-wrap:wrap;}
+.lib-left{flex:1;min-width:260px;}
+.lib-number{font-size:4rem;font-weight:900;color:var(--gold);line-height:1;}
+.lib-number span{font-size:1.5rem;vertical-align:super;}
+.lib-desc{color:var(--muted);font-size:.88rem;margin-top:.5rem;line-height:1.7;max-width:400px;}
+.lib-right{display:flex;flex-direction:column;gap:.8rem;}
+.lib-stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.3rem;display:flex;align-items:center;gap:.8rem;}
+.lib-stat-icon{font-size:1.3rem;}
+.lib-stat-val{font-weight:700;font-size:.9rem;}
+.lib-stat-sub{color:var(--muted);font-size:.72rem;}
+.btn-access{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07111a;padding:.7rem 1.6rem;border-radius:8px;font-weight:700;font-size:.86rem;text-decoration:none;transition:all .22s;}
+.btn-access:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.35);}
+
+/* APPROACH */
+#approach{background:var(--navy2);}
+.approach-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border-radius:14px;overflow:hidden;}
+.ap-item{background:var(--card);padding:1.8rem;text-align:center;transition:background .22s;}
+.ap-item:hover{background:var(--navy3);}
+.ap-num{font-size:2.5rem;font-weight:900;color:rgba(201,168,76,.2);line-height:1;margin-bottom:.5rem;}
+.ap-icon{font-size:1.6rem;margin-bottom:.6rem;}
+.ap-title{font-weight:700;font-size:.9rem;margin-bottom:.4rem;}
+.ap-desc{color:var(--muted);font-size:.8rem;line-height:1.6;}
+
+/* FOOTER */
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+
+@media(max-width:760px){
+  .why-grid,.tools-compare,.approach-row{grid-template-columns:1fr;}
+  .approach-row{gap:1px;}
+  .lib-cta{flex-direction:column;gap:1.5rem;}
+  .stats-inner{flex-wrap:wrap;}
+  .sbi{min-width:50%;border-bottom:1px solid var(--border);}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="analytics.html" class="active">Analytics</a></li>
+      <li><a href="automation.html">Automation</a></li>
+      <li><a href="prompts.html">Prompting</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="casestudies.html">Case Studies</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">📊 Data Analytics</div>
+    <h1 class="ph-title">Fraud Analytics &amp; <span>Compliance Intelligence</span></h1>
+    <p class="ph-sub">Uncovering risk. Enhancing integrity. Empowering decisions. A structured approach to detecting fraud and misconduct through data.</p>
+    <div class="ph-quote">
+      <div class="ph-quote-icon">💬</div>
+      <div class="ph-quote-text"><strong>"Every fraud leaves a trace.</strong> Analytics helps us find it — faster, smarter, and more reliably."</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="sbi"><div class="sbi-val">1,700+</div><div class="sbi-label">Analytics Tests</div></div>
+    <div class="sbi"><div class="sbi-val">7</div><div class="sbi-label">Fraud Domains</div></div>
+    <div class="sbi"><div class="sbi-val">5%</div><div class="sbi-label">Avg Revenue Lost to Fraud (ACFE)</div></div>
+    <div class="sbi"><div class="sbi-val">100%</div><div class="sbi-label">Transaction Coverage vs Sampling</div></div>
+  </div>
+</div>
+
+<!-- WHY ANALYTICS -->
+<section id="why">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">Why It Matters</div>
+      <h2 class="sh">Why Data Analytics in Compliance?</h2>
+      <p class="ss">Fraud and misconduct hide behind large volumes of transactions, emails, and approvals. Analytics makes the invisible visible.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rv" style="transition-delay:.05s">
+        <div class="why-icon">🕵️</div>
+        <div class="why-title">Detect Early</div>
+        <div class="why-desc">Identify early warning signs and unusual behaviours before they escalate into major fraud events or compliance failures.</div>
+      </div>
+      <div class="why-card rv" style="transition-delay:.1s">
+        <div class="why-icon">🔮</div>
+        <div class="why-title">Predict & Prevent</div>
+        <div class="why-desc">Move beyond detection — use predictive models to anticipate where misconduct is likely to occur and intervene proactively.</div>
+      </div>
+      <div class="why-card rv" style="transition-delay:.15s">
+        <div class="why-icon">📈</div>
+        <div class="why-title">Scale Coverage</div>
+        <div class="why-desc">Analyse 100% of transactions instead of relying on manual sampling — dramatically increasing coverage and reducing blind spots.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRAUD ANALYTICS FRAMEWORK -->
+<section id="framework">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">Framework</div>
+      <h2 class="sh">Fraud Analytics Framework</h2>
+      <p class="ss">Specialised analytical tests and use cases applied across seven domains. Click any domain to expand.</p>
+    </div>
+    <div class="framework-grid">
+
+      <div class="fw-card rv" style="transition-delay:.05s">
+        <div class="fw-header" onclick="toggleFw(this)">
+          <div class="fw-icon">💰</div>
+          <div class="fw-title-wrap"><div class="fw-title">Accounts Payable &amp; Procurement</div><div class="fw-subtitle">Ghost vendors · Kickbacks · Duplicate payments</div></div>
+          <div class="fw-toggle">▼</div>
+        </div>
+        <div class="fw-body">
+          <div class="fw-divider"></div>
+          <ul class="fw-list">
+            <li>Duplicate Payment Test — same amount / date / vendor match</li>
+            <li>Benford's Law — detect abnormal number distributions in invoices</li>
+            <li>Vendor–Employee Link Analysis — shared addresses, phone or bank accounts</li>
+            <li>Price Variance Analysis — flag vendors with consistent overpricing vs peers</li>
+            <li>Round-Number or Month-End Billing Check</li>
+            <li>Three-Way Match Exceptions — invoices without matching PO / receipt</li>
+          </ul>
+          <div class="fw-impact"><strong>Impact:</strong> Prevents financial leakages, exposes collusion networks, strengthens internal controls.</div>
+        </div>
+      </div>
+
+      <div class="fw-card rv" style="transition-delay:.1s">
+        <div class="fw-header" onclick="toggleFw(this)">
+          <div class="fw-icon">🏦</div>
+          <div class="fw-title-wrap"><div class="fw-title">Banking &amp; AML</div><div class="fw-subtitle">Transaction layering · Structuring · Shell entities</div></div>
+          <div class="fw-toggle">▼</div>
+        </div>
+        <div class="fw-body">
+          <div class="fw-divider"></div>
+          <ul class="fw-list">
+            <li>Transaction Pattern Deviation — accounts exceeding normal activity thresholds</li>
+            <li>Geo-Velocity &amp; IP Analysis — logins or transfers from abnormal locations</li>
+            <li>Structuring / Smurfing Detection — multiple small transactions below reporting limits</li>
+            <li>Entity Link Analysis — detect relationships among shell entities</li>
+            <li>KYC Data Inconsistency Check — mismatched customer identity attributes</li>
+            <li>Rapid In-and-Out Movement — flag accounts with quick fund cycling</li>
+          </ul>
+          <div class="fw-impact"><strong>Impact:</strong> Supports STR/SAR reporting, improves AML model precision, strengthens bank integrity.</div>
+        </div>
+      </div>
+
+      <div class="fw-card rv" style="transition-delay:.15s">
+        <div class="fw-header" onclick="toggleFw(this)">
+          <div class="fw-icon">🧾</div>
+          <div class="fw-title-wrap"><div class="fw-title">Expense &amp; Reimbursement Fraud</div><div class="fw-subtitle">Falsified · Inflated · Personal claims</div></div>
+          <div class="fw-toggle">▼</div>
+        </div>
+        <div class="fw-body">
+          <div class="fw-divider"></div>
+          <ul class="fw-list">
+            <li>Employee Behaviour Profiling — compare individual claims to department norms</li>
+            <li>Weekend / Off-Day Claims Test — reimbursements during non-working periods</li>
+            <li>Round-Amount Expense Check — spot fabricated or estimated bills</li>
+            <li>Duplicate Invoice Scan — same receipts reused across submissions</li>
+            <li>Split Expense Test — repeated claims just below approval thresholds</li>
+          </ul>
+          <div class="fw-impact"><strong>Impact:</strong> Improves financial discipline and deters policy violations.</div>
+        </div>
+      </div>
+
+      <div class="fw-card rv" style="transition-delay:.2s">
+        <div class="fw-header" onclick="toggleFw(this)">
+          <div class="fw-icon">🌐</div>
+          <div class="fw-title-wrap"><div class="fw-title">Third-Party &amp; Vendor Integrity</div><div class="fw-subtitle">Sanctions · Conflict of interest · Reputational risk</div></div>
+          <div class="fw-toggle">▼</div>
+        </div>
+        <div class="fw-body">
+          <div class="fw-divider"></div>
+          <ul class="fw-list">
+            <li>Beneficial Ownership Matching — cross-verify vendor ownership data</li>
+            <li>Sanctions &amp; Watchlist Screening — OFAC, UNSC, restricted lists</li>
+            <li>Vendor Network Mapping — common addresses or directors</li>
+            <li>Payment Frequency Analysis — abnormal patterns or new high-risk vendors</li>
+            <li>Geolocation Risk Indexing — score vendors by country risk &amp; transparency</li>
+          </ul>
+          <div class="fw-impact"><strong>Impact:</strong> Strengthens ethical sourcing and protects organisational reputation.</div>
+        </div>
+      </div>
+
+      <div class="fw-card rv" style="transition-delay:.25s">
+        <div class="fw-header" onclick="toggleFw(this)">
+          <div class="fw-icon">⚖️</div>
+          <div class="fw-title-wrap"><div class="fw-title">Compliance Monitoring</div><div class="fw-subtitle">Control failures · Ethics trends · Policy breaches</div></div>
+          <div class="fw-toggle">▼</div>
+        </div>
+        <div class="fw-body">
+          <div class="fw-divider"></div>
+          <ul class="fw-list">
+            <li>Hotline Data Text Mining — recurring complaint themes and risk zones</li>
+            <li>Investigation Closure Time Trend — SLA breaches and case backlogs</li>
+            <li>Sentiment Analysis on Survey Comments — detect disengaged populations</li>
+            <li>Policy Exception Tracking — quantify rule breaches by function or region</li>
+            <li>Control Effectiveness Metrics — track audit outcomes and residual risk scores</li>
+          </ul>
+          <div class="fw-impact"><strong>Impact:</strong> Enables continuous monitoring and proactive ethical risk management.</div>
+        </div>
+      </div>
+
+      <div class="fw-card rv" style="transition-delay:.3s">
+        <div class="fw-header" onclick="toggleFw(this)">
+          <div class="fw-icon">👥</div>
+          <div class="fw-title-wrap"><div class="fw-title">HR &amp; Conflict of Interest</div><div class="fw-subtitle">Ghost employees · Payroll fraud · COI</div></div>
+          <div class="fw-toggle">▼</div>
+        </div>
+        <div class="fw-body">
+          <div class="fw-divider"></div>
+          <ul class="fw-list">
+            <li>Employee–Vendor Match Tests — phone numbers, PANs, or addresses</li>
+            <li>Duplicate Bank Accounts — multiple employees sharing the same account</li>
+            <li>Attendance vs Productivity Correlation — outlier analysis</li>
+            <li>High Overtime Analysis — consistently excessive overtime claims</li>
+          </ul>
+          <div class="fw-impact"><strong>Impact:</strong> Identifies conflicts of interest, ghost employees, and payroll fraud.</div>
+        </div>
+      </div>
+
+      <div class="fw-card rv" style="transition-delay:.35s">
+        <div class="fw-header" onclick="toggleFw(this)">
+          <div class="fw-icon">📈</div>
+          <div class="fw-title-wrap"><div class="fw-title">Sales &amp; Revenue Manipulation</div><div class="fw-subtitle">Channel stuffing · Fictitious sales · Revenue recognition</div></div>
+          <div class="fw-toggle">▼</div>
+        </div>
+        <div class="fw-body">
+          <div class="fw-divider"></div>
+          <ul class="fw-list">
+            <li>End-of-Period Spike Analysis — sales clustering near month-end</li>
+            <li>Credit Note Reversal Tests — frequent sales reversals after revenue recognition</li>
+            <li>Outlier Revenue per Customer — z-score or percentile analysis</li>
+            <li>Returns vs Discounts Ratio — unusually high returns or discounts</li>
+          </ul>
+          <div class="fw-impact"><strong>Impact:</strong> Detects revenue recognition fraud and channel stuffing schemes.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS & TECHNIQUES -->
+<section id="tools">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">Tools &amp; Techniques</div>
+      <h2 class="sh">Analytics Toolkit</h2>
+      <p class="ss">The choice of tool depends on data size, complexity, and type of analysis required.</p>
+    </div>
+    <div class="tools-compare">
+      <div class="tool-box rv">
+        <div class="tool-box-header">
+          <div class="tool-box-icon">📊</div>
+          <div><div class="tool-box-name">Excel / Power Pivot</div><div class="tool-box-sub">Small to medium datasets</div><span class="tool-tag tag-excel">Excel</span></div>
+        </div>
+        <ul class="tool-list">
+          <li>Pivot tables &amp; lookup formulas for exception testing</li>
+          <li>Power Query (M Code) — transform &amp; merge messy data</li>
+          <li>Power Pivot — advanced data modelling &amp; DAX queries</li>
+          <li>Power BI — automated dashboards &amp; live KPI refresh</li>
+          <li>Google Sheets + App Scripts — cloud-based automation</li>
+          <li>AI Boost: GPT generates formulas &amp; DAX in plain English</li>
+        </ul>
+      </div>
+      <div class="tool-box rv" style="transition-delay:.1s">
+        <div class="tool-box-header">
+          <div class="tool-box-icon">🐍</div>
+          <div><div class="tool-box-name">Python</div><div class="tool-box-sub">Large datasets &amp; advanced analytics</div><span class="tool-tag tag-python">Python</span></div>
+        </div>
+        <div class="lib-item"><code>pandas</code> Data wrangling &amp; manipulation</div>
+        <div class="lib-item"><code>numpy</code> Numerical computation</div>
+        <div class="lib-item"><code>scikit-learn</code> Machine learning &amp; predictive models</div>
+        <div class="lib-item"><code>matplotlib</code> <code>seaborn</code> Data visualisation</div>
+        <div class="lib-item"><code>networkx</code> Relationship &amp; network mapping</div>
+        <div class="lib-item" style="margin-top:.5rem;color:var(--muted);font-size:.8rem;">AI Boost: GPT generates ready-to-run Python scripts tailored to your data — no setup needed.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIBRARY CTA -->
+<section id="library">
+  <div class="wrap">
+    <div class="lib-cta rv">
+      <div class="lib-left">
+        <div class="lib-number">1,700<span>+</span></div>
+        <h3 style="font-size:1.2rem;font-weight:800;margin-top:.4rem;">Analytics Test Library</h3>
+        <p class="lib-desc">A comprehensive, ready-to-use repository of analytics tests covering Finance, HR, Procurement, and Compliance — each tagged by process, risk area, and logic technique. Designed as a toolkit for internal auditors, investigators, and compliance professionals.</p>
+        <a href="https://docs.google.com/spreadsheets/d/1BUjdArryqoEJed8iCwTU6j7-YjR8czSq1eOyTWQponE/edit#gid=0" target="_blank" class="btn-access">📎 Access the Full Library →</a>
+      </div>
+      <div class="lib-right">
+        <div class="lib-stat"><div class="lib-stat-icon">💰</div><div><div class="lib-stat-val">AP &amp; Procurement</div><div class="lib-stat-sub">Ghost vendors, duplicates, kickbacks</div></div></div>
+        <div class="lib-stat"><div class="lib-stat-icon">🏦</div><div><div class="lib-stat-val">Banking &amp; AML</div><div class="lib-stat-sub">Structuring, layering, shell entities</div></div></div>
+        <div class="lib-stat"><div class="lib-stat-icon">👥</div><div><div class="lib-stat-val">HR &amp; Payroll</div><div class="lib-stat-sub">Ghost employees, payroll fraud</div></div></div>
+        <div class="lib-stat"><div class="lib-stat-icon">📈</div><div><div class="lib-stat-val">Sales &amp; Revenue</div><div class="lib-stat-sub">Channel stuffing, fictitious sales</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MY APPROACH -->
+<section id="approach">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">My Approach</div>
+      <h2 class="sh">Analytics Philosophy</h2>
+      <p class="ss">Three principles that guide every analytics engagement.</p>
+    </div>
+    <div class="approach-row rv">
+      <div class="ap-item">
+        <div class="ap-num">01</div>
+        <div class="ap-icon">🕵️</div>
+        <div class="ap-title">Investigative Curiosity</div>
+        <div class="ap-desc">Always asking "what's not normal here?" — starting with scepticism and letting data lead the narrative.</div>
+      </div>
+      <div class="ap-item">
+        <div class="ap-num">02</div>
+        <div class="ap-icon">📐</div>
+        <div class="ap-title">Data Science Discipline</div>
+        <div class="ap-desc">Quantifying risk and behaviour with statistical rigour — not gut feel. Every finding is evidence-backed and reproducible.</div>
+      </div>
+      <div class="ap-item">
+        <div class="ap-num">03</div>
+        <div class="ap-icon">🧩</div>
+        <div class="ap-title">Business Practicality</div>
+        <div class="ap-desc">Delivering results that drive compliance decisions — not just analytical outputs that sit in a report.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="automation.html">Automation</a>
+    <a href="prompts.html">Prompting</a>
+    <a href="tools.html">Tools</a>
+    <a href="casestudies.html">Case Studies</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>40));
+
+function toggleFw(header){
+  const body=header.nextElementSibling;
+  const toggle=header.querySelector('.fw-toggle');
+  const isOpen=body.classList.contains('open');
+  // close all
+  document.querySelectorAll('.fw-body').forEach(b=>b.classList.remove('open'));
+  document.querySelectorAll('.fw-toggle').forEach(t=>{t.style.transform='';});
+  // open clicked if it was closed
+  if(!isOpen){body.classList.add('open');toggle.style.transform='rotate(180deg)';}
+}
+
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

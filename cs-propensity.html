@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Customer Purchase Propensity — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--cyan:#06b6d4;--cyan2:rgba(6,182,212,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--cyan);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+.breadcrumb{padding:4.5rem 2rem 0;max-width:1160px;margin:auto;}
+.bc-inner{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted);}
+.bc-inner a{color:var(--muted);text-decoration:none;}
+.bc-inner a:hover{color:var(--gold);}
+.bc-sep{opacity:.4;}
+.bc-current{color:var(--cyan);}
+.page-hero{padding:2rem 2rem 4rem;position:relative;overflow:hidden;background:var(--navy2);}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(6,182,212,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,.05) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+.hgl{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(6,182,212,.1),transparent 65%);top:-150px;right:-100px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--cyan2);border:1px solid rgba(6,182,212,.3);color:var(--cyan);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.1;margin-bottom:.6rem;}
+.ph-title span{background:linear-gradient(135deg,var(--cyan),#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.92rem;max-width:620px;}
+section{padding:4rem 2rem 5rem;background:var(--navy2);}
+.wrap{max-width:1000px;margin:auto;}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+.cs-meta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.cm{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.8rem 1.2rem;flex:1;min-width:140px;text-align:center;}
+.cm-val{font-size:1.1rem;font-weight:800;color:var(--cyan);margin-bottom:.2rem;}
+.cm-label{font-size:.72rem;color:var(--muted);}
+.cs-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.6rem;margin-bottom:1.2rem;}
+.cs-card-title{font-weight:700;font-size:.92rem;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem;}
+.cs-text{color:var(--muted);font-size:.86rem;line-height:1.7;}
+.cs-text strong{color:var(--text);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.8rem;}
+.mini-box{background:var(--navy3);border-radius:8px;padding:1rem 1.1rem;}
+.mini-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.8px;color:var(--cyan);margin-bottom:.5rem;}
+.mini-list{list-style:none;}
+.mini-list li{color:var(--muted);font-size:.8rem;padding:.25rem 0;display:flex;gap:.5rem;border-bottom:1px solid rgba(255,255,255,.03);}
+.mini-list li:last-child{border:none;}
+.mini-list li::before{content:'›';color:var(--cyan);flex-shrink:0;}
+.results{background:var(--cyan2);border:1px solid rgba(6,182,212,.2);border-radius:12px;padding:1.5rem;margin-bottom:1.2rem;}
+.results-title{font-weight:700;font-size:.9rem;color:var(--cyan);margin-bottom:.9rem;}
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.8rem;}
+.ri{background:rgba(255,255,255,.04);border-radius:9px;padding:.9rem;text-align:center;}
+.ri-val{font-size:1.1rem;font-weight:800;color:var(--cyan);line-height:1;}
+.ri-label{font-size:.7rem;color:var(--muted);margin-top:.3rem;}
+.quote{background:rgba(6,182,212,.07);border:1px solid rgba(6,182,212,.15);border-radius:8px;padding:.9rem 1.2rem;font-size:.83rem;color:#67e8f9;margin-top:.8rem;font-style:italic;}
+.files-box{background:var(--navy3);border-radius:10px;padding:1.2rem 1.5rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
+.file-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;text-decoration:none;padding:.4rem .9rem;border-radius:7px;font-weight:600;background:var(--cyan2);border:1px solid rgba(6,182,212,.3);color:var(--cyan);transition:background .2s;}
+.file-link:hover{background:rgba(6,182,212,.2);}
+.back-strip{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.2rem 1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2rem;}
+.back-strip p{color:var(--muted);font-size:.84rem;}
+.btn-b{display:inline-flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07111a;padding:.6rem 1.3rem;border-radius:8px;font-weight:700;font-size:.83rem;text-decoration:none;}
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;}
+.footer-links a:hover{color:var(--gold);}
+@media(max-width:760px){
+  .two-col{grid-template-columns:1fr;}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="casestudies.html">Case Studies</a></li>
+      <li><a href="predictive.html">Predictive</a></li>
+      <li><a href="ml.html">ML & DS</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <div class="bc-inner"><a href="index.html">Home</a><span class="bc-sep">›</span><a href="casestudies.html">Case Studies</a><span class="bc-sep">›</span><span class="bc-current">Customer Purchase Propensity</span></div>
+</div>
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">📊 Predictive Analytics</div>
+    <h1 class="ph-title">Customer Purchase<br><span>Propensity Model</span></h1>
+    <p class="ph-sub">Using historical customer behaviour to build a Python-based predictive model that scores customers by their likelihood to purchase in the next 30 days — enabling targeted marketing with 4x conversion lift.</p>
+  </div>
+</div>
+<section>
+  <div class="wrap">
+    <div class="cs-meta rv">
+      <div class="cm"><div class="cm-val">50,000</div><div class="cm-label">Customers analysed</div></div>
+      <div class="cm"><div class="cm-val">0.82</div><div class="cm-label">ROC-AUC score</div></div>
+      <div class="cm"><div class="cm-val">4.0x</div><div class="cm-label">Conversion lift</div></div>
+      <div class="cm"><div class="cm-val">Python</div><div class="cm-label">Primary tool</div></div>
+    </div>
+    <div class="cs-card rv">
+      <div class="cs-card-title">🎯 Business Problem</div>
+      <div class="cs-text">Marketing was spending broadly to promote Product X across a large customer base, with low conversion and high acquisition cost.<br><br><strong>Question:</strong> Which customers should we target to maximise conversion while minimising cost?<br><br><strong>Objective:</strong> Build a propensity model producing a ranked score (0–1) for each customer indicating probability of purchase in the next 30 days — then target the top segments.</div>
+    </div>
+    <div class="cs-card rv">
+      <div class="cs-card-title">🧾 Dataset & Features</div>
+      <div class="cs-text"><strong>Target variable (dependent):</strong> purchase_next_30d — 1 if customer purchased in next 30 days, else 0.<br><strong>Source:</strong> CRM + transaction logs + web/mobile interactions (anonymised). Time window: past 12 months.</div>
+      <div class="two-col">
+        <div class="mini-box">
+          <div class="mini-label">Independent Variables (Features)</div>
+          <ul class="mini-list">
+            <li>Recency — days since last purchase</li>
+            <li>Frequency — purchases in last 90 days</li>
+            <li>Monetary — avg order value / total spend</li>
+            <li>Engagement — page views, email opens</li>
+            <li>Product interaction — cart adds, browse time</li>
+            <li>Demographics — segment, region</li>
+            <li>Promotion exposure — past discount response</li>
+          </ul>
+        </div>
+        <div class="mini-box">
+          <div class="mini-label">Models Tested</div>
+          <ul class="mini-list">
+            <li>Logistic Regression — baseline, interpretable</li>
+            <li>Random Forest — higher accuracy</li>
+            <li>XGBoost — best overall performance</li>
+            <li>80/20 train/test split (time-aware)</li>
+            <li>GridSearch CV for hyperparameter tuning</li>
+            <li>SHAP for feature explainability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="cs-card rv">
+      <div class="cs-card-title">✔️ Why These Metrics</div>
+      <div class="cs-text">
+        <strong>ROC-AUC:</strong> Good for overall ranking performance — does the model distinguish buyers from non-buyers?<br><br>
+        <strong>Precision@k / Lift:</strong> Directly shows business impact — top 10% of customers convert at X times the baseline rate.<br><br>
+        <strong>Calibration:</strong> Ensures predicted probabilities reflect real-world conversion rates — important for setting decision thresholds.
+      </div>
+    </div>
+    <div class="results rv">
+      <div class="results-title">📈 Illustrative Results</div>
+      <div class="rg">
+        <div class="ri"><div class="ri-val">3.0%</div><div class="ri-label">Baseline conversion rate</div></div>
+        <div class="ri"><div class="ri-val">12.0%</div><div class="ri-label">Top decile conversion</div></div>
+        <div class="ri"><div class="ri-val">4.0x</div><div class="ri-label">Conversion lift</div></div>
+        <div class="ri"><div class="ri-val">0.82</div><div class="ri-label">ROC-AUC (test set)</div></div>
+      </div>
+      <div class="quote">🏆 Business interpretation: Targeting the top 10% instead of random customers yields 4x conversion and significantly reduces cost per acquisition. Global corporations spending billions on ads can save enormous costs with this approach.</div>
+    </div>
+    <div class="cs-card rv">
+      <div class="cs-card-title">📁 Project Files</div>
+      <div class="files-box">
+        <a href="https://colab.research.google.com/drive/11JVnSb-ieHZRLfaMdvt2ce9FleYsmDCm?usp=sharing" target="_blank" class="file-link">📓 Google Colab Notebook →</a>
+        <span style="color:var(--muted);font-size:.8rem;">GitHub: README.md · Code.py · sample_data_file.csv</span>
+      </div>
+    </div>
+    <div class="back-strip rv">
+      <p>Explore the other case studies</p>
+      <a href="casestudies.html" class="btn-b">← All Case Studies</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="casestudies.html">Case Studies</a><a href="cs-automation.html">Automation</a><a href="cs-fraud-ml.html">Fraud ML</a><a href="predictive.html">Predictive</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

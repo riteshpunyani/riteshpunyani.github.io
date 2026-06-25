@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Automation in Action — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--green:#10b981;--green2:rgba(16,185,129,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+.breadcrumb{padding:4.5rem 2rem 0;max-width:1160px;margin:auto;}
+.bc-inner{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted);}
+.bc-inner a{color:var(--muted);text-decoration:none;}
+.bc-inner a:hover{color:var(--gold);}
+.bc-sep{opacity:.4;}
+.bc-current{color:var(--green);}
+.page-hero{padding:2rem 2rem 4rem;position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(16,185,129,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,.05) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+.hgl{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(16,185,129,.1),transparent 65%);top:-150px;right:-100px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--green2);border:1px solid rgba(16,185,129,.3);color:var(--green);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.1;margin-bottom:.6rem;}
+.ph-title span{background:linear-gradient(135deg,var(--green),#6ee7b7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.92rem;max-width:620px;}
+section{padding:4rem 2rem 5rem;}
+.wrap{max-width:1000px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--green);display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--green);display:inline-block;}
+h2.sh{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:800;margin-bottom:1.3rem;}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+/* META */
+.cs-meta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.cm{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.8rem 1.2rem;flex:1;min-width:140px;text-align:center;}
+.cm-val{font-size:1.1rem;font-weight:800;color:var(--green);margin-bottom:.2rem;}
+.cm-label{font-size:.72rem;color:var(--muted);}
+/* CASE STUDY BLOCK */
+.cs-block{margin-bottom:3rem;}
+.cs-num{display:inline-flex;align-items:center;gap:.6rem;background:var(--green2);border:1px solid rgba(16,185,129,.2);color:var(--green);font-size:.72rem;font-weight:700;padding:.28rem .8rem;border-radius:999px;letter-spacing:.8px;text-transform:uppercase;margin-bottom:.8rem;}
+.cs-title{font-size:1.15rem;font-weight:800;margin-bottom:1.2rem;}
+.cs-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.6rem;margin-bottom:1rem;}
+.cs-card-title{font-weight:700;font-size:.92rem;margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem;}
+.cs-text{color:var(--muted);font-size:.86rem;line-height:1.7;}
+.cs-text strong{color:var(--text);}
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:.7rem;margin-top:.5rem;}
+.step{display:flex;align-items:flex-start;gap:.9rem;background:var(--navy3);border-radius:9px;padding:.9rem 1.1rem;}
+.step-n{width:26px;height:26px;border-radius:50%;background:var(--green2);border:1px solid rgba(16,185,129,.3);color:var(--green);font-size:.7rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.step-t{color:var(--muted);font-size:.84rem;line-height:1.55;}
+.step-t strong{color:var(--text);}
+/* RESULTS */
+.results{background:var(--green2);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:1.5rem;margin-bottom:1rem;}
+.results-title{font-weight:700;font-size:.9rem;color:var(--green);margin-bottom:.9rem;}
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.8rem;}
+.ri{background:rgba(255,255,255,.04);border-radius:9px;padding:.9rem;text-align:center;}
+.ri-val{font-size:1.1rem;font-weight:800;color:var(--green);line-height:1;}
+.ri-label{font-size:.7rem;color:var(--muted);margin-top:.3rem;}
+.quote{background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.15);border-radius:8px;padding:.9rem 1.2rem;font-size:.83rem;color:#6ee7b7;margin-top:.8rem;font-style:italic;}
+/* DIVIDER */
+.cs-divider{border:none;border-top:1px dashed var(--border);margin:2.5rem 0;}
+/* BACK */
+.back-strip{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.2rem 1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2rem;}
+.back-strip p{color:var(--muted);font-size:.84rem;}
+.btn-b{display:inline-flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,var(--green),#6ee7b7);color:#04120a;padding:.6rem 1.3rem;border-radius:8px;font-weight:700;font-size:.83rem;text-decoration:none;transition:all .22s;}
+.btn-b:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(16,185,129,.3);}
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;}
+.footer-links a:hover{color:var(--gold);}
+@media(max-width:760px){
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="casestudies.html">Case Studies</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="automation.html">Automation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <div class="bc-inner"><a href="index.html">Home</a><span class="bc-sep">›</span><a href="casestudies.html">Case Studies</a><span class="bc-sep">›</span><span class="bc-current">Automation in Action</span></div>
+</div>
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">🛠️ Automation in Action</div>
+    <h1 class="ph-title">Turning Manual Work into<br><span>Instant Automation</span></h1>
+    <p class="ph-sub">⚡ Real-life examples where even simple automations delivered huge time savings, improved accuracy, and higher project impact — by combining technology with domain expertise. 1 + 1 = 11.</p>
+  </div>
+</div>
+<section>
+  <div class="wrap">
+    <div class="cs-meta rv">
+      <div class="cm"><div class="cm-val">3</div><div class="cm-label">Case Studies</div></div>
+      <div class="cm"><div class="cm-val">70%+</div><div class="cm-label">Time Reduction</div></div>
+      <div class="cm"><div class="cm-val">0</div><div class="cm-label">Manual Errors</div></div>
+      <div class="cm"><div class="cm-val">VBA + Macros</div><div class="cm-label">Tools Used</div></div>
+    </div>
+
+    <!-- CS 1 -->
+    <div class="cs-block rv">
+      <div class="cs-num">Case Study 01</div>
+      <div class="cs-title">🚀 Automating PAN Verification for KYC Compliance</div>
+      <div class="cs-card">
+        <div class="cs-card-title">📌 Background & Challenge</div>
+        <div class="cs-text">As part of a KYC compliance project, our team had to validate customer PAN details using the Income Tax Department's portal. For a sample size of <strong>10,000+ PANs</strong>, the traditional manual process was extremely time-consuming, error-prone, and consuming reviewer effort on repetitive tasks — one by one.</div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-card-title">⚙️ Solution</div>
+        <div class="steps">
+          <div class="step"><div class="step-n">1</div><div class="step-t"><strong>Recorded</strong> the manual verification steps once on the Income Tax portal using macro software</div></div>
+          <div class="step"><div class="step-n">2</div><div class="step-t"><strong>Linked</strong> the process with Excel, where all 10,000+ PAN numbers were listed in a structured sheet</div></div>
+          <div class="step"><div class="step-n">3</div><div class="step-t"><strong>Built</strong> a workflow that automatically entered each PAN, captured name and date of birth, and recorded results systematically</div></div>
+          <div class="step"><div class="step-n">4</div><div class="step-t"><strong>Executed</strong> for 10,000+ cases — completing in hours what would have taken several days</div></div>
+        </div>
+      </div>
+      <div class="results">
+        <div class="results-title">✅ Results & Recognition</div>
+        <div class="rg">
+          <div class="ri"><div class="ri-val">Days → Hours</div><div class="ri-label">Processing time</div></div>
+          <div class="ri"><div class="ri-val">0</div><div class="ri-label">Manual entry errors</div></div>
+          <div class="ri"><div class="ri-val">10,000+</div><div class="ri-label">PANs verified</div></div>
+          <div class="ri"><div class="ri-val">🏆</div><div class="ri-label">Client & leadership recognition</div></div>
+        </div>
+        <div class="quote">Acknowledged by leadership as an innovative approach that showcased how technology can transform compliance reviews.</div>
+      </div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <!-- CS 2 -->
+    <div class="cs-block rv">
+      <div class="cs-num">Case Study 02</div>
+      <div class="cs-title">🚀 Automating SAP SoD Script Updates</div>
+      <div class="cs-card">
+        <div class="cs-card-title">📌 Background & Challenge</div>
+        <div class="cs-text">As part of the annual compliance cycle, the team updated Segregation of Duties (SoD) testing scripts within SAP — each spanning <strong>250–300 pages</strong>, requiring changes to user IDs and access rights. The manual process consumed <strong>20–25 man-days</strong> of effort annually, with high risk of copy-paste errors tying up skilled resources in low-value tasks.</div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-card-title">⚙️ Solution</div>
+        <div class="steps">
+          <div class="step"><div class="step-n">1</div><div class="step-t"><strong>Analysed</strong> the structure of the SAP SoD testing scripts to identify all updatable fields</div></div>
+          <div class="step"><div class="step-n">2</div><div class="step-t"><strong>Built</strong> a VBA macro to rewrite and update the scripts automatically based on new user rights data from Excel</div></div>
+          <div class="step"><div class="step-n">3</div><div class="step-t"><strong>Ran</strong> the macro — generating fully updated 250–300 page scripts in minutes instead of weeks</div></div>
+        </div>
+      </div>
+      <div class="results">
+        <div class="results-title">✅ Results & Recognition</div>
+        <div class="rg">
+          <div class="ri"><div class="ri-val">20–25 days → Minutes</div><div class="ri-label">Annual effort saved</div></div>
+          <div class="ri"><div class="ri-val">0</div><div class="ri-label">Copy-paste errors</div></div>
+          <div class="ri"><div class="ri-val">♾️</div><div class="ri-label">Reusable every year</div></div>
+          <div class="ri"><div class="ri-val">🏆</div><div class="ri-label">Best practice acknowledgement</div></div>
+        </div>
+        <div class="quote">Acknowledged by leadership as a major productivity breakthrough and highlighted as a best practice in compliance automation.</div>
+      </div>
+    </div>
+
+    <hr class="cs-divider"/>
+
+    <!-- CS 3 -->
+    <div class="cs-block rv">
+      <div class="cs-num">Case Study 03</div>
+      <div class="cs-title">🚀 Automated File Renaming for Litigation Review</div>
+      <div class="cs-card">
+        <div class="cs-card-title">📌 Background & Solution</div>
+        <div class="cs-text">During a litigation-related investigation, the team had to rename hundreds of documents based on a specific sequencing provided in a spreadsheet — to make referencing easy during review. Doing this manually had previously taken <strong>2–3 days</strong>.<br><br>Using VBA, I wrote a script that instantly renamed all files per the sequencing, with a smart workaround to retrieve filenames even when not listed in the spreadsheet. Total coding effort: <strong>15–20 minutes</strong>. Total execution time: <strong>10 seconds</strong>.</div>
+      </div>
+      <div class="results">
+        <div class="results-title">✅ Results</div>
+        <div class="rg">
+          <div class="ri"><div class="ri-val">2–3 days → 10 secs</div><div class="ri-label">Time saved</div></div>
+          <div class="ri"><div class="ri-val">15–20 min</div><div class="ri-label">Coding effort</div></div>
+          <div class="ri"><div class="ri-val">0</div><div class="ri-label">Naming errors</div></div>
+          <div class="ri"><div class="ri-val">♾️</div><div class="ri-label">Reusable for future reviews</div></div>
+        </div>
+        <div class="quote">Small automation steps multiply into massive efficiency gains — this is the power of 1+1=11 thinking in compliance workflows.</div>
+      </div>
+    </div>
+
+    <div class="back-strip rv">
+      <p>Explore the other case studies</p>
+      <a href="casestudies.html" class="btn-b">← All Case Studies</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="casestudies.html">Case Studies</a><a href="cs-propensity.html">Propensity</a><a href="cs-fraud-ml.html">Fraud ML</a><a href="automation.html">Automation</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

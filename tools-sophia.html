@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sophia — AI Order-Taking Assistant — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--teal:#14b8a6;--teal2:rgba(20,184,166,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+.breadcrumb{padding:4.5rem 2rem 0;max-width:1160px;margin:auto;}
+.bc-inner{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted);}
+.bc-inner a{color:var(--muted);text-decoration:none;}
+.bc-inner a:hover{color:var(--gold);}
+.bc-sep{opacity:.4;}
+.bc-current{color:var(--teal);}
+.page-hero{padding:2rem 2rem 3.5rem;position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(20,184,166,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(20,184,166,.05) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+.hgl{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(20,184,166,.1),transparent 65%);top:-150px;right:-50px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--teal2);border:1px solid rgba(20,184,166,.3);color:var(--teal);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;line-height:1.1;margin-bottom:.5rem;}
+.ph-title span{background:linear-gradient(135deg,var(--teal),#5eead4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.9rem;max-width:560px;margin-bottom:1rem;}
+.ph-new{display:inline-block;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.25);color:#6ee7b7;font-size:.7rem;padding:.25rem .7rem;border-radius:999px;font-weight:600;}
+.ph-avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--teal),#5eead4);display:flex;align-items:center;justify-content:center;font-size:3.5rem;flex-shrink:0;box-shadow:0 0 40px rgba(20,184,166,.2);}
+section{padding:3.5rem 2rem;}
+.wrap{max-width:1100px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--teal);display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--teal);display:inline-block;}
+h2.sh{font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:800;margin-bottom:.8rem;}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .55s,transform .55s;}
+.rv.up{opacity:1;transform:none;}
+.problems-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-bottom:2rem;}
+.prob{background:var(--card);border:1px solid rgba(239,68,68,.2);border-left:3px solid #ef4444;border-radius:0 10px 10px 0;padding:1.2rem;}
+.prob-icon{font-size:1.4rem;margin-bottom:.4rem;}
+.prob-title{font-weight:700;font-size:.88rem;margin-bottom:.3rem;}
+.prob-desc{color:var(--muted);font-size:.8rem;}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;}
+.step{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;transition:border-color .2s,transform .2s;}
+.step:hover{border-color:rgba(20,184,166,.3);transform:translateY(-3px);}
+.step-num{font-size:.68rem;color:var(--teal);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:.4rem;}
+.step-icon{font-size:1.6rem;margin-bottom:.5rem;}
+.step-title{font-weight:700;font-size:.9rem;margin-bottom:.35rem;}
+.step-desc{color:var(--muted);font-size:.81rem;line-height:1.55;}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.9rem;}
+.tech{background:var(--navy3);border:1px solid var(--border);border-radius:10px;padding:1rem;text-align:center;}
+.tech-icon{font-size:1.5rem;margin-bottom:.4rem;}
+.tech-name{font-weight:700;font-size:.84rem;margin-bottom:.2rem;}
+.tech-desc{color:var(--muted);font-size:.73rem;}
+.impact-row{display:flex;gap:1rem;flex-wrap:wrap;margin:1.5rem 0;}
+.imp{background:linear-gradient(135deg,var(--teal2),rgba(201,168,76,.05));border:1px solid rgba(20,184,166,.2);border-radius:10px;padding:1rem 1.4rem;flex:1;min-width:150px;}
+.imp-val{font-size:1.3rem;font-weight:900;color:var(--teal);}
+.imp-label{font-size:.76rem;color:var(--muted);margin-top:.2rem;}
+.try-box{background:linear-gradient(135deg,var(--teal2),rgba(201,168,76,.06));border:1px solid rgba(20,184,166,.25);border-radius:16px;padding:2.5rem;text-align:center;}
+.try-box h3{font-size:1.2rem;font-weight:800;margin-bottom:.5rem;}
+.try-box p{color:var(--muted);font-size:.88rem;margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto;}
+.try-btns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
+.btn-t{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.4rem;border-radius:8px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .22s;}
+.btn-t1{background:linear-gradient(135deg,var(--teal),#5eead4);color:#04120a;}
+.btn-t1:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,184,166,.3);}
+.btn-t2{border:1px solid rgba(20,184,166,.3);color:var(--teal);}
+.btn-t2:hover{background:var(--teal2);}
+.back-strip{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.2rem 1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2rem;}
+.back-strip p{color:var(--muted);font-size:.84rem;}
+.btn-back{display:inline-flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07111a;padding:.6rem 1.3rem;border-radius:8px;font-weight:700;font-size:.83rem;text-decoration:none;}
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;}
+.footer-links a:hover{color:var(--gold);}
+@media(max-width:760px){
+  .ph-inner{grid-template-columns:1fr;}
+  .ph-avatar{display:none;}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tools.html" class="active">Tools</a></li>
+      <li><a href="tools-emily.html">Emily</a></li>
+      <li><a href="tools-custom-gpts.html">Custom GPTs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <div class="bc-inner"><a href="index.html">Home</a><span class="bc-sep">›</span><a href="tools.html">Tools</a><span class="bc-sep">›</span><span class="bc-current">Sophia — AI Order-Taking Assistant</span></div>
+</div>
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div>
+  <div class="ph-inner">
+    <div>
+      <div class="ph-tag">🛒 AI Voice Assistant</div>
+      <h1 class="ph-title">"Sophia" —<br><span>AI Order-Taking Assistant</span></h1>
+      <p class="ph-sub">An AI-powered voice assistant that receives customer orders naturally, validates real-time inventory, and logs structured orders automatically — zero manual entry, zero errors, 24×7.</p>
+      <span class="ph-new">✨ New · Live Demo Available</span>
+    </div>
+    <div class="ph-avatar">🛒</div>
+  </div>
+</div>
+<section style="background:var(--navy2);">
+  <div class="wrap">
+    <div class="rv"><div class="stag">The Problem</div><h2 class="sh">Why Sophia Was Built</h2></div>
+    <div class="problems-grid rv">
+      <div class="prob"><div class="prob-icon">📞</div><div class="prob-title">Missed Calls</div><div class="prob-desc">Missed calls = missed revenue. Retail businesses lose orders every day.</div></div>
+      <div class="prob"><div class="prob-icon">❌</div><div class="prob-title">Manual Errors</div><div class="prob-desc">Misheard items, wrong quantities, forgotten orders — costly and avoidable.</div></div>
+      <div class="prob"><div class="prob-icon">📦</div><div class="prob-title">No Inventory Check</div><div class="prob-desc">False promises due to no real-time availability validation before confirming.</div></div>
+      <div class="prob"><div class="prob-icon">⏳</div><div class="prob-title">Delayed Confirmations</div><div class="prob-desc">Customers wait for callbacks. Poor experience, lost trust.</div></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="rv"><div class="stag">How It Works</div><h2 class="sh">Sophia's 5-Step Process</h2></div>
+    <div class="steps-grid rv">
+      <div class="step"><div class="step-num">Step 01</div><div class="step-icon">🗣️</div><div class="step-title">Natural Language Understanding</div><div class="step-desc">"I want 5 apples and 2 mangoes for tomorrow evening." Sophia extracts products, quantities, and delivery time — no rigid commands needed.</div></div>
+      <div class="step"><div class="step-num">Step 02</div><div class="step-icon">📦</div><div class="step-title">Real-Time Inventory Check</div><div class="step-desc">Before confirming, Sophia checks live inventory in Google Sheets — identifying unavailable items and informing the customer instantly.</div></div>
+      <div class="step"><div class="step-num">Step 03</div><div class="step-icon">💬</div><div class="step-title">Intelligent Response</div><div class="step-desc">If all items available → confirms confidently. If something is unavailable → clearly informs. Always polite, never robotic.</div></div>
+      <div class="step"><div class="step-num">Step 04</div><div class="step-icon">📝</div><div class="step-title">Structured Order Logging</div><div class="step-desc">Automatically records customer name, phone, outlet, items, quantities, timestamp, and delivery time into Google Sheets — zero manual typing.</div></div>
+      <div class="step"><div class="step-num">Step 05</div><div class="step-icon">⚙️</div><div class="step-title">No-Code Architecture</div><div class="step-desc">Built entirely with no-code and low-code tools — scalable, auditable, and easily extendable to WhatsApp, SMS, or website chat.</div></div>
+    </div>
+  </div>
+</section>
+<section style="background:var(--navy2);">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Tech Stack & Impact</div><h2 class="sh">Built With</h2></div>
+    <div class="tech-grid rv">
+      <div class="tech"><div class="tech-icon">🧠</div><div class="tech-name">GPT-Based AI</div><div class="tech-desc">Natural order understanding and response generation</div></div>
+      <div class="tech"><div class="tech-icon">🎙️</div><div class="tech-name">VAPI / Twilio</div><div class="tech-desc">Voice input handling for phone interactions</div></div>
+      <div class="tech"><div class="tech-icon">⚙️</div><div class="tech-name">n8n</div><div class="tech-desc">Order logic, decision flows, and integrations</div></div>
+      <div class="tech"><div class="tech-icon">📊</div><div class="tech-name">Google Sheets</div><div class="tech-desc">Live inventory + structured order ledger</div></div>
+      <div class="tech"><div class="tech-icon">🔗</div><div class="tech-name">Webhooks / JSON</div><div class="tech-desc">Reliable system-to-system communication</div></div>
+    </div>
+    <div class="impact-row rv">
+      <div class="imp"><div class="imp-val">100%</div><div class="imp-label">Automated order capture</div></div>
+      <div class="imp"><div class="imp-val">0</div><div class="imp-label">Manual data entry</div></div>
+      <div class="imp"><div class="imp-val">24×7</div><div class="imp-label">Always available</div></div>
+      <div class="imp"><div class="imp-val">∞</div><div class="imp-label">Scalable capacity</div></div>
+    </div>
+    <div class="try-box rv">
+      <h3>🧪 Try Sophia Yourself!</h3>
+      <p>Call Sophia, place a real order, and watch it appear instantly in the Google Sheet — a live demonstration of AI + automation in action.</p>
+      <div class="try-btns">
+        <a href="tel:+18387889563" class="btn-t btn-t1">📞 Call Sophia: +1-838-788-9563</a>
+        <a href="https://docs.google.com/spreadsheets/d/1FOhSfmBRzfV96iMGfwCOxVGJ69ZEdVy4_iN3WSY7mEk/edit?usp=sharing" target="_blank" class="btn-t btn-t2">📊 View Live Order Sheet</a>
+      </div>
+    </div>
+    <div class="back-strip rv">
+      <p>Explore Emily — AI Appointment Assistant for clinics and services</p>
+      <a href="tools-emily.html" class="btn-back">Meet Emily →</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-links"><a href="index.html">Home</a><a href="tools.html">Tools</a><a href="tools-emily.html">Emily</a><a href="tools-custom-gpts.html">Custom GPTs</a><a href="n8n.html">n8n</a><a href="contact.html">Contact</a></div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact Me — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;min-height:100vh;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+
+/* HERO */
+.page-hero{min-height:50vh;display:flex;align-items:center;justify-content:center;padding:7rem 2rem 4rem;background:linear-gradient(135deg,#070c18,#0d1423,#070c18);position:relative;overflow:hidden;text-align:center;}
+.hero-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(201,168,76,.08),transparent 65%);top:-200px;left:50%;transform:translateX(-50%);border-radius:50%;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:50px 50px;}
+.ph-inner{position:relative;z-index:1;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold3);border:1px solid rgba(201,168,76,.28);color:var(--gold);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(2rem,5vw,3rem);font-weight:900;line-height:1.1;margin-bottom:.7rem;}
+.ph-title span{background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.95rem;max-width:520px;margin:0 auto 1.5rem;}
+.ph-meta{display:inline-flex;align-items:center;gap:.5rem;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);color:#6ee7b7;font-size:.78rem;padding:.35rem .9rem;border-radius:999px;}
+
+/* MAIN */
+.main{padding:4rem 2rem 5rem;}
+.wrap{max-width:900px;margin:auto;}
+
+/* CONTACT CARDS GRID */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;margin-bottom:3rem;}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem;text-align:center;text-decoration:none;color:inherit;transition:transform .25s,border-color .25s,box-shadow .25s;display:flex;flex-direction:column;align-items:center;gap:.7rem;position:relative;overflow:hidden;}
+.cc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .3s;}
+.cc:hover{transform:translateY(-5px);border-color:rgba(201,168,76,.3);box-shadow:0 14px 36px rgba(0,0,0,.4);}
+.cc:hover::before{transform:scaleX(1);}
+.cc-icon{font-size:2.2rem;}
+.cc-label{font-size:.7rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);font-weight:600;}
+.cc-value{font-weight:700;font-size:.92rem;}
+.cc-sub{color:var(--muted);font-size:.76rem;}
+.cc-arrow{font-size:.78rem;color:var(--gold);margin-top:.3rem;}
+
+/* ABOUT CONTACT */
+.about-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;margin-bottom:3rem;}
+.ab-photo{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));padding:2px;flex-shrink:0;}
+.ab-photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:top;display:block;background:var(--navy3);}
+.ab-name{font-weight:800;font-size:1.1rem;margin-bottom:.2rem;}
+.ab-role{color:var(--gold);font-size:.82rem;font-weight:600;margin-bottom:.4rem;}
+.ab-loc{color:var(--muted);font-size:.8rem;margin-bottom:.6rem;}
+.ab-desc{color:var(--muted);font-size:.84rem;line-height:1.65;}
+
+/* TOPICS */
+.topics{margin-bottom:3rem;}
+.topics h3{font-size:1.1rem;font-weight:700;margin-bottom:1.2rem;}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.8rem;}
+.topic{background:var(--navy3);border:1px solid var(--border);border-radius:10px;padding:1rem;display:flex;align-items:center;gap:.7rem;transition:border-color .2s;}
+.topic:hover{border-color:rgba(201,168,76,.25);}
+.topic-icon{font-size:1.3rem;}
+.topic-text{font-size:.82rem;font-weight:500;color:var(--muted);}
+
+/* RESPONSE */
+.response-box{background:linear-gradient(135deg,var(--gold3),rgba(201,168,76,.06));border:1px solid rgba(201,168,76,.2);border-radius:12px;padding:1.5rem 2rem;text-align:center;}
+.response-box p{color:var(--muted);font-size:.88rem;}
+.response-box strong{color:var(--gold);}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+
+@media(max-width:760px){
+  .about-box{grid-template-columns:1fr;text-align:center;}
+  .ab-photo{margin:0 auto;}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="automation.html">Automation</a></li>
+      <li><a href="prompts.html">Prompting</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="casestudies.html">Case Studies</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hg"></div><div class="hero-glow"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">📩 Contact Me</div>
+    <h1 class="ph-title">Let's <span>Connect</span></h1>
+    <p class="ph-sub">Whether it's fraud investigations, ethics & compliance, AI, automation, or just a conversation — I'd love to hear from you.</p>
+    <div class="ph-meta">📍 Gurugram, India &nbsp;·&nbsp; ⚡ Usually responds within 12–24 hours</div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="wrap">
+
+    <!-- ABOUT -->
+    <div class="about-box rv">
+      <div class="ab-photo">
+        <img src="https://riteshpunyani.github.io/assets/photo.jpg" alt="Ritesh Punyani" onerror="this.onerror=null;"/>
+      </div>
+      <div>
+        <div class="ab-name">Ritesh Punyani</div>
+        <div class="ab-role">COBC Lead · Reliance Consumer Products Limited (RCPL)</div>
+        <div class="ab-loc">📍 Gurugram, India</div>
+        <div class="ab-desc">CA · DISA · CISA · CIA · CFE · AML Specialist · CIPPE &nbsp;|&nbsp; 18+ years in fraud investigations, ethics & compliance. Passionate about AI, automation, and building practical tools for professionals.</div>
+      </div>
+    </div>
+
+    <!-- CONTACT CARDS -->
+    <div class="contact-grid rv">
+      <a class="cc" href="https://www.linkedin.com/in/riteshpunyani/" target="_blank">
+        <div class="cc-icon">🔗</div>
+        <div class="cc-label">LinkedIn</div>
+        <div class="cc-value">linkedin.com/in/riteshpunyani</div>
+        <div class="cc-sub">Connect professionally</div>
+        <div class="cc-arrow">Visit Profile →</div>
+      </a>
+      <a class="cc" href="https://forms.gle/JLQN4QcBZ134iTsE7" target="_blank">
+        <div class="cc-icon">📝</div>
+        <div class="cc-label">Contact Form</div>
+        <div class="cc-value">Google Form</div>
+        <div class="cc-sub">Send a detailed message</div>
+        <div class="cc-arrow">Open Form →</div>
+      </a>
+      <a class="cc" href="tel:+18323748374">
+        <div class="cc-icon">📞</div>
+        <div class="cc-label">Google Voice</div>
+        <div class="cc-value">+1 (832) 374-8374</div>
+        <div class="cc-sub">Available for calls</div>
+        <div class="cc-arrow">Call Now →</div>
+      </a>
+      <a class="cc" href="https://riteshpunyani.github.io" target="_blank">
+        <div class="cc-icon">🌐</div>
+        <div class="cc-label">Website</div>
+        <div class="cc-value">riteshpunyani.github.io</div>
+        <div class="cc-sub">Full portfolio site</div>
+        <div class="cc-arrow">Visit Site →</div>
+      </a>
+    </div>
+
+    <!-- TOPICS -->
+    <div class="topics rv">
+      <h3>💬 Happy to discuss...</h3>
+      <div class="topic-grid">
+        <div class="topic"><div class="topic-icon">🔍</div><div class="topic-text">Fraud Investigations & Forensics</div></div>
+        <div class="topic"><div class="topic-icon">⚖️</div><div class="topic-text">Ethics & Compliance Programmes</div></div>
+        <div class="topic"><div class="topic-icon">🤖</div><div class="topic-text">AI Tools & Automation</div></div>
+        <div class="topic"><div class="topic-icon">📊</div><div class="topic-text">Data Analytics in Compliance</div></div>
+        <div class="topic"><div class="topic-icon">💬</div><div class="topic-text">Prompt Engineering</div></div>
+        <div class="topic"><div class="topic-icon">📈</div><div class="topic-text">Predictive Analytics & ML</div></div>
+        <div class="topic"><div class="topic-icon">🛡️</div><div class="topic-text">AML & Data Privacy</div></div>
+        <div class="topic"><div class="topic-icon">🤝</div><div class="topic-text">Mentoring & Collaboration</div></div>
+      </div>
+    </div>
+
+    <!-- RESPONSE TIME -->
+    <div class="response-box rv">
+      <p>💡 <strong>Response time:</strong> I usually respond within <strong>12–24 hours</strong>. Looking forward to connecting with you! 🚀</p>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="portfolio.html">Portfolio</a><a href="analytics.html">Analytics</a><a href="automation.html">Automation</a><a href="prompts.html">Prompting</a><a href="tools.html">Tools</a><a href="blogs.html">Blogs</a><a href="sitemap.html">Site Map</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

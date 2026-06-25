@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>My Portfolio — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+
+/* HERO */
+.page-hero{min-height:50vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:linear-gradient(135deg,#070c18,#0d1423,#070c18);position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.05) 1px,transparent 1px);background-size:55px 55px;pointer-events:none;}
+.hgl{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,.08),transparent 65%);top:-200px;right:-100px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;width:100%;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;}
+.ph-photo{width:150px;height:150px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));padding:3px;flex-shrink:0;}
+.ph-photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:top;display:block;background:var(--navy3);}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold3);border:1px solid rgba(201,168,76,.28);color:var(--gold);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.9rem;}
+.ph-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.1;margin-bottom:.5rem;}
+.ph-title span{background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-role{color:var(--gold);font-size:.85rem;font-weight:600;margin-bottom:.5rem;}
+.ph-creds{color:var(--muted);font-size:.78rem;letter-spacing:.5px;margin-bottom:1rem;}
+.ph-tags{display:flex;flex-wrap:wrap;gap:.4rem;}
+.ptag{background:var(--gold3);border:1px solid rgba(201,168,76,.18);color:var(--gold);padding:.22rem .62rem;border-radius:999px;font-size:.7rem;}
+
+/* STATS BAR */
+.stats-bar{background:var(--navy3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stats-inner{max-width:1160px;margin:auto;display:flex;padding:0 2rem;}
+.sbi{flex:1;padding:1.2rem 1rem;text-align:center;border-right:1px solid var(--border);}
+.sbi:last-child{border-right:none;}
+.sbi-val{font-size:1.6rem;font-weight:900;color:var(--gold);}
+.sbi-label{font-size:.68rem;color:var(--muted);margin-top:.15rem;}
+
+section{padding:4.5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--gold);display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.88rem;max-width:560px;margin-bottom:2.5rem;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+.rl{opacity:0;transform:translateX(-24px);transition:opacity .65s,transform .65s;}
+.rl.up{opacity:1;transform:none;}
+.rr{opacity:0;transform:translateX(24px);transition:opacity .65s,transform .65s;}
+.rr.up{opacity:1;transform:none;}
+
+/* ABOUT */
+#about{background:var(--navy2);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+.about-text p{color:var(--muted);font-size:.88rem;margin-bottom:.85rem;}
+.about-text strong{color:var(--text);}
+.mission{background:var(--card);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:1.2rem 1.5rem;margin-top:1.5rem;font-style:italic;color:var(--muted);font-size:.86rem;line-height:1.75;}
+.mission strong{color:var(--gold);}
+.quick-links{display:flex;flex-direction:column;gap:.7rem;}
+.ql{display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;}
+.ql:hover{border-color:rgba(201,168,76,.3);transform:translateX(4px);}
+.ql-icon{font-size:1.5rem;}
+.ql-title{font-weight:600;font-size:.88rem;}
+.ql-sub{color:var(--muted);font-size:.75rem;margin-top:.1rem;}
+
+/* TIMELINE */
+#career{background:var(--navy);}
+.tl{position:relative;padding-left:2rem;max-width:860px;}
+.tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--gold),rgba(201,168,76,.05));}
+.tli{position:relative;margin-bottom:2rem;padding:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:12px;transition:border-color .22s,transform .22s;}
+.tli:hover{border-color:rgba(201,168,76,.3);transform:translateX(4px);}
+.tli::before{content:'';position:absolute;left:-2.65rem;top:1.8rem;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid var(--navy);box-shadow:0 0 0 4px rgba(201,168,76,.15);}
+.tl-current::before{box-shadow:0 0 0 4px rgba(201,168,76,.25),0 0 12px rgba(201,168,76,.4);}
+.tl-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem;}
+.tl-role{font-weight:800;font-size:1rem;}
+.tl-period{font-size:.72rem;background:var(--gold3);border:1px solid rgba(201,168,76,.2);color:var(--gold);padding:.22rem .7rem;border-radius:999px;white-space:nowrap;flex-shrink:0;}
+.tl-org{color:var(--gold);font-size:.84rem;font-weight:600;margin-bottom:.5rem;}
+.tl-desc{color:var(--muted);font-size:.84rem;line-height:1.65;}
+.tl-pills{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem;}
+.tl-pill{font-size:.68rem;padding:.18rem .52rem;border-radius:999px;border:1px solid var(--border);color:var(--muted);}
+
+/* ACHIEVEMENTS */
+#achievements{background:var(--navy2);}
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;}
+.ach{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;position:relative;overflow:hidden;transition:transform .22s,border-color .22s;}
+.ach::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transition:transform .3s;}
+.ach:hover{transform:translateY(-4px);border-color:rgba(201,168,76,.28);}
+.ach:hover::before{transform:scaleX(1);}
+.ach-icon{font-size:1.8rem;margin-bottom:.7rem;}
+.ach-title{font-weight:700;font-size:.92rem;margin-bottom:.35rem;}
+.ach-desc{color:var(--muted);font-size:.81rem;line-height:1.6;}
+
+/* CERTIFICATIONS */
+#certs{background:var(--navy);}
+.cert-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.ctab{background:var(--card);border:1px solid var(--border);color:var(--muted);font-size:.78rem;padding:.4rem 1rem;border-radius:999px;cursor:pointer;transition:all .2s;user-select:none;}
+.ctab.active,.ctab:hover{background:var(--gold3);border-color:rgba(201,168,76,.3);color:var(--gold);}
+.cert-group{display:none;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;}
+.cert-group.active{display:grid;}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .22s,transform .22s;text-decoration:none;color:inherit;}
+.cc:hover{border-color:var(--gold);transform:translateY(-3px);}
+.cc-abbr{font-size:1.2rem;font-weight:900;color:var(--gold);min-width:50px;padding:.4rem;background:var(--gold3);border-radius:8px;text-align:center;flex-shrink:0;}
+.cc-name{font-weight:700;font-size:.85rem;margin-bottom:.2rem;}
+.cc-body{color:var(--muted);font-size:.75rem;line-height:1.5;}
+.cc-year{display:inline-block;margin-top:.4rem;font-size:.68rem;background:var(--navy3);border:1px solid var(--border);color:var(--muted);padding:.15rem .5rem;border-radius:999px;}
+
+/* SKILLS */
+#skills{background:var(--navy2);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;}
+.sk{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.3rem;}
+.sk-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:.7rem;}
+.sk-name{font-size:.88rem;font-weight:600;}
+.sk-pct{font-size:.75rem;color:var(--gold);font-weight:700;}
+.sk-bar{background:var(--navy3);border-radius:999px;height:5px;overflow:hidden;}
+.sk-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--gold),var(--gold2));width:0;transition:width 1.3s ease;}
+
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;}
+.footer-links a:hover{color:var(--gold);}
+
+@media(max-width:760px){
+  .ph-inner,.about-grid{grid-template-columns:1fr;}
+  .ph-photo{margin:0 auto;}
+  .stats-inner{flex-wrap:wrap;}
+  .sbi{min-width:50%;border-bottom:1px solid var(--border);}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="automation.html">Automation</a></li>
+      <li><a href="prompts.html">Prompting</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="casestudies.html">Case Studies</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div>
+  <div class="ph-inner">
+    <div class="ph-photo"><img src="https://riteshpunyani.github.io/assets/photo.jpg" alt="Ritesh Punyani" onerror="this.onerror=null;"/></div>
+    <div>
+      <div class="ph-tag">🌐 My Portfolio</div>
+      <h1 class="ph-title">Ritesh <span>Punyani</span></h1>
+      <div class="ph-role">COBC Lead · Reliance Consumer Products Limited (RCPL)</div>
+      <div class="ph-creds">CA · DISA · CISA · CIA · CFE · AML Specialist · CIPPE &nbsp;|&nbsp; 18+ Years Experience</div>
+      <div class="ph-tags">
+        <span class="ptag">Fraud Investigations</span><span class="ptag">Ethics & Compliance</span><span class="ptag">AI & Automation</span><span class="ptag">Data Analytics</span><span class="ptag">Prompt Engineering</span><span class="ptag">AML</span><span class="ptag">GDPR</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="sbi"><div class="sbi-val">18+</div><div class="sbi-label">Years Experience</div></div>
+    <div class="sbi"><div class="sbi-val">12</div><div class="sbi-label">Years at Coca-Cola</div></div>
+    <div class="sbi"><div class="sbi-val">7</div><div class="sbi-label">Certifications</div></div>
+    <div class="sbi"><div class="sbi-val">4</div><div class="sbi-label">Countries (SWA Lead)</div></div>
+    <div class="sbi"><div class="sbi-val">1,700+</div><div class="sbi-label">Analytics Tests Built</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text rl">
+        <div class="stag">About Me</div>
+        <h2 class="sh">Integrity with Innovation</h2>
+        <p>I am a <strong>Chartered Accountant</strong> with over 18 years of experience in fraud investigations, ethics, and compliance. Currently serving as <strong>COBC Lead at Reliance Consumer Products Limited (RCPL)</strong>, where I am setting up the Code of Business Conduct function from scratch and driving ethical culture across the organisation.</p>
+        <p>Previously <strong>Senior Manager, Ethics & Compliance at PwC</strong>, and before that spent <strong>12 years at The Coca-Cola Company</strong> leading Fraud & Compliance across South-West Asia — India, Nepal, Bangladesh, and Sri Lanka. I drove the Fraud Management Framework across the INSWA region and also led internal controls, SOX compliance, and policy governance for the Microsoft Dynamics 365 ERP rollout in international markets.</p>
+        <p>Early career at <strong>Deloitte</strong> and <strong>Aviva Life Insurance</strong> in fraud investigations, compliance reviews, and white-collar crime assignments.</p>
+        <p>Deeply passionate about <strong>AI, automation, and data analytics</strong> as force multipliers — building practical tools that simplify complexity and improve efficiency exponentially.</p>
+        <div class="mission">"From leading Coca-Cola's regional fraud and compliance vertical across four countries — to setting up the COBC function at RCPL — <strong>my mission remains constant: combining ethics, compliance, and technology to build trust in business.</strong>"</div>
+      </div>
+      <div class="rr">
+        <div class="stag">Explore My Work</div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;color:var(--text);">What's on this site</h3>
+        <div class="quick-links">
+          <a href="analytics.html" class="ql"><span class="ql-icon">📊</span><div><div class="ql-title">Data Analytics in Fraud & Compliance</div><div class="ql-sub">1,700+ analytics tests library</div></div></a>
+          <a href="automation.html" class="ql"><span class="ql-icon">⚙️</span><div><div class="ql-title">Automation Hub</div><div class="ql-sub">6 domains · Tools · AI Copilots</div></div></a>
+          <a href="prompts.html" class="ql"><span class="ql-icon">💬</span><div><div class="ql-title">Prompt Engineering</div><div class="ql-sub">Library · Hacks · Techniques</div></div></a>
+          <a href="tools.html" class="ql"><span class="ql-icon">🛠️</span><div><div class="ql-title">Free Tools & Resources</div><div class="ql-sub">Emily · Sophia · VBA Utilities · Custom GPTs</div></div></a>
+          <a href="casestudies.html" class="ql"><span class="ql-icon">🧩</span><div><div class="ql-title">Case Studies</div><div class="ql-sub">ML · Predictive Analytics · Automation</div></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER TIMELINE -->
+<section id="career">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Career</div><h2 class="sh">Career Timeline</h2><p class="ss">A journey spanning investigations, governance, consulting, and AI-driven compliance.</p></div>
+    <div class="tl">
+      <div class="tli tl-current rv">
+        <div class="tl-header"><div class="tl-role">COBC Lead</div><div class="tl-period">2025 — Present</div></div>
+        <div class="tl-org">Reliance Consumer Products Limited (RCPL) · Reliance Industries</div>
+        <div class="tl-desc">Setting up the Code of Business Conduct (COBC) function from the ground up. Establishing investigation workflows, ethics helpline governance, policy frameworks, and driving ethical culture across RCPL.</div>
+        <div class="tl-pills"><span class="tl-pill">COBC Setup</span><span class="tl-pill">Ethics Helpline</span><span class="tl-pill">Investigations</span><span class="tl-pill">Policy Frameworks</span><span class="tl-pill">Ethical Culture</span></div>
+      </div>
+      <div class="tli rv" style="transition-delay:.08s">
+        <div class="tl-header"><div class="tl-role">Senior Manager — Ethics & Compliance</div><div class="tl-period">Previous</div></div>
+        <div class="tl-org">PwC</div>
+        <div class="tl-desc">Drove governance, integrity, and compliance advisory for clients across industries at one of the world's leading professional services firms.</div>
+        <div class="tl-pills"><span class="tl-pill">Compliance Advisory</span><span class="tl-pill">Governance</span><span class="tl-pill">Ethics Programmes</span></div>
+      </div>
+      <div class="tli rv" style="transition-delay:.16s">
+        <div class="tl-header"><div class="tl-role">Lead — Fraud & Compliance, South-West Asia</div><div class="tl-period">12 Years</div></div>
+        <div class="tl-org">The Coca-Cola Company · India · Nepal · Bangladesh · Sri Lanka</div>
+        <div class="tl-desc">Led the Fraud Management Framework across the INSWA region. Detected, investigated, and implemented preventive controls for a multi-million dollar fraud using advanced data analytics. Drove internal controls, SOX compliance, and policy governance for the Microsoft Dynamics 365 ERP rollout across international markets.</div>
+        <div class="tl-pills"><span class="tl-pill">Fraud Management</span><span class="tl-pill">INSWA Region</span><span class="tl-pill">Data Analytics</span><span class="tl-pill">SOX Controls</span><span class="tl-pill">D365 ERP</span><span class="tl-pill">FCPA</span><span class="tl-pill">Anti-Bribery</span></div>
+      </div>
+      <div class="tli rv" style="transition-delay:.24s">
+        <div class="tl-header"><div class="tl-role">Fraud Investigations & Compliance Reviews</div><div class="tl-period">Early Career</div></div>
+        <div class="tl-org">Deloitte & Aviva Life Insurance</div>
+        <div class="tl-desc">White-collar crime investigations, fraud risk management, anti-bribery and corruption compliance, and internal audit reviews.</div>
+        <div class="tl-pills"><span class="tl-pill">White-Collar Crime</span><span class="tl-pill">Internal Audit</span><span class="tl-pill">Anti-Bribery</span><span class="tl-pill">Forensic Accounting</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Achievements</div><h2 class="sh">Key Achievements</h2><p class="ss">Selected highlights from a career at the intersection of integrity, technology, and governance.</p></div>
+    <div class="ach-grid">
+      <div class="ach rv" style="transition-delay:.05s"><div class="ach-icon">🏆</div><div class="ach-title">Multi-Million Dollar Fraud — Detected & Controlled</div><div class="ach-desc">Used advanced data analytics to detect, investigate, and implement preventive controls for a major fraud spanning multiple markets at Coca-Cola.</div></div>
+      <div class="ach rv" style="transition-delay:.1s"><div class="ach-icon">🌐</div><div class="ach-title">Cross-Border Compliance Leadership</div><div class="ach-desc">Managed fraud and compliance across four countries — India, Nepal, Bangladesh, Sri Lanka — with varying legal systems, regulations, and cultural contexts.</div></div>
+      <div class="ach rv" style="transition-delay:.15s"><div class="ach-icon">⚡</div><div class="ach-title">COBC Function Setup at RCPL</div><div class="ach-desc">Building the Code of Business Conduct function from scratch at Reliance Consumer Products — policies, investigation workflows, ethics helpline, and culture programmes.</div></div>
+      <div class="ach rv" style="transition-delay:.2s"><div class="ach-icon">📊</div><div class="ach-title">1,700+ Analytics Test Library</div><div class="ach-desc">Built a comprehensive repository of fraud and compliance analytics tests covering Finance, HR, Procurement, and Compliance — freely available to practitioners worldwide.</div></div>
+      <div class="ach rv" style="transition-delay:.25s"><div class="ach-icon">🤖</div><div class="ach-title">AI Tools Built for Professionals</div><div class="ach-desc">Developed AI voice assistants (Emily, Sophia), Custom GPTs, Excel VBA utilities, and automation workflows used by professionals for compliance and productivity.</div></div>
+      <div class="ach rv" style="transition-delay:.3s"><div class="ach-icon">💡</div><div class="ach-title">Thought Leadership</div><div class="ach-desc">Published blogs and delivered sessions on AI ethics, compliance monitoring, and the future of integrity in organisations.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Credentials</div><h2 class="sh">Education & Certifications</h2><p class="ss">A multi-disciplinary credential stack spanning accounting, audit, fraud, privacy, and data science.</p></div>
+    <div class="cert-tabs rv">
+      <div class="ctab active" onclick="showTab(this,'global')">🌐 Global</div>
+      <div class="ctab" onclick="showTab(this,'indian')">🇮🇳 Indian</div>
+      <div class="ctab" onclick="showTab(this,'technical')">💻 Technical</div>
+      <div class="ctab" onclick="showTab(this,'leadership')">🎓 Leadership</div>
+    </div>
+    <div id="tab-global" class="cert-group active rv">
+      <a class="cc" href="https://www.credential.net/bb12599d-92b7-4920-a74b-d783c78d8cd5" target="_blank"><div class="cc-abbr">CIPPE</div><div><div class="cc-name">Certified Info. Privacy Professional / Europe</div><div class="cc-body">IAPP, USA · GDPR & data privacy frameworks</div><span class="cc-year">2024</span></div></a>
+      <a class="cc" href="https://www.credly.com/badges/50d9cb80-4b2f-4fd2-b2c0-964ffc8a9f40" target="_blank"><div class="cc-abbr">CFE</div><div><div class="cc-name">Certified Fraud Examiner</div><div class="cc-body">ACFE, USA · Fraud detection, prevention & investigation</div><span class="cc-year">2008</span></div></a>
+      <a class="cc" href="https://www.credly.com/badges/55ebbf67-cfc9-48ee-929b-37a5a19813fa" target="_blank"><div class="cc-abbr">CIA</div><div><div class="cc-name">Certified Internal Auditor</div><div class="cc-body">IIA, USA · Internal controls, governance & risk</div><span class="cc-year">2007</span></div></a>
+      <a class="cc" href="https://www.credly.com/badges/926f39dc-d874-465e-a54f-cc3c9d92e85f" target="_blank"><div class="cc-abbr">CISA</div><div><div class="cc-name">Certified Information Systems Auditor</div><div class="cc-body">ISACA, USA · IT audit & information security</div><span class="cc-year">2006</span></div></a>
+    </div>
+    <div id="tab-indian" class="cert-group rv">
+      <div class="cc"><div class="cc-abbr">CA</div><div><div class="cc-name">Chartered Accountant</div><div class="cc-body">ICAI · Accounting, auditing & corporate laws</div><span class="cc-year">2004</span></div></div>
+      <div class="cc"><div class="cc-abbr">AML</div><div><div class="cc-name">AML Specialist</div><div class="cc-body">ICAI · AML risk assessment & financial crime</div><span class="cc-year">2021</span></div></div>
+      <div class="cc"><div class="cc-abbr">DISA</div><div><div class="cc-name">Diploma in Information System Audit</div><div class="cc-body">ICAI · IT audit, system controls & data assurance</div><span class="cc-year">2005</span></div></div>
+    </div>
+    <div id="tab-technical" class="cert-group rv">
+      <a class="cc" href="https://www.linkedin.com/learning/certificates/c0d611608c02f5db3bbbc11be0e1c21a3840e2365a83f7f9fdcb27adb30b0545" target="_blank"><div class="cc-abbr" style="font-size:.7rem">LI</div><div><div class="cc-name">Improving Insights with OpenAI's Advanced Data Analysis</div><div class="cc-body">LinkedIn Learning · 2024</div></div></a>
+      <a class="cc" href="https://www.udemy.com/certificate/UC-d4b94ab4-a041-4013-8a34-d39ced0a7395/" target="_blank"><div class="cc-abbr" style="font-size:.7rem">Ud</div><div><div class="cc-name">Data Science A–Z™: Hands-On + ChatGPT Bonus</div><div class="cc-body">Udemy · 2023</div></div></a>
+      <a class="cc" href="https://www.coursera.org/account/accomplishments/certificate/BZWGVQQ5RF84" target="_blank"><div class="cc-abbr" style="font-size:.7rem">Co</div><div><div class="cc-name">The Power of Machine Learning</div><div class="cc-body">Coursera · 2020</div></div></a>
+      <a class="cc" href="https://www.coursera.org/account/accomplishments/certificate/8Z6UPCW6Y36C" target="_blank"><div class="cc-abbr" style="font-size:.7rem">Co</div><div><div class="cc-name">Statistical Analysis & Business Applications</div><div class="cc-body">Coursera · 4-Course Specialisation · 2020</div></div></a>
+      <a class="cc" href="https://www.udemy.com/certificate/UC-fa175236-6c0e-4592-b8f7-f04b7477970a/" target="_blank"><div class="cc-abbr" style="font-size:.7rem">Ud</div><div><div class="cc-name">Intro to Data Science</div><div class="cc-body">Udemy · 2022</div></div></a>
+      <a class="cc" href="https://verify.skilljar.com/c/6yz7mve58v22" target="_blank"><div class="cc-abbr" style="font-size:.7rem">FP</div><div><div class="cc-name">Access Certifications / Security Designer / Change Tracking</div><div class="cc-body">Fastpath Solutions · D365 · 2023</div></div></a>
+    </div>
+    <div id="tab-leadership" class="cert-group rv">
+      <a class="cc" href="https://drive.google.com/file/d/1IJTzjkCM0Ip8VbspcEzcn548XhXAuCn2/view" target="_blank"><div class="cc-abbr" style="font-size:.7rem">HBS</div><div><div class="cc-name">Stepping Up to Management</div><div class="cc-body">Harvard Business School · 2006</div></div></a>
+      <div class="cc"><div class="cc-abbr" style="font-size:.7rem">MDI</div><div><div class="cc-name">Building High Performance</div><div class="cc-body">Management Development Institute, Gurgaon · 2008</div></div></div>
+      <div class="cc"><div class="cc-abbr" style="font-size:.7rem">YB</div><div><div class="cc-name">Yellow Belt Certification</div><div class="cc-body">Aviva Life Insurance · Lean Six Sigma · 2008</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Skills</div><h2 class="sh">Core Competencies</h2><p class="ss">Skills honed over 18+ years across investigations, compliance, and technology.</p></div>
+    <div class="skills-grid rv">
+      <div class="sk"><div class="sk-top"><div class="sk-name">🔍 Fraud Investigations & Forensics</div><div class="sk-pct">95%</div></div><div class="sk-bar"><div class="sk-fill" data-w="95"></div></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-name">⚖️ Ethics & Compliance</div><div class="sk-pct">95%</div></div><div class="sk-bar"><div class="sk-fill" data-w="95"></div></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-name">📊 Data Analytics in Fraud</div><div class="sk-pct">90%</div></div><div class="sk-bar"><div class="sk-fill" data-w="90"></div></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-name">💬 Prompt Engineering</div><div class="sk-pct">90%</div></div><div class="sk-bar"><div class="sk-fill" data-w="90"></div></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-name">🤖 AI & Automation</div><div class="sk-pct">85%</div></div><div class="sk-bar"><div class="sk-fill" data-w="85"></div></div></div>
+      <div class="sk"><div class="sk-top"><div class="sk-name">📈 Predictive Analytics & ML</div><div class="sk-pct">78%</div></div><div class="sk-bar"><div class="sk-fill" data-w="78"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="analytics.html">Analytics</a><a href="automation.html">Automation</a><a href="prompts.html">Prompting</a><a href="tools.html">Tools</a><a href="casestudies.html">Case Studies</a><a href="blogs.html">Blogs</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+
+<script>
+function showTab(el,id){
+  document.querySelectorAll('.cert-group').forEach(g=>g.classList.remove('active'));
+  document.querySelectorAll('.ctab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  el.classList.add('active');
+}
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv,.rl,.rr').forEach(el=>ro.observe(el));
+const sro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.querySelectorAll('.sk-fill').forEach(b=>b.style.width=b.dataset.w+'%');}),{threshold:.3});
+document.querySelectorAll('.skills-grid').forEach(el=>sro.observe(el));
+</script>
+</body>
+</html>

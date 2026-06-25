@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>News & Updates — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--blue:#3b82f6;--blue2:rgba(59,130,246,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--blue);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+/* HERO */
+.page-hero{min-height:38vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:var(--navy2);position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.06) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+.hgl{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,.1),transparent 65%);top:-200px;right:-100px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;width:100%;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--blue2);border:1px solid rgba(59,130,246,.3);color:var(--blue);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(2rem,5vw,3rem);font-weight:900;line-height:1.1;margin-bottom:.7rem;}
+.ph-title span{background:linear-gradient(135deg,var(--blue),#93c5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.95rem;max-width:600px;margin-bottom:1rem;}
+.ph-focus{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem;}
+.ph-pill{background:var(--blue2);border:1px solid rgba(59,130,246,.2);color:#93c5fd;font-size:.72rem;padding:.25rem .7rem;border-radius:999px;}
+/* SECTIONS */
+section{padding:4.5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--blue);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--blue);display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.9rem;max-width:580px;margin-bottom:2.5rem;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+/* FOCUS AREAS */
+.focus-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.2rem;}
+.fc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color .22s,transform .22s;}
+.fc:hover{border-color:rgba(59,130,246,.3);transform:translateY(-3px);}
+.fc-icon{font-size:2rem;margin-bottom:.7rem;}
+.fc-title{font-weight:700;font-size:.93rem;margin-bottom:.4rem;}
+.fc-desc{color:var(--muted);font-size:.83rem;line-height:1.6;}
+/* SOURCES */
+.sources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;}
+.sc{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.2rem;display:flex;align-items:center;gap:.8rem;transition:border-color .2s,transform .2s;text-decoration:none;color:inherit;}
+.sc:hover{border-color:rgba(59,130,246,.3);transform:translateY(-2px);}
+.sc-icon{font-size:1.5rem;flex-shrink:0;}
+.sc-name{font-weight:700;font-size:.86rem;margin-bottom:.15rem;}
+.sc-type{color:var(--muted);font-size:.74rem;}
+/* COMING NOTICE */
+.coming-box{background:linear-gradient(135deg,var(--blue2),rgba(201,168,76,.06));border:1px solid rgba(59,130,246,.2);border-radius:16px;padding:3rem;text-align:center;}
+.coming-box h3{font-size:1.3rem;font-weight:800;margin-bottom:.6rem;}
+.coming-box p{color:var(--muted);font-size:.9rem;max-width:520px;margin:0 auto 1.5rem;line-height:1.7;}
+.btn-sub{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--blue),#93c5fd);color:#07111a;padding:.7rem 1.6rem;border-radius:8px;font-weight:700;font-size:.86rem;text-decoration:none;transition:all .22s;}
+.btn-sub:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,.3);}
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;}
+.footer-links a:hover{color:var(--gold);}
+@media(max-width:760px){
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="news.html" class="active">News</a></li>
+      <li><a href="youtube.html">YouTube</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">📰 News & Updates</div>
+    <h1 class="ph-title">Stay Ahead with<br><span>the Latest News</span></h1>
+    <p class="ph-sub">Curated insights from leading sources — industry news, regulatory updates, case law, thought leadership, and emerging trends in ethics, compliance, fraud risk, and AI.</p>
+    <div class="ph-focus">
+      <span class="ph-pill">Ethics & Integrity</span>
+      <span class="ph-pill">Compliance & Regulation</span>
+      <span class="ph-pill">Fraud Risk Management</span>
+      <span class="ph-pill">AI & Technology</span>
+      <span class="ph-pill">Thought Leadership</span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="rv"><div class="stag">Focus Areas</div><h2 class="sh">What This Page Covers</h2><p class="ss">Updated regularly with curated insights from leading sources across five key domains.</p></div>
+    <div class="focus-grid">
+      <div class="fc rv" style="transition-delay:.05s"><div class="fc-icon">⚖️</div><div class="fc-title">Ethics & Compliance</div><div class="fc-desc">Regulatory developments, enforcement actions, COBC frameworks, and governance best practices from global regulators and compliance bodies.</div></div>
+      <div class="fc rv" style="transition-delay:.1s"><div class="fc-icon">🔍</div><div class="fc-title">Fraud Risk Management</div><div class="fc-desc">Case law, enforcement precedents, fraud typologies, and emerging schemes — including financial crime, procurement fraud, and white-collar crime developments.</div></div>
+      <div class="fc rv" style="transition-delay:.15s"><div class="fc-icon">🤖</div><div class="fc-title">AI & Technology in Compliance</div><div class="fc-desc">How AI, machine learning, and automation are reshaping compliance monitoring, fraud detection, and risk management workflows.</div></div>
+      <div class="fc rv" style="transition-delay:.2s"><div class="fc-icon">🌐</div><div class="fc-title">Regulatory Updates</div><div class="fc-desc">SEBI, RBI, MCA, GDPR, FCPA, and other key regulatory developments affecting corporate governance, data privacy, and AML compliance.</div></div>
+      <div class="fc rv" style="transition-delay:.25s"><div class="fc-icon">💡</div><div class="fc-title">Thought Leadership</div><div class="fc-desc">Perspectives from industry leaders, compliance professionals, and academia on the future of ethics, integrity, and responsible business.</div></div>
+      <div class="fc rv" style="transition-delay:.3s"><div class="fc-icon">📊</div><div class="fc-title">Data & Analytics Trends</div><div class="fc-desc">Latest developments in predictive analytics, fraud detection models, and data-driven compliance — including new tools, techniques, and research.</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--navy2);">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Recommended Sources</div><h2 class="sh">Where I Follow the News</h2><p class="ss">Curated reading list for compliance professionals, fraud investigators, and AI practitioners.</p></div>
+    <div class="sources-grid rv">
+      <a class="sc" href="https://www.acfe.com/fraud-resources/fraud-magazine" target="_blank"><div class="sc-icon">📘</div><div><div class="sc-name">ACFE Fraud Magazine</div><div class="sc-type">Fraud & Investigations</div></div></a>
+      <a class="sc" href="https://www.complianceweek.com" target="_blank"><div class="sc-icon">📰</div><div><div class="sc-name">Compliance Week</div><div class="sc-type">Regulatory & Compliance</div></div></a>
+      <a class="sc" href="https://www.fcpablog.com" target="_blank"><div class="sc-icon">⚖️</div><div><div class="sc-name">FCPA Blog</div><div class="sc-type">Anti-Bribery & Corruption</div></div></a>
+      <a class="sc" href="https://www.iia.org.uk" target="_blank"><div class="sc-icon">🏛️</div><div><div class="sc-name">IIA (Institute of Internal Auditors)</div><div class="sc-type">Audit & Governance</div></div></a>
+      <a class="sc" href="https://www.iapp.org/news" target="_blank"><div class="sc-icon">🔒</div><div><div class="sc-name">IAPP Privacy News</div><div class="sc-type">Data Privacy & GDPR</div></div></a>
+      <a class="sc" href="https://www.sebi.gov.in" target="_blank"><div class="sc-icon">🇮🇳</div><div><div class="sc-name">SEBI</div><div class="sc-type">Indian Securities Regulation</div></div></a>
+      <a class="sc" href="https://www.rbi.org.in" target="_blank"><div class="sc-icon">🏦</div><div><div class="sc-name">Reserve Bank of India</div><div class="sc-type">Banking & AML Regulation</div></div></a>
+      <a class="sc" href="https://www.mit.edu/research/artificial-intelligence" target="_blank"><div class="sc-icon">🤖</div><div><div class="sc-name">MIT AI Research</div><div class="sc-type">AI & Technology</div></div></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="coming-box rv">
+      <h3>📡 Live News Feed — Coming Soon</h3>
+      <p>A curated, auto-updated news feed covering ethics, compliance, fraud risk, and AI is being set up using automation and RSS integration. In the meantime, follow the recommended sources above or connect with me on LinkedIn for regular updates.</p>
+      <a href="https://www.linkedin.com/in/riteshpunyani/" target="_blank" class="btn-sub">🔗 Follow on LinkedIn →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="blogs.html">Blogs</a><a href="youtube.html">YouTube Picks</a><a href="analytics.html">Analytics</a><a href="tools.html">Tools</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

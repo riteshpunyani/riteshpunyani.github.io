@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Machine Learning & Data Science — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--orange:#f97316;--orange2:rgba(249,115,22,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--orange);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+
+.page-hero{min-height:44vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:linear-gradient(135deg,#070c18,#140a04,#070c18);position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.06) 1px,transparent 1px);background-size:45px 45px;}
+.hgl{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(249,115,22,.12),transparent 65%);top:-200px;right:-100px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;width:100%;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--orange2);border:1px solid rgba(249,115,22,.3);color:var(--orange);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:.8rem;}
+.ph-title span{background:linear-gradient(135deg,var(--orange),#fdba74);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.95rem;max-width:600px;margin-bottom:1.5rem;}
+
+.stats-bar{background:var(--navy3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stats-inner{max-width:1160px;margin:auto;display:flex;padding:0 2rem;}
+.sbi{flex:1;padding:1.2rem 1rem;text-align:center;border-right:1px solid var(--border);}
+.sbi:last-child{border-right:none;}
+.sbi-val{font-size:1.6rem;font-weight:900;color:var(--orange);}
+.sbi-label{font-size:.68rem;color:var(--muted);margin-top:.15rem;}
+
+section{padding:4.5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--orange);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--orange);display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.88rem;max-width:560px;margin-bottom:2.5rem;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+
+/* UMBRELLA */
+#umbrella{background:var(--navy2);}
+.umb-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;}
+.umb-visual{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;}
+.umb-outer{background:var(--orange2);border:2px solid rgba(249,115,22,.25);border-radius:12px;padding:2rem;margin-bottom:1rem;}
+.umb-outer-label{font-size:.78rem;font-weight:700;color:var(--orange);letter-spacing:.8px;margin-bottom:1.2rem;}
+.umb-inner{background:var(--card);border:2px solid rgba(201,168,76,.3);border-radius:10px;padding:1.2rem;}
+.umb-inner-label{font-size:.78rem;font-weight:700;color:var(--gold);margin-bottom:.4rem;}
+.umb-inner-desc{font-size:.76rem;color:var(--muted);}
+.umb-question{margin-top:1.2rem;background:var(--navy3);border-radius:8px;padding:.8rem;font-size:.8rem;color:var(--muted);}
+.umb-question strong{color:var(--orange);}
+.umb-text p{color:var(--muted);font-size:.88rem;margin-bottom:.9rem;line-height:1.7;}
+.umb-text strong{color:var(--text);}
+
+/* MATHS */
+#maths{background:var(--navy);}
+.math-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.math-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.6rem;}
+.math-icon{font-size:1.8rem;margin-bottom:.7rem;}
+.math-title{font-weight:700;font-size:.95rem;margin-bottom:.5rem;}
+.math-desc{color:var(--muted);font-size:.84rem;line-height:1.65;margin-bottom:.9rem;}
+.math-example{background:var(--navy3);border-radius:8px;padding:.8rem 1rem;font-size:.8rem;color:var(--muted);}
+.math-example strong{color:var(--orange);}
+
+/* INDUSTRIES */
+#industries{background:var(--navy2);}
+.ind-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;}
+.ind{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.3rem;text-align:center;transition:transform .22s,border-color .22s;}
+.ind:hover{transform:translateY(-4px);border-color:rgba(249,115,22,.3);}
+.ind-icon{font-size:2rem;margin-bottom:.6rem;}
+.ind-name{font-weight:700;font-size:.88rem;margin-bottom:.3rem;}
+.ind-use{color:var(--muted);font-size:.76rem;}
+
+/* USE CASES */
+#usecases{background:var(--navy);}
+.uc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;}
+.uc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;overflow:hidden;position:relative;transition:transform .22s,border-color .22s;}
+.uc:hover{transform:translateY(-4px);border-color:rgba(249,115,22,.3);}
+.uc-num{position:absolute;top:1rem;right:1.2rem;font-size:2rem;font-weight:900;color:rgba(249,115,22,.08);}
+.uc-icon{font-size:1.8rem;margin-bottom:.6rem;}
+.uc-title{font-weight:700;font-size:.92rem;margin-bottom:.4rem;}
+.uc-desc{color:var(--muted);font-size:.82rem;line-height:1.6;margin-bottom:.7rem;}
+.uc-tag{display:inline-block;font-size:.7rem;padding:.2rem .6rem;border-radius:999px;background:var(--orange2);border:1px solid rgba(249,115,22,.2);color:var(--orange);}
+
+/* TAKEAWAY */
+#takeaway{background:var(--navy2);}
+.ta-box{background:linear-gradient(135deg,var(--orange2),rgba(201,168,76,.06));border:1px solid rgba(249,115,22,.2);border-radius:16px;padding:3rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;text-align:center;}
+.ta-item{}
+.ta-icon{font-size:2.5rem;margin-bottom:.7rem;}
+.ta-title{font-weight:800;font-size:.95rem;margin-bottom:.4rem;}
+.ta-desc{color:var(--muted);font-size:.82rem;line-height:1.6;}
+
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+@media(max-width:760px){
+  .umb-grid,.math-grid,.ta-box{grid-template-columns:1fr;}
+  .stats-inner{flex-wrap:wrap;}
+  .sbi{min-width:50%;border-bottom:1px solid var(--border);}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="predictive.html">Predictive</a></li>
+      <li><a href="ml.html" class="active">ML & DS</a></li>
+      <li><a href="prompts.html">Prompting</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="casestudies.html">Case Studies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">📊 ML & Data Science</div>
+    <h1 class="ph-title">Machine Learning &<br><span>Data Science</span></h1>
+    <p class="ph-sub">In today's AI-driven world, data is the new oil. Data Science and ML form the engine behind AI applications — from fraud detection and chatbots to product recommendations and medical diagnosis.</p>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="sbi"><div class="sbi-val">DS</div><div class="sbi-label">The Umbrella Discipline</div></div>
+    <div class="sbi"><div class="sbi-val">ML</div><div class="sbi-label">The Prediction Engine Inside</div></div>
+    <div class="sbi"><div class="sbi-val">∞</div><div class="sbi-label">Industries Transformed</div></div>
+    <div class="sbi"><div class="sbi-val">📊+🧠</div><div class="sbi-label">Stats + Maths = ML</div></div>
+  </div>
+</div>
+
+<!-- UMBRELLA -->
+<section id="umbrella">
+  <div class="wrap">
+    <div class="rv"><div class="stag">The Big Picture</div><h2 class="sh">How Data Science & ML Relate</h2><p class="ss">Think of Data Science as the bigger umbrella — ML is one of the most powerful tools inside it.</p></div>
+    <div class="umb-grid rv">
+      <div class="umb-visual">
+        <div class="umb-outer">
+          <div class="umb-outer-label">📊 DATA SCIENCE</div>
+          <div style="color:var(--muted);font-size:.78rem;margin-bottom:1rem;">Computer Science · Statistics · Domain Knowledge · Coding</div>
+          <div class="umb-inner">
+            <div class="umb-inner-label">🧠 MACHINE LEARNING</div>
+            <div class="umb-inner-desc">Models that learn from data and predict automatically</div>
+          </div>
+        </div>
+        <div class="umb-question">
+          <strong>Data Science asks:</strong> "What does the data tell us?"<br>
+          <strong style="color:var(--orange)">ML goes further:</strong> "Can we use past patterns to predict what happens next?"
+        </div>
+      </div>
+      <div class="umb-text">
+        <p><strong>Data Science</strong> is an interdisciplinary field combining principles from computer science, mathematics, statistics, and domain knowledge to extract hidden patterns, build predictive models, and inform data-driven decisions.</p>
+        <p><strong>Machine Learning</strong> is one of the power tools inside Data Science — the part that allows systems to learn automatically from past data and make predictions about new situations without being explicitly programmed.</p>
+        <p>Together, they form the backbone of modern AI applications — from the fraud detection systems protecting banks to the recommendation engines powering Netflix and Amazon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATHS ROLE -->
+<section id="maths">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Foundations</div><h2 class="sh">The Role of Maths & Statistics</h2><p class="ss">At its core, Machine Learning is applied mathematics and statistics.</p></div>
+    <div class="math-grid rv">
+      <div class="math-card">
+        <div class="math-icon">📐</div>
+        <div class="math-title">Statistics</div>
+        <div class="math-desc">Helps in understanding patterns, averages, correlations, and probabilities in data — the foundation for understanding what the data is telling you.</div>
+        <div class="math-example"><strong>In marketing:</strong> Statistics identifies which variables (age, gender, past purchases) correlate most with buying behaviour.</div>
+      </div>
+      <div class="math-card">
+        <div class="math-icon">🔢</div>
+        <div class="math-title">Mathematics</div>
+        <div class="math-desc">Algebra, calculus, and linear algebra provide the tools to build and optimise predictive models — the engine that turns data into predictions.</div>
+        <div class="math-example"><strong>In ML:</strong> Mathematics builds a model that predicts which new customers are most likely to buy, based on past patterns.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Applications</div><h2 class="sh">Industries Transformed by ML</h2><p class="ss">Every industry with data and decisions can benefit from Machine Learning.</p></div>
+    <div class="ind-grid rv">
+      <div class="ind"><div class="ind-icon">🛒</div><div class="ind-name">Retail</div><div class="ind-use">Personalised shopping & demand forecasting</div></div>
+      <div class="ind"><div class="ind-icon">🏦</div><div class="ind-name">Finance</div><div class="ind-use">Credit scoring & fraud prevention</div></div>
+      <div class="ind"><div class="ind-icon">🏥</div><div class="ind-name">Healthcare</div><div class="ind-use">Predictive diagnosis & treatment planning</div></div>
+      <div class="ind"><div class="ind-icon">🏭</div><div class="ind-name">Manufacturing</div><div class="ind-use">Predictive maintenance of machines</div></div>
+      <div class="ind"><div class="ind-icon">🎬</div><div class="ind-name">Entertainment</div><div class="ind-use">Personalised content (Netflix, Spotify)</div></div>
+      <div class="ind"><div class="ind-icon">⚖️</div><div class="ind-name">Compliance</div><div class="ind-use">Risk scoring & ethics monitoring</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section id="usecases">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Real-World Use Cases</div><h2 class="sh">ML in Action</h2><p class="ss">From boardrooms to hospitals — how ML is delivering measurable impact.</p></div>
+    <div class="uc-grid">
+      <div class="uc rv" style="transition-delay:.05s">
+        <div class="uc-num">01</div>
+        <div class="uc-icon">💰</div>
+        <div class="uc-title">Smarter Marketing</div>
+        <div class="uc-desc">Instead of random ads, ML predicts which customers are most likely to purchase — dramatically reducing acquisition costs and boosting revenue. With global corporations spending billions on ads, the cost-saving potential is enormous.</div>
+        <span class="uc-tag">Classification · Propensity</span>
+      </div>
+      <div class="uc rv" style="transition-delay:.1s">
+        <div class="uc-num">02</div>
+        <div class="uc-icon">🔐</div>
+        <div class="uc-title">Fraud Detection</div>
+        <div class="uc-desc">Banks use ML to detect unusual transaction patterns in real time — analysing amount, location, device, and frequency simultaneously. ACFE estimates organisations lose 5% of annual revenue to fraud.</div>
+        <span class="uc-tag">Anomaly Detection · Classification</span>
+      </div>
+      <div class="uc rv" style="transition-delay:.15s">
+        <div class="uc-num">03</div>
+        <div class="uc-icon">🏥</div>
+        <div class="uc-title">Healthcare Predictions</div>
+        <div class="uc-desc">ML models predict disease risk from health records — blood pressure, age, genetic history — enabling early intervention and significantly better treatment outcomes.</div>
+        <span class="uc-tag">Risk Scoring · Classification</span>
+      </div>
+      <div class="uc rv" style="transition-delay:.2s">
+        <div class="uc-num">04</div>
+        <div class="uc-icon">📦</div>
+        <div class="uc-title">Supply Chain Optimisation</div>
+        <div class="uc-desc">Predicts which products will be in demand based on season, location, and sales history — preventing costly overstocking and stockouts while improving working capital.</div>
+        <span class="uc-tag">Time Series · Regression</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAKEAWAY -->
+<section id="takeaway">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Key Takeaway</div><h2 class="sh">Data Science + ML = Smarter Decisions</h2></div>
+    <div class="ta-box rv">
+      <div class="ta-item"><div class="ta-icon">💰</div><div class="ta-title">Save Costs</div><div class="ta-desc">Optimise resources, reduce waste, and cut acquisition costs through data-driven precision.</div></div>
+      <div class="ta-item"><div class="ta-icon">⚡</div><div class="ta-title">Increase Efficiency</div><div class="ta-desc">Automate predictions and decisions that previously required hours of manual analysis.</div></div>
+      <div class="ta-item"><div class="ta-icon">❤️</div><div class="ta-title">Better Experiences</div><div class="ta-desc">Deliver personalised, timely, and relevant experiences for customers and stakeholders.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="analytics.html">Analytics</a><a href="predictive.html">Predictive</a><a href="casestudies.html">Case Studies</a><a href="tools.html">Tools</a><a href="blogs.html">Blogs</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

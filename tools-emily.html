@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Emily — AI Appointment Assistant — Ritesh Punyani</title>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--teal:#14b8a6;--teal2:rgba(20,184,166,.12);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:2px;}
+nav{position:fixed;top:0;width:100%;z-index:300;background:rgba(7,12,24,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;}
+.nav-logo{font-weight:900;font-size:1.05rem;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-links{display:flex;gap:1.3rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-color:rgba(201,168,76,.4);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:22px;height:1.5px;background:var(--muted);display:block;}
+.breadcrumb{padding:4.5rem 2rem 0;max-width:1160px;margin:auto;}
+.bc-inner{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted);}
+.bc-inner a{color:var(--muted);text-decoration:none;}
+.bc-inner a:hover{color:var(--gold);}
+.bc-sep{opacity:.4;}
+.bc-current{color:var(--teal);}
+.page-hero{padding:2rem 2rem 3.5rem;background:var(--navy2);position:relative;overflow:hidden;}
+.hg{position:absolute;inset:0;background-image:linear-gradient(rgba(20,184,166,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(20,184,166,.05) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+.hgl{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(20,184,166,.1),transparent 65%);top:-150px;right:-50px;border-radius:50%;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--teal2);border:1px solid rgba(20,184,166,.3);color:var(--teal);font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;line-height:1.1;margin-bottom:.5rem;}
+.ph-title span{background:linear-gradient(135deg,var(--teal),#5eead4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.9rem;max-width:560px;margin-bottom:1rem;}
+.ph-new{display:inline-block;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.25);color:#6ee7b7;font-size:.7rem;padding:.25rem .7rem;border-radius:999px;font-weight:600;}
+.ph-avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--teal),#5eead4);display:flex;align-items:center;justify-content:center;font-size:3.5rem;flex-shrink:0;box-shadow:0 0 40px rgba(20,184,166,.2);}
+section{padding:3.5rem 2rem;}
+.wrap{max-width:1100px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--teal);display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:var(--teal);display:inline-block;}
+h2.sh{font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:800;margin-bottom:.8rem;}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .55s,transform .55s;}
+.rv.up{opacity:1;transform:none;}
+.motivation-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;max-width:800px;}
+.motivation-box p{color:var(--muted);font-size:.9rem;line-height:1.75;margin-bottom:.8rem;}
+.motivation-box p:last-child{margin:0;}
+.motivation-box strong{color:var(--text);}
+.quote-box{background:rgba(20,184,166,.07);border:1px solid rgba(20,184,166,.15);border-radius:8px;padding:.9rem 1.2rem;margin-top:1rem;font-size:.84rem;color:#5eead4;font-style:italic;}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;}
+.step{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;transition:border-color .2s,transform .2s;}
+.step:hover{border-color:rgba(20,184,166,.3);transform:translateY(-3px);}
+.step-num{font-size:.68rem;color:var(--teal);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:.4rem;}
+.step-icon{font-size:1.6rem;margin-bottom:.5rem;}
+.step-title{font-weight:700;font-size:.9rem;margin-bottom:.35rem;}
+.step-desc{color:var(--muted);font-size:.81rem;line-height:1.55;}
+.cap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;}
+.cap{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.2rem;display:flex;gap:.8rem;align-items:flex-start;transition:border-color .2s;}
+.cap:hover{border-color:rgba(20,184,166,.3);}
+.cap-icon{font-size:1.4rem;flex-shrink:0;}
+.cap-title{font-weight:700;font-size:.87rem;margin-bottom:.2rem;}
+.cap-desc{color:var(--muted);font-size:.79rem;line-height:1.5;}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.9rem;}
+.tech{background:var(--navy3);border:1px solid var(--border);border-radius:10px;padding:1rem;text-align:center;}
+.tech-icon{font-size:1.5rem;margin-bottom:.4rem;}
+.tech-name{font-weight:700;font-size:.84rem;margin-bottom:.2rem;}
+.tech-desc{color:var(--muted);font-size:.73rem;}
+.impact-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;}
+.imp{background:linear-gradient(135deg,var(--teal2),rgba(201,168,76,.05));border:1px solid rgba(20,184,166,.2);border-radius:10px;padding:1rem 1.4rem;flex:1;min-width:160px;}
+.imp-val{font-size:1.3rem;font-weight:900;color:var(--teal);}
+.imp-label{font-size:.76rem;color:var(--muted);margin-top:.2rem;}
+.try-box{background:linear-gradient(135deg,var(--teal2),rgba(201,168,76,.06));border:1px solid rgba(20,184,166,.25);border-radius:16px;padding:2.5rem;text-align:center;}
+.try-box h3{font-size:1.2rem;font-weight:800;margin-bottom:.5rem;}
+.try-box p{color:var(--muted);font-size:.88rem;margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto;}
+.try-btns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
+.btn-t{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.4rem;border-radius:8px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .22s;}
+.btn-t1{background:linear-gradient(135deg,var(--teal),#5eead4);color:#04120a;}
+.btn-t1:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,184,166,.3);}
+.btn-t2{border:1px solid rgba(20,184,166,.3);color:var(--teal);}
+.btn-t2:hover{background:var(--teal2);}
+.btn-t3{border:1px solid var(--border);color:var(--muted);}
+.btn-t3:hover{border-color:var(--gold);color:var(--gold);}
+.back-strip{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.2rem 1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2rem;}
+.back-strip p{color:var(--muted);font-size:.84rem;}
+.btn-back{display:inline-flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07111a;padding:.6rem 1.3rem;border-radius:8px;font-weight:700;font-size:.83rem;text-decoration:none;}
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.8rem;}
+.footer-links a:hover{color:var(--gold);}
+@media(max-width:760px){
+  .ph-inner{grid-template-columns:1fr;}
+  .ph-avatar{display:none;}
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(7,12,24,.98);flex-direction:column;padding:1rem 2rem 1.5rem;gap:.9rem;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .hbg{display:flex;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Ritesh P.</a>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tools.html" class="active">Tools</a></li>
+      <li><a href="tools-sophia.html">Sophia</a></li>
+      <li><a href="tools-custom-gpts.html">Custom GPTs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <div class="bc-inner"><a href="index.html">Home</a><span class="bc-sep">›</span><a href="tools.html">Tools</a><span class="bc-sep">›</span><span class="bc-current">Emily — AI Appointment Assistant</span></div>
+</div>
+<div class="page-hero">
+  <div class="hg"></div><div class="hgl"></div>
+  <div class="ph-inner">
+    <div>
+      <div class="ph-tag">🤖 AI Voice Assistant</div>
+      <h1 class="ph-title">"Emily" —<br><span>AI Appointment Assistant</span></h1>
+      <p class="ph-sub">An AI-powered, no-code voice assistant that speaks naturally with customers, understands intent, and books appointments in real time — available 24×7, just like a trained human receptionist.</p>
+      <span class="ph-new">✨ New · Live Demo Available</span>
+    </div>
+    <div class="ph-avatar">🤖</div>
+  </div>
+</div>
+<section style="background:var(--navy2);">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Why I Built This</div><h2 class="sh">The Motivation</h2></div>
+    <div class="motivation-box rv">
+      <p>Driven by a passion for learning, innovation, and technology, I constantly seek to explore how automation and AI can transform real-world business processes. This project combines my practical expertise in technology, automation, and responsible AI into a hands-on, working system — not just a demo.</p>
+      <p>Emily showcases <strong>strategic design thinking</strong>, <strong>hands-on implementation</strong>, <strong>responsible AI</strong>, and <strong>continuous learning</strong> — all packaged into one intelligent assistant.</p>
+      <div class="quote-box">"AI should not replace people — it should free them to focus on what truly requires human judgment and empathy. Emily is a step in that direction."</div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="rv"><div class="stag">How It Works</div><h2 class="sh">Emily's 4-Step Intelligence</h2></div>
+    <div class="steps-grid rv">
+      <div class="step"><div class="step-num">Step 01</div><div class="step-icon">🗣️</div><div class="step-title">Voice Understanding</div><div class="step-desc">Emily interprets natural language — "Can I get a cleaning appointment this Friday?" She extracts intent, date, and service type instantly using NLP.</div></div>
+      <div class="step"><div class="step-num">Step 02</div><div class="step-icon">💬</div><div class="step-title">Context-Aware Responses</div><div class="step-desc">Unlike scripted bots, Emily responds based on context and tone — if a customer sounds worried, she acknowledges concern before helping.</div></div>
+      <div class="step"><div class="step-num">Step 03</div><div class="step-icon">📆</div><div class="step-title">Real-Time Booking</div><div class="step-desc">Emily checks the live Google Calendar, lists available slots, confirms availability, books directly, and logs customer details in Google Sheets.</div></div>
+      <div class="step"><div class="step-num">Step 04</div><div class="step-icon">⚙️</div><div class="step-title">No-Code Integration</div><div class="step-desc">The entire system is built using no-code and low-code tools — rapid iteration, easy expansion, zero fragile dependencies.</div></div>
+    </div>
+  </div>
+</section>
+<section style="background:var(--navy2);">
+  <div class="wrap">
+    <div class="rv"><div class="stag">Capabilities</div><h2 class="sh">What Emily Can Do</h2></div>
+    <div class="cap-grid rv">
+      <div class="cap"><div class="cap-icon">🗣️</div><div><div class="cap-title">Natural Conversations</div><div class="cap-desc">Responds in human-like dialogue — clarity and comfort throughout every interaction.</div></div></div>
+      <div class="cap"><div class="cap-icon">🕐</div><div><div class="cap-title">Real-Time Scheduling</div><div class="cap-desc">Checks live availability and books appointment slots instantly — no manual intervention.</div></div></div>
+      <div class="cap"><div class="cap-icon">📆</div><div><div class="cap-title">Calendar Sync</div><div class="cap-desc">Integrates with Google Calendar to prevent double-bookings and overlapping slots.</div></div></div>
+      <div class="cap"><div class="cap-icon">📋</div><div><div class="cap-title">Data Logging</div><div class="cap-desc">Creates and maintains appointment entries automatically in Google Sheets.</div></div></div>
+      <div class="cap"><div class="cap-icon">🧾</div><div><div class="cap-title">Lead Capture</div><div class="cap-desc">Collects contact details for non-appointment enquiries — no lead is ever missed.</div></div></div>
+      <div class="cap"><div class="cap-icon">🔒</div><div><div class="cap-title">Privacy Focus</div><div class="cap-desc">Never reveals other clients' information or schedules — privacy by design.</div></div></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="rv"><div class="stag">Tech Stack & Impact</div><h2 class="sh">Built With</h2></div>
+    <div class="tech-grid rv">
+      <div class="tech"><div class="tech-icon">🧠</div><div class="tech-name">GPT-Based AI</div><div class="tech-desc">Natural understanding and intelligent response generation</div></div>
+      <div class="tech"><div class="tech-icon">🎙️</div><div class="tech-name">ElevenLabs / Twilio</div><div class="tech-desc">Real-time speech processing during phone interactions</div></div>
+      <div class="tech"><div class="tech-icon">⚙️</div><div class="tech-name">n8n / Make</div><div class="tech-desc">Appointment logic and cross-platform integrations</div></div>
+      <div class="tech"><div class="tech-icon">📆</div><div class="tech-name">Google Calendar API</div><div class="tech-desc">Real-time slot checking, booking, and updates</div></div>
+      <div class="tech"><div class="tech-icon">📊</div><div class="tech-name">Google Sheets</div><div class="tech-desc">Appointment records and call logs storage</div></div>
+      <div class="tech"><div class="tech-icon">🔗</div><div class="tech-name">Webhooks & JSON</div><div class="tech-desc">Seamless data flow across all platforms</div></div>
+    </div>
+    <div class="impact-row rv" style="margin-top:1.5rem;">
+      <div class="imp"><div class="imp-val">100%</div><div class="imp-label">Automated call flow</div></div>
+      <div class="imp"><div class="imp-val">0%</div><div class="imp-label">Code dependency</div></div>
+      <div class="imp"><div class="imp-val">24×7</div><div class="imp-label">Always available</div></div>
+      <div class="imp"><div class="imp-val">100%</div><div class="imp-label">Data capture accuracy</div></div>
+    </div>
+    <div class="try-box rv">
+      <h3>🧪 Try Emily Yourself!</h3>
+      <p>Experience how voice AI handles live conversations — book a real appointment and see it appear in Google Calendar instantly.</p>
+      <div class="try-btns">
+        <a href="tel:+12533218007" class="btn-t btn-t1">📞 Call Emily: +1-253-321-8007</a>
+        <a href="https://calendar.google.com/calendar/embed?src=c28cc76424a56ec74295aeb58642185264b6b6d2520ef4a1a4df7b5f312a0b04%40group.calendar.google.com&ctz=Asia%2FKolkata" target="_blank" class="btn-t btn-t2">📆 View Live Calendar</a>
+        <a href="https://docs.google.com/spreadsheets/d/1QDy4Fb4k8XfOg1tBq7Lz7mvyZdTAnrlAay-TpwodTNM/edit?usp=sharing" target="_blank" class="btn-t btn-t3">📊 View Booking Sheet</a>
+      </div>
+    </div>
+    <div class="back-strip rv">
+      <p>Explore Sophia — AI Order-Taking Assistant for retail</p>
+      <a href="tools-sophia.html" class="btn-back">Meet Sophia →</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-links"><a href="index.html">Home</a><a href="tools.html">Tools</a><a href="tools-sophia.html">Sophia</a><a href="tools-custom-gpts.html">Custom GPTs</a><a href="n8n.html">n8n</a><a href="contact.html">Contact</a></div>
+  <p>© 2025 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+<script>
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
