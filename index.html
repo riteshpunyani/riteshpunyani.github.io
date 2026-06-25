@@ -574,7 +574,6 @@ window.addEventListener('scroll',()=>document.getElementById('nav').classList.to
   };draw();
 })();
 
-<script>
 /* TYPED HEADLINE ANIMATION */
 (()=>{
   const el=document.getElementById('typed');
@@ -598,6 +597,14 @@ window.addEventListener('scroll',()=>document.getElementById('nav').classList.to
   }
   tick();
 })();
+</script>
+
+<script>
+/* REVEAL ANIMATION */
+const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:0});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+/* fallback: ensure all .rv become visible after 1s */
+setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('up')),1000);
 </script>
 <script src="assets/nav.js"></script>
 </body>
