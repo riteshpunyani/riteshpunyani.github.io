@@ -94,6 +94,11 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
   .nav-links.open{display:flex;}
   .hbg{display:flex;}
 }
+
+.ph-video{flex-shrink:0;width:420px;}
+.yt-wrap{position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 16px 48px rgba(0,0,0,.5);}
+.yt-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+@media(max-width:860px){.ph-video{width:100%;}.ph-inner{flex-direction:column !important;}}
 </style>
 <link rel="stylesheet" href="assets/nav.css"/>
 </head>
@@ -104,14 +109,18 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
 </div>
 <div class="page-hero">
   <div class="hg"></div><div class="hgl"></div>
-  <div class="ph-inner">
+  <div class="ph-inner" style="display:flex;gap:2.5rem;align-items:center;">
     <div>
       <div class="ph-tag">🤖 AI Voice Assistant</div>
       <h1 class="ph-title">"Emily" —<br><span>AI Appointment Assistant</span></h1>
-      <p class="ph-sub">An AI-powered, no-code voice assistant that speaks naturally with customers, understands intent, and books appointments in real time — available 24×7, just like a trained human receptionist.</p>
+      <p class="ph-sub">An AI-powered, no-code voice assistant that speaks naturally with customers, understands intent, and books appointments in real time — available 24x7, just like a trained human receptionist.</p>
       <span class="ph-new">✨ New · Live Demo Available</span>
     </div>
-    <div class="ph-avatar">🤖</div>
+    <div class="ph-video">
+      <div class="yt-wrap">
+        <iframe src="https://www.youtube.com/embed/Zr3VimOHX_8" title="Emily AI Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
   </div>
 </div>
 <section style="background:var(--navy2);">
