@@ -208,7 +208,7 @@
       var h2 = sec.querySelector('h2');
       if (h2) return h2.textContent.trim().replace(/[^\w\s&]/g,'').trim().substring(0,28);
       // format id
-      return sec.id.replace(/-/g,' ').replace(/\w/g,function(c){return c.toUpperCase();});
+      return sec.id.replace(/-/g,' ').split(' ').map(function(w){return w.charAt(0).toUpperCase()+w.slice(1);}).join(' ');
     }
 
     // Build bar HTML
