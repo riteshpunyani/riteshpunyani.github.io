@@ -191,8 +191,10 @@
   (function() {
     // Skip if bar already exists
     if (document.getElementById('page-bar')) return;
-    // Find all sections with an id
-    var sections = Array.from(document.querySelectorAll('section[id]'));
+    // Find all sections with an id, skip hero/banner sections
+    var sections = Array.from(document.querySelectorAll('section[id]')).filter(function(s){
+      return !['hero','banner','top','header'].includes(s.id.toLowerCase());
+    });
     if (sections.length < 2) return; // skip pages with only 1 section
 
     // Get label: prefer first h2 > stag text or h2, fallback to section id
