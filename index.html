@@ -254,14 +254,6 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:1.8rem
 .scroll-down:hover{color:var(--gold);border-color:var(--gold);transform:translateX(-50%) translateY(3px);}
 @keyframes bob{0%,100%{bottom:2rem;}50%{bottom:1.5rem;}}
 
-/* ON-THIS-PAGE ANCHOR BAR */
-#page-nav{position:absolute;bottom:4rem;left:0;right:0;z-index:10;background:rgba(7,12,24,.7);backdrop-filter:blur(12px);border-top:1px solid rgba(201,168,76,.15);border-bottom:1px solid rgba(201,168,76,.15);overflow-x:auto;}
-#page-nav.stuck{position:fixed;top:56px;bottom:auto;background:var(--navy3);border-top:none;border-bottom:1px solid var(--border);}
-.pnav-inner{max-width:1160px;margin:auto;display:flex;align-items:center;gap:1rem;padding:.5rem 2rem;white-space:nowrap;}
-.pnav-label{font-size:.67rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);flex-shrink:0;}
-.pnav-links{display:flex;gap:0;}
-.pnav-links a{color:var(--muted);text-decoration:none;font-size:.76rem;padding:.3rem .75rem;border-radius:999px;transition:color .18s,background .18s;}
-.pnav-links a:hover,.pnav-links a.active{color:var(--gold);background:rgba(201,168,76,.08);}
 </style>
 <link rel="stylesheet" href="assets/nav.css"/>
 </head>
@@ -300,25 +292,7 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:1.8rem
         <div><div class="sv"><span data-c="7">0</span></div><div class="sl">Certifications</div></div>
       </div>
     </div>
-  </div>
-
-  <div id="page-nav">
-    <div class="pnav-inner">
-      <span class="pnav-label">On this page:</span>
-      <div class="pnav-links">
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#analytics">Analytics</a>
-        <a href="#prompt">Prompting</a>
-        <a href="#automation">Automation</a>
-        <a href="#casestudies">Case Studies</a>
-        <a href="#tools">Tools</a>
-        <a href="#certs">Credentials</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </div>
-  <a href="#about" class="scroll-down" aria-label="Scroll down">
+  </div><a href="#about" class="scroll-down" aria-label="Scroll down">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </a>
 </section>
@@ -665,31 +639,6 @@ setTimeout(()=>document.querySelectorAll('.rv,.rl,.rr').forEach(el=>el.classList
 })();
 </script>
 
-<script>
-/* ANCHOR BAR ACTIVE STATE + STICKY */
-(()=>{
-  const nav = document.getElementById('page-nav');
-  const hero = document.getElementById('hero');
-  // Stick bar to top after hero scrolls past
-  window.addEventListener('scroll', () => {
-    const heroBottom = hero.getBoundingClientRect().bottom;
-    nav.classList.toggle('stuck', heroBottom <= 56);
-  }, {passive:true});
-  // Highlight active section
-  const links = document.querySelectorAll('.pnav-links a');
-  const sections = [...links].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector('.pnav-links a[href="#'+e.target.id+'"]');
-        if (active) active.classList.add('active');
-      }
-    });
-  }, {threshold: 0.3});
-  sections.forEach(s => obs.observe(s));
-})();
-</script>
 <script src="assets/nav.js"></script>
 </body>
 </html>
