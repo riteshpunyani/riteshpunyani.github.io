@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Build a Free Website for Life — GitHub, Google Sites & Cloudflare | Ritesh Punyani</title>
+<meta name="description" content="Step-by-step guide to building a lifetime free professional website using GitHub Pages, Google Sites, and a free domain with Cloudflare — with pros, cons, and AI tips."/>
+<style>
+:root{--navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;--gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);--text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;--green:#22c55e;--green2:rgba(34,197,94,.12);--green3:rgba(34,197,94,.25);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+
+.page-hero{min-height:44vh;display:flex;align-items:center;padding:7rem 2rem 4rem;background:linear-gradient(135deg,#070c18 0%,#061a0e 50%,#070c18 100%);position:relative;overflow:hidden;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(34,197,94,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(34,197,94,.06) 1px,transparent 1px);background-size:45px 45px;}
+.hero-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(34,197,94,.12),transparent 65%);top:-200px;right:-100px;border-radius:50%;pointer-events:none;}
+.hero-glow2{position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,.08),transparent 65%);bottom:-100px;left:-50px;border-radius:50%;pointer-events:none;}
+.ph-inner{position:relative;z-index:1;max-width:1160px;margin:auto;width:100%;}
+.ph-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);color:#86efac;font-size:.7rem;padding:.3rem .9rem;border-radius:999px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1rem;}
+.ph-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:.8rem;}
+.ph-title span{background:linear-gradient(135deg,#4ade80,#86efac);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ph-sub{color:var(--muted);font-size:.95rem;max-width:640px;margin-bottom:1.5rem;}
+.ph-quote{display:inline-flex;align-items:flex-start;gap:.7rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:10px;padding:1rem 1.2rem;max-width:600px;}
+.ph-quote-icon{color:var(--gold);font-size:1.2rem;flex-shrink:0;margin-top:.1rem;}
+.ph-quote-text{color:var(--muted);font-size:.84rem;font-style:italic;line-height:1.65;}
+.ph-quote-text strong{color:var(--gold);}
+
+.stats-bar{background:var(--navy3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stats-inner{max-width:1160px;margin:auto;display:flex;padding:0 2rem;}
+.sbi{flex:1;padding:1.2rem 1rem;text-align:center;border-right:1px solid var(--border);}
+.sbi:last-child{border-right:none;}
+.sbi-val{font-size:1.6rem;font-weight:900;color:var(--green);}
+.sbi-label{font-size:.68rem;color:var(--muted);letter-spacing:.4px;margin-top:.15rem;}
+
+section{padding:4.5rem 2rem;}
+.wrap{max-width:1160px;margin:auto;}
+.stag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:#4ade80;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.stag::before{content:'';width:18px;height:1.5px;background:#4ade80;display:inline-block;}
+h2.sh{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+p.ss{color:var(--muted);font-size:.88rem;max-width:580px;margin-bottom:2.5rem;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.rv.up{opacity:1;transform:none;}
+
+/* OVERVIEW CARDS */
+#overview{background:var(--navy2);}
+.ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;}
+.ov-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;}
+.ov-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.4);}
+.ov-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--green2),transparent 60%);opacity:0;transition:opacity .3s;}
+.ov-card:hover::before{opacity:1;}
+.ov-num{font-size:.68rem;font-weight:700;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:.6rem;}
+.ov-icon{font-size:2rem;margin-bottom:.8rem;}
+.ov-title{font-size:1.05rem;font-weight:800;margin-bottom:.4rem;}
+.ov-desc{font-size:.83rem;color:var(--muted);line-height:1.6;}
+.ov-badge{display:inline-block;margin-top:.9rem;font-size:.68rem;font-weight:700;padding:.28rem .75rem;border-radius:999px;background:var(--green2);color:var(--green);border:1px solid rgba(34,197,94,.3);}
+
+/* PLATFORM DETAIL SECTIONS */
+.platform-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;margin-top:2rem;}
+.platform-wrap.flip{direction:rtl;}
+.platform-wrap.flip > *{direction:ltr;}
+.plat-visual{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;position:relative;overflow:hidden;}
+.plat-visual::after{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:var(--green2);filter:blur(40px);pointer-events:none;}
+.plat-icon-big{font-size:3rem;margin-bottom:1rem;}
+.plat-name{font-size:1.4rem;font-weight:900;margin-bottom:.3rem;}
+.plat-url{font-size:.78rem;color:var(--green);margin-bottom:1rem;}
+.plat-desc{font-size:.87rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;}
+.plat-steps{list-style:none;}
+.plat-steps li{font-size:.83rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid var(--border);display:flex;gap:.6rem;align-items:flex-start;}
+.plat-steps li:last-child{border-bottom:none;}
+.step-num{color:var(--green);font-weight:700;font-size:.75rem;min-width:22px;margin-top:.1rem;}
+
+.plat-pros-cons{display:flex;flex-direction:column;gap:1.2rem;}
+.pc-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;}
+.pc-title{font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem;}
+.pc-title.pros{color:#4ade80;}
+.pc-title.cons{color:#f87171;}
+.pc-list{list-style:none;}
+.pc-list li{font-size:.83rem;color:var(--muted);padding:.32rem 0;display:flex;gap:.6rem;align-items:flex-start;line-height:1.5;}
+.pc-list li::before{font-size:.75rem;flex-shrink:0;margin-top:.1rem;}
+.pc-list.pros li::before{content:'✓';color:#4ade80;}
+.pc-list.cons li::before{content:'✗';color:#f87171;}
+
+.ai-tip{background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.2);border-radius:10px;padding:1rem 1.2rem;margin-top:1.2rem;font-size:.83rem;color:var(--muted);}
+.ai-tip strong{color:var(--gold);}
+
+/* CLOUDFLARE SECTION */
+#cloudflare{background:var(--navy2);}
+.cf-layout{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2rem;align-items:start;}
+.cf-steps-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem;}
+.cf-step{display:flex;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--border);}
+.cf-step:last-child{border-bottom:none;}
+.cf-step-num{width:28px;height:28px;border-radius:50%;background:var(--green2);border:1px solid rgba(34,197,94,.3);color:var(--green);font-weight:700;font-size:.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem;}
+.cf-step-body{flex:1;}
+.cf-step-title{font-size:.88rem;font-weight:700;margin-bottom:.2rem;}
+.cf-step-desc{font-size:.8rem;color:var(--muted);line-height:1.55;}
+.cf-step-code{font-family:monospace;background:var(--navy3);border:1px solid var(--border);border-radius:6px;padding:.3rem .6rem;font-size:.75rem;color:#4ade80;margin-top:.4rem;display:inline-block;}
+
+/* COMPARISON TABLE */
+#compare{background:var(--navy3);}
+.comp-table{width:100%;border-collapse:collapse;margin-top:2rem;font-size:.84rem;}
+.comp-table th{background:var(--card);color:var(--gold);font-size:.72rem;text-transform:uppercase;letter-spacing:1px;padding:.9rem 1rem;text-align:left;border-bottom:2px solid var(--border);}
+.comp-table td{padding:.85rem 1rem;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top;}
+.comp-table tr:last-child td{border-bottom:none;}
+.comp-table tr:hover td{background:rgba(255,255,255,.02);}
+.comp-table td:first-child{color:var(--text);font-weight:600;}
+.badge-yes{color:#4ade80;font-weight:700;}
+.badge-no{color:#f87171;font-weight:700;}
+.badge-partial{color:var(--gold);font-weight:700;}
+
+/* RECOMMENDATION */
+#recommend{background:var(--navy2);}
+.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem;}
+.rec-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;}
+.rec-card.featured{border-color:rgba(34,197,94,.4);background:rgba(34,197,94,.04);}
+.rec-who{font-size:.68rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--green);margin-bottom:.5rem;}
+.rec-icon{font-size:1.8rem;margin-bottom:.6rem;}
+.rec-title{font-size:.95rem;font-weight:800;margin-bottom:.5rem;}
+.rec-desc{font-size:.8rem;color:var(--muted);line-height:1.6;}
+.rec-badge{display:inline-block;margin-top:.9rem;font-size:.68rem;font-weight:700;padding:.25rem .7rem;border-radius:999px;background:var(--green2);color:var(--green);}
+
+footer{background:var(--navy3);border-top:1px solid var(--border);padding:2rem;text-align:center;}
+.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;margin-bottom:.8rem;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.78rem;transition:color .2s;}
+.footer-links a:hover{color:var(--gold);}
+footer p{color:var(--muted);font-size:.75rem;}
+
+@media(max-width:900px){
+  .ov-grid,.rec-grid{grid-template-columns:1fr;}
+  .platform-wrap,.platform-wrap.flip,.cf-layout{grid-template-columns:1fr;}
+  .platform-wrap.flip{direction:ltr;}
+  .comp-table{font-size:.76rem;}
+  .comp-table th,.comp-table td{padding:.65rem .6rem;}
+}
+</style>
+<link rel="stylesheet" href="assets/nav.css"/>
+</head>
+<body>
+
+<div id="snav"></div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="ph-inner">
+    <div class="ph-tag">&#127760; Free Website Guide</div>
+    <h1 class="ph-title">Build a <span>Free Website</span><br>That Lasts a Lifetime</h1>
+    <p class="ph-sub">Three proven platforms — GitHub Pages, Google Sites, and Cloudflare with a free domain — each with zero cost, real trade-offs, and AI-powered content creation tips.</p>
+    <div class="ph-quote">
+      <div class="ph-quote-icon">&#128161;</div>
+      <div class="ph-quote-text">A professional website used to cost thousands. Today, with the right tools and a few hours, you can build one that costs <strong>absolutely nothing — forever.</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="sbi"><div class="sbi-val">&#8377;0</div><div class="sbi-label">Annual Cost</div></div>
+    <div class="sbi"><div class="sbi-val">3</div><div class="sbi-label">Platforms Covered</div></div>
+    <div class="sbi"><div class="sbi-val">100%</div><div class="sbi-label">Free Forever</div></div>
+    <div class="sbi"><div class="sbi-val">AI</div><div class="sbi-label">Content Creation</div></div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">Three Options</div>
+      <h2 class="sh">Pick Your Platform</h2>
+      <p class="ss">Each approach suits a different skill level and goal. Here is a quick overview before the deep dive.</p>
+    </div>
+    <div class="ov-grid">
+      <div class="ov-card rv" style="transition-delay:.04s">
+        <div class="ov-num">Option 01</div>
+        <div class="ov-icon">&#128025;</div>
+        <div class="ov-title">GitHub Pages</div>
+        <div class="ov-desc">Host a full static website directly from a GitHub repository. Write code (or let AI write it), push to GitHub, and your site is live — forever, free.</div>
+        <span class="ov-badge">Best for professionals &amp; developers</span>
+      </div>
+      <div class="ov-card rv" style="transition-delay:.08s">
+        <div class="ov-num">Option 02</div>
+        <div class="ov-icon">&#127760;</div>
+        <div class="ov-title">Google Sites</div>
+        <div class="ov-desc">A drag-and-drop website builder from Google. No code, no setup — just pick a template and start editing. Hosted on Google's infrastructure for free.</div>
+        <span class="ov-badge">Best for beginners &amp; quick setup</span>
+      </div>
+      <div class="ov-card rv" style="transition-delay:.12s">
+        <div class="ov-num">Option 03</div>
+        <div class="ov-icon">&#9925;</div>
+        <div class="ov-title">Free Domain + Cloudflare</div>
+        <div class="ov-desc">Get a free .ua or .tk domain and point it to any website via Cloudflare. Your site gets a real custom domain, CDN speed boost, and SSL — all free.</div>
+        <span class="ov-badge">Best for custom branding</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB PAGES -->
+<section id="github">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">Option 01</div>
+      <h2 class="sh">GitHub Pages</h2>
+      <p class="ss">The most powerful free hosting option — full control over design, code, and content. This very website runs on GitHub Pages.</p>
+    </div>
+    <div class="platform-wrap rv">
+      <div class="plat-visual">
+        <div class="plat-icon-big">&#128025;</div>
+        <div class="plat-name">GitHub Pages</div>
+        <div class="plat-url">pages.github.com</div>
+        <div class="plat-desc">GitHub Pages turns any public repository into a live website. Upload HTML, CSS, and JavaScript files — GitHub serves them at <strong>yourusername.github.io</strong> instantly. No server, no database, no hosting bill.</div>
+        <ul class="plat-steps">
+          <li><span class="step-num">01</span>Create a free account at github.com</li>
+          <li><span class="step-num">02</span>Create a new repository named <strong>yourusername.github.io</strong></li>
+          <li><span class="step-num">03</span>Use AI (Claude, ChatGPT) to generate your HTML pages</li>
+          <li><span class="step-num">04</span>Upload files via the GitHub web interface (no coding tools needed)</li>
+          <li><span class="step-num">05</span>Go to Settings &#8594; Pages &#8594; select main branch &#8594; Save</li>
+          <li><span class="step-num">06</span>Your site is live at <strong>yourusername.github.io</strong> within minutes</li>
+        </ul>
+        <div class="ai-tip"><strong>&#129302; AI Tip:</strong> Paste this prompt into Claude or ChatGPT: <em>"Build me a professional personal website page in a single HTML file with dark navy theme, my name [Name], role [Role], and sections for About, Experience, and Contact."</em> — You get a complete page in seconds, ready to upload.</div>
+      </div>
+      <div class="plat-pros-cons">
+        <div class="pc-box">
+          <div class="pc-title pros">&#10003; Advantages</div>
+          <ul class="pc-list pros">
+            <li>Complete design freedom — full HTML/CSS/JS control</li>
+            <li>Custom domain support (connect your own .com)</li>
+            <li>Free SSL (HTTPS) included automatically</li>
+            <li>Version history — every change tracked, easy to undo</li>
+            <li>AI can write all the code for you — zero coding skills needed</li>
+            <li>No ads, no branding from GitHub on your site</li>
+            <li>Industry-standard hosting used by millions of professionals</li>
+            <li>Unlimited bandwidth on public repos</li>
+          </ul>
+        </div>
+        <div class="pc-box">
+          <div class="pc-title cons">&#10007; Disadvantages</div>
+          <ul class="pc-list cons">
+            <li>Slight learning curve — GitHub interface is unfamiliar at first</li>
+            <li>Static only — no databases, login systems, or server-side code</li>
+            <li>Dynamic features (forms, search) need third-party services</li>
+            <li>Repo must be public for free Pages hosting</li>
+            <li>Updates require re-uploading files (no in-browser editor)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE SITES -->
+<section id="googlesites">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">Option 02</div>
+      <h2 class="sh">Google Sites</h2>
+      <p class="ss">The easiest way to build a website — no code, no uploads, just drag-and-drop. Part of your existing Google account.</p>
+    </div>
+    <div class="platform-wrap flip rv">
+      <div class="plat-visual">
+        <div class="plat-icon-big">&#127760;</div>
+        <div class="plat-name">Google Sites</div>
+        <div class="plat-url">sites.google.com</div>
+        <div class="plat-desc">Google Sites is a free, no-code website builder included with every Google account. Build by inserting sections, text blocks, images, and Google Drive embeds. Live instantly at <strong>sites.google.com/view/yoursite</strong>.</div>
+        <ul class="plat-steps">
+          <li><span class="step-num">01</span>Go to sites.google.com and sign in with your Google account</li>
+          <li><span class="step-num">02</span>Click the + button to create a new site</li>
+          <li><span class="step-num">03</span>Choose a theme and start adding sections visually</li>
+          <li><span class="step-num">04</span>Use AI to write your content, paste it into text blocks</li>
+          <li><span class="step-num">05</span>Embed Google Docs, Sheets, YouTube, Maps, and Calendar directly</li>
+          <li><span class="step-num">06</span>Click Publish — your site is instantly live</li>
+        </ul>
+        <div class="ai-tip"><strong>&#129302; AI Tip:</strong> Ask AI: <em>"Write professional About Me, Experience, and Skills sections for a website. I am a [Your Role] with [X] years of experience in [field]."</em> Copy-paste the result directly into Google Sites text blocks.</div>
+      </div>
+      <div class="plat-pros-cons">
+        <div class="pc-box">
+          <div class="pc-title pros">&#10003; Advantages</div>
+          <ul class="pc-list pros">
+            <li>Zero technical knowledge required — fully visual editor</li>
+            <li>No files to manage — everything saved in Google Drive</li>
+            <li>Seamless Google embeds — Docs, Sheets, Forms, Maps, Calendar</li>
+            <li>Live in under 30 minutes from scratch</li>
+            <li>Free forever with any Google account</li>
+            <li>Mobile-responsive by default</li>
+            <li>Easy collaboration — share editing access with teammates</li>
+          </ul>
+        </div>
+        <div class="pc-box">
+          <div class="pc-title cons">&#10007; Disadvantages</div>
+          <ul class="pc-list cons">
+            <li>Very limited design customisation — locked to Google's templates</li>
+            <li>Default URL is long and unprofessional (sites.google.com/view/...)</li>
+            <li>No custom CSS or JavaScript allowed</li>
+            <li>Looks generic — hard to stand out from other Google Sites</li>
+            <li>SEO is poor — Google Sites ranks lower than custom domains</li>
+            <li>No analytics or traffic tracking built-in</li>
+            <li>Not suitable for a professional portfolio or personal brand</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOUDFLARE + FREE DOMAIN -->
+<section id="cloudflare">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">Option 03</div>
+      <h2 class="sh">Free Domain + Cloudflare Redirect</h2>
+      <p class="ss">Get a real custom domain for free and point it to your GitHub Pages or Google Sites — making your site look fully professional.</p>
+    </div>
+    <div class="cf-layout rv">
+      <div>
+        <div class="cf-steps-box">
+          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--green);font-weight:700;margin-bottom:1.2rem;">Setup Steps</div>
+          <div class="cf-step">
+            <div class="cf-step-num">1</div>
+            <div class="cf-step-body">
+              <div class="cf-step-title">Get a Free Domain</div>
+              <div class="cf-step-desc">Go to <strong>ua.domains</strong> or <strong>freenom.com</strong> and register a free .ua, .tk, .ml, or .ga domain. Search for your name — e.g. riteshpunyani.ua — and register for free.</div>
+              <span class="cf-step-code">riteshpunyani.ua &#8594; free forever</span>
+            </div>
+          </div>
+          <div class="cf-step">
+            <div class="cf-step-num">2</div>
+            <div class="cf-step-body">
+              <div class="cf-step-title">Add Domain to Cloudflare</div>
+              <div class="cf-step-desc">Create a free Cloudflare account at cloudflare.com. Click Add a Site, enter your domain, and select the <strong>Free plan</strong>.</div>
+            </div>
+          </div>
+          <div class="cf-step">
+            <div class="cf-step-num">3</div>
+            <div class="cf-step-body">
+              <div class="cf-step-title">Update Nameservers</div>
+              <div class="cf-step-desc">Cloudflare gives you two nameserver addresses. Go back to your domain registrar and replace the existing nameservers with Cloudflare's.</div>
+              <span class="cf-step-code">ns1.cloudflare.com</span><br/>
+              <span class="cf-step-code" style="margin-top:.3rem">ns2.cloudflare.com</span>
+            </div>
+          </div>
+          <div class="cf-step">
+            <div class="cf-step-num">4</div>
+            <div class="cf-step-body">
+              <div class="cf-step-title">Add DNS CNAME Record</div>
+              <div class="cf-step-desc">In Cloudflare DNS settings, add a CNAME record pointing your domain to your GitHub Pages URL.</div>
+              <span class="cf-step-code">CNAME @ &#8594; yourusername.github.io</span>
+            </div>
+          </div>
+          <div class="cf-step">
+            <div class="cf-step-num">5</div>
+            <div class="cf-step-body">
+              <div class="cf-step-title">Set Custom Domain in GitHub</div>
+              <div class="cf-step-desc">In your GitHub repo go to Settings &#8594; Pages &#8594; Custom domain, enter your free domain, and save. GitHub will verify and issue a free SSL certificate automatically.</div>
+            </div>
+          </div>
+          <div class="cf-step">
+            <div class="cf-step-num">6</div>
+            <div class="cf-step-body">
+              <div class="cf-step-title">Done — Live in 24 Hours</div>
+              <div class="cf-step-desc">DNS propagation takes up to 24 hours. Once live, your GitHub Pages site is accessible via your custom domain — with Cloudflare CDN, free SSL, and DDoS protection.</div>
+              <span class="cf-step-code">riteshpunyani.ua &#8594; live &#127881;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="plat-pros-cons">
+        <div class="plat-visual" style="margin-bottom:1.2rem;">
+          <div class="plat-icon-big">&#9925;</div>
+          <div class="plat-name">Cloudflare Free</div>
+          <div class="plat-url">cloudflare.com</div>
+          <div class="plat-desc">Cloudflare acts as a middleman between your domain and your website. It speeds up your site (global CDN), protects it (DDoS, bots), and provides free SSL. The free plan is genuinely powerful.</div>
+        </div>
+        <div class="pc-box">
+          <div class="pc-title pros">&#10003; Advantages</div>
+          <ul class="pc-list pros">
+            <li>Real custom domain — looks fully professional</li>
+            <li>Free SSL (HTTPS) via Cloudflare</li>
+            <li>Global CDN — faster load times worldwide</li>
+            <li>DDoS protection and bot filtering</li>
+            <li>Works with GitHub Pages, Google Sites, or any host</li>
+            <li>Free email forwarding via Cloudflare Email Routing</li>
+          </ul>
+        </div>
+        <div class="pc-box" style="margin-top:1.2rem;">
+          <div class="pc-title cons">&#10007; Disadvantages</div>
+          <ul class="pc-list cons">
+            <li>Free TLDs (.ua, .tk) have lower trust than .com or .in</li>
+            <li>DNS propagation takes up to 24 hours</li>
+            <li>Setup involves nameservers and DNS — intimidating for beginners</li>
+            <li>Free domain providers occasionally discontinue free TLDs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section id="compare">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">Side by Side</div>
+      <h2 class="sh">Platform Comparison</h2>
+      <p class="ss">A quick reference to help you choose the right option for your needs.</p>
+    </div>
+    <div class="rv" style="overflow-x:auto;">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>GitHub Pages</th>
+            <th>Google Sites</th>
+            <th>+ Free Domain &amp; Cloudflare</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Cost</td><td><span class="badge-yes">Free forever</span></td><td><span class="badge-yes">Free forever</span></td><td><span class="badge-yes">Free forever</span></td></tr>
+          <tr><td>Technical skill needed</td><td>Low (with AI help)</td><td>None</td><td>Medium</td></tr>
+          <tr><td>Custom domain</td><td><span class="badge-partial">Supported (paid domain)</span></td><td><span class="badge-partial">Supported (paid domain)</span></td><td><span class="badge-yes">Yes — free domain included</span></td></tr>
+          <tr><td>Design control</td><td><span class="badge-yes">Full — any CSS/JS</span></td><td><span class="badge-no">Limited templates only</span></td><td><span class="badge-yes">Inherits GitHub Pages</span></td></tr>
+          <tr><td>Free SSL (HTTPS)</td><td><span class="badge-yes">Yes</span></td><td><span class="badge-yes">Yes</span></td><td><span class="badge-yes">Yes — via Cloudflare</span></td></tr>
+          <tr><td>SEO capability</td><td><span class="badge-yes">Excellent</span></td><td><span class="badge-no">Poor</span></td><td><span class="badge-yes">Excellent</span></td></tr>
+          <tr><td>Google Search Console</td><td><span class="badge-yes">Full support</span></td><td><span class="badge-partial">Limited</span></td><td><span class="badge-yes">Full support</span></td></tr>
+          <tr><td>AI content creation</td><td><span class="badge-yes">Full — AI writes code</span></td><td><span class="badge-partial">AI writes text only</span></td><td><span class="badge-yes">Full — AI writes code</span></td></tr>
+          <tr><td>Setup time</td><td>1–3 hours</td><td>30 minutes</td><td>2–4 hours</td></tr>
+          <tr><td>Professional appearance</td><td><span class="badge-yes">High</span></td><td><span class="badge-no">Low</span></td><td><span class="badge-yes">Very High</span></td></tr>
+          <tr><td>Best for</td><td>Personal brand, portfolio</td><td>Quick internal pages</td><td>Professional public presence</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- RECOMMENDATION -->
+<section id="recommend">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stag">My Recommendation</div>
+      <h2 class="sh">Which Should You Choose?</h2>
+      <p class="ss">The right choice depends on your goal and how much time you want to invest.</p>
+    </div>
+    <div class="rec-grid rv">
+      <div class="rec-card">
+        <div class="rec-who">For Beginners</div>
+        <div class="rec-icon">&#127760;</div>
+        <div class="rec-title">Start with Google Sites</div>
+        <div class="rec-desc">If you've never built a website and just need something live today — Google Sites gets you there in 30 minutes with zero technical knowledge. Use AI to write your content, paste it in, and publish.</div>
+        <span class="rec-badge">Fastest start</span>
+      </div>
+      <div class="rec-card featured">
+        <div class="rec-who">Best Overall</div>
+        <div class="rec-icon">&#128025;</div>
+        <div class="rec-title">GitHub Pages + AI</div>
+        <div class="rec-desc">For any professional wanting a real online presence — GitHub Pages with AI-generated code gives you a stunning, fast, SEO-friendly site at zero cost. This is what this website runs on. A small time investment with massive long-term payoff.</div>
+        <span class="rec-badge">&#11088; Recommended</span>
+      </div>
+      <div class="rec-card">
+        <div class="rec-who">For Maximum Impact</div>
+        <div class="rec-icon">&#9925;</div>
+        <div class="rec-title">GitHub + Free Domain + Cloudflare</div>
+        <div class="rec-desc">Once your GitHub Pages site is live, add a free domain via Cloudflare. Your site now has a custom URL, CDN speed, and free SSL — indistinguishable from a paid professional website.</div>
+        <span class="rec-badge">Most professional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="automation.html">Automation</a>
+    <a href="tools.html">Tools</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p>&copy; 2026 Ritesh Punyani. All rights reserved. All materials are for knowledge-sharing and non-commercial use only. Views are personal and do not reflect the views of my employer.</p>
+</footer>
+
+<script>
+const ro = new IntersectionObserver(e => e.forEach(e2 => { if (e2.isIntersecting) e2.target.classList.add('up'); }), {threshold: .08});
+document.querySelectorAll('.rv').forEach(el => ro.observe(el));
+</script>
+<script src="assets/nav.js"></script>
+</body>
+</html>
