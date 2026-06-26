@@ -134,7 +134,7 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
   function fetchNews(q){
     var feed=document.getElementById('news-feed');
     feed.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted);font-size:.88rem;">Loading news...</div>';
-    fetch(PROXY+encodeURIComponent(GN_BASE+q)+'&count=12')
+    fetch(PROXY+encodeURIComponent(GN_BASE+q))
       .then(function(r){return r.json();})
       .then(function(d){
         if(!d.items||!d.items.length){throw new Error('empty');}

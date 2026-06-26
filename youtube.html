@@ -46,7 +46,11 @@ p.ss{color:var(--muted);font-size:.9rem;max-width:580px;margin-bottom:2.5rem;}
 /* CHANNEL CARDS */
 .yc{background:var(--card);border:1px solid var(--border);border-radius:13px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .25s,border-color .25s,box-shadow .25s;display:block;}
 .yc:hover{transform:translateY(-4px);border-color:rgba(239,68,68,.3);box-shadow:0 12px 30px rgba(0,0,0,.4);}
-.yc-thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;overflow:hidden;}
+
+.yc-thumb{position:relative;height:120px;background-size:cover;background-position:center;background-color:#0a0f1e;display:flex;align-items:center;justify-content:center;font-size:2.5rem;transition:opacity .3s;}
+.yc-thumb.loaded{font-size:0;}
+.yc-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.5));}
+
 .yc-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3);opacity:0;transition:opacity .2s;}
 .yc:hover .yc-play{opacity:1;}
 .yc-play-icon{width:48px;height:48px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
@@ -98,68 +102,68 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
     </div>
 
     <div id="cat-ai" class="cat-group active rv">
-      <a class="yc" href="https://www.youtube.com/@TechWithTim" target="_blank">
+      <a class="yc" data-cid="UCWr0mx597DnSGLFk1WfvSkQ" href="https://www.youtube.com/@TechWithTim" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#1a1a2e,#16213e);">🐍<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Python & AI</div><div class="yc-name">Tech With Tim</div><div class="yc-desc">Python programming, AI projects, and automation tutorials — beginner to advanced.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@MattWolfe" target="_blank">
+      <a class="yc" data-cid="UChpleBmo18P08aKCIgti38g" href="https://www.youtube.com/@MattWolfe" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0f0f1a,#1a0a2e);">🤖<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">AI News & Tools</div><div class="yc-name">Matt Wolfe</div><div class="yc-desc">Latest AI tools, models, and tutorials — one of the best channels for staying current with AI developments.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@NickChapple" target="_blank">
+      <a class="yc" data-cid="UCBcRF18a7Qf58cCRy5xuWwQ" href="https://www.youtube.com/@NickChapple" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0d1117,#161b22);">⚙️<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">n8n & Automation</div><div class="yc-name">Nick Chapple</div><div class="yc-desc">n8n automation workflows, AI agents, and no-code automation — practical and highly applicable.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@AIJasonZ" target="_blank">
+      <a class="yc" data-cid="UCrXSVX9a1mj8l0CMLwKgMVw" href="https://www.youtube.com/@AIJasonZ" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0a0a1a,#120e2e);">🧠<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">AI Agents & LLMs</div><div class="yc-name">AI Jason</div><div class="yc-desc">Building AI agents, LLM workflows, and practical AI applications — excellent for prompt engineers and automation builders.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@LeonardoVeiga" target="_blank">
+      <a class="yc" data-cid="UC-C03hl6mrWxexEnv1N4Tdw" href="https://www.youtube.com/@LeonardoVeiga" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0d0d1a,#1a0f2e);">🔄<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">n8n & Make.com</div><div class="yc-name">Leonardo Veiga</div><div class="yc-desc">Workflow automation with n8n and Make.com — real-world business automation examples.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
     </div>
 
     <div id="cat-data" class="cat-group rv">
-      <a class="yc" href="https://www.youtube.com/@statquest" target="_blank">
+      <a class="yc" data-cid="UCtYLUTtgS3k1Lgd7Tc5fH_A" href="https://www.youtube.com/@statquest" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0a1628,#0d1f3c);">📊<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Statistics & ML</div><div class="yc-name">StatQuest with Josh Starmer</div><div class="yc-desc">Statistics and machine learning explained simply — the best channel for understanding ML fundamentals from first principles.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@sentdex" target="_blank">
+      <a class="yc" data-cid="UCfzlCWGWYyIQ0aLC5w48gBQ" href="https://www.youtube.com/@sentdex" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0f1a0f,#162412);">🐍<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Python & Data Science</div><div class="yc-name">sentdex</div><div class="yc-desc">Python for data science, machine learning, and finance — deep dives with real code examples.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@RealWorldData" target="_blank">
+      <a class="yc" data-cid="UC7cs8q-gJRlGwj4A8OmCmXg" href="https://www.youtube.com/@RealWorldData" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0a0f1e,#0f1a2e);">🔍<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Data Analytics</div><div class="yc-name">Alex The Analyst</div><div class="yc-desc">Data analytics, SQL, Python, and Power BI tutorials — highly practical for compliance and business analysts.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@cbellcpa" target="_blank">
+      <a class="yc" data-cid="UCBKlcGT9NKBZRT_FXMX2ZFg" href="https://www.youtube.com/@cbellcpa" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#1a0a0a,#2e1212);">💰<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Fraud & Data Analytics</div><div class="yc-name">Chris Bell CPA</div><div class="yc-desc">Forensic accounting, fraud analytics, and data-driven audit techniques — ideal for CFEs and compliance professionals.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
     </div>
 
     <div id="cat-compliance" class="cat-group rv">
-      <a class="yc" href="https://www.youtube.com/@ACFEFraud" target="_blank">
+      <a class="yc" data-cid="UCqr-7GDVTsdNBCeufvERYuw" href="https://www.youtube.com/@ACFEFraud" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0a0f1e,#1a1028);">⚖️<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Fraud & Investigations</div><div class="yc-name">ACFE (Official)</div><div class="yc-desc">Official channel of the Association of Certified Fraud Examiners — fraud prevention, investigation techniques, and CFE exam resources.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@IIAGlobal" target="_blank">
+      <a class="yc" data-cid="UCLqixauvWTxH9lTPWYjjkLA" href="https://www.youtube.com/@IIAGlobal" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0a1a0a,#122e12);">🏛️<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Internal Audit</div><div class="yc-name">IIA Global</div><div class="yc-desc">Internal audit, governance, risk management, and control frameworks — from the global internal audit standard-setter.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@ethicsandcompliance" target="_blank">
+      <a class="yc" data-cid="UCddiUEpeqJcYeBxX1IVBKvQ" href="https://www.youtube.com/@ethicsandcompliance" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#1a0a0f,#2e1220);">🔒<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Ethics & Compliance</div><div class="yc-name">Ethics & Compliance Initiative</div><div class="yc-desc">Ethical workplace culture, compliance programme design, and leadership in integrity — essential viewing for compliance professionals.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
     </div>
 
     <div id="cat-productivity" class="cat-group rv">
-      <a class="yc" href="https://www.youtube.com/@AliAbdaal" target="_blank">
+      <a class="yc" data-cid="UCoOae5nYA7VqaXzerajD0lg" href="https://www.youtube.com/@AliAbdaal" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0f0a1a,#1a102e);">⚡<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Productivity</div><div class="yc-name">Ali Abdaal</div><div class="yc-desc">Evidence-based productivity, tools, and systems for knowledge workers — one of the most practical productivity channels.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@jeffsu" target="_blank">
+      <a class="yc" data-cid="UCQdgfMzHtkXRdqNhiGPBpJQ" href="https://www.youtube.com/@jeffsu" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0a0f1e,#0f162e);">📧<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Gmail & Workspace</div><div class="yc-name">Jeff Su</div><div class="yc-desc">Gmail, Google Workspace productivity tips and automation tricks — save hours on email management.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
@@ -170,7 +174,7 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
     </div>
 
     <div id="cat-tech" class="cat-group rv">
-      <a class="yc" href="https://www.youtube.com/@Fireship" target="_blank">
+      <a class="yc" data-cid="UCsBjURrPoezykLs9EqgamOA" href="https://www.youtube.com/@Fireship" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0a0f1e,#162030);">💻<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Web Dev & Tech</div><div class="yc-name">Fireship</div><div class="yc-desc">Fast-paced, high-quality tech and programming videos — "100 seconds" explanations of complex concepts.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
@@ -178,7 +182,7 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0f0f0f,#1a1a1a);">📱<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">Tech Reviews</div><div class="yc-name">MKBHD</div><div class="yc-desc">High-quality tech reviews and industry insights — the benchmark for technology journalism on YouTube.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
-      <a class="yc" href="https://www.youtube.com/@TwoMinutePapers" target="_blank">
+      <a class="yc" data-cid="UCbfYPyITQ-7l4upoX8nvctg" href="https://www.youtube.com/@TwoMinutePapers" target="_blank">
         <div class="yc-thumb" style="background:linear-gradient(135deg,#0a0a1e,#10102e);">🧪<div class="yc-play"><div class="yc-play-icon">▶</div></div></div>
         <div class="yc-body"><div class="yc-tag">AI Research</div><div class="yc-name">Two Minute Papers</div><div class="yc-desc">AI and machine learning research papers explained in simple, engaging videos — stay ahead of AI developments.</div><div class="yc-link">▶️ Visit Channel →</div></div>
       </a>
@@ -241,7 +245,7 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
   var CHANNELS = {
     ai: [
       {id:'UCWr0mx597DnSGLFk1WfvSkQ', name:'Tech With Tim'},
-      {id:'UCTfD6xDq0cIHFYQM4KY5jDQ', name:'Matt Wolfe'},
+      {id:'UChpleBmo18P08aKCIgti38g', name:'Matt Wolfe'},
       {id:'UCBcRF18a7Qf58cCRy5xuWwQ', name:'Nick Chapple'}
     ],
     data: [
@@ -265,19 +269,17 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
     return items.map(function(v){
       var vid=(v.link||'').split('v=')[1]||v.link.split('/').pop();
       vid=(vid||'').split('&')[0];
-      var thumb='https://img.youtube.com/vi/'+vid+'/mqdefault.jpg';
       var date=v.pubDate?new Date(v.pubDate).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}):'';
-      return ['<a class="yvid" href="'+escHtml(v.link||'#')+'" target="_blank" rel="noopener">',
-        '<div class="yvid-thumb">',
-          '<img src="'+thumb+'" alt="'+escHtml(v.title||'')+'" loading="lazy" onerror="this.style.display='none'"/>',
-          '<div class="yvid-play"><div class="yvid-play-btn">&#9654;</div></div>',
+      return ['<div class="yvid">',
+        '<div class="yvid-frame">',
+          '<iframe src="https://www.youtube.com/embed/'+vid+'" title="'+escHtml(v.title||'')+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>',
         '</div>',
         '<div class="yvid-body">',
-          '<div class="yvid-ch">'+escHtml(v.channel||'')+'</div>',
+          '<div class="yvid-ch">'+escHtml(v.author||v.channel||'')+'</div>',
           '<div class="yvid-title">'+escHtml(v.title||'')+'</div>',
           '<div class="yvid-date">'+escHtml(date)+'</div>',
         '</div>',
-      '</a>'].join('');
+      '</div>'].join('');
     }).join('');
   }
   function loadCategory(cat){
@@ -289,7 +291,7 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
     var allItems=[],done=0;
     if(!channels.length){feed.innerHTML='<div class="yt-err">No channels configured.</div>';return;}
     channels.forEach(function(ch){
-      fetch(PROXY+encodeURIComponent(YT_FEED+ch.id)+'&count=3')
+      fetch(PROXY+encodeURIComponent(YT_FEED+ch.id))
         .then(function(r){return r.json();})
         .then(function(d){
           if(d.items&&d.items.length){d.items.slice(0,3).forEach(function(i){i.channel=ch.name;});allItems=allItems.concat(d.items.slice(0,3));}
@@ -327,6 +329,40 @@ function showCat(el,id){
 }
 const ro=new IntersectionObserver(e=>e.forEach(e2=>{if(e2.isIntersecting)e2.target.classList.add('up');}),{threshold:.08});
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+
+<script>
+/* CHANNEL CARD THUMBNAILS */
+(function(){
+  function loadThumbsForGroup(groupEl){
+    if(!groupEl) return;
+    groupEl.querySelectorAll('.yc[data-cid]').forEach(function(card, i){
+      var cid = card.dataset.cid;
+      var thumb = card.querySelector('.yc-thumb');
+      if(!thumb || thumb.dataset.loaded) return;
+      thumb.dataset.loaded = '1';
+      setTimeout(function(){
+        fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent('https://www.youtube.com/feeds/videos.xml?channel_id='+cid))
+          .then(function(r){return r.json();})
+          .then(function(d){
+            if(d.items && d.items[0]){
+              var lnk=d.items[0].link||'';
+              var vid=lnk.includes('/shorts/')?lnk.split('/shorts/')[1].split('?')[0]:(lnk.split('v=')[1]||'').split('&')[0];
+              if(vid){
+                thumb.style.backgroundImage='url(https://img.youtube.com/vi/'+vid+'/mqdefault.jpg)';
+                thumb.classList.add('loaded');
+              }
+            }
+          }).catch(function(){});
+      }, i * 400);
+    });
+  }
+  window._loadThumbsForGroup = loadThumbsForGroup;
+  // Load active tab on page load
+  document.addEventListener('DOMContentLoaded', function(){
+    loadThumbsForGroup(document.querySelector('.cat-group.active'));
+  });
+})();
 </script>
 <script src="assets/nav.js"></script>
 </body>
