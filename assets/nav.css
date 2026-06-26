@@ -38,15 +38,27 @@
 
 /* LOGO */
 .snav-logo {
-  font-weight: 900;
-  font-size: 1.05rem;
-  background: linear-gradient(135deg, var(--nav-gold), var(--nav-gold2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   text-decoration: none;
+  flex-shrink: 0;
+}
+.snav-mono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--nav-gold), var(--nav-gold2));
+  color: #0a1120;
+  font-weight: 900;
+  font-size: .78rem;
   letter-spacing: .5px;
   flex-shrink: 0;
+  transition: transform .18s, box-shadow .18s;
+}
+.snav-logo:hover .snav-mono {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 3px rgba(201,168,76,.25);
 }
 
 /* TOP-LEVEL LINKS */

@@ -115,7 +115,7 @@
 
   var navHTML = [
     '<div class="snav-inner">',
-      '<a class="snav-logo" href="index.html">Ritesh P.</a>',
+      '<a class="snav-logo" href="index.html"><span class="snav-mono">RP</span></a>',
       '<ul class="snav-links" id="snav-ul">' + liHtml + '</ul>',
       '<div class="snav-hbg" id="snav-hbg" aria-label="Menu" role="button" tabindex="0">',
         '<span></span><span></span><span></span>',
