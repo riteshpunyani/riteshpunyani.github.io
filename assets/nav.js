@@ -60,6 +60,7 @@
         { label: '▶️ YouTube Picks',                  href: 'youtube.html' },
         { label: '✍️ My Blogs',                       href: 'blogs.html' },
         { label: '📰 News & Updates',                 href: 'news.html' },
+        { label: '🌐 Free Website Guide',               href: 'free-website.html' },
       ]
     },
     { label: 'Credentials', href: 'index.html#certs', key: 'certs' },
