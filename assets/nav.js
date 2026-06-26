@@ -189,10 +189,10 @@
      6. "On this page" section bar — auto-built from page sections
   ---------------------------------------------------------- */
   (function() {
+    // Skip if page has its own nav bar already
+    if (document.getElementById('page-bar') || document.getElementById('page-nav')) return;
     // Find all sections with an id
-    var sections = Array.from(document.querySelectorAll('section[id], div[id].section, [id].page-hero ~ section'));
-    // Also grab direct section IDs
-    sections = Array.from(document.querySelectorAll('section[id]'));
+    var sections = Array.from(document.querySelectorAll('section[id]'));
     if (sections.length < 2) return; // skip pages with only 1 section
 
     // Get label: prefer first h2 > stag text or h2, fallback to section id
@@ -218,13 +218,16 @@
     bar.id = 'page-bar';
     bar.innerHTML = '<div class="pb-inner"><span class="pb-label">On this page</span><div class="pb-links">' + links + '</div></div>';
 
-    // Insert after #snav
-    var snav = document.getElementById('snav');
-    if (snav && snav.parentNode) {
-      snav.parentNode.insertBefore(bar, snav.nextSibling);
-    } else {
-      document.body.insertBefore(bar, document.body.firstChild);
-    }
+    // Insert as first element inside body, after snav
+    // Use fixed positioning so it always sits below the nav
+    bar.style.cssText = 'position:fixed;top:56px;left:0;right:0;z-index:8990;background:rgba(13,20,35,0.97);backdrop-filter:blur(12px);border-bottom:1px solid #1a2640;overflow-x:auto;scrollbar-width:none;';
+    document.body.appendChild(bar);
+    // After render, measure bar height and add to body padding-top
+    requestAnimationFrame(function(){
+      var h = bar.offsetHeight || 36;
+      var current = parseInt(getComputedStyle(document.body).paddingTop) || 0;
+      document.body.style.paddingTop = (current + h) + 'px';
+    });
 
     // Highlight active section on scroll
     var allLinks = bar.querySelectorAll('.pb-link');
