@@ -189,8 +189,8 @@
      6. "On this page" section bar — auto-built from page sections
   ---------------------------------------------------------- */
   (function() {
-    // Skip if page has its own nav bar already
-    if (document.getElementById('page-bar') || document.getElementById('page-nav')) return;
+    // Skip if bar already exists
+    if (document.getElementById('page-bar')) return;
     // Find all sections with an id
     var sections = Array.from(document.querySelectorAll('section[id]'));
     if (sections.length < 2) return; // skip pages with only 1 section
