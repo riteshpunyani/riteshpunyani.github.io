@@ -184,4 +184,60 @@
     }
   });
 
+
+  /* ----------------------------------------------------------
+     6. "On this page" section bar — auto-built from page sections
+  ---------------------------------------------------------- */
+  (function() {
+    // Find all sections with an id
+    var sections = Array.from(document.querySelectorAll('section[id], div[id].section, [id].page-hero ~ section'));
+    // Also grab direct section IDs
+    sections = Array.from(document.querySelectorAll('section[id]'));
+    if (sections.length < 2) return; // skip pages with only 1 section
+
+    // Get label: prefer first h2 > stag text or h2, fallback to section id
+    function getLabel(sec) {
+      var stag = sec.querySelector('.stag');
+      if (stag) {
+        // stag has a ::before pseudo, get text content minus that
+        var txt = stag.textContent.trim();
+        return txt;
+      }
+      var h2 = sec.querySelector('h2');
+      if (h2) return h2.textContent.trim().replace(/[^\w\s&]/g,'').trim().substring(0,28);
+      // format id
+      return sec.id.replace(/-/g,' ').replace(/\w/g,function(c){return c.toUpperCase();});
+    }
+
+    // Build bar HTML
+    var links = sections.map(function(s) {
+      return '<a href="#' + s.id + '" class="pb-link">' + getLabel(s) + '</a>';
+    }).join('');
+
+    var bar = document.createElement('div');
+    bar.id = 'page-bar';
+    bar.innerHTML = '<div class="pb-inner"><span class="pb-label">On this page</span><div class="pb-links">' + links + '</div></div>';
+
+    // Insert after #snav
+    var snav = document.getElementById('snav');
+    if (snav && snav.parentNode) {
+      snav.parentNode.insertBefore(bar, snav.nextSibling);
+    } else {
+      document.body.insertBefore(bar, document.body.firstChild);
+    }
+
+    // Highlight active section on scroll
+    var allLinks = bar.querySelectorAll('.pb-link');
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          allLinks.forEach(function(l) { l.classList.remove('active'); });
+          var active = bar.querySelector('.pb-link[href="#' + e.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.25 });
+    sections.forEach(function(s) { obs.observe(s); });
+  })();
+
 })();
