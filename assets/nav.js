@@ -64,7 +64,7 @@
       ]
     },
     { label: 'Credentials', href: 'index.html#certs', key: 'certs' },
-     { label: '🛒 Shop', href: 'shop.html', key: 'shop' },
+    { label: '🛒 Shop', href: 'shop.html', key: 'shop' },
     { label: 'Contact', href: 'contact.html', key: 'contact' },
   ];
 
