@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Templates &amp; Tools — Ritesh Punyani</title>
+<meta name="description" content="Excel templates, automation tools, prompt libraries and more — created by Ritesh Punyani CA."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🛒</text></svg>"/>
+
+<!-- ============================================================
+  HOW TO ADD A NEW PRODUCT
+  ============================================================
+  1. Copy one product block from the PRODUCTS array below
+  2. Paste it after the last product (before the closing ] )
+  3. Fill in the fields — all fields explained in comments
+  4. Save the file and push to GitHub — product appears instantly
+
+  REQUIRED fields: id, title, category, icon, priceUSD, priceINR,
+                   tagline, description, features, buyLink, status
+  OPTIONAL fields: badge, youtube (leave "" to hide Watch Demo button)
+
+  BADGE options:  "NEW"  |  "FEATURED"  |  "BESTSELLER"  |  "" (none)
+  STATUS options: "available"  |  "coming-soon"
+  ============================================================ -->
+
+<script>
+// ============================================================
+//  PRODUCT DATA — only edit this section to manage products
+// ============================================================
+const PRODUCTS = [
+
+  {
+    id: "analytics-test-library",
+    title: "Analytics Test Library",
+
+    // Category — any text you like; new categories auto-appear as filter tabs
+    category: "Excel Templates",
+
+    // Badge — "NEW" | "FEATURED" | "BESTSELLER" | "" (none)
+    badge: "FEATURED",
+
+    // Emoji icon shown on the card
+    icon: "📊",
+
+    // Prices — set priceUSD: 0 to show "Free"
+    priceUSD: 29,
+    priceINR: 2499,
+
+    // One-line summary shown under the title
+    tagline: "1,718 ready-to-use analytics tests across 20 fraud & compliance categories",
+
+    // Full description paragraph
+    description: "A curated library of 1,718 analytics tests covering every major audit and compliance domain — from AP/AR and payroll to FCPA, banking, and anomaly detection. Built from 18+ years of real-world investigation experience.",
+
+    // Checklist bullet points
+    features: [
+      "1,718 tests across 20 master categories",
+      "Covers fraud, GL, AP, AR, payroll, vendor, banking & more",
+      "Excel format with Category Legend and Stats sheets",
+      "Ready to use — no setup required"
+    ],
+
+    // YouTube demo — paste full URL, or leave "" to hide the button
+    youtube: "",
+
+    // Buy link — paste your Gumroad product URL here when ready
+    buyLink: "#coming-soon",
+
+    // "available" shows Buy Now | "coming-soon" shows an overlay
+    status: "coming-soon"
+  },
+
+  {
+    id: "prompt-library",
+    title: "Prompt Library for Professionals",
+    category: "AI & Prompts",
+    badge: "NEW",
+    icon: "📘",
+    priceUSD: 19,
+    priceINR: 1599,
+    tagline: "19 tried-and-tested prompts for fraud investigators and compliance professionals",
+    description: "A hand-crafted collection of AI prompts for fraud investigations, ethics & compliance, data analytics, and COBC workflows. Each prompt includes a use case, role setup, and worked example.",
+    features: [
+      "19 prompts covering investigations, MoM, analytics, ethics",
+      "Role-assignment and reset prompts included",
+      "Works with ChatGPT, Claude, Gemini",
+      "Word document — print-ready navy/gold format"
+    ],
+    youtube: "",
+    buyLink: "#coming-soon",
+    status: "coming-soon"
+  },
+
+  {
+    id: "vba-toolkit",
+    title: "Excel VBA Automation Toolkit",
+    category: "VBA Tools",
+    badge: "NEW",
+    icon: "⚙️",
+    priceUSD: 24,
+    priceINR: 1999,
+    tagline: "Data merge, bulk rename, and duplicate finder — three utilities in one workbook",
+    description: "Three practical Excel VBA utilities built for finance and compliance professionals. Automates tasks that normally take hours into seconds — no coding knowledge required to run them.",
+    features: [
+      "Excel Data Merge Tool — combine multiple sheets instantly",
+      "Bulk File Renaming Utility — rename hundreds of files by rule",
+      "Duplicate File & Folder Identifier",
+      "Protected .xlsb format — code locked, fully functional"
+    ],
+    youtube: "",
+    buyLink: "#coming-soon",
+    status: "coming-soon"
+  }
+
+  // ── ADD YOUR NEXT PRODUCT HERE ──────────────────────────────
+  // Copy the block above (from { to the closing }, )
+  // Paste it here, update the fields, save, push to GitHub.
+  // The new card appears automatically — no other changes needed.
+  // ────────────────────────────────────────────────────────────
+
+];
+// ============================================================
+//  END OF PRODUCT DATA
+// ============================================================
+</script>
+
+<style>
+:root{
+  --navy:#070c18;--navy2:#0d1423;--navy3:#131c2f;
+  --gold:#c9a84c;--gold2:#e8c97a;--gold3:rgba(201,168,76,.12);
+  --text:#e2e8f0;--muted:#8899b0;--card:#0f1825;--border:#1a2640;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.65;}
+a{color:inherit;text-decoration:none;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+#snav{}
+.ph{background:linear-gradient(135deg,var(--navy2),var(--navy3));border-bottom:1px solid var(--border);padding:5rem 2rem 3rem;text-align:center;}
+.ph-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);margin-bottom:.6rem;}
+.ph h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-bottom:.5rem;}
+.ph p{color:var(--muted);font-size:.9rem;max-width:500px;margin:0 auto;}
+.filter-wrap{background:var(--navy2);border-bottom:1px solid var(--border);padding:.9rem 2rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;position:sticky;top:56px;z-index:100;}
+.ftab{background:rgba(201,168,76,.06);border:1px solid var(--border);color:var(--muted);padding:.35rem .9rem;border-radius:999px;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .18s;}
+.ftab:hover{border-color:rgba(201,168,76,.3);color:var(--gold);}
+.ftab.active{background:var(--gold);color:#07111a;border-color:var(--gold);}
+main{max-width:1160px;margin:0 auto;padding:2.5rem 2rem 4rem;}
+.grid-count{color:var(--muted);font-size:.8rem;margin-bottom:1.4rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.4rem;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .22s,border-color .22s,box-shadow .22s;position:relative;}
+.card:hover{transform:translateY(-5px);border-color:rgba(201,168,76,.3);box-shadow:0 14px 40px rgba(0,0,0,.5);}
+.card-top{height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));}
+.card-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;gap:.7rem;}
+.card-head{display:flex;align-items:flex-start;gap:.8rem;}
+.card-icon{font-size:2rem;flex-shrink:0;margin-top:.1rem;}
+.card-cat{display:inline-block;font-size:.64rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold);background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.18);padding:.15rem .5rem;border-radius:999px;margin-bottom:.35rem;}
+.card-title{font-size:1rem;font-weight:800;line-height:1.2;}
+.card-tagline{color:var(--muted);font-size:.81rem;line-height:1.55;}
+.card-desc{color:var(--muted);font-size:.8rem;line-height:1.6;}
+.card-features{list-style:none;display:flex;flex-direction:column;gap:.3rem;}
+.card-features li{font-size:.78rem;color:var(--muted);display:flex;align-items:flex-start;gap:.45rem;}
+.card-features li::before{content:'✓';color:var(--gold);flex-shrink:0;font-weight:700;}
+.card-price{display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap;margin-top:.2rem;}
+.price-usd{font-size:1.4rem;font-weight:900;color:var(--gold);}
+.price-inr{font-size:.88rem;color:var(--muted);}
+.price-free{font-size:1.4rem;font-weight:900;color:#4ade80;}
+.card-actions{display:flex;gap:.6rem;margin-top:auto;padding-top:.8rem;flex-wrap:wrap;}
+.btn-buy{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:var(--gold);color:#07111a;padding:.6rem 1rem;border-radius:8px;font-size:.83rem;font-weight:800;transition:opacity .18s;cursor:pointer;border:none;}
+.btn-buy:hover{opacity:.88;}
+.btn-yt{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:rgba(255,0,0,.12);border:1px solid rgba(255,0,0,.25);color:#f87171;padding:.6rem .9rem;border-radius:8px;font-size:.83rem;font-weight:700;transition:background .18s;}
+.btn-yt:hover{background:rgba(255,0,0,.2);}
+.card-badge{position:absolute;top:14px;right:14px;font-size:.63rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:.22rem .6rem;border-radius:999px;}
+.badge-NEW{background:#1d4ed8;color:#bfdbfe;}
+.badge-FEATURED{background:var(--gold);color:#07111a;}
+.badge-BESTSELLER{background:#15803d;color:#bbf7d0;}
+.cs-overlay{position:absolute;inset:0;background:rgba(7,12,24,.72);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;border-radius:14px;z-index:2;}
+.cs-label{background:var(--navy3);border:1px solid var(--border);color:var(--muted);padding:.5rem 1.2rem;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:1px;}
+.empty{text-align:center;padding:4rem 2rem;color:var(--muted);}
+.empty-icon{font-size:2.5rem;margin-bottom:.8rem;}
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:1.8rem 2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
+@media(max-width:680px){.grid{grid-template-columns:1fr;}.card-actions{flex-direction:column;}.btn-buy{flex:none;}}
+</style>
+</head>
+<body>
+
+<div id="snav"></div>
+
+<div class="ph">
+  <div class="ph-tag">Templates &amp; Tools</div>
+  <h1>Products by Ritesh Punyani</h1>
+  <p>Practical Excel templates, AI tools, and automation resources — built from 18+ years in fraud, analytics, and compliance.</p>
+</div>
+
+<div class="filter-wrap" id="filters"></div>
+
+<main>
+  <div class="grid-count" id="grid-count"></div>
+  <div class="grid" id="product-grid"></div>
+</main>
+
+<footer>
+  <p>© 2026 Ritesh Punyani. All rights reserved.</p>
+  <p style="margin-top:.3rem;opacity:.6;">All products are for personal professional use. Single-user license. Reverse engineering or redistribution is prohibited.</p>
+</footer>
+
+<script src="assets/nav.js"></script>
+
+<script>
+// ============================================================
+//  RENDER ENGINE — do not edit below this line
+// ============================================================
+let activeCategory = 'All';
+
+function getCategories() {
+  return ['All', ...new Set(PRODUCTS.map(p => p.category))];
+}
+
+function renderFilters() {
+  const wrap = document.getElementById('filters');
+  getCategories().forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'ftab' + (cat === activeCategory ? ' active' : '');
+    btn.textContent = cat === 'All' ? '🛒 All Products' : cat;
+    btn.addEventListener('click', () => {
+      activeCategory = cat;
+      document.querySelectorAll('.ftab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderGrid();
+    });
+    wrap.appendChild(btn);
+  });
+}
+
+function renderGrid() {
+  const grid = document.getElementById('product-grid');
+  const count = document.getElementById('grid-count');
+  const filtered = activeCategory === 'All' ? PRODUCTS : PRODUCTS.filter(p => p.category === activeCategory);
+  count.textContent = filtered.length + (filtered.length === 1 ? ' product' : ' products');
+  grid.innerHTML = '';
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="empty"><div class="empty-icon">📦</div><p>No products in this category yet.</p></div>';
+    return;
+  }
+
+  filtered.forEach(p => {
+    const priceHTML = p.priceUSD === 0
+      ? '<span class="price-free">Free</span>'
+      : '<span class="price-usd">$' + p.priceUSD + '</span><span class="price-inr">&#8377;' + p.priceINR.toLocaleString('en-IN') + '</span>';
+    const featuresHTML = p.features.map(f => '<li>' + f + '</li>').join('');
+    const ytBtn = p.youtube ? '<a class="btn-yt" href="' + p.youtube + '" target="_blank">&#9654; Watch Demo</a>' : '';
+    const buyBtn = p.status === 'coming-soon'
+      ? '<button class="btn-buy" style="opacity:.45;cursor:default;" disabled>Coming Soon</button>'
+      : '<a class="btn-buy" href="' + p.buyLink + '" target="_blank">&#128722; Buy Now</a>';
+    const badgeHTML = p.badge ? '<div class="card-badge badge-' + p.badge + '">' + p.badge + '</div>' : '';
+    const csOverlay = p.status === 'coming-soon' ? '<div class="cs-overlay"><div class="cs-label">&#9203; Coming Soon</div></div>' : '';
+
+    grid.innerHTML += '<div class="card"><div class="card-top"></div>' + badgeHTML + csOverlay +
+      '<div class="card-body"><div class="card-head"><div class="card-icon">' + p.icon + '</div>' +
+      '<div class="card-meta"><div class="card-cat">' + p.category + '</div>' +
+      '<div class="card-title">' + p.title + '</div></div></div>' +
+      '<div class="card-tagline">' + p.tagline + '</div>' +
+      '<div class="card-price">' + priceHTML + '</div>' +
+      '<div class="card-desc">' + p.description + '</div>' +
+      '<ul class="card-features">' + featuresHTML + '</ul>' +
+      '<div class="card-actions">' + buyBtn + ytBtn + '</div></div></div>';
+  });
+}
+
+renderFilters();
+renderGrid();
+</script>
+</body>
+</html>
