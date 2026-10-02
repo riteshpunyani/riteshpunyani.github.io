@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Templates &amp; Tools — Ritesh Punyani</title>
-<meta name="description" content="Excel templates, automation tools, prompt libraries and more — created by Ritesh Punyani CA."/>
+<meta name="description" content="Excel VBA tools, automation utilities, analytics templates, AI prompts and more — created by Ritesh Punyani CA."/>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🛒</text></svg>"/>
 <link rel="stylesheet" href="assets/nav.css"/>
 
@@ -17,11 +17,13 @@
   4. Save the file and push to GitHub — product appears instantly
 
   REQUIRED fields: id, title, category, icon, priceUSD, priceINR,
-                   tagline, description, features, buyLink, status
+                   tagline, description, features, buyLink,
+                   demoLink, status
   OPTIONAL fields: badge, youtube (leave "" to hide Watch Demo button)
 
   BADGE options:  "NEW"  |  "FEATURED"  |  "BESTSELLER"  |  "" (none)
   STATUS options: "available"  |  "coming-soon"
+  demoLink: URL to free demo download, or "" to hide the button
   ============================================================ -->
 
 <script>
@@ -30,44 +32,101 @@
 // ============================================================
 const PRODUCTS = [
 
+  // ── VBA TOOLS ──────────────────────────────────────────────
+
+  {
+    id: "bulk-file-renamer",
+    title: "Bulk File Renamer Tool",
+    category: "VBA Tools",
+    badge: "NEW",
+    icon: "📁",
+    priceUSD: 9,
+    priceINR: 749,
+    tagline: "Rename or move thousands of files in seconds — no coding required",
+    description: "Paste your source file paths in Column A and target paths in Column B. Run the macro and every file is renamed instantly with a status report in Column C. Works on any file type across any folder.",
+    features: [
+      "Rename or move unlimited files in a single run",
+      "Automatic status per row: renamed / not found / already exists / error",
+      "Progress shown in Excel status bar during processing",
+      "Full error handling — never crashes mid-batch",
+      "Works with any file type: xlsx, pdf, docx, jpg, txt, and more",
+      "Password-protected VBA — code locked, macro fully functional"
+    ],
+    youtube: "",
+    demoLink: "assets/downloads/BulkFileRenamer_DEMO.xlsm",
+    buyLink: "https://riteshpunyani.gumroad.com/l/syufli",
+    status: "available"
+  },
+
+  {
+    id: "excel-data-merge",
+    title: "Excel Data Merge Tool",
+    category: "VBA Tools",
+    badge: "NEW",
+    icon: "🔗",
+    priceUSD: 9,
+    priceINR: 749,
+    tagline: "Merge unlimited Excel and CSV files into one consolidated workbook",
+    description: "Select files individually or point to an entire folder. The macro opens each file, skips duplicate headers, and appends all data into a single Merged_Data worksheet — ready for analysis in seconds.",
+    features: [
+      "Merge unlimited .xls, .xlsx, and .csv files in one click",
+      "Pick individual files or merge an entire folder automatically",
+      "Smart header management — first file only, no duplicates",
+      "Creates a new clean output workbook: Merged_Data",
+      "Handles large batches with full error recovery per file",
+      "Password-protected VBA — code locked, macro fully functional"
+    ],
+    youtube: "",
+    demoLink: "assets/downloads/ExcelDataMerge_DEMO.xlsm",
+    buyLink: "https://riteshpunyani.gumroad.com/l/bmohqt",
+    status: "available"
+  },
+
+  {
+    id: "file-property-cleanup",
+    title: "File Property & Cleanup Tool",
+    category: "VBA Tools",
+    badge: "NEW",
+    icon: "🗂️",
+    priceUSD: 9,
+    priceINR: 749,
+    tagline: "Scan folders, surface duplicates, and clean up clutter — all from Excel",
+    description: "Enter a folder path and the macro recursively lists every file and sub-folder with 10 property columns including size, dates, extension, and four duplicate-detection scores. Filter, identify, open, or delete directly from the spreadsheet.",
+    features: [
+      "Recursive folder scan — all files and sub-folders listed",
+      "10 columns: path, name, size (KB), modified, created, extension",
+      "4 duplicate-detection scores: size+ext, name+size, name+size+dates",
+      "Open any file or its folder directly from Excel with one click",
+      "Send selected files to the Windows Recycle Bin — safely reversible",
+      "AutoFilter applied automatically for instant sorting and filtering"
+    ],
+    youtube: "",
+    demoLink: "assets/downloads/FilePropertyCleanup_DEMO.xlsm",
+    buyLink: "https://riteshpunyani.gumroad.com/l/ymgqnf",
+    status: "available"
+  },
+
+  // ── ANALYTICS & AI ─────────────────────────────────────────
+
   {
     id: "analytics-test-library",
     title: "Analytics Test Library",
-
-    // Category — any text you like; new categories auto-appear as filter tabs
-    category: "Excel Templates",
-
-    // Badge — "NEW" | "FEATURED" | "BESTSELLER" | "" (none)
+    category: "Analytics",
     badge: "FEATURED",
-
-    // Emoji icon shown on the card
     icon: "📊",
-
-    // Prices — set priceUSD: 0 to show "Free"
     priceUSD: 29,
     priceINR: 2499,
-
-    // One-line summary shown under the title
     tagline: "1,718 ready-to-use analytics tests across 20 fraud & compliance categories",
-
-    // Full description paragraph
     description: "A curated library of 1,718 analytics tests covering every major audit and compliance domain — from AP/AR and payroll to FCPA, banking, and anomaly detection. Built from 18+ years of real-world investigation experience.",
-
-    // Checklist bullet points
     features: [
       "1,718 tests across 20 master categories",
       "Covers fraud, GL, AP, AR, payroll, vendor, banking & more",
       "Excel format with Category Legend and Stats sheets",
       "Ready to use — no setup required"
     ],
-
-    // YouTube demo — paste full URL, or leave "" to hide the button
     youtube: "",
-
-    // Buy link — paste your Gumroad product URL here when ready
+    demoLink: "",
     buyLink: "#coming-soon",
-
-    // "available" shows Buy Now | "coming-soon" shows an overlay
     status: "coming-soon"
   },
 
@@ -88,27 +147,7 @@ const PRODUCTS = [
       "Word document — print-ready navy/gold format"
     ],
     youtube: "",
-    buyLink: "#coming-soon",
-    status: "coming-soon"
-  },
-
-  {
-    id: "vba-toolkit",
-    title: "Excel VBA Automation Toolkit",
-    category: "VBA Tools",
-    badge: "NEW",
-    icon: "⚙️",
-    priceUSD: 24,
-    priceINR: 1999,
-    tagline: "Data merge, bulk rename, and duplicate finder — three utilities in one workbook",
-    description: "Three practical Excel VBA utilities built for finance and compliance professionals. Automates tasks that normally take hours into seconds — no coding knowledge required to run them.",
-    features: [
-      "Excel Data Merge Tool — combine multiple sheets instantly",
-      "Bulk File Renaming Utility — rename hundreds of files by rule",
-      "Duplicate File & Folder Identifier",
-      "Protected .xlsb format — code locked, fully functional"
-    ],
-    youtube: "",
+    demoLink: "",
     buyLink: "#coming-soon",
     status: "coming-soon"
   }
@@ -141,7 +180,7 @@ a{color:inherit;text-decoration:none;}
 .ph{background:linear-gradient(135deg,var(--navy2),var(--navy3));border-bottom:1px solid var(--border);padding:5rem 2rem 3rem;text-align:center;}
 .ph-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);margin-bottom:.6rem;}
 .ph h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-bottom:.5rem;}
-.ph p{color:var(--muted);font-size:.9rem;max-width:500px;margin:0 auto;}
+.ph p{color:var(--muted);font-size:.9rem;max-width:520px;margin:0 auto;}
 .filter-wrap{background:var(--navy2);border-bottom:1px solid var(--border);padding:.9rem 2rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;position:sticky;top:56px;z-index:100;}
 .ftab{background:rgba(201,168,76,.06);border:1px solid var(--border);color:var(--muted);padding:.35rem .9rem;border-radius:999px;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .18s;}
 .ftab:hover{border-color:rgba(201,168,76,.3);color:var(--gold);}
@@ -169,6 +208,8 @@ main{max-width:1160px;margin:0 auto;padding:2.5rem 2rem 4rem;}
 .card-actions{display:flex;gap:.6rem;margin-top:auto;padding-top:.8rem;flex-wrap:wrap;}
 .btn-buy{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:var(--gold);color:#07111a;padding:.6rem 1rem;border-radius:8px;font-size:.83rem;font-weight:800;transition:opacity .18s;cursor:pointer;border:none;}
 .btn-buy:hover{opacity:.88;}
+.btn-demo{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);color:var(--gold);padding:.6rem .9rem;border-radius:8px;font-size:.83rem;font-weight:700;transition:background .18s;}
+.btn-demo:hover{background:rgba(201,168,76,.2);}
 .btn-yt{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:rgba(255,0,0,.12);border:1px solid rgba(255,0,0,.25);color:#f87171;padding:.6rem .9rem;border-radius:8px;font-size:.83rem;font-weight:700;transition:background .18s;}
 .btn-yt:hover{background:rgba(255,0,0,.2);}
 .card-badge{position:absolute;top:14px;right:14px;font-size:.63rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:.22rem .6rem;border-radius:999px;}
@@ -179,6 +220,40 @@ main{max-width:1160px;margin:0 auto;padding:2.5rem 2rem 4rem;}
 .cs-label{background:var(--navy3);border:1px solid var(--border);color:var(--muted);padding:.5rem 1.2rem;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:1px;}
 .empty{text-align:center;padding:4rem 2rem;color:var(--muted);}
 .empty-icon{font-size:2.5rem;margin-bottom:.8rem;}
+
+/* ── MACRO INSTRUCTIONS STRIP ───────────────────────────── */
+.instr-strip{background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(201,168,76,.04));border:1px solid rgba(201,168,76,.2);border-radius:14px;padding:2rem 2.2rem;margin:0 0 2.5rem 0;}
+.instr-strip h3{font-size:1rem;font-weight:800;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;}
+.instr-cols{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.instr-block h4{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.5rem;}
+.instr-block ol,.instr-block ul{padding-left:1.2rem;}
+.instr-block li{font-size:.78rem;color:var(--muted);line-height:1.65;margin-bottom:.15rem;}
+.instr-block li strong{color:var(--text);}
+.instr-block code{background:rgba(255,255,255,.06);padding:.1rem .35rem;border-radius:4px;font-size:.75rem;font-family:'Consolas',monospace;color:var(--gold);}
+.alert-box{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:10px;padding:1rem 1.2rem;margin-top:1rem;}
+.alert-box p{font-size:.78rem;color:#fca5a5;line-height:1.65;}
+.alert-box strong{color:#f87171;}
+@media(max-width:680px){.instr-cols{grid-template-columns:1fr;}}
+
+/* ── SAP AUTOMATION SECTION ─────────────────────────────── */
+.sap-section{background:linear-gradient(135deg,var(--navy2),var(--navy3));border-top:1px solid var(--border);padding:4rem 2rem;}
+.sap-inner{max-width:1160px;margin:0 auto;}
+.sap-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem;}
+.sap-tag::before{content:'';width:18px;height:1.5px;background:var(--gold);display:inline-block;}
+.sap-title{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:800;margin-bottom:.5rem;}
+.sap-sub{color:var(--muted);font-size:.88rem;max-width:580px;margin-bottom:2.5rem;}
+.sap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-bottom:2.5rem;}
+.sap-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:1.5rem;transition:transform .22s,border-color .22s;}
+.sap-card:hover{transform:translateY(-4px);border-color:rgba(201,168,76,.3);}
+.sap-icon{font-size:1.8rem;margin-bottom:.7rem;}
+.sap-card-title{font-weight:700;font-size:.95rem;margin-bottom:.4rem;}
+.sap-card-desc{color:var(--muted);font-size:.8rem;line-height:1.6;}
+.sap-highlight{background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.05));border:1px solid rgba(201,168,76,.25);border-radius:12px;padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+.sap-hl-text strong{font-size:1rem;color:var(--text);}
+.sap-hl-text p{color:var(--muted);font-size:.83rem;margin-top:.3rem;max-width:500px;line-height:1.65;}
+.sap-coming{display:inline-flex;align-items:center;gap:.5rem;background:var(--navy3);border:1px solid var(--border);color:var(--muted);padding:.5rem 1.2rem;border-radius:999px;font-size:.78rem;font-weight:700;}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
 footer{background:var(--navy2);border-top:1px solid var(--border);padding:1.8rem 2rem;text-align:center;color:var(--muted);font-size:.74rem;line-height:1.8;}
 @media(max-width:680px){.grid{grid-template-columns:1fr;}.card-actions{flex-direction:column;}.btn-buy{flex:none;}}
 </style>
@@ -190,19 +265,96 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:1.8rem
 <div class="ph">
   <div class="ph-tag">Templates &amp; Tools</div>
   <h1>Products by Ritesh Punyani</h1>
-  <p>Practical Excel templates, AI tools, and automation resources — built from 18+ years in fraud, analytics, and compliance.</p>
+  <p>Practical Excel VBA tools, AI prompts, and analytics resources — built from 18+ years in fraud, compliance, and automation.</p>
 </div>
 
 <div class="filter-wrap" id="filters"></div>
 
 <main>
   <div class="grid-count" id="grid-count"></div>
+
+  <!-- ── MACRO ENABLE & SECURITY INSTRUCTIONS ── -->
+  <div class="instr-strip">
+    <h3>🔐 Before You Run — Macro Enable &amp; Security Guide</h3>
+    <div class="instr-cols">
+      <div class="instr-block">
+        <h4>Step 1 — Unblock the file (Windows security)</h4>
+        <ol>
+          <li>After downloading, <strong>do not open the file yet.</strong></li>
+          <li>In Windows Explorer, <strong>right-click</strong> the <code>.xlsm</code> file.</li>
+          <li>Select <strong>Properties</strong>.</li>
+          <li>At the bottom, tick <strong>"Unblock"</strong> → click <strong>OK</strong>.</li>
+          <li>Now open the file normally.</li>
+        </ol>
+        <div class="alert-box">
+          <p><strong>⚠️ If you see:</strong> <em>"This file came from another computer and might be blocked to help protect this computer"</em> — follow the Unblock steps above before enabling macros.</p>
+        </div>
+      </div>
+      <div class="instr-block">
+        <h4>Step 2 — Enable macros in Excel</h4>
+        <ol>
+          <li>When the file opens, click the yellow banner: <strong>"Enable Content"</strong>.</li>
+          <li>If no banner appears, go to: <strong>File → Options → Trust Center → Trust Center Settings → Macro Settings</strong>.</li>
+          <li>Select <strong>"Enable all macros"</strong> (you can reset this after use).</li>
+          <li>Alternatively, save the file to a <strong>Trusted Location</strong> so you are never prompted again.</li>
+        </ol>
+        <h4 style="margin-top:1rem;">Running the macro</h4>
+        <ul>
+          <li>Press <code>Alt+F8</code> → select the macro → click <strong>Run</strong>.</li>
+          <li>Or use the keyboard shortcut listed on the Instructions sheet inside the file.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- ── END INSTRUCTIONS ── -->
+
   <div class="grid" id="product-grid"></div>
 </main>
 
+<!-- ── SAP AUTOMATION SECTION ── -->
+<section class="sap-section">
+  <div class="sap-inner">
+    <div class="sap-tag">SAP Automation</div>
+    <h2 class="sap-title">Automate SAP with Excel — Coming Soon</h2>
+    <p class="sap-sub">SAP has powerful built-in macro recording and scripting capabilities. Paired with Excel VBA, you can pull data from SAP directly into Excel and automate repetitive daily tasks — no additional software required.</p>
+
+    <div class="sap-grid">
+      <div class="sap-card">
+        <div class="sap-icon">📥</div>
+        <div class="sap-card-title">Pull SAP Data into Excel</div>
+        <div class="sap-card-desc">Use SAP's built-in scripting recorder to capture any transaction and replay it automatically. Export data to Excel without manual copy-paste — ever again.</div>
+      </div>
+      <div class="sap-card">
+        <div class="sap-icon">🔁</div>
+        <div class="sap-card-title">Automate Repetitive SAP Tasks</div>
+        <div class="sap-card-desc">Schedule and loop through SAP transactions (GR55, F-43, ME21N, and more) using VBScript or Excel VBA macros. What took 2 hours now runs in 5 minutes.</div>
+      </div>
+      <div class="sap-card">
+        <div class="sap-icon">📊</div>
+        <div class="sap-card-title">Live SAP–Excel Dashboards</div>
+        <div class="sap-card-desc">Build Excel dashboards that refresh SAP data on demand — no SAP GUI open, no manual export. Ideal for compliance monitoring, AP tracking, and expense analytics.</div>
+      </div>
+      <div class="sap-card">
+        <div class="sap-icon">⚙️</div>
+        <div class="sap-card-title">SAP Script Recording (Zero Coding)</div>
+        <div class="sap-card-desc">SAP's built-in macro recorder captures every click and keystroke. No ABAP knowledge needed. Record once, replay thousands of times with different inputs from Excel.</div>
+      </div>
+    </div>
+
+    <div class="sap-highlight">
+      <div class="sap-hl-text">
+        <strong>📎 SAP + Excel Automation Toolkit — Launching Soon</strong>
+        <p>A practical toolkit of SAP scripting templates and Excel VBA macros for finance, compliance, and audit professionals. Automate data pulls, report generation, and control testing across common SAP modules — all driven from Excel.</p>
+      </div>
+      <div class="sap-coming">⏳ Coming Soon</div>
+    </div>
+  </div>
+</section>
+<!-- ── END SAP SECTION ── -->
+
 <footer>
   <p>© 2026 Ritesh Punyani. All rights reserved.</p>
-  <p style="margin-top:.3rem;opacity:.6;">All products are for personal professional use. Single-user license. Reverse engineering or redistribution is prohibited.</p>
+  <p style="margin-top:.3rem;opacity:.6;">All products are for personal professional use. Single-user licence. Reverse engineering or redistribution is prohibited.</p>
 </footer>
 
 <script src="assets/nav.js"></script>
@@ -234,7 +386,7 @@ function renderFilters() {
 }
 
 function renderGrid() {
-  const grid = document.getElementById('product-grid');
+  const grid  = document.getElementById('product-grid');
   const count = document.getElementById('grid-count');
   const filtered = activeCategory === 'All' ? PRODUCTS : PRODUCTS.filter(p => p.category === activeCategory);
   count.textContent = filtered.length + (filtered.length === 1 ? ' product' : ' products');
@@ -249,23 +401,36 @@ function renderGrid() {
     const priceHTML = p.priceUSD === 0
       ? '<span class="price-free">Free</span>'
       : '<span class="price-usd">$' + p.priceUSD + '</span><span class="price-inr">&#8377;' + p.priceINR.toLocaleString('en-IN') + '</span>';
+
     const featuresHTML = p.features.map(f => '<li>' + f + '</li>').join('');
-    const ytBtn = p.youtube ? '<a class="btn-yt" href="' + p.youtube + '" target="_blank">&#9654; Watch Demo</a>' : '';
+
+    const ytBtn   = p.youtube   ? '<a class="btn-yt"   href="' + p.youtube   + '" target="_blank">&#9654; Watch Demo</a>' : '';
+    const demoBtn = p.demoLink  ? '<a class="btn-demo" href="' + p.demoLink  + '" target="_blank">⬇ Free Demo</a>'       : '';
+
     const buyBtn = p.status === 'coming-soon'
       ? '<button class="btn-buy" style="opacity:.45;cursor:default;" disabled>Coming Soon</button>'
-      : '<a class="btn-buy" href="' + p.buyLink + '" target="_blank">&#128722; Buy Now</a>';
-    const badgeHTML = p.badge ? '<div class="card-badge badge-' + p.badge + '">' + p.badge + '</div>' : '';
-    const csOverlay = p.status === 'coming-soon' ? '<div class="cs-overlay"><div class="cs-label">&#9203; Coming Soon</div></div>' : '';
+      : '<a class="btn-buy" href="' + p.buyLink + '" target="_blank">&#128722; Buy Now — $' + p.priceUSD + '</a>';
 
-    grid.innerHTML += '<div class="card"><div class="card-top"></div>' + badgeHTML + csOverlay +
-      '<div class="card-body"><div class="card-head"><div class="card-icon">' + p.icon + '</div>' +
-      '<div class="card-meta"><div class="card-cat">' + p.category + '</div>' +
-      '<div class="card-title">' + p.title + '</div></div></div>' +
-      '<div class="card-tagline">' + p.tagline + '</div>' +
-      '<div class="card-price">' + priceHTML + '</div>' +
-      '<div class="card-desc">' + p.description + '</div>' +
-      '<ul class="card-features">' + featuresHTML + '</ul>' +
-      '<div class="card-actions">' + buyBtn + ytBtn + '</div></div></div>';
+    const badgeHTML = p.badge ? '<div class="card-badge badge-' + p.badge + '">' + p.badge + '</div>' : '';
+    const csOverlay = p.status === 'coming-soon'
+      ? '<div class="cs-overlay"><div class="cs-label">&#9203; Coming Soon</div></div>' : '';
+
+    grid.innerHTML +=
+      '<div class="card"><div class="card-top"></div>' + badgeHTML + csOverlay +
+      '<div class="card-body">' +
+        '<div class="card-head">' +
+          '<div class="card-icon">' + p.icon + '</div>' +
+          '<div class="card-meta">' +
+            '<div class="card-cat">' + p.category + '</div>' +
+            '<div class="card-title">' + p.title + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="card-tagline">' + p.tagline + '</div>' +
+        '<div class="card-price">' + priceHTML + '</div>' +
+        '<div class="card-desc">' + p.description + '</div>' +
+        '<ul class="card-features">' + featuresHTML + '</ul>' +
+        '<div class="card-actions">' + buyBtn + demoBtn + ytBtn + '</div>' +
+      '</div></div>';
   });
 }
 
