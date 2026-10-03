@@ -32,16 +32,17 @@
 // ============================================================
 const PRODUCTS = [
 
-  // ── VBA TOOLS ──────────────────────────────────────────────
+  // ── FILE & SYSTEM UTILITIES ────────────────────────────────
 
   {
     id: "bulk-file-renamer",
     title: "Bulk File Renamer Tool",
-    category: "VBA Tools",
-    badge: "NEW",
+    category: "File Utilities",
+    badge: "",
     icon: "📁",
-    priceUSD: Free,
-    priceINR: (Nil),
+    priceUSD: 0,
+    priceINR: 0,
+    pwyw: false,
     tagline: "Rename or move thousands of files in seconds — no coding required",
     description: "Paste your source file paths in Column A and target paths in Column B. Run the macro and every file is renamed instantly with a status report in Column C. Works on any file type across any folder.",
     features: [
@@ -59,13 +60,66 @@ const PRODUCTS = [
   },
 
   {
+    id: "file-property-cleanup",
+    title: "File Property & Cleanup Tool",
+    category: "File Utilities",
+    badge: "",
+    icon: "🗂️",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Scan folders, surface duplicates, and clean up clutter — all from Excel",
+    description: "Enter a folder path and the macro recursively lists every file and sub-folder with 10 property columns including size, dates, extension, and four duplicate-detection scores. Filter, identify, open, or delete directly from the spreadsheet.",
+    features: [
+      "Recursive folder scan — all files and sub-folders listed",
+      "10 columns: path, name, size (KB), modified, created, extension",
+      "4 duplicate-detection scores: size+ext, name+size, name+size+dates",
+      "Open any file or its folder directly from Excel with one click",
+      "Send selected files to the Windows Recycle Bin — safely reversible",
+      "AutoFilter applied automatically for instant sorting and filtering"
+    ],
+    youtube: "",
+    demoLink: "assets/downloads/FilePropertyCleanup_DEMO.xlsm",
+    buyLink: "https://riteshpunyani.gumroad.com/l/ymgqnf",
+    status: "available"
+  },
+
+  {
+    id: "folder-structure-generator",
+    title: "Folder Structure Generator",
+    category: "File Utilities",
+    badge: "NEW",
+    icon: "🏗️",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Create entire folder hierarchies from an Excel list in one click",
+    description: "Enter your folder structure across five level columns, set a root path, and the macro creates every folder and sub-folder instantly. Includes a tree preview, validation for invalid characters, and a creation log showing created / skipped / failed paths.",
+    features: [
+      "Up to 5-level deep folder hierarchy from a simple Excel list",
+      "Preview tree structure before creating anything on disk",
+      "Validates folder names — flags invalid Windows characters",
+      "Naming style: AS-IS, UPPER, or PROPER Case",
+      "Creation log: CREATED / SKIPPED / FAILED with colour coding",
+      "Opens root folder in Explorer after creation"
+    ],
+    youtube: "",
+    demoLink: "",
+    buyLink: "https://riteshpunyani.gumroad.com/l/axhkfs",
+    status: "available"
+  },
+
+  // ── DATA & EXCEL TOOLS ─────────────────────────────────────
+
+  {
     id: "excel-data-merge",
     title: "Excel Data Merge Tool",
-    category: "VBA Tools",
-    badge: "NEW",
+    category: "Data Tools",
+    badge: "",
     icon: "🔗",
-    priceUSD: Free,
-    priceINR: (Nil),
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
     tagline: "Merge unlimited Excel and CSV files into one consolidated workbook",
     description: "Select files individually or point to an entire folder. The macro opens each file, skips duplicate headers, and appends all data into a single Merged_Data worksheet — ready for analysis in seconds.",
     features: [
@@ -83,26 +137,206 @@ const PRODUCTS = [
   },
 
   {
-    id: "file-property-cleanup",
-    title: "File Property & Cleanup Tool",
-    category: "VBA Tools",
+    id: "excel-data-cleaner",
+    title: "Excel Data Cleaner Pro",
+    category: "Data Tools",
     badge: "NEW",
-    icon: "🗂️",
-    priceUSD: Free,
-    priceINR: Nil,
-    tagline: "Scan folders, surface duplicates, and clean up clutter — all from Excel",
-    description: "Enter a folder path and the macro recursively lists every file and sub-folder with 10 property columns including size, dates, extension, and four duplicate-detection scores. Filter, identify, open, or delete directly from the spreadsheet.",
+    icon: "🧹",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "12 targeted data-cleaning operations — run one or all in sequence",
+    description: "Trim whitespace, fix case, remove non-printable characters, delete blank rows, deduplicate, bulk find-and-replace, standardise dates, and convert text-stored numbers — all via a simple numbered menu. Works on the active sheet's used range. Every operation confirms before running and reports the change count.",
     features: [
-      "Recursive folder scan — all files and sub-folders listed",
-      "10 columns: path, name, size (KB), modified, created, extension",
-      "4 duplicate-detection scores: size+ext, name+size, name+size+dates",
-      "Open any file or its folder directly from Excel with one click",
-      "Send selected files to the Windows Recycle Bin — safely reversible",
-      "AutoFilter applied automatically for instant sorting and filtering"
+      "12 operations: trim, case, non-printable removal, date standardise, dedup",
+      "Bulk find & replace — paste multiple OLD|NEW pairs at once",
+      "Delete blank rows and duplicate rows with one selection",
+      "Convert text-stored numbers to real numeric values",
+      "Works on any sheet — just make it active before running",
+      "Each operation is confirmable and undoable (Ctrl+Z)"
     ],
     youtube: "",
-    demoLink: "assets/downloads/FilePropertyCleanup_DEMO.xlsm",
-    buyLink: "https://riteshpunyani.gumroad.com/l/ymgqnf",
+    demoLink: "",
+    buyLink: "https://riteshpunyani.gumroad.com/l/ovthks",
+    status: "available"
+  },
+
+  {
+    id: "cross-workbook-extractor",
+    title: "Cross-Workbook Data Extractor",
+    category: "Data Tools",
+    badge: "NEW",
+    icon: "📂",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Pull specified columns from every Excel file in a folder into one master sheet",
+    description: "Point to a folder, specify the sheet name and columns to extract, and the tool opens every .xlsx and .xlsm file, pulls the data, and appends it to a Master Data sheet — automatically. Files are opened read-only and closed without saving. An Error Log captures any files that could not be processed.",
+    features: [
+      "Processes entire folders — unlimited files in one run",
+      "Extract specific columns (A,B,D) or all columns",
+      "Configurable sheet name, header row, and start data row",
+      "Adds a 'Source File' column to each row automatically",
+      "Error Log for files that fail — process continues regardless",
+      "Navy/gold formatted headers with AutoFilter on output"
+    ],
+    youtube: "",
+    demoLink: "",
+    buyLink: "https://riteshpunyani.gumroad.com/l/mvhoqn",
+    status: "available"
+  },
+
+  // ── AUDIT & FRAUD DETECTION ────────────────────────────────
+
+  {
+    id: "benfords-law-analyser",
+    title: "Benford's Law Analyser",
+    category: "Audit & Fraud",
+    badge: "NEW",
+    icon: "📊",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Detect statistical anomalies in financial data using Benford's Law",
+    description: "Paste any numeric dataset — invoice amounts, journal entries, expense claims — and the tool calculates first-digit frequency, compares against Benford's expected distribution, runs a chi-square test (critical value 15.507 at 8 df), and produces a colour-coded results table with an embedded bar chart. Each digit is flagged as NORMAL, WATCH, or FLAG.",
+    features: [
+      "Chi-square test with PASS/FAIL verdict at 95% confidence",
+      "Digit-level flags: NORMAL (<2% deviation), WATCH (2-5%), FLAG (>5%)",
+      "Embedded clustered bar chart: Actual% vs Expected%",
+      "Works on any numeric dataset — invoices, JEs, expenses, sales",
+      "Results sheet auto-created and refreshed on each run",
+      "Suitable for 30+ records; most reliable at 500+ records"
+    ],
+    youtube: "",
+    demoLink: "",
+    buyLink: "https://riteshpunyani.gumroad.com/l/vwgpep",
+    status: "available"
+  },
+
+  {
+    id: "duplicate-payment-detector",
+    title: "Duplicate Payment Detector",
+    category: "Audit & Fraud",
+    badge: "NEW",
+    icon: "💳",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Detect exact and near-duplicate payments using 5 configurable rules",
+    description: "Upload your payment or invoice register and the tool runs five detection rules simultaneously: exact duplicates (vendor + invoice + amount), same invoice number with different vendors, same vendor and amount within a configurable date window, duplicate reference/cheque numbers, and identical amount-description pairs. Each flag is rated HIGH or MEDIUM risk.",
+    features: [
+      "Rule 1: Exact duplicate — same vendor, invoice, and amount",
+      "Rule 2: Same invoice number under different vendors",
+      "Rule 3: Same vendor + amount within configurable days (default 30)",
+      "Rule 4: Duplicate reference or cheque number",
+      "Rule 5: Same amount and description combination",
+      "HIGH/MEDIUM risk colour coding with row-pair output for easy review"
+    ],
+    youtube: "",
+    demoLink: "",
+    buyLink: "https://riteshpunyani.gumroad.com/l/tjvlhr",
+    status: "available"
+  },
+
+  {
+    id: "journal-entry-scanner",
+    title: "Journal Entry Red Flag Scanner",
+    category: "Audit & Fraud",
+    badge: "NEW",
+    icon: "📋",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Scan journal entries for 9 fraud-risk indicators with severity scoring",
+    description: "Paste your journal entry data and the tool checks every row against nine red flags: round numbers, weekend entries, month-end postings, unusually large amounts, missing descriptions, missing approvals, non-standard users, zero-amount entries, and same-account roundtrip entries on the same date. Each entry is scored and ranked HIGH / MEDIUM / LOW.",
+    features: [
+      "9 red flags: round number, weekend, month-end, large, missing desc/approval",
+      "Unusual user detection against your configurable approved user list",
+      "Same-date same-account roundtrip detection (ghost entries)",
+      "Severity scoring: HIGH (3+ flags), MEDIUM (2), LOW (1)",
+      "Output sorted by severity — highest risk at the top",
+      "Configurable thresholds (round-number threshold, large-entry multiplier)"
+    ],
+    youtube: "",
+    demoLink: "",
+    buyLink: "https://riteshpunyani.gumroad.com/l/genxj",
+    status: "available"
+  },
+
+  {
+    id: "vendor-duplicate-finder",
+    title: "Vendor Master Duplicate Finder",
+    category: "Audit & Fraud",
+    badge: "NEW",
+    icon: "🏢",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Detect duplicate and ghost vendors across 7 matching methods",
+    description: "Upload your vendor master and the tool compares every vendor against every other using seven methods: exact bank account, PAN/Tax ID, GST/VAT number, email address (HIGH risk), plus fuzzy name similarity (≥80%), same phone number, and same address-city combination (MEDIUM risk). Output includes recommended actions and AutoFilter for easy triage.",
+    features: [
+      "4 HIGH-risk exact matches: bank account, PAN, GST, email",
+      "Fuzzy name similarity at ≥80% threshold to catch misspellings",
+      "Phone normalisation — strips spaces and dashes before comparison",
+      "Address+City combination matching",
+      "Recommended action: Merge or Delete / Investigate",
+      "AutoFilter on output — sort by risk level in one click"
+    ],
+    youtube: "",
+    demoLink: "",
+    buyLink: "https://riteshpunyani.gumroad.com/l/rjaubs",
+    status: "available"
+  },
+
+  // ── OUTLOOK & EMAIL ────────────────────────────────────────
+
+  {
+    id: "bulk-email-sender",
+    title: "Bulk Email Sender with Attachments",
+    category: "Outlook Tools",
+    badge: "NEW",
+    icon: "📧",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Send personalised emails with attachments via Outlook — from an Excel list",
+    description: "Populate the Email List sheet with recipients, subjects, body text, and attachment paths. Add extra columns for merge fields ({{Name}}, {{Company}}, etc.) to personalise every email. A preview mode shows you the first email before bulk sending. The Send Log records every outcome.",
+    features: [
+      "Mail merge: {{FieldName}} placeholders replaced from your columns",
+      "Up to 3 attachments per email — file paths in columns F, G, H",
+      "Preview Mode: displays first email in Outlook without sending",
+      "Configurable send delay (seconds) to avoid throttling",
+      "HTML email support toggle",
+      "Send Log: timestamp, recipient, status, error detail per row"
+    ],
+    youtube: "",
+    demoLink: "",
+    buyLink: "https://riteshpunyani.gumroad.com/l/sxzfaz",
+    status: "available"
+  },
+
+  {
+    id: "inbox-analyser",
+    title: "Inbox Analyser & Follow-up Tracker",
+    category: "Outlook Tools",
+    badge: "NEW",
+    icon: "📥",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Export and analyse Outlook emails with overdue follow-up flagging",
+    description: "Connect to any Outlook folder, set a date range, and export 12 fields per email to Excel: sender, subject, received date, read status, attachments, size, body preview, and more. Follow-up tracking columns let you log priority, action, and due date. Unread emails older than your threshold are automatically flagged OVERDUE.",
+    features: [
+      "Scan Inbox, Sent Items, or any named Outlook folder",
+      "Date range filter + optional subfolder inclusion",
+      "12 exported fields including body preview and category",
+      "Auto-flags overdue follow-ups in red based on configurable threshold",
+      "Summary sheet: top senders, emails per day, read vs unread counts",
+      "CSV export with quote-escaping for use in other tools"
+    ],
+    youtube: "",
+    demoLink: "",
+    buyLink: "https://riteshpunyani.gumroad.com/l/kzaeg",
     status: "available"
   },
 
@@ -113,9 +347,10 @@ const PRODUCTS = [
     title: "Analytics Test Library",
     category: "Analytics",
     badge: "FEATURED",
-    icon: "📊",
-    priceUSD: 29,
-    priceINR: 2499,
+    icon: "🔬",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
     tagline: "1,718 ready-to-use analytics tests across 20 fraud & compliance categories",
     description: "A curated library of 1,718 analytics tests covering every major audit and compliance domain — from AP/AR and payroll to FCPA, banking, and anomaly detection. Built from 18+ years of real-world investigation experience.",
     features: [
@@ -136,8 +371,9 @@ const PRODUCTS = [
     category: "AI & Prompts",
     badge: "NEW",
     icon: "📘",
-    priceUSD: 19,
-    priceINR: 1599,
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
     tagline: "19 tried-and-tested prompts for fraud investigators and compliance professionals",
     description: "A hand-crafted collection of AI prompts for fraud investigations, ethics & compliance, data analytics, and COBC workflows. Each prompt includes a use case, role setup, and worked example.",
     features: [
@@ -153,9 +389,11 @@ const PRODUCTS = [
   }
 
   // ── ADD YOUR NEXT PRODUCT HERE ──────────────────────────────
-  // Copy the block above (from { to the closing }, )
+  // Copy a block above (from { to the closing }, )
   // Paste it here, update the fields, save, push to GitHub.
   // The new card appears automatically — no other changes needed.
+  // pwyw: true  → shows "Pay What You Want"  (set priceUSD: 0)
+  // pwyw: false → shows "$X / ₹Y"            (set your price)
   // ────────────────────────────────────────────────────────────
 
 ];
@@ -205,6 +443,7 @@ main{max-width:1160px;margin:0 auto;padding:2.5rem 2rem 4rem;}
 .price-usd{font-size:1.4rem;font-weight:900;color:var(--gold);}
 .price-inr{font-size:.88rem;color:var(--muted);}
 .price-free{font-size:1.4rem;font-weight:900;color:#4ade80;}
+.price-pwyw{font-size:1rem;font-weight:800;color:#4ade80;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.25);padding:.3rem .75rem;border-radius:999px;letter-spacing:.3px;}
 .card-actions{display:flex;gap:.6rem;margin-top:auto;padding-top:.8rem;flex-wrap:wrap;}
 .btn-buy{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:var(--gold);color:#07111a;padding:.6rem 1rem;border-radius:8px;font-size:.83rem;font-weight:800;transition:opacity .18s;cursor:pointer;border:none;}
 .btn-buy:hover{opacity:.88;}
@@ -311,6 +550,20 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:1.8rem
   <div class="grid" id="product-grid"></div>
 </main>
 
+<!-- ── DISCLAIMER SECTION ── -->
+<section style="background:var(--navy2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2rem 2rem;">
+  <div style="max-width:1160px;margin:0 auto;">
+    <div style="background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:12px;padding:1.5rem 2rem;display:flex;gap:1.2rem;align-items:flex-start;">
+      <div style="font-size:1.4rem;flex-shrink:0;margin-top:.1rem;">⚠️</div>
+      <div>
+        <p style="font-size:.83rem;font-weight:800;color:#fca5a5;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.8px;">Disclaimer — As Is Basis</p>
+        <p style="font-size:.79rem;color:#e2e8f0;line-height:1.75;opacity:.8;">All tools and templates on this page are provided <strong>strictly on an "as is" basis</strong>, without warranty of any kind, express or implied — including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. Ritesh Punyani makes no representations or warranties as to the accuracy, completeness, reliability, or suitability of any tool for any purpose. <strong>Use of any tool is entirely at your own risk.</strong> Ritesh Punyani shall not be liable for any direct, indirect, incidental, consequential, or other loss or damage (including data loss) arising from or in connection with the use of, or inability to use, any tool available on this page. Always back up your data before running any macro. These tools are designed for use by qualified professionals who understand their data and operational context; they are not a substitute for professional judgement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ── END DISCLAIMER ── -->
+
 <!-- ── SAP AUTOMATION SECTION ── -->
 <section class="sap-section">
   <div class="sap-inner">
@@ -355,6 +608,7 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:1.8rem
 <footer>
   <p>© 2026 Ritesh Punyani. All rights reserved.</p>
   <p style="margin-top:.3rem;opacity:.6;">All products are for personal professional use. Single-user licence. Reverse engineering or redistribution is prohibited.</p>
+  <p style="margin-top:.25rem;opacity:.5;font-size:.7rem;">All tools provided on an "as is" basis — no warranty or liability. See disclaimer above.</p>
 </footer>
 
 <script src="assets/nav.js"></script>
@@ -398,9 +652,11 @@ function renderGrid() {
   }
 
   filtered.forEach(p => {
-    const priceHTML = p.priceUSD === 0
-      ? '<span class="price-free">Free</span>'
-      : '<span class="price-usd">$' + p.priceUSD + '</span><span class="price-inr">&#8377;' + p.priceINR.toLocaleString('en-IN') + '</span>';
+    const priceHTML = p.pwyw
+      ? '<span class="price-pwyw">Pay What You Want</span>'
+      : (p.priceUSD === 0
+          ? '<span class="price-free">Free</span>'
+          : '<span class="price-usd">$' + p.priceUSD + '</span><span class="price-inr">&#8377;' + p.priceINR.toLocaleString('en-IN') + '</span>');
 
     const featuresHTML = p.features.map(f => '<li>' + f + '</li>').join('');
 
@@ -409,7 +665,9 @@ function renderGrid() {
 
     const buyBtn = p.status === 'coming-soon'
       ? '<button class="btn-buy" style="opacity:.45;cursor:default;" disabled>Coming Soon</button>'
-      : '<a class="btn-buy" href="' + p.buyLink + '" target="_blank">&#128722; Buy Now — $' + p.priceUSD + '</a>';
+      : (p.priceUSD === 0
+          ? '<a class="btn-buy" href="' + p.buyLink + '" target="_blank" style="background:#4ade80;color:#071a10;">&#11015; Download Free</a>'
+          : '<a class="btn-buy" href="' + p.buyLink + '" target="_blank">&#128722; Buy Now — $' + p.priceUSD + '</a>');
 
     const badgeHTML = p.badge ? '<div class="card-badge badge-' + p.badge + '">' + p.badge + '</div>' : '';
     const csOverlay = p.status === 'coming-soon'
