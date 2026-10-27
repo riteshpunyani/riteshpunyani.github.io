@@ -361,8 +361,8 @@ const PRODUCTS = [
     ],
     youtube: "",
     demoLink: "",
-    buyLink: "#coming-soon",
-    status: "coming-soon"
+    buyLink: "assets/Downloads/Analytics-Test-Library.xlsx",
+    status: "available"
   },
 
   {
@@ -384,8 +384,8 @@ const PRODUCTS = [
     ],
     youtube: "",
     demoLink: "",
-    buyLink: "#coming-soon",
-    status: "coming-soon"
+    buyLink: "assets/Downloads/Prompt-Library.docx",
+    status: "available"
   },
 
   // ── OFFLINE BROWSER TOOLS (no macros, Windows & Mac) ──────
@@ -538,6 +538,106 @@ const PRODUCTS = [
     demoLink: "",
     buyLink: "https://2961368254203.gumroad.com/l/ywrqke",
     status: "available"
+  },
+
+  {
+    id: "travel-expense-fraud-analyser",
+    title: "Travel & Expense Claim Fraud Analyser",
+    category: "Audit & Fraud",
+    badge: "NEW",
+    icon: "🧳",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Cross-check an entire travel claims register for overlapping trips, infeasible distances and duplicate bills",
+    description: "Load your travel & expense claims register and the tool checks every claim against every other claim from the same employee for timing and distance contradictions, plus duplicate bills, duplicate claims and policy limits — the same cross-verification logic used in real investigations, run across a whole register at once.",
+    features: [
+      "Finds overlapping travel dates to different cities for the same employee",
+      "Flags distance claimed that is not feasible for the mode and days travelled",
+      "Catches duplicate bill numbers and duplicate claims (same amount & purpose)",
+      "Checks for missing approvers, round amounts and claims over your policy limit",
+      "Risk-scored and sorted so the worst claims surface first",
+      "Runs offline in your browser — your register never leaves your computer"
+    ],
+    youtube: "",
+    demoLink: "",
+        buyLink: "https://2961368254203.gumroad.com/l/rygjzb",
+    status: "available"
+  },
+
+  {
+    id: "rpt-screener",
+    title: "Related Party Transaction (RPT) Screener",
+    category: "Compliance",
+    badge: "NEW",
+    icon: "🔗",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Fuzzy-match your vendor or customer master against your related-party list — even when the trading name is different",
+    description: "Screen your vendor or customer master against your related-party list (directors, KMP, their relatives, and entities they control) using the same fuzzy name-matching as the Watchlist Name Screener. An exact PAN or bank account match raises the score to near-certain even when the two names look nothing alike.",
+    features: [
+      "Fuzzy name matching: spelling, word order and partial names",
+      "PAN / tax ID and bank account corroboration — catches a related party trading under a different name",
+      "Ignores legal words (Pvt, Ltd, LLC) so company variants still match",
+      "Review sheet with score, reason and Decision / Reviewed by columns",
+      "Your vendor/customer master returned with a screening result per row",
+      "Tested with 150,000 vendor records — runs entirely offline"
+    ],
+    youtube: "",
+    demoLink: "",
+        buyLink: "https://2961368254203.gumroad.com/l/fwljgi",
+    status: "available"
+  },
+
+  {
+    id: "ghost-employee-checker",
+    title: "Ghost Employee / Payroll Integrity Checker",
+    category: "Audit & Fraud",
+    badge: "NEW",
+    icon: "🪪",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Checks your payroll master for the same bank account, PAN, Aadhaar or email used by more than one employee code",
+    description: "Compares every employee against every other employee in your payroll master across seven checks: shared bank account, PAN, Aadhaar or email (High risk), and near-identical names, shared phone numbers or shared addresses (Medium risk) — the classic ghost-employee and duplicate-payroll signals, found automatically.",
+    features: [
+      "4 High-risk exact matches: bank account, PAN, Aadhaar, email",
+      "Near-identical name detection, even under different employee codes",
+      "Shared phone number and address + similar-name combinations",
+      "Blank fields are never matched against each other — no false matches from sparse data",
+      "Risk-scored review sheet plus your payroll master with flags added",
+      "Tested with 100,000 employees, under 2 seconds — runs offline"
+    ],
+    youtube: "",
+    demoLink: "",
+        buyLink: "https://2961368254203.gumroad.com/l/oixatd",
+    status: "available"
+  },
+
+  {
+    id: "sod-conflict-checker",
+    title: "Segregation of Duties (SOD) Conflict Checker",
+    category: "Audit & Fraud",
+    badge: "NEW",
+    icon: "⚖️",
+    pwyw: false,
+    priceUSD: 0,
+    priceINR: 0,
+    tagline: "Flags every user who holds both sides of a conflicting access combination, against SOD rules you define",
+    description: "Load your user access list and your own SOD rule set (two access items that should not be held by the same person) and the tool flags every user who holds both sides of any rule. Matching works whether your access list and rule set write the access item the same way or not — a rule written as just a code will still match a row written as code plus description.",
+    features: [
+      "Works with any access export: one row per user per role/transaction code",
+      "You supply the SOD rules — a starter sample set is included to show the format",
+      "Matches on the access code or its full description, either way",
+      "Each rule's two sides can list several equivalent codes (A;B aliases)",
+      "Conflicts ranked by risk, plus a one-row-per-user summary",
+      "Tested with 300,000 access rows across 20,000 users, under 1 second"
+    ],
+    youtube: "",
+    demoLink: "",
+        buyLink: "https://2961368254203.gumroad.com/l/nyyjcr",
+    status: "available"
   }
 
   // ── ADD YOUR NEXT PRODUCT HERE ──────────────────────────────
@@ -669,7 +769,7 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:1.8rem
   <!-- ── MACRO ENABLE & SECURITY INSTRUCTIONS ── -->
   <div class="instr-strip">
     <h3>🔐 Excel VBA tools only — Macro Enable &amp; Security Guide</h3>
-    <p style="font-size:.8rem;color:var(--muted);margin:-.5rem 0 1rem;">Browser tools (Reconciliation Matcher, Audit Sample Selector, PII Anonymiser, Watchlist Name Screener, GSTR-2B Reconciler, Customer Propensity &amp; ROI Planner) need no macros: just double-click the .html file. They run offline and your data never leaves your computer.</p>
+    <p style="font-size:.8rem;color:var(--muted);margin:-.5rem 0 1rem;">Browser tools (Reconciliation Matcher, Audit Sample Selector, PII Anonymiser, Watchlist Name Screener, GSTR-2B Reconciler, Customer Propensity &amp; ROI Planner, Travel &amp; Expense Fraud Analyser, RPT Screener, Ghost Employee Checker, SOD Conflict Checker) need no macros: just double-click the .html file. They run offline and your data never leaves your computer.</p>
     <div class="instr-cols">
       <div class="instr-block">
         <h4>Step 1 — Unblock the file (Windows security)</h4>
