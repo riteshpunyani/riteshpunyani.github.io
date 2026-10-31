@@ -1,1 +1,44 @@
-test
+name: Update News Feed
+
+# Refreshes assets/data/news.json from Google News RSS on a schedule, so
+# news.html never has to call a third-party RSS->JSON proxy at page load.
+# See .github/scripts/fetch-news.js for the fetch/parse logic.
+
+on:
+  schedule:
+    - cron: '15 * * * *'   # hourly, at :15, UTC (GitHub Actions schedules always run in UTC)
+  workflow_dispatch: {}      # allows a manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-news
+  cancel-in-progress: false
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch latest news
+        run: node .github/scripts/fetch-news.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "news-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/data/news.json
+          if git diff --staged --quiet; then
+            echo "No change in news.json - nothing to commit."
+          else
+            git commit -m "Update news feed data [automated]"
+            git push
+          fi
