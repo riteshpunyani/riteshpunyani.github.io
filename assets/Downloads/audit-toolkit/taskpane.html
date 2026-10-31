@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <title>Audit Toolkit</title>
+  <link rel="stylesheet" href="taskpane.css" />
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script src="core/fuzzy.js"></script>
+  <script src="core/workpaper.js"></script>
+</head>
+<body>
+  <header class="at-header">
+    <div class="at-title">Audit Toolkit</div>
+    <div class="at-subtitle">created by <a href="https://riteshpunyani.github.io" target="_blank" rel="noopener">Ritesh Punyani</a></div>
+  </header>
+
+  <nav class="at-nav">
+    <button class="at-navbtn" data-view="home">Home</button>
+    <button class="at-navbtn" data-view="match">Fuzzy Match</button>
+    <button class="at-navbtn" data-view="settings">Settings</button>
+    <button class="at-navbtn" data-view="help">Function Reference</button>
+  </nav>
+
+  <main id="at-status" class="at-status" hidden></main>
+
+  <!-- ============== HOME ============== -->
+  <section id="view-home" class="at-view">
+    <p>Audit Toolkit adds a small library of formulas (<code>=AT.___()</code>) for cleaning, parsing and flagging data, plus a fuzzy name/ID matching wizard - all customisable from one plain Excel sheet, and all computed locally in your workbook. Nothing is uploaded anywhere.</p>
+
+    <div class="at-card">
+      <h3>Fuzzy Match</h3>
+      <p>Match two lists of names (vendors against a watchlist, duplicate customer records, related-party checks) even when spelling, word order or legal suffixes differ.</p>
+      <button class="at-btn" data-view="match">Open the Match wizard</button>
+    </div>
+
+    <div class="at-card">
+      <h3>Workpaper functions</h3>
+      <p>Nine formulas for text cleanup, name parsing, keyword flagging and date parsing. Type <code>=AT.</code> in any cell and Excel's own tooltip explains each one as you type.</p>
+      <button class="at-btn" data-view="help">See the function reference</button>
+    </div>
+
+    <div class="at-card">
+      <h3>Settings</h3>
+      <p>Keyword lists, character maps and other defaults live on one visible "AT Settings" sheet you can edit directly - no hidden dialog.</p>
+      <button class="at-btn" data-view="settings">Insert / open Settings</button>
+    </div>
+
+    <p class="at-note">New to the toolkit? Open the Match wizard and click <b>Load sample data</b> on the first step to see it work before trying your own data.</p>
+  </section>
+
+  <!-- ============== MATCH WIZARD ============== -->
+  <section id="view-match" class="at-view" hidden>
+    <h2>Fuzzy Match wizard</h2>
+    <ol class="at-steps">
+      <li><a href="#" data-step="1">1. Pick List A</a></li>
+      <li><a href="#" data-step="2">2. Pick List B</a></li>
+      <li><a href="#" data-step="3">3. Settings &amp; run</a></li>
+    </ol>
+
+    <div id="match-step-1" class="at-step">
+      <p>List A is the list you want to check - e.g. your vendor master, new customer applications, or a related-party list.</p>
+      <button class="at-btn" id="btn-sample-data">Load sample data instead</button>
+      <p>Select the full range of List A in your sheet (including its header row), then:</p>
+      <button class="at-btn at-btn-primary" id="btn-pick-a">Use current selection as List A</button>
+      <p id="pick-a-result" class="at-result"></p>
+      <button class="at-btn at-btn-primary" id="btn-next-1">Next</button>
+    </div>
+
+    <div id="match-step-2" class="at-step" hidden>
+      <p>List B is what you're checking List A against - e.g. a sanctions/watchlist, your existing customer list, or your related-party register.</p>
+      <p>Select the full range of List B in your sheet (including its header row), then:</p>
+      <button class="at-btn at-btn-primary" id="btn-pick-b">Use current selection as List B</button>
+      <p id="pick-b-result" class="at-result"></p>
+      <button class="at-btn" id="btn-back-2">Back</button>
+      <button class="at-btn at-btn-primary" id="btn-next-2">Next</button>
+    </div>
+
+    <div id="match-step-3" class="at-step" hidden>
+      <label class="at-field">Match sensitivity (report matches scoring at least)
+        <input type="range" id="thr" min="60" max="100" value="85" />
+        <span id="thr-val">85</span>
+      </label>
+      <label class="at-field">Strong match from
+        <input type="range" id="hi" min="60" max="100" value="95" />
+        <span id="hi-val">95</span>
+      </label>
+      <label class="at-checkbox"><input type="checkbox" id="ignoreLegal" checked /> Ignore legal words (Pvt, Ltd, LLC, GmbH, Trading...) for company names</label>
+      <label class="at-field">Maximum matches per List A row
+        <input type="number" id="maxPer" min="1" max="100" value="10" />
+      </label>
+      <p class="at-note">Column mapping: the wizard looks for a column named "name" (or similar) in each list. If your columns use different headers, rename the header to include the word "name" before running, or map manually below.</p>
+      <div id="map-fields"></div>
+      <button class="at-btn" id="btn-back-3">Back</button>
+      <button class="at-btn at-btn-primary" id="btn-run-match">Run Match</button>
+      <p id="match-run-result" class="at-result"></p>
+    </div>
+  </section>
+
+  <!-- ============== SETTINGS ============== -->
+  <section id="view-settings" class="at-view" hidden>
+    <h2>Settings</h2>
+    <p>Every customisable default used by the functions and wizards above lives on one sheet named <b>AT Settings</b> - plain Excel tables you can edit directly. No reinstall, no dialog, no code.</p>
+    <table class="at-table">
+      <tr><th>Table</th><th>Default</th><th>Used by</th></tr>
+      <tr><td>Keyword list</td><td>cash, personal, adjustment, write-off, advance, urgent</td><td><code>=AT.KEYWORDFLAG()</code></td></tr>
+      <tr><td>Lookalike-character map</td><td>O&rarr;0, I&rarr;1, l&rarr;1, S&rarr;5, B&rarr;8, Z&rarr;2</td><td><code>=AT.NORMALISECHARS()</code></td></tr>
+      <tr><td>Legal-suffix ignore list</td><td>Pvt, Ltd, LLC, GmbH, Trading, Inc...</td><td>Fuzzy Match wizard</td></tr>
+    </table>
+    <button class="at-btn at-btn-primary" id="btn-insert-settings">Insert AT Settings sheet</button>
+    <p id="settings-result" class="at-result"></p>
+    <p class="at-note">To use your own list instead of the default, pass the Settings sheet range directly as the function's optional second argument, e.g. <code>=AT.KEYWORDFLAG(A2,'AT Settings'!$B$4:$B$9)</code>. The function still works perfectly with no second argument at all - the Settings sheet is there for when you want to change something, never a requirement.</p>
+  </section>
+
+  <!-- ============== HELP / FUNCTION REFERENCE ============== -->
+  <section id="view-help" class="at-view" hidden>
+    <h2>Function reference</h2>
+    <p>Type <code>=AT.</code> in any cell - Excel's own formula tooltip shows this same description as you type each argument, so this page is a convenience, not a requirement.</p>
+    <div id="help-list"></div>
+  </section>
+
+  <footer class="at-footer">Audit Toolkit v1.0 &middot; (c) Ritesh Punyani &middot; <a href="https://riteshpunyani.github.io" target="_blank" rel="noopener">riteshpunyani.github.io</a></footer>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>

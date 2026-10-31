@@ -1,0 +1,103 @@
+{
+  "functions": [
+    {
+      "id": "FUZZYSCORE",
+      "name": "FUZZYSCORE",
+      "description": "Similarity between two names, 0 (nothing alike) to 1 (identical) - ignores case, punctuation, word order and common legal suffixes (Pvt/Ltd/LLC...).",
+      "helpUrl": "https://riteshpunyani.github.io/assets/Downloads/audit-toolkit/taskpane.html#help",
+      "result": { "type": "number", "dimensionality": "scalar" },
+      "parameters": [
+        { "name": "text1", "description": "First name or text to compare.", "type": "string", "dimensionality": "scalar" },
+        { "name": "text2", "description": "Second name or text to compare.", "type": "string", "dimensionality": "scalar" }
+      ]
+    },
+    {
+      "id": "FUZZYLOOKUP",
+      "name": "FUZZYLOOKUP",
+      "description": "Best fuzzy match for a value inside a list. Spills three cells: the matched value, its score (0-1), and the reason it matched. Blank if nothing scores at or above the threshold.",
+      "helpUrl": "https://riteshpunyani.github.io/assets/Downloads/audit-toolkit/taskpane.html#help",
+      "result": { "type": "any", "dimensionality": "matrix" },
+      "parameters": [
+        { "name": "value", "description": "The name or text to look up.", "type": "string", "dimensionality": "scalar" },
+        { "name": "lookupRange", "description": "The range of names to search, e.g. B2:B500.", "type": "any", "dimensionality": "matrix" },
+        { "name": "threshold", "description": "Optional. Minimum score to accept, 0-1 (default 0.7).", "type": "number", "dimensionality": "scalar", "optional": true }
+      ]
+    },
+    {
+      "id": "DIGITSONLY",
+      "name": "DIGITSONLY",
+      "description": "Keeps only the digit characters in a piece of text - useful for pulling a numeric ID out of a reference that also has letters.",
+      "helpUrl": "https://riteshpunyani.github.io/assets/Downloads/audit-toolkit/taskpane.html#help",
+      "result": { "type": "string", "dimensionality": "scalar" },
+      "parameters": [
+        { "name": "text", "description": "The text to extract digits from.", "type": "string", "dimensionality": "scalar" }
+      ]
+    },
+    {
+      "id": "LETTERSONLY",
+      "name": "LETTERSONLY",
+      "description": "Keeps only letter characters (A-Z, a-z) by default, or only the characters you list in keepSet if you supply one.",
+      "helpUrl": "https://riteshpunyani.github.io/assets/Downloads/audit-toolkit/taskpane.html#help",
+      "result": { "type": "string", "dimensionality": "scalar" },
+      "parameters": [
+        { "name": "text", "description": "The text to extract letters from.", "type": "string", "dimensionality": "scalar" },
+        { "name": "keepSet", "description": "Optional. A string of characters to keep instead of the default A-Z/a-z, e.g. \"aeiouAEIOU\" to keep only vowels.", "type": "string", "dimensionality": "scalar", "optional": true }
+      ]
+    },
+    {
+      "id": "NORMALISECHARS",
+      "name": "NORMALISECHARS",
+      "description": "Replaces lookalike characters (O/0, I or l/1, S/5, B/8, Z/2) before you compare two IDs - catches a deliberately substituted character that would otherwise pass an exact-match check. Pass your own 2-column From/To range to override the default map.",
+      "helpUrl": "https://riteshpunyani.github.io/assets/Downloads/audit-toolkit/taskpane.html#help",
+      "result": { "type": "string", "dimensionality": "scalar" },
+      "parameters": [
+        { "name": "text", "description": "The text to clean up.", "type": "string", "dimensionality": "scalar" },
+        { "name": "mapRange", "description": "Optional. A 2-column range of From/To character pairs, e.g. your AT Settings character-map table. Uses the built-in default map if omitted.", "type": "any", "dimensionality": "matrix", "optional": true }
+      ]
+    },
+    {
+      "id": "PARSENAME",
+      "name": "PARSENAME",
+      "description": "Splits a full name into First / Middle / Last, spilled across three cells. Handles titles (Dr, Mr, Shri...), suffixes (Jr, Sr...) and any number of middle names - not just a fixed two-slot split.",
+      "helpUrl": "https://riteshpunyani.github.io/assets/Downloads/audit-toolkit/taskpane.html#help",
+      "result": { "type": "string", "dimensionality": "matrix" },
+      "parameters": [
+        { "name": "text", "description": "The full name to split.", "type": "string", "dimensionality": "scalar" }
+      ]
+    },
+    {
+      "id": "BETWEEN",
+      "name": "BETWEEN",
+      "description": "Text found between a start marker and the end marker that follows it - handy for pulling a name or ID out of a line formatted like \"timestamp - Actor: message\".",
+      "helpUrl": "https://riteshpunyani.github.io/assets/Downloads/audit-toolkit/taskpane.html#help",
+      "result": { "type": "string", "dimensionality": "scalar" },
+      "parameters": [
+        { "name": "text", "description": "The text to search.", "type": "string", "dimensionality": "scalar" },
+        { "name": "startDelimiter", "description": "The marker to start after, e.g. \"-\".", "type": "string", "dimensionality": "scalar" },
+        { "name": "endDelimiter", "description": "The marker to stop before, e.g. \":\".", "type": "string", "dimensionality": "scalar" },
+        { "name": "occurrence", "description": "Optional. Which occurrence of startDelimiter to use if it appears more than once (default 1, the first).", "type": "number", "dimensionality": "scalar", "optional": true }
+      ]
+    },
+    {
+      "id": "KEYWORDFLAG",
+      "name": "KEYWORDFLAG",
+      "description": "Returns which red-flag keyword was found in the text (not just true/false), checked against a built-in default list (cash, personal, adjustment, write-off, advance, urgent) or your own list.",
+      "helpUrl": "https://riteshpunyani.github.io/assets/Downloads/audit-toolkit/taskpane.html#help",
+      "result": { "type": "string", "dimensionality": "scalar" },
+      "parameters": [
+        { "name": "text", "description": "The text to check, e.g. a transaction narration.", "type": "string", "dimensionality": "scalar" },
+        { "name": "keywordRange", "description": "Optional. A range of keywords to check against instead of the built-in default list, e.g. your AT Settings keyword table.", "type": "any", "dimensionality": "matrix", "optional": true }
+      ]
+    },
+    {
+      "id": "SMARTDATE",
+      "name": "SMARTDATE",
+      "description": "Parses a date written in any of several common formats (DD/MM/YYYY, YYYY-MM-DD, \"15 June 2026\", \"June 15, 2026\", \"15-Jun-26\"...) into a real Excel date. Returns blank, never a wrong guess, if the text genuinely cannot be read as a date.",
+      "helpUrl": "https://riteshpunyani.github.io/assets/Downloads/audit-toolkit/taskpane.html#help",
+      "result": { "type": "any", "dimensionality": "scalar" },
+      "parameters": [
+        { "name": "text", "description": "The date text to parse.", "type": "string", "dimensionality": "scalar" }
+      ]
+    }
+  ]
+}
