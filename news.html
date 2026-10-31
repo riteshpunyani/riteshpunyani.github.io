@@ -127,33 +127,44 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
 
 <script>
 (function(){
-  var PROXY='https://api.rss2json.com/v1/api.json?rss_url=';
-  var GN_BASE='https://news.google.com/rss/search?hl=en-IN&gl=IN&ceid=IN%3Aen&q=';
+  // News is pre-fetched by a scheduled GitHub Action (.github/workflows/update-news.yml)
+  // into this same-origin JSON file, so the page never depends on a live
+  // third-party proxy at load time (the previous rss2json.com dependency
+  // started failing a Cloudflare bot-challenge and was removed on 2026-10-30).
+  var DATA_URL='assets/data/news.json';
   var currentQ='fraud+investigation+compliance+ethics';
+  var cache=null;
   function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function renderFeed(q){
+    var feed=document.getElementById('news-feed');
+    var items=(cache&&cache.feeds&&cache.feeds[q])||[];
+    if(!items.length){
+      feed.innerHTML='<div class="news-error">Unable to load news right now. Please visit the sources listed above.</div>';
+      return;
+    }
+    feed.innerHTML=items.map(function(item){
+      var src=item.source||'Google News';
+      var date=item.pubDate?new Date(item.pubDate).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}):'';
+      var title=item.title||'';
+      return ['<a class="news-card" href="'+escHtml(item.link||'#')+'" target="_blank" rel="noopener">',
+        '<div class="news-bar"></div>',
+        '<div class="news-body">',
+          '<div class="news-source">'+escHtml(src)+'</div>',
+          '<div class="news-title">'+escHtml(title)+'</div>',
+          '<div class="news-date">'+escHtml(date)+'</div>',
+          '<span class="news-read">Read article</span>',
+        '</div>',
+      '</a>'].join('');
+    }).join('');
+  }
   function fetchNews(q){
+    currentQ=q;
+    if(cache){renderFeed(q);return;}
     var feed=document.getElementById('news-feed');
     feed.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted);font-size:.88rem;">Loading news...</div>';
-    fetch(PROXY+encodeURIComponent(GN_BASE+q))
+    fetch(DATA_URL)
       .then(function(r){return r.json();})
-      .then(function(d){
-        if(!d.items||!d.items.length){throw new Error('empty');}
-        var html=d.items.slice(0,12).map(function(item){
-          var src=item.author||item.source||'Google News';
-          var date=item.pubDate?new Date(item.pubDate).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}):'';
-          var title=(item.title||'').replace(/ - [^-]+$/,'');
-          return ['<a class="news-card" href="'+escHtml(item.link||'#')+'" target="_blank" rel="noopener">',
-            '<div class="news-bar"></div>',
-            '<div class="news-body">',
-              '<div class="news-source">'+escHtml(src)+'</div>',
-              '<div class="news-title">'+escHtml(title)+'</div>',
-              '<div class="news-date">'+escHtml(date)+'</div>',
-              '<span class="news-read">Read article</span>',
-            '</div>',
-          '</a>'].join('');
-        }).join('');
-        feed.innerHTML=html;
-      })
+      .then(function(d){cache=d;renderFeed(q);})
       .catch(function(){
         feed.innerHTML='<div class="news-error">Unable to load news right now. Please visit the sources listed above.</div>';
       });
@@ -162,8 +173,7 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:2rem;t
     btn.addEventListener('click',function(){
       document.querySelectorAll('.feed-tab').forEach(function(b){b.classList.remove('active');});
       btn.classList.add('active');
-      currentQ=btn.dataset.q;
-      fetchNews(currentQ);
+      fetchNews(btn.dataset.q);
     });
   });
   fetchNews(currentQ);
