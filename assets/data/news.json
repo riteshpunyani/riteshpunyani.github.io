@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T13:25:36.852Z",
+  "generatedAt": "2026-11-01T18:56:45.241Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -21,6 +21,12 @@
         "source": "Wolters Kluwer"
       },
       {
+        "title": "Safaricom fires 118 employees over fraud",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdTVPRlVsVm1faWc5YUlfZ1BfMmJwd2JvQzhobHR6RW4tVDA1MEh1aFBVQUhvMnA4YnJPMTMteVczaWM4Y1d4Uk9vcFBRczJfMzYydi1Yek53MWF5RVJHNTV4NnkwMGtuLWRKV1UyWTdQT2pWRmZNaVh0bWRITlFKYXd3bw?oc=5",
+        "pubDate": "Wed, 28 Oct 2026 06:03:55 GMT",
+        "source": "People Daily"
+      },
+      {
         "title": "The implications of using AI in fraud prevention and detection",
         "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUFFTTXI0VWF6MjRMOFNKUXBVTFpkTTZOeEdHczhLUExNYW54MENXZ1k5RHVkYmY3bkY0MHN1c09VU0lWcjV2UnVoQ3ZvNUc3T2pvV29TMnJSTUVhMm42UmZFdUdRVEh6cTlUYldrUXBBWjRoX28zdW1pS1NyNXZNTjdkdlU5Q2R3SlhWd3FkUk1vTlZmV3doTkFHOXhlMUZIc0pJM0JtbVM3Z2NaVlhwZWV3TTY0RGZlamg2Zg?oc=5",
         "pubDate": "Thu, 21 May 2026 17:27:58 GMT",
@@ -33,16 +39,16 @@
         "source": "ASIS International"
       },
       {
+        "title": "Fraud Alert",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE85aTZvMElHcmh2NXJiS0JwNFZ3SnU3MEl1d0NHbUV5dkhIbkVLNV9ZWXN3SWo2TVFFSzFzRlEtWWpITV9mVHZlellrM2FZOENCeUhEb2ZkdXNCeEE?oc=5",
+        "pubDate": "Tue, 07 Jul 2026 07:00:00 GMT",
+        "source": "University of Vermont"
+      },
+      {
         "title": "States Push Back on the Clarity Act: What the Crypto Ethics and Enforcement Debate Means for Compliance Teams",
         "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNVHdOUXk4b29wZFhpWGVzZEx5S1RZWFMwd3ZoVWM4cUlia2NLeG9VTnNkRnl3aWZyODUtc1hreVA0N2NrQkpQN0Rla2lmM0xrZ3BvdGRtb25qN3paSl8wemM1RWhFMmdNbTkwVThCemFNenNNQXB4MGJ3TWdBaVl6cFZhQkE5Vi1iZXlTTjlZaVdzSm9HTjcxQy04NUNLV3piV3l0dGJuQjlQU2E0RjE5LXNwYllsT2lGc0RWUXdCUW5LcW9WQXd5TmVSTG8yNEdKRkVJaFZkSlBMYVBjRG05aE9Db1NxWnMt?oc=5",
         "pubDate": "Fri, 31 Jul 2026 07:00:00 GMT",
         "source": "Regulatory Oversight"
-      },
-      {
-        "title": "Director addresses global anti-corruption conference",
-        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRnlDTmtuMURZZnpQdFNkUUJkUVJtVUtPblJWbldSRTB5aHhhZ242bm51eEtYbmt4NG15cndyLUZRS2Y4Rkk2aUVfNVl1d19SaHpmTVF2QmR2bDBwR0Nob0hydHlnc2VTd2hUMW9vUlowd1pzZUtXaGJseTYzdmhsRFZHTVRvSmdTLV9tN3lfQUVSLWJ0anc?oc=5",
-        "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
-        "source": "GOV.UK"
       },
       {
         "title": "Healthcare Fraud Enforcement and Compliance",
@@ -67,26 +73,20 @@
         "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTE5aLXRPelc0S2Q4UmUxMFM2bGJlcGhfNEw2bWtoQ2VWMDRZMlVvUUNIaWt3MXpIWUxUTlZDeVFkX1FuRlhjMVhrWnFTSVNVQ3FrNDFKX0pXeUROUVRFZXNVMjdCdXJvS1VyV1lVN0EzVl9GLUJqbGx4SklJYU1SaWJPVHVJenFrUjVqLVdCT09JZDE2N2ZEYlRxTEp3cG02cVZqSzdB?oc=5",
         "pubDate": "Tue, 28 May 2019 07:00:00 GMT",
         "source": "Cyril Amarchand Mangaldas"
-      },
-      {
-        "title": "10 Global Compliance Concerns for 2026",
-        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYWxvS1B5U3FXUThwY0l3MjZmc2lXUVYyUkJ6RlRRbFpTbTlWVjZoQ2QxemdFTklDenU3SF85SHhEVi1mNWhQUjFacmNjdFVrenJ6cUJ5NWVmY0xXTk53dDJYRWZEdkRHVHk3M2VKMlI5RERpc0JWUnpMbmUtSnZoNXJvTkxzM0E?oc=5",
-        "pubDate": "Wed, 10 Dec 2025 08:00:00 GMT",
-        "source": "Thomson Reuters"
       }
     ],
     "artificial+intelligence+enterprise+automation": [
-      {
-        "title": "How AI and Blockchain Can Work Together to Transform Enterprise Applications",
-        "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNU0hNX1hRdWM5UmhHeDNEZExqN1RZekVfZW9YQnFtWHhucldrcTRTWWNqRTU1a2hILWhpb1R0VVhSa0NFWFNDRE92LTN0d2p4Z0NFa2Y0NmYxaWRaLUhhSk1uSzlFZlhYV3E3VjdrNUxyYmpwNXRlZDhLb244M19YbWoyLS01YS1xQXF6SjVKTlM1MzNwcW5wNTctVFFINDdpalowa0x0QUFfWDNkT2IzRGM0Y3NXeFcyVS02NTY4c1AtdDVu?oc=5",
-        "pubDate": "Sun, 01 Nov 2026 07:31:21 GMT",
-        "source": "Nasscom"
-      },
       {
         "title": "Indian AI companies showcase homegrown technologies at Dubai AI Festival 2026",
         "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZnhpME50RVVLeHFiTGpyZGV2eld1OXBJaXRMa1g5UXFxaFJmalY1R0ctNHMtMXpESVBsWE5kZGJBRlRrUDkwcWQ3WXpsalI4djBjd3FxejQtUV9IeWtXODJOYlNSZ2w5TnVvMk02dHR0SlhKM0VISTBxR0kxa0pJNk5UZFdhYk5LcEphMEg3TFJVX0ZYRWFKMFpaaEJFR09JS3NiUmVn?oc=5",
         "pubDate": "Fri, 30 Oct 2026 23:16:51 GMT",
         "source": "News On AIR"
+      },
+      {
+        "title": "AI Agents vs Traditional Automation: What Enterprises Need to Know",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQRHkyU3pQeEItcXduV0FQLTlIMWtlQW82WmlSbDNYYmZSeVd3U01NVTdMUnI4TmxNYy1Gd1lvLVdXaEFSMVFyTHNzSDJCbDNaRndnaVgzaTBlN3djQUFxcDZwZEZEVU55X2FLZzZIVkliSm91Q1o0X2oxUEJ2cmdEVEpSYi1GNEZyVFdCZjFSVzJaS0hkOHlGZnlNa2lDajRSZVhRa0Vka285UQ?oc=5",
+        "pubDate": "Thu, 29 Oct 2026 12:31:27 GMT",
+        "source": "Nasscom"
       },
       {
         "title": "OpenAI Unveils Half-Price AI Model to Target Enterprise Automation",
@@ -119,12 +119,6 @@
         "source": "The Hackett Group"
       },
       {
-        "title": "AI Agents vs Traditional Automation: What Enterprises Need to Know",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQRHkyU3pQeEItcXduV0FQLTlIMWtlQW82WmlSbDNYYmZSeVd3U01NVTdMUnI4TmxNYy1Gd1lvLVdXaEFSMVFyTHNzSDJCbDNaRndnaVgzaTBlN3djQUFxcDZwZEZEVU55X2FLZzZIVkliSm91Q1o0X2oxUEJ2cmdEVEpSYi1GNEZyVFdCZjFSVzJaS0hkOHlGZnlNa2lDajRSZVhRa0Vka285UQ?oc=5",
-        "pubDate": "Thu, 29 Oct 2026 12:31:27 GMT",
-        "source": "Nasscom"
-      },
-      {
         "title": "ServiceNow unveils new AI tools to speed enterprise automation",
         "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQMVlHVGRwWXNVbXFQczEzY0NvTmFSQ29tU1M3dTQ4SlFJUk91ejcxWWY1Q0R6U1BiUlR3LXpWVXYwY0VHRy1LS2pzNXhrLU9OSnJWTnVHdTVmSmMwVFgyTHF5QW9RTmFWdnBMcEZlZVFoZ0huUk9COFI1UTAtM1JZTTlzZUZsWVJRb1lkSTFPU25MSzdXQnpGSHNSejZ2TnUxVjEyZGVRQ2NmektfOGNYVFdoUk83Zmw4SDJLN3dENGZ1OXRSdVBTTlZJdGw5V3JScUp4Sk52OEVnQdIB3wFBVV95cUxPbU13Sl83UHl2VjhMVE1TaWxxVHhXd2pvR0hrQjdRbTJBaUVISnloNjVSSHZkLVUydDhaQXhzU2pSMEhxeTVTenZpcVF5anVnYXh1ZWZDdERSbllOczl6Y3oxY0lYRHduT19LYXJtVWNnWkxfUHJzdk9xNTNuckZvR3Bydkl5WUZyX3JZNnhLSHRoaXVpRUplRDVYN3hhZ2NZTjh4ckpOeUlBWE1OZENDV1VMektMY08waTdQa3pQX1BxMU1LRjZPWlVfckNwdnBWN0d4bFlNUW83OVJuckln?oc=5",
         "pubDate": "Tue, 06 Oct 2026 07:00:00 GMT",
@@ -147,6 +141,12 @@
         "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSlBiWURXRUNKMFM5RDJub0Q5MFBra2lMLXBWNlVOY1R2WUVLQTg3QmU5QVB5NG1tanN0cmxpLUVhODNwTmZjLWN0QzNNc1cyQU5rTGRjTnhQWXU5aXhKMWF3a1gwbEtFU01BSzZHRExUVUJhc2dBZlBIMU1zTFZYMTZKaFJSdG90cFRETTJYTDNVZFFS?oc=5",
         "pubDate": "Wed, 02 Sep 2026 07:00:00 GMT",
         "source": "KDnuggets"
+      },
+      {
+        "title": "What is Artificial Intelligence (AI) in Business?",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5VNG1NRDgxaXVLSjZyZlowN210di03LXN6NnUwYWd2RDJmWFdIOHk1WlJiRjVIdUo1NllIMFo3OXJnTGZ2aTMzbUJCOG5lR2stZ2JlZ0xGZlpWWXlRRE5Ndy1Eb2JERFhFbTJWX2lObGxna2s?oc=5",
+        "pubDate": "Fri, 05 Jun 2026 07:00:00 GMT",
+        "source": "IBM"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
@@ -231,16 +231,10 @@
         "source": "Council, European Union"
       },
       {
-        "title": "Data and Cyber Update - June 2026",
-        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOSldWYzZJNE9pMjJjTndwZ002SThQb1NpZzlvUG93QWVvYWxVdy1HdmJIY2ItMklKc08zRUFIUG5fZ0ZVWUdfbjJJdUYzMDFiLWVRczkzU2xUSGZhUklRQkgzMXR4R2tfb3hsSzlZQmJnYmZUTnlIbGNidlo1akpiMA?oc=5",
-        "pubDate": "Thu, 02 Jul 2026 13:06:38 GMT",
+        "title": "Data and Cyber Update - August 2026",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQTd2bmJpcDdMc0g1MHNoTWl3LW0wQTdaMUJTZDBzYWFHM0prTGpjVGVaeGJhSzR0SzV2ekpkV09YMW9YeWVfLUl4TU5mT0pac2N6eFR5bTBsR1BPN1BMTGJPRXNyTnNqbk1jdFhuRUFQMDRaUWlrWl9VZ2pMcld0MmpJWQ?oc=5",
+        "pubDate": "Thu, 03 Sep 2026 10:52:15 GMT",
         "source": "Stephenson Harwood"
-      },
-      {
-        "title": "What Is GDPR?",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MNlhEb0xuTDdYRC02S3lWVHUxYUlGQnE2UTJzRzg1Vk9kVF9ITE9uM1F6NmVhWEhIbldJYWdZZWFkd1EyOC1LS3lXNW1nbFRXOHNDVlhuaWMydw?oc=5",
-        "pubDate": "Sat, 27 Jun 2026 07:00:00 GMT",
-        "source": "Coursera"
       },
       {
         "title": "Top 12 data protection action items for global businesses",
@@ -249,52 +243,58 @@
         "source": "IAPP"
       },
       {
+        "title": "Strengthening Data Protection Resilience Against Geopolitical Threats: A Call to Action",
+        "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQOU15emRuUmpQeDMxSEZLX1UwY0pvX3JPbFNwcGRmclQ3T3hOZGZ0ZHE4X3o4MU8tWEs2QTh4d0t0MWN5TVc0amxqTmtVd1h1R1Fya3g0RmJXMXVNZHdVbFhMZEQ0LVNjY2lMdm4waHZsZGxsNDg0dmlKaFVTNnE1U1Y2UGs1SE85Nmg4U2hwMUlQNmFYQW14aW96Yzl5dw?oc=5",
+        "pubDate": "Wed, 24 Jun 2026 07:00:00 GMT",
+        "source": "Verfassungsblog"
+      },
+      {
+        "title": "Top Cybersecurity Frameworks: NIST, DORA & More (2026)",
+        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcldEVVRrYk9ybV82QTNueXhGWmI4aUo3a2JqcUpDbmJpd2FScmhaQTB5NlIzUDdGcTBTaTNaVGZ5blN0eHpmZkdJd3Jjby15eHdFNktKTWZNZC0tb1lUU2hVd3Y4aUFrSTYwNUtuZVFjZTgwREN4VFVEMkZ4Y2NQNzd1dl95dw?oc=5",
+        "pubDate": "Fri, 11 Sep 2026 07:00:00 GMT",
+        "source": "Bitsight"
+      },
+      {
+        "title": "Data Economy, Privacy and Cybersecurity Newsletter - April 2026",
+        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUElRT0dTX2hKZDRHeXlCSUZ2dG9tXzFiODJ6SUVqaGdmak1sRm9oLWMwQ3Nyb05XQkxUR0dlY1M5QzdGZWxYdms4eVRoSi1URHVCSGlzS3VzTjdUUmxUVDNSQk9Rb21FVEJsV0paYzM3VloxckN4WW5DVUw1QUk0cGhvUzlVbW5DSW4tamZ3YjFHTG0zcUNQRHAyeWg?oc=5",
+        "pubDate": "Tue, 28 Apr 2026 07:00:00 GMT",
+        "source": "Garrigues"
+      },
+      {
+        "title": "What Is GDPR?",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MNlhEb0xuTDdYRC02S3lWVHUxYUlGQnE2UTJzRzg1Vk9kVF9ITE9uM1F6NmVhWEhIbldJYWdZZWFkd1EyOC1LS3lXNW1nbFRXOHNDVlhuaWMydw?oc=5",
+        "pubDate": "Sat, 27 Jun 2026 07:00:00 GMT",
+        "source": "Coursera"
+      },
+      {
         "title": "What to Watch in 2026: Key EU Privacy & Cybersecurity Developments",
         "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWHg5cTU3c0txdmhXeU9TS0owdEVmRDFXY0Rlc0h6T3dTaTFXTU0zTWFEOG9penpOVGhTUjNMVk5MWGhTUDZNMDY3d0pKQlVwRThGUV9HOHBWSndOdGdDblZBMHFUaE54ZzZrUzdjd1M3dzRTM0Nta0hmRGRWR3ZQeldmVEV5Z3pld0UyX250dWZxTU5iZll2ODY4cWUyNGRnSjJmTm9SN29Kcnlwck9HNQ?oc=5",
         "pubDate": "Tue, 27 Jan 2026 08:00:00 GMT",
         "source": "Inside Privacy"
       },
       {
-        "title": "What is GDPR in Cybersecurity? | Protecting Data and Privacy",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5wanlOZURsWGhib3lNOHpkMllGRXJDa3F5cmJZSXJOajFmdng3WnY1eXpiTDg0VU4yMHpUSjhPUV80RE9DakM3cjg5YW5USENMMVdsVEo4R3dtSlhjY0J1aUx5dDdmMzF0SWR5cm5lcHhwTGZMc3c?oc=5",
-        "pubDate": "Fri, 03 Oct 2025 07:00:00 GMT",
-        "source": "Huntress"
+        "title": "Google Fined €403 Million for GDPR Violations Over Users’ Location Data",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE90N081MENFYUhRWXlGWXNFaUtKaGIzOTRKeDNXbF9TZS1CcFV1cU5HOGpzaGstWjNWTTBCSnhUNTZqOVNUcEMySWxESmlDaEFxVG9lazFSWFdTWDRPMHBGaUl5Zm1UX2fSAWxBVV95cUxNRHpvTHhmZGZPaGpTVHFRcm53VG5ULUVweE9uVHlkVFRNVnd1RzVwWTNpWWZDdEhuSlRGR2pyNTJ3ZUd3N0xiQ0xneWhjdXJxMGxJRjNvN3hrRFJKTWRkeV9SSzktaE1Pd0IxM3Y?oc=5",
+        "pubDate": "Mon, 21 Sep 2026 07:00:00 GMT",
+        "source": "CyberSecurityNews"
       },
       {
-        "title": "Redefining global privacy: The critical role of India’s GCCs",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZmlVV2RtR2JRTENUXzlWZUxnYTI4RTh6MWZTdEd0dFV5d1o4ZlE2bnUzNWw5T094djFlZmZMUk9wZEw5eFNLM2o5Z1R2MEhCMmxKVFowNy1nTENtZWM0UVpRN0tYeC0yUVQ1eHYtb1NzMUVSbzFNd0pVTXZ3ZEJvYXVnWGxPcmlySFlOajRlUHUxWGJXVUZ4TVRPT3dxTFVFOC1EUFo0cnJ2azA?oc=5",
-        "pubDate": "Fri, 25 Apr 2025 07:00:00 GMT",
-        "source": "EY"
+        "title": "Data and Cyber Update - June 2026",
+        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOSldWYzZJNE9pMjJjTndwZ002SThQb1NpZzlvUG93QWVvYWxVdy1HdmJIY2ItMklKc08zRUFIUG5fZ0ZVWUdfbjJJdUYzMDFiLWVRczkzU2xUSGZhUklRQkgzMXR4R2tfb3hsSzlZQmJnYmZUTnlIbGNidlo1akpiMA?oc=5",
+        "pubDate": "Thu, 02 Jul 2026 13:06:38 GMT",
+        "source": "Stephenson Harwood"
       },
       {
-        "title": "Data, privacy, and cybersecurity developments we are watching in 2026",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeGRmTkN6VjdGdXN0QXlHMGVac3hQNmNNSWdPTHNpMTVsR2puNmpncmJ6Si0yNHJWSzh0NmRwa3dEQmN6bjVMclhRaUV3U0lvSjEwWTZLUHljSlV0MmNDeGhaYlBZNWNpeW5SdEFmZFhpQ21WbXJlcUM4aE1tNVpjZTlvS0RPQTBNOGdfWTdMTFNWcFZFQjZfV0FHMUNvbWw1eGVYRVdaX3c4Zw?oc=5",
-        "pubDate": "Mon, 15 Dec 2025 08:00:00 GMT",
-        "source": "McDermott Will & Schulte"
+        "title": "GDPR set the tone for regulatory action — and the AI fine pushback to come",
+        "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMEFOTlpodFFQY0pTQ2lkdE5jQXczeVZCZ29pODE1ZVlCOVN1VGVVX3dnMnNTbEdIVzhDemhTSUtpUjBuTTlSVXMwUkYyLTRoRkJOTDFzcnloNDhjQUR3a3FyUkNUeG5uRHdqMnl4M1JCclBpLUZUQ0lGUG15bWZpdFZIVURhX2Z3ZkY3eUlBUFdTUnVCQXZjOVpTXzJrZzlyVkFmRFJqbjJJbUROX0d4aEllV1FySE9VVHdR?oc=5",
+        "pubDate": "Fri, 29 May 2026 07:00:00 GMT",
+        "source": "csoonline.com"
       },
       {
-        "title": "What You Really Need To Know About The General Data Protection Regulation (GDPR)",
-        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUWxwNF9pUXQtb1BfS05aN2dteGY0UGdVallLSlhiTmhQcHN4NTZDVVZtRFNfb1dkTHFpUFZCX1h4Y1Uzc0U5cHBtdk04VDdoQmtRMDBVSkVfaGV5S2N6UkxoY0wza1AyazZfZjZoTjB0VWp6ZWxxRmNrYmlydEpvS0Exek9GU1o5MWJERHU1dHFibG8xeVlKeS1mcWktaEtEQ2R5MVZLb2d1eHJMUzZCd0hUMA?oc=5",
-        "pubDate": "Thu, 02 Apr 2026 07:00:00 GMT",
-        "source": "Cybercrime Magazine"
-      },
-      {
-        "title": "1 The Rapid Evolution of Data Protection Laws - Data Protection Laws and Regulations 2026",
-        "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWGN1X3RqU1JfRGMzTDdSZnRYMnphOWltMHRnNEdnMzZXU09VODdwYW1oVkUyaTg1SXdvdDRHOGg0ejZmU1ZTNkRSaWJRNzJ6Zm9sQnNRbDFnTl9janl1ZEZ2UTJNY1h3VjJTcm5ITHZ5SkFtLVJRblRUUWhKNnFnbDVqXzZ1UUs4clpqaUhtTFAxTGZ3c29FZXVLMUR5cnhIczJFUXlLSC1Qb0pnQ28wcEk0emY0X2s?oc=5",
-        "pubDate": "Mon, 20 Jul 2026 07:00:00 GMT",
-        "source": "ICLG"
-      },
-      {
-        "title": "Data privacy in 2025: Key trends and challenges ahead",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOFhlRDNmdi1POWg5Z1A4VkhiNzQ5bmNsNmRMaWFaWlJncWEtZ3FtUV9TZURYRExLbE5rYTlqaUNKamZoMmVVeDRtVFBac1NyTTJJUmVGQkNfUTVGZ3g0U2RJMEUwaUZCQVROdTRQT2k1QjlVY0pTemJhaUNHQnBCaDVKVlplTWxZNmFvaUZ6YWhvQ1loNWltajFobk95bWZNMGpEQzZxcmo1dw?oc=5",
-        "pubDate": "Thu, 23 Jan 2025 08:00:00 GMT",
-        "source": "WeLiveSecurity"
-      },
-      {
-        "title": "Comparing Global Privacy Regimes Under GDPR, DPDPA and US Data Protection Laws",
-        "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOLUVFUXhGc1dtQ3ZidHp4MnhVQ1lUZXY5Z3BJa0RLTV9EVGR1ZUxYN2xRVXB3blRNZURzdVV5QWZjQ2pYQ1FaQWh2YWc0YVhOR2U4NkQ5emN1eU5CNEYxU0o4bmI3Ylh6c1hvTFhEMUhBTUxKZ2RmT09XWUlsUDNmVGNBRjN6ZkJsU0JQc2dXblRDZHFFOWVrdmJ6SGJPNlVHbnpoNDVkOTdYWS1FeVpTRUh1NVBxVEFwVWJjVWZSY3V0LXd5aGNB?oc=5",
-        "pubDate": "Tue, 09 Jan 2024 08:00:00 GMT",
-        "source": "Cyril Amarchand Mangaldas"
+        "title": "Spain fines 23andMe nearly $3 million for cybersecurity failings enabling 2023 hack",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSWxzT3kxWHp1Y2RYRS1Nb2FEeDF2UnpzTG9zVmVNV1phcENyZDlGUEZXaVl1dFphVmhmeUs3dEx6UFlXVkVGSXB6dmZrMzVmMUNHRzhYcDA3NDQ3QjhSdUtLSjFLTkdPY0dyVGs3TDJlbi0wYlBCSEdISlIzZjR2ZlhmZDlLQ2s?oc=5",
+        "pubDate": "Tue, 21 Jul 2026 07:00:00 GMT",
+        "source": "The Record from Recorded Future News"
       }
     ]
   }
