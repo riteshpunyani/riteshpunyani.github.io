@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T02:31:25.429Z",
+  "generatedAt": "2026-11-02T11:08:47.778Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -21,16 +21,16 @@
         "source": "kpmg.com"
       },
       {
-        "title": "Safaricom fires 118 employees over fraud",
-        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdTVPRlVsVm1faWc5YUlfZ1BfMmJwd2JvQzhobHR6RW4tVDA1MEh1aFBVQUhvMnA4YnJPMTMteVczaWM4Y1d4Uk9vcFBRczJfMzYydi1Yek53MWF5RVJHNTV4NnkwMGtuLWRKV1UyWTdQT2pWRmZNaVh0bWRITlFKYXd3bw?oc=5",
-        "pubDate": "Wed, 28 Oct 2026 06:03:55 GMT",
-        "source": "People Daily"
-      },
-      {
         "title": "Weaponized Compliance: When the Hotline Becomes a Sword",
         "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNMHBOWXBQWl9Pd3FadTRsc3dmWE53NGNIREx3ZXFVdGdwdXdYb0NIM2lzTXJtQWxhVFRrWm5HQlUzZWZ5UGhQdHFGNW9GSVRDcnBka0FzR3B3dTF2ZTNHc3lYOXBMNWduYVlqMFg1S09DeFpCVVJ6Z2g3RE1yWllaQS1Ya1BXODhVUlY4TG9WWU5uTjVmeDFCQzJfUUxlZng2WnNoTG5UUlJXa1Z0aFpnVlo4Y3Z1a3F6WXFfNVBlNXY3NU1CRDNuV0JCLUZYV3d3UjRwRDRwWDYwRTg?oc=5",
         "pubDate": "Mon, 15 Jun 2026 07:00:00 GMT",
         "source": "ASIS International"
+      },
+      {
+        "title": "Safaricom fires 118 employees over fraud",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdTVPRlVsVm1faWc5YUlfZ1BfMmJwd2JvQzhobHR6RW4tVDA1MEh1aFBVQUhvMnA4YnJPMTMteVczaWM4Y1d4Uk9vcFBRczJfMzYydi1Yek53MWF5RVJHNTV4NnkwMGtuLWRKV1UyWTdQT2pWRmZNaVh0bWRITlFKYXd3bw?oc=5",
+        "pubDate": "Wed, 28 Oct 2026 06:03:55 GMT",
+        "source": "People Daily"
       },
       {
         "title": "States Push Back on the Clarity Act: What the Crypto Ethics and Enforcement Debate Means for Compliance Teams",
@@ -77,6 +77,12 @@
     ],
     "artificial+intelligence+enterprise+automation": [
       {
+        "title": "HCLTech launches AI agents to automate enterprise mainframe operations",
+        "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQNkxlU3BWTVhFbzBudWlXMkxZTU5RaXdVN2gxeEM4QzBZQXFJaDF3TjJXdDdpN211UnRiUHNQNkszWXI3LXByMmlVNVc3M3pUV3lYandqS0FJc2ZGdGMtS3pXaHFibWtWU2ZiVUZsT3pZUG9BdGRZOGgwOXFBNlpETjhxTVZ3Q0Y5LWExcVdRZFlsblBDRXI2ZE8wTHJKUk5IYTdGSFYzOXNjUkJuUjMzQlU1VXk3aDd3YjNWWWVCZFB0dVB2YW5XSkJtWGVwWUExNGlxcjRUQjV5QjlkbGtLQzBMU3V1UjQ10gHuAUFVX3lxTFA2UW1jQXRHOGxzZGNNbnFMYnBQdUVnVzhIeWZFMmhXa2tzQTVYUTc4X2w5Wk1RVGdzR2JLNHZJMmhfOG9ST1dqM0FaSUw1NG5jV3lsX0RFTVppQk5OcnRGdmVPWWhhQi10VEp4VEZlVmJxMFNMTklJRG90bXVBN1pKQVQ3T3ByQlBCeHJNYnJlVDh6Z2JUTUxKWUJ2eTBpYm4yYmhJUk5nRnNnam02eFluVUZzOUc0OEpjT3ZZbDB6SzY3RUVqZVg5b2RWZVp2QnNnVmlMSkxKcHgzM1htS282Y0FVcEZHVzlOSHZsUmc?oc=5",
+        "pubDate": "Mon, 02 Nov 2026 09:36:04 GMT",
+        "source": "The Economic Times"
+      },
+      {
         "title": "Indian AI companies showcase homegrown technologies at Dubai AI Festival 2026",
         "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZnhpME50RVVLeHFiTGpyZGV2eld1OXBJaXRMa1g5UXFxaFJmalY1R0ctNHMtMXpESVBsWE5kZGJBRlRrUDkwcWQ3WXpsalI4djBjd3FxejQtUV9IeWtXODJOYlNSZ2w5TnVvMk02dHR0SlhKM0VISTBxR0kxa0pJNk5UZFdhYk5LcEphMEg3TFJVX0ZYRWFKMFpaaEJFR09JS3NiUmVn?oc=5",
         "pubDate": "Fri, 30 Oct 2026 23:16:51 GMT",
@@ -89,16 +95,16 @@
         "source": "Nasscom"
       },
       {
-        "title": "OpenAI Unveils Half-Price AI Model to Target Enterprise Automation",
-        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdmN5THZQLTZnZjdTSDZmRlo2ZldLSFA4M3I3NnNPaDBQMWp2RUtjTjhpN1hWU01qbGk2UllUcG5vMk5uOEpxTHpxcUpiUXNoNUxqdXVFLVQ5Q2NhRmhwWkUtb0tDUEs3VVFiWXNtTFJQcGh1RjFYWVFWajB5T0d1bXhrUnlZOXh4YS1Hb3hDOTdTZFFndjlmVEItRXRmc3oyZ1ZBeVJvRjZkeGhXcnBkcDBMY0ZwVzdRdWkzcVRvOHhBZw?oc=5",
-        "pubDate": "Mon, 26 Oct 2026 23:18:35 GMT",
-        "source": "PYMNTS.com"
-      },
-      {
         "title": "Oracle pushes AI deeper into enterprise workflows with Fusion Companion",
         "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdDMzcmRvNWZrVUJ0elltbWV2dkd3Z3lqT2NjSTladG9EOUR6cTBRQTdhc0toSmI3ZUhQTkVaa1lVMjk2VkhzakFVbmNpd3Bkb1BzRGVaWXloTnl3TldEbl9CUVBLSkU4eEZZTHY2X0JRcXZrRzZWZElCNXlwdWl1b0lTc0YwMWlEcHpUeFhxLTMtbzVIN1l4VlhGYjdhaWlBVHNIMjN4V3NtNjdrQzRET1lqN0c?oc=5",
         "pubDate": "Tue, 27 Oct 2026 10:57:57 GMT",
         "source": "CIO"
+      },
+      {
+        "title": "OpenAI Unveils Half-Price AI Model to Target Enterprise Automation",
+        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdmN5THZQLTZnZjdTSDZmRlo2ZldLSFA4M3I3NnNPaDBQMWp2RUtjTjhpN1hWU01qbGk2UllUcG5vMk5uOEpxTHpxcUpiUXNoNUxqdXVFLVQ5Q2NhRmhwWkUtb0tDUEs3VVFiWXNtTFJQcGh1RjFYWVFWajB5T0d1bXhrUnlZOXh4YS1Hb3hDOTdTZFFndjlmVEItRXRmc3oyZ1ZBeVJvRjZkeGhXcnBkcDBMY0ZwVzdRdWkzcVRvOHhBZw?oc=5",
+        "pubDate": "Mon, 26 Oct 2026 23:18:35 GMT",
+        "source": "PYMNTS.com"
       },
       {
         "title": "Serval triples valuation to $3 billion as businesses adopt AI workflow automation",
@@ -131,22 +137,16 @@
         "source": "IO+"
       },
       {
-        "title": "SCG Appoints Tim Dietrich as First Head of AI to Advance Enterprise Automation",
-        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQWFExMlhWeVQ2VnZvLVVvZmtHRmh0U0p0RDFNd0NzeHNGLXVYMTRPY1I5akwySDlDemJzdWJ2UWxjcjJ0TUMtWTExM0dGUWpfTW9iSVZUWGtYMGdmSUdkSFh1b3RwaDM5djVCeXhWZ3NLZGdQRlhDU2sta2lFVGlMUjBPTXMwZnpLSm1QMk5wWWEtVVBidkg1Q1Rjd19xOExOTWlhcDNMNGFvaFRvOGtuTkxWdw?oc=5",
-        "pubDate": "Mon, 26 Oct 2026 11:45:35 GMT",
-        "source": "Konsulteer"
+        "title": "What is Artificial Intelligence (AI) in Business?",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5VNG1NRDgxaXVLSjZyZlowN210di03LXN6NnUwYWd2RDJmWFdIOHk1WlJiRjVIdUo1NllIMFo3OXJnTGZ2aTMzbUJCOG5lR2stZ2JlZ0xGZlpWWXlRRE5Ndy1Eb2JERFhFbTJWX2lObGxna2s?oc=5",
+        "pubDate": "Fri, 05 Jun 2026 07:00:00 GMT",
+        "source": "IBM"
       },
       {
         "title": "5 Real-World Applications of Agentic AI in Enterprise Automation",
         "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSlBiWURXRUNKMFM5RDJub0Q5MFBra2lMLXBWNlVOY1R2WUVLQTg3QmU5QVB5NG1tanN0cmxpLUVhODNwTmZjLWN0QzNNc1cyQU5rTGRjTnhQWXU5aXhKMWF3a1gwbEtFU01BSzZHRExUVUJhc2dBZlBIMU1zTFZYMTZKaFJSdG90cFRETTJYTDNVZFFS?oc=5",
         "pubDate": "Wed, 02 Sep 2026 07:00:00 GMT",
         "source": "KDnuggets"
-      },
-      {
-        "title": "What is Artificial Intelligence (AI) in Business?",
-        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5VNG1NRDgxaXVLSjZyZlowN210di03LXN6NnUwYWd2RDJmWFdIOHk1WlJiRjVIdUo1NllIMFo3OXJnTGZ2aTMzbUJCOG5lR2stZ2JlZ0xGZlpWWXlRRE5Ndy1Eb2JERFhFbTJWX2lObGxna2s?oc=5",
-        "pubDate": "Fri, 05 Jun 2026 07:00:00 GMT",
-        "source": "IBM"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
@@ -155,6 +155,12 @@
         "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUjVGYjdIcHZOVzNBRmpCenVBU0JzalJBbHEwSXRrakc1WWMwOUlWUzNFdHdNbmVReTBrNWIyODRqeEFSY0w5S2hEN3FjYkJ6TGVVZ0VCZ2dJeExmNDZ3ZmMxY0F3NnhhU1hJalNPNnFTcW9vckxackczZXdKMTBHb2dEOXluS2dkbFhob1o5MTlEQkdQSFAyaVM5emgyYkJXN05IdVAtelhlVDBLVEJSUE9ZY1J5M3JUN3dmaXBnZTZvWGhGNEl6aHltWllDMmU5Z2fSAdgBQVVfeXFMTzlfQlppRHVFeVMxQkYxODlSbklma3VIRUttYVBERV9TV2FUT3JxLXJTNTNzTjZPZHpBU3RzNEpSYzJGVDJsUkJjcHR0ZlpwS2NvMWw5dVIxTnhNT3lYU0dwR3oxcTRGMUNaSnpGU3c1TkxxSjdIaElVOFFaUktnRUlrTE9JOXFTQlBkME83aEdUQnJaczI1VXhZOUM4UjdtaHhMRXFCYWY5NXhBU1IyYmI3cVc1U0YtN3QxaFVOTEI1OXhRbzhqYUFpM2tsMEpUemFoOGVvRlZw?oc=5",
         "pubDate": "Thu, 10 Sep 2026 07:00:00 GMT",
         "source": "The Indian Express"
+      },
+      {
+        "title": "SEBI’s Regulatory Overhaul - Strengthening Corporate Governance and Deepening Capital Markets",
+        "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNWHpNTU9ia01wSUxvZVYzbUF3WktLQW5JMFBLQWVyLUp5dUtudlpWU01qb0pKaDhlcFI2N2JOeDVwVEZxWExiSW1BQnROQ0hTR0hXNjhzWEgya1A5UDA4eUF3cExVWWx2OGpZdm4yeDc3cW9mU0JXZGdrV3RrR2dPV3ZDWXFmWlkzNDMzZmY4V0M3cTlCSzQ0YlExdE1uQzYtaFlGR3h5anJXNTZCSVNReWZWVjJmcHA5UWpKWlZBd3FrcXhiVllzeTBHbjJma2M?oc=5",
+        "pubDate": "Sat, 13 Jun 2026 07:00:00 GMT",
+        "source": "Vajiram & Ravi"
       },
       {
         "title": "Listing rules on corporate governance to prevail over RBI’s for listed banks, clarifies SEBI",
@@ -175,52 +181,46 @@
         "source": "bfsi.economictimes.indiatimes.com"
       },
       {
+        "title": "SEBI, RBI Launch ‘Demat 2.0’ Pilot for Tokenised Corporate Bonds, 3 Issuers Raise ₹1,025 Crore",
+        "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZDJyUVNEV3A1ejJlOVhLLUQtUEFCN0R6cDNoSHR5QWNBamF0YkoxX1RZLTFDQndzX240QkUzUG1EM2NnUEVBTnhtNjVUaDdMMzkwdEJyNFI4MjdPWWRGLV9rN1J6Y3lKSzVuNjZHdEp4eWJ2aF9ncHBlZWZ5RDE3VEd4b2dHLTctSGxkbUwzbFpmNTNtNjl0Y3hKbml3MG5PbkRqdWhHZ1IySi1aQ3lwZWp2RklCRWo2UDFkQjFoZ1E5dGo1Q2dnLWE5VQ?oc=5",
+        "pubDate": "Fri, 11 Sep 2026 06:08:34 GMT",
+        "source": "Moneylife"
+      },
+      {
+        "title": "SEBI, RBI Launch Demat 2.0 At GFF 2026 Amid Focus On CBDC, Blockchain",
+        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxORjQtNzdTVUJfSDJLMnpORWhPQUUtTVZlRUpRR0JKVnpjbThzejUxZ2FVYks4TTJpaHNrZzl2bFhkVDZDNk1iUFFUSDJGcVpUcE9FQnRGX21Xd3Y0QW5NaWk5SFBQUXVNcEhtbExJX2Qta1NpM3Q0NUdyelNxU01NSGQ5T3hsSDh0MTJ2SFhYSFFvMERUY0RqTll4U1F4bmxaTmFBSWdSZE5wbFh0VzNzMNIBuAFBVV95cUxNZW1pRm1vU0NkQ0RfeUZpZERFUTVWRHpCd3dITEt0aFQ2VHpxU2k3a1o3UENQalpReHdmUEpwcm1lN0ZIMHpaQU5TUmJDLU5jX1RBeUJPZkFkOWMzSmpzd3A4SUo1SkdXNHRoeEItTHVfQWVyT1JKcGF1TTlsQjFkNUlCS08wRmVQQ0hRem84U1dmMGs1c3pyR1JjNUJ1cnc4c3V6VDEzdWJuRzRDNlk5alhwbHFXV0cy?oc=5",
+        "pubDate": "Thu, 10 Sep 2026 07:00:00 GMT",
+        "source": "NDTV Profit"
+      },
+      {
+        "title": "SEBI And RBI Pilot Blockchain Settlement For Corporate Bonds Using Digital Rupee",
+        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeHBUX0NWVlFIWTJ6WU8waHVfcUxtNVd2ekRtaTE3OU13ZFlJazNEdFZSUEpWLUdDVTNfQmNYZ0hjM2twVVk2NzBGYnEzalZ3OWw1OGk1Wm5WaDRWbEl5UUZlMlhuWWNIWXZFbWlDTjFuYkRsR19OY19td2QxZmctSE9SbHVUYWZBQ3czMFlhVXBDZl9NSDNtZllwaDBBSEdUYnpqc3BlcnRQTWNBWmh6UFJCMF84VnBHWmtkTA?oc=5",
+        "pubDate": "Fri, 11 Sep 2026 07:00:00 GMT",
+        "source": "OneBullEx"
+      },
+      {
+        "title": "SEBI, RBI working to launch derivatives on corporate bond indices: Tuhin Kanta Pandey",
+        "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOS0p4ZWkxYkQyRzRrOWtrSmRNNWNjdlpXbmU5RzJwZGk4UEM5c2dVbmxVMHlGOHFJbTVIQzBCY2hFSF8wT0phN3J6R0g2RmR1SGYwZHFDWmxmaDhkajY2c3JuYjBsUHdRRGVjR2J6dGtmQzMtMk1FLWN3eU5tdGh3d29vTFlVY1lOMVJKSVRMZGhKd2xvb1pxSzB4elhoYjg2MzA5alE3d1F1eGw1Q1FWcXEwYmt0cGExdnZmaTF6SXpUU0dHNDhDSFpJc3hvZGZhMW1YRDV6TzTSAd4BQVVfeXFMTnpoSnN6UXZUeFRnNlljaHNfSDVWTTBhd0hVa0thOHJQWGc4LXAyZFdkcWFHWTVCek1lM29ZQUhQTU9UaVNVMldLV29jN1lUaFFTeWJQMFdWUTB6LWVKYmoyV0pYU2FzbkVleHBvQjJuRU9PYTRTZHNjQ0FoemZDd3BqZU1hZklBNDJuck14RXBpc3EyUXFKUXJqMThSdWtrNlk4N2hNRzMyb2hET19JOEMwT21ndXh1ejhWVFZtTUR1T1FYVXkzQWpDZVBIOUFORWRBOHpWbnpvZEVhTEV3?oc=5",
+        "pubDate": "Mon, 08 Jun 2026 07:00:00 GMT",
+        "source": "Livemint"
+      },
+      {
+        "title": "Sebi explores tokenisation of corporate bonds for faster settlements",
+        "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPaW11VmJCcWdmWU5QS2FCekw4ZGE5VVhBUlJNRDZBY0tjcDkxZXFnY29Ob3A1NjQydV9YZVBQYjhXQkVBbUxrTmRwZ0RPdjRfalZUQWh6Mk11OGtoTFp2WFRZN2FuM0xva19TbC1EN1EzMVlmMGtWV1FKLTVpWnFoeFFnTy1WcEZkRjM2c1lCYzNKXzNzS0Q2TkU3T0o0TzBlOTFtbElWdml2VzhnSjV4RVdBd1U0Q2hKTUwwVGo2MnM0V0FtTWdyb1VURTNFcDB10gHWAUFVX3lxTE5QZkR1dS1iaWZxRDB2eUdLMUxJb1JvZkctYmhlXzlHYUpvUW8wYmQxM3JudjFPZjJYbERoSFhla28tcVJRM0xvbzN0SVJYdWFjaWJMSlpUQnBFUnM1Z0JIeEdLNEpqSVNrQ0dvaEpZLVZJZmUxMWZIMFRMQkNCWVJhZ1R0bEhYaUVmUldIR3EzNU9BMDl5MzczcUZfakwzT3hROXp6ZXdCTEdqZmN1cVRIanhKRDJWb19vZ2ViVkpVa3F3SVRTcThIZk9KbXFndDdDQXRmdGc?oc=5",
+        "pubDate": "Tue, 26 May 2026 07:00:00 GMT",
+        "source": "Business Standard"
+      },
+      {
         "title": "SEBI draws line between listing norms and RBI rules in guidance to PNB",
         "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOb21fSzFOWkhranJ3UlZnZzFUelVLSF83Z0NrelRoNldHT3JfT0c3dGU1dlh1SFQ4SXViSjNXYnlOaE1oU1JqaUFOaElNdU5MNWF5NzBYYUxnajIyb2s0SDY4R2F5eHhLbzhfN1dLTXVRd3JOVzNLN3JMRENsV1ZqRmVuSjlCM3YwNjItTG45QzRhNEVVREozS3ZSckk1YWJpM0F3TlVwTUcwUFl1OFhQeW5QRUF6SGk1Q25QLW5rZ2pNLVZNMHppeF9ld2U3ZURYTlA3Y0diWdIB3AFBVV95cUxOTHlucnNfTUJ2MHcwU0RUeExyMnRia2tFd2RLNW5sOTdvU25SaUprV0sxRllNWTVWY09VUWItWG5ZTl9uc1k1WHpnSlAxanhyVml1aUM2b3dhT2lUaTZmcnRYUFdJYlhOM2o1WVE3LXlzd0xmNm5pS3BnMlFuWWVOWlRnd1pnaGw3Zk9iUWJhTGhrMDN4WGlnR0Jpbzl0NDhJYlRkQ0s2Vi0xTTZuTHpjUzBlY2tnMGI0c1lmZ3VNWEtyYmlyX19LbkZib2h0OXdXdGoybVZhTGs1d0RM?oc=5",
         "pubDate": "Sun, 08 Feb 2026 08:00:00 GMT",
         "source": "Business Today"
       },
       {
-        "title": "Enhancing the Interoperability of India’s Business Sustainability Reporting with International Standards",
-        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPLU9kY0RnT0JHOGFuZEQ2NVE3MWdfeFJzODRiS2hHRG0yVmQtOTd4RUczeWxRT1JvR3VHNHdTdDhVRG53NjI4bVhTc2N1ekU2c1BBZHF4LUdwdFl3d0hnblllQUNBcjFOc2pYdlN0NGRtWm1SMUUxcFdrcWxMOXlrTGw3c2ZGOS1yRmh0UTY1MWlFNmdRVW5xOWVyU1JYSnBmN1N1ZHRsXzNua2hJR1N3ZzNPZWxMbXJwTUJiMGhWNjhUT2hPNWdRQTVyWlJqVVVSb1c3Ql93?oc=5",
-        "pubDate": "Thu, 22 Jan 2026 08:00:00 GMT",
-        "source": "orfonline.org"
-      },
-      {
-        "title": "What DPDPA, RBI, and SEBI demand from the digital Indian workforce",
-        "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOempEVkNlMS1iZ19JR29ZMGctUm9sLXN2R2lMdWUwYkdXWkZqU2VCS0hsOXJEcWt6QWl1M1pMUXdrWjUtT3ZSdmlRQVo0bmh5SDN6djdDTDhfME81UXF5M2k3WEFuMlRleDFxVWQ4cFI2NlB1eUVocEY1ejBQcEtmTFJwZ3U5b2t6enlZejFDcGxoNV9nZTlVYk9DeGV4U1VhbWlGRVNKUmotS0liUkJTbGR3MlU5MmxEZTZJbmtfZTdvaEYyZ1hjSk5yYzg3SXNncUJnTDVYOVNRTnRJcm1lb2NENTNQZ9IB6gFBVV95cUxPaHJiWUJsR21WeVptN0RCLUFzVktsYUlhZ0Mzc0JpTG5YVjJPOFo4VUtZSjJIR2ItTHVEeVNERk02d09GbmppU0l1cXAyZ3Rnbm00ZWdJQTBxejI5b3htSEpGcUR4S0UtREE0aEhsUHB5MlVZS2M4S3BoUldIRmlGY2ZoOFpsREo1WFdtVjNtcThnaDBNM2xIX3dqNkIxOEg0RkNiMzBuLVBTb2hzemlzT2FLVk5HU1JSNVprZ1o0dl9GZ2hrRkN4OEg5allVVnF3eUl1c2NtbGZ4R29obGpnaWRidGt3UFJpRGc?oc=5",
-        "pubDate": "Thu, 06 Aug 2026 07:00:00 GMT",
-        "source": "ETLegalWorld.com"
-      },
-      {
-        "title": "RBI Bulletin",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5YanJEbnVVWDVCd1FuTnd5eHdjcDZaelVlMVRoWjBYVVppMHhQaFVEY29tNjJUY3dYZTNQYzVNVjBoaTVXazVpY0NZSmQwUHJnLWdIYkZXSk9WdVRHWXd6OWlJMi1hODQzQ2dHdQ?oc=5",
-        "pubDate": "Mon, 20 Oct 2025 07:00:00 GMT",
-        "source": "Reserve Bank of India"
-      },
-      {
-        "title": "The role of regulatory bodies in India's financial sector: Wha...",
-        "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdGh5RnVJTnlhYlRQaGRxemF0SkdUZS0zcENPWHRCbkNXZUZKaHJNNGtjS3RSbXdXV0NHY0RmdGpiLW9IcUxYM0R1ZTRYRU9Ibi1JT3FyWnhmVzFKSWp4bFIxaFRSQTBCQXN3M2I4VTd6WHZTZlNORzVWZFgxTHhJNEIzU1N6bHMwcW0zRmxjVHZKTzNMNXR0MUVLVzNvcE1SYkp1cEF6QWtvcVZrc0Vwck5ETTN3bWJKR1BOdXNn?oc=5",
-        "pubDate": "Thu, 12 Jun 2025 07:00:00 GMT",
-        "source": "Invest India"
-      },
-      {
-        "title": "SEBI, RBI working on bond tokenisation project; pilot to test faster settlement",
-        "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOYzgtQ2pHQ2JRM19pVnVsTnBHd2taaTBoUlJVQzF2Qi1sRVNhRnVLT1lyWUxtbzNYZkQ4elVYTzNTXzZWMXNtZUJsSXExcThDZWxzSTVBeURQSjJfb3o2U2hHVHlxb2hWQlhEUUlGWWJrU2tVNkZiWWpVOXFIRlV0RmpjMkY0ci13Y1NvUENPa1l1MUNrOTAwNi04aXZJVWg1S3ZFUmRRM1ZxSjg4ZjhZMHY2cG0yMFBBSDVMNHlBMXRBMDVudmhqLXZpRTZZZmxpejVQbE5teVJrUQ?oc=5",
-        "pubDate": "Thu, 20 Aug 2026 07:00:00 GMT",
-        "source": "BusinessLine"
-      },
-      {
-        "title": "ETLegalWorld webinar on workforce security amid DPDPA, RBI, SEBI norms",
-        "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNaXhKS0lMTllpZjIzX0J2WGFBMERkWUhNeDc5X3lBQWtFOElRdUdVemtkM2hvQ3VKd1ZRcmpwZ3NzXzdGdkc5ZUdzcnU1Z0EzaTJXeWJJWXlFX1hLOFFKQW56YVdqR0tFbUhPRWR3dGlTYlVMY0x2ZXRNdGZrVVpkRk5MdkF5MnJhRzBXX2J2dnBHSFZuMGtXTWdsNUdZYjRmdVEyZndwcUFxS1dzVDE2WFc5LTRfRm1GVFB5Vkg0M3ZybHpaaTJZMFFrRHJjeGFJWW4wcUUydnFxM1JoMFZRa0tUZzM3VnBpSkRjdzh1TVNYeVJrMllYZGc2ckvSAYACQVVfeXFMUEpBczNqUWRfbWVQdTRTUDVQMEJ3QTZJNE9wdjY0MVBTb1p4b3U2cUtJV082czJmNmg4eExTaHJxTEtxYnNId0VESGx5SG1yaDdSQVV3MmVweGV3MXBpSE9uU1dPOGV0ZGtHZnM0Z3hvaU9UMFpERzBxcXNhY3JoVld6Z2ZEXzVJXzA3R3NIdFhSQ3VxaXJYTnpRYzZLOFg5cEstSUlyM3UyOV92d2xBRVg5d0staWJERmhKcng3TENWMGZrYzUxZlpjeFY1Yk9ubEFnX3NUakJ0T2ZwcmthSUg3LUNhNDN3UlZfejZBNl81THgySVdfeW5lb09sR0NpSw?oc=5",
-        "pubDate": "Tue, 14 Jul 2026 07:00:00 GMT",
-        "source": "ETLegalWorld.com"
-      },
-      {
-        "title": "Why RBI, SEBI have cracked whip on JM Financial & what investment bank said in its defence",
-        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVjZMcFlUWno1cXk5QXp1UU9rNU4xRS16REp3ZFpTYVAyMzFKTVo1YzBlZlpNek9nVGhhaGNKWTBJaEVubVh3V2VFc3YxX2RNdEdFUU9LNnJsaVItdEd6MnE0bWZWazhLWmxKSTN5M1lXUVM1RGtENXROWFVhLWs3cEo5Y3Q4cUhpZHg2OUJjVjNBUnRZUDcxQUtMclZCSVFRbU4zUWkzazZvaFNUN0xoaVNWc2FqblZiVE82N3B6THlId9IBxwFBVV95cUxNcVE2cFNNUGdLR1h6RFktb0xOVHlFbC04cElFRDV5WDdxWjNZQjlVdVFBWm1hZ3pLSzVsdTBia3NxZFpIbFRjSWZsaXF1S1QtNHdzNjlJLU1rcWdUR3kzT2lkUW5EZnBpbUhyVjB3UTdaMXVGV214SnZOeXBmMWYwQVNXaFQtY1RqN0t0Yk5hSVRQV1BjRlNBV2lieGhDakhGUVFIcnNUZFVwUlNDcWwwNmlDNElwZDFzRlIwOXRxSF9UYTRiTDhZ?oc=5",
-        "pubDate": "Sat, 09 Mar 2024 08:00:00 GMT",
-        "source": "ThePrint"
+        "title": "As AI poses threat to critical financial systems, how regulators are stepping up vigil",
+        "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZmlIUVBab3NJT2J6NGRkZl9TUVJJTUxHUWxneGF2emRDZDVDczRFU0tUUXhlVXc3Y3VhTnU2cThod2M0MUdmYUl1dUVMUWZKSG9NM3NnMWhJYkNQaHg2cTdLaHhIOHZoWTI3MWlpaE9SUmVHVE5KYmRDUTROeUszSmhSSVpBcnAwdThqLTctU2k5RERNN1hnLVdGT1psV0pFb0pPd1plYzhOUnBJeWFoUUd3YTNlaGgwYzQzMi1NbFJGeXFIZE9HUm01QdIB0gFBVV95cUxPdmMyR2JUdkZMZko4Z1BOczZmN2EycndSb2dXd2p3WkFKb2hqdW1QOE1SQVJ5TENwOWMya2IyMHVZdmZXTFJEVlVYZ29xbG0tbWJKZ25mbjdzdFlfSjNvUnFXUkphYnQzTEhvcjg5X1U1Sy1BYWRuUm5uM20zUDktRktRTGc1VG9fZ21WNS1FamVKSDZ6cDdxM2ZvNngtZmJGcVBaWHJfbzg0N1JhZVZIYk1ySXZhcWlrVFpQa3g2enVtUFZlR01NcjV4SVc3SXV0aEE?oc=5",
+        "pubDate": "Mon, 31 Aug 2026 07:00:00 GMT",
+        "source": "The Indian Express"
       }
     ],
     "data+privacy+GDPR+cybersecurity": [
@@ -229,6 +229,36 @@
         "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNRWRZX3pMLTUwSXFaYzRRZnNzRTRsSURBalpjVXpKcXNfRFhuOWI5LWo0R1dfeFFOYm90VVZNdDFqQm43ZF9qamwxbUpjaDNnMUtIOGxxU1BkZ3JfMU84dXM5LUpWaXdhZmFMUmtFSWFPVFl6SFlvZ3RVU2tta1ptWDVWNVVIYk5ILWh6Z3N4TjdPWWd2MFJUNDl0SUUtUWRwMjExQS1fSk9WZVZyck5LcjdjT0JXcWtGdXBiMk5fc3ExYVpOVzZRRU1IMzROc1EyeHhjU0NiRWUyUlZYSlR2dlhULTdaSk9tcUN4eUFiVjVadExkQWpQZzFkcmo3TXM?oc=5",
         "pubDate": "Wed, 21 Oct 2026 07:00:00 GMT",
         "source": "Council, European Union"
+      },
+      {
+        "title": "Data and Cyber Update - August 2026",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQTd2bmJpcDdMc0g1MHNoTWl3LW0wQTdaMUJTZDBzYWFHM0prTGpjVGVaeGJhSzR0SzV2ekpkV09YMW9YeWVfLUl4TU5mT0pac2N6eFR5bTBsR1BPN1BMTGJPRXNyTnNqbk1jdFhuRUFQMDRaUWlrWl9VZ2pMcld0MmpJWQ?oc=5",
+        "pubDate": "Thu, 03 Sep 2026 10:52:15 GMT",
+        "source": "Stephenson Harwood"
+      },
+      {
+        "title": "Top Cybersecurity Frameworks: NIST, DORA & More (2026)",
+        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcldEVVRrYk9ybV82QTNueXhGWmI4aUo3a2JqcUpDbmJpd2FScmhaQTB5NlIzUDdGcTBTaTNaVGZ5blN0eHpmZkdJd3Jjby15eHdFNktKTWZNZC0tb1lUU2hVd3Y4aUFrSTYwNUtuZVFjZTgwREN4VFVEMkZ4Y2NQNzd1dl95dw?oc=5",
+        "pubDate": "Fri, 11 Sep 2026 07:00:00 GMT",
+        "source": "Bitsight"
+      },
+      {
+        "title": "Strengthening Data Protection Resilience Against Geopolitical Threats: A Call to Action",
+        "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQOU15emRuUmpQeDMxSEZLX1UwY0pvX3JPbFNwcGRmclQ3T3hOZGZ0ZHE4X3o4MU8tWEs2QTh4d0t0MWN5TVc0amxqTmtVd1h1R1Fya3g0RmJXMXVNZHdVbFhMZEQ0LVNjY2lMdm4waHZsZGxsNDg0dmlKaFVTNnE1U1Y2UGs1SE85Nmg4U2hwMUlQNmFYQW14aW96Yzl5dw?oc=5",
+        "pubDate": "Wed, 24 Jun 2026 07:00:00 GMT",
+        "source": "Verfassungsblog"
+      },
+      {
+        "title": "What Is GDPR?",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MNlhEb0xuTDdYRC02S3lWVHUxYUlGQnE2UTJzRzg1Vk9kVF9ITE9uM1F6NmVhWEhIbldJYWdZZWFkd1EyOC1LS3lXNW1nbFRXOHNDVlhuaWMydw?oc=5",
+        "pubDate": "Sat, 27 Jun 2026 07:00:00 GMT",
+        "source": "Coursera"
+      },
+      {
+        "title": "Google Fined €403 Million for GDPR Violations Over Users’ Location Data",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE90N081MENFYUhRWXlGWXNFaUtKaGIzOTRKeDNXbF9TZS1CcFV1cU5HOGpzaGstWjNWTTBCSnhUNTZqOVNUcEMySWxESmlDaEFxVG9lazFSWFdTWDRPMHBGaUl5Zm1UX2fSAWxBVV95cUxNRHpvTHhmZGZPaGpTVHFRcm53VG5ULUVweE9uVHlkVFRNVnd1RzVwWTNpWWZDdEhuSlRGR2pyNTJ3ZUd3N0xiQ0xneWhjdXJxMGxJRjNvN3hrRFJKTWRkeV9SSzktaE1Pd0IxM3Y?oc=5",
+        "pubDate": "Mon, 21 Sep 2026 07:00:00 GMT",
+        "source": "CyberSecurityNews"
       },
       {
         "title": "Data and Cyber Update - June 2026",
@@ -243,58 +273,28 @@
         "source": "IAPP"
       },
       {
-        "title": "What Is GDPR?",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MNlhEb0xuTDdYRC02S3lWVHUxYUlGQnE2UTJzRzg1Vk9kVF9ITE9uM1F6NmVhWEhIbldJYWdZZWFkd1EyOC1LS3lXNW1nbFRXOHNDVlhuaWMydw?oc=5",
-        "pubDate": "Sat, 27 Jun 2026 07:00:00 GMT",
-        "source": "Coursera"
+        "title": "Spain fines 23andMe nearly $3 million for cybersecurity failings enabling 2023 hack",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSWxzT3kxWHp1Y2RYRS1Nb2FEeDF2UnpzTG9zVmVNV1phcENyZDlGUEZXaVl1dFphVmhmeUs3dEx6UFlXVkVGSXB6dmZrMzVmMUNHRzhYcDA3NDQ3QjhSdUtLSjFLTkdPY0dyVGs3TDJlbi0wYlBCSEdISlIzZjR2ZlhmZDlLQ2s?oc=5",
+        "pubDate": "Tue, 21 Jul 2026 07:00:00 GMT",
+        "source": "The Record from Recorded Future News"
       },
       {
-        "title": "What to Watch in 2026: Key EU Privacy & Cybersecurity Developments",
-        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWHg5cTU3c0txdmhXeU9TS0owdEVmRDFXY0Rlc0h6T3dTaTFXTU0zTWFEOG9penpOVGhTUjNMVk5MWGhTUDZNMDY3d0pKQlVwRThGUV9HOHBWSndOdGdDblZBMHFUaE54ZzZrUzdjd1M3dzRTM0Nta0hmRGRWR3ZQeldmVEV5Z3pld0UyX250dWZxTU5iZll2ODY4cWUyNGRnSjJmTm9SN29Kcnlwck9HNQ?oc=5",
-        "pubDate": "Tue, 27 Jan 2026 08:00:00 GMT",
-        "source": "Inside Privacy"
+        "title": "Web privacy in 2026, your GDPR rights and how to actually protect yourself",
+        "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPS3JzYkJMMEpZTGJCOHV6T3VoNm1feXpEV2hDYWx1YzRuZTE4UGVidU9xN1FFdXdFSS1XTGY4RENHRkVCM1RMOXVsRkEwTzRLeFBTU1l6S3RRZjB6VjRtNjJQd3VyMTF1a2xYOWVFZUJ1alh6aGZFZmNqOGFNMXRuYldTTUU?oc=5",
+        "pubDate": "Mon, 24 Aug 2026 07:00:00 GMT",
+        "source": "Pasquale Pillitteri"
       },
       {
-        "title": "Data, privacy, and cybersecurity developments we are watching in 2026",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeGRmTkN6VjdGdXN0QXlHMGVac3hQNmNNSWdPTHNpMTVsR2puNmpncmJ6Si0yNHJWSzh0NmRwa3dEQmN6bjVMclhRaUV3U0lvSjEwWTZLUHljSlV0MmNDeGhaYlBZNWNpeW5SdEFmZFhpQ21WbXJlcUM4aE1tNVpjZTlvS0RPQTBNOGdfWTdMTFNWcFZFQjZfV0FHMUNvbWw1eGVYRVdaX3c4Zw?oc=5",
-        "pubDate": "Mon, 15 Dec 2025 08:00:00 GMT",
-        "source": "McDermott Will & Schulte"
+        "title": "U.S. Supreme Court FTC Ruling Prompts Fresh Scrutiny of EU-U.S. Data Privacy Framework",
+        "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQb3VOOHBXQmQ5VXBua2FRU1RfY0N6V1B2MlRsYW5uUk95dTFESWdCNVJpTXFJcEp1VGJpOUxLZ3VmLXhEMFZLUHgzRUhKNktBeHBydHM0NWRFODRDRmtEcGZ5bnI1ZzUyYkU4a3JyeXNwbnpTTGxMbnpPVjNYM045ZENUM1dRSld2OHJrQWVtQmQxY3JFY29RdnYxcE5UTFhXVWRzYTZ3dVdJcjhpZ0sycDhpdFR3elJWNnVvdV9PTlpMUnBlN2ZDcjdUeDJuTUt2RWcxVGZseklFZw?oc=5",
+        "pubDate": "Thu, 02 Jul 2026 07:00:00 GMT",
+        "source": "Hunton Andrews Kurth LLP"
       },
       {
-        "title": "Data Protection update – January 2025",
-        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaVVaajVDVkxsdnpQQ19kY012ZFB3NkhYNDI2M3B3TmRCd0hWOUJBTkJ6UW5OeWlkVG5NTjM0RUhscEtBVHEwd0hOU2ZrdS1tYl9sN0ZISXlHanlmQjNPdGhCQ2tkMXpzZFVoaDA0cF92ZzN5ZC1FWTZwZEhEQTdtV1Mya0RhQQ?oc=5",
-        "pubDate": "Tue, 02 Dec 2025 08:19:53 GMT",
-        "source": "Stephenson Harwood"
-      },
-      {
-        "title": "What is GDPR in Cybersecurity? | Protecting Data and Privacy",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5wanlOZURsWGhib3lNOHpkMllGRXJDa3F5cmJZSXJOajFmdng3WnY1eXpiTDg0VU4yMHpUSjhPUV80RE9DakM3cjg5YW5USENMMVdsVEo4R3dtSlhjY0J1aUx5dDdmMzF0SWR5cm5lcHhwTGZMc3c?oc=5",
-        "pubDate": "Fri, 03 Oct 2025 07:00:00 GMT",
-        "source": "Huntress"
-      },
-      {
-        "title": "Redefining global privacy: The critical role of India’s GCCs",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZmlVV2RtR2JRTENUXzlWZUxnYTI4RTh6MWZTdEd0dFV5d1o4ZlE2bnUzNWw5T094djFlZmZMUk9wZEw5eFNLM2o5Z1R2MEhCMmxKVFowNy1nTENtZWM0UVpRN0tYeC0yUVQ1eHYtb1NzMUVSbzFNd0pVTXZ3ZEJvYXVnWGxPcmlySFlOajRlUHUxWGJXVUZ4TVRPT3dxTFVFOC1EUFo0cnJ2azA?oc=5",
-        "pubDate": "Fri, 25 Apr 2025 07:00:00 GMT",
-        "source": "EY"
-      },
-      {
-        "title": "Privacy Disparity: U.S. vs. Europe",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS1ZrV3dNUGZXRUxkbjR1dXpNdFMxenBOWTROUzMwYUhjdzJfbzlKU1V3bzI0ZlBSbE93QVcwSkJLOUpEYnB2V0NLVC1NNGxBZ1ZjWjQzOF9iN2daODNRUkc2S05nR0NrclVhT1NtcnM2LUhNb3cyTjZhZUp2R0s4MmRlY3RlNlM1QnJTakNIU0ZSLVdsWWduRU9xZ1Q2TFplbGx2cHZoRlJPdw?oc=5",
-        "pubDate": "Wed, 19 Nov 2025 08:00:00 GMT",
-        "source": "University of Miami News"
-      },
-      {
-        "title": "What You Really Need To Know About The General Data Protection Regulation (GDPR)",
-        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUWxwNF9pUXQtb1BfS05aN2dteGY0UGdVallLSlhiTmhQcHN4NTZDVVZtRFNfb1dkTHFpUFZCX1h4Y1Uzc0U5cHBtdk04VDdoQmtRMDBVSkVfaGV5S2N6UkxoY0wza1AyazZfZjZoTjB0VWp6ZWxxRmNrYmlydEpvS0Exek9GU1o5MWJERHU1dHFibG8xeVlKeS1mcWktaEtEQ2R5MVZLb2d1eHJMUzZCd0hUMA?oc=5",
-        "pubDate": "Thu, 02 Apr 2026 07:00:00 GMT",
-        "source": "Cybercrime Magazine"
-      },
-      {
-        "title": "1 The Rapid Evolution of Data Protection Laws - Data Protection Laws and Regulations 2026",
-        "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWGN1X3RqU1JfRGMzTDdSZnRYMnphOWltMHRnNEdnMzZXU09VODdwYW1oVkUyaTg1SXdvdDRHOGg0ejZmU1ZTNkRSaWJRNzJ6Zm9sQnNRbDFnTl9janl1ZEZ2UTJNY1h3VjJTcm5ITHZ5SkFtLVJRblRUUWhKNnFnbDVqXzZ1UUs4clpqaUhtTFAxTGZ3c29FZXVLMUR5cnhIczJFUXlLSC1Qb0pnQ28wcEk0emY0X2s?oc=5",
-        "pubDate": "Mon, 20 Jul 2026 07:00:00 GMT",
-        "source": "ICLG"
+        "title": "GDPR set the tone for regulatory action — and the AI fine pushback to come",
+        "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMEFOTlpodFFQY0pTQ2lkdE5jQXczeVZCZ29pODE1ZVlCOVN1VGVVX3dnMnNTbEdIVzhDemhTSUtpUjBuTTlSVXMwUkYyLTRoRkJOTDFzcnloNDhjQUR3a3FyUkNUeG5uRHdqMnl4M1JCclBpLUZUQ0lGUG15bWZpdFZIVURhX2Z3ZkY3eUlBUFdTUnVCQXZjOVpTXzJrZzlyVkFmRFJqbjJJbUROX0d4aEllV1FySE9VVHdR?oc=5",
+        "pubDate": "Fri, 29 May 2026 07:00:00 GMT",
+        "source": "csoonline.com"
       }
     ]
   }
