@@ -1,25 +1,7 @@
 {
-  "generatedAt": "2026-11-03T18:27:42.690Z",
+  "generatedAt": "2026-11-03T23:59:24.996Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
-      {
-        "title": "UK SFO strengthens guidance on corporate self-reporting for fraud, bribery, and corruption",
-        "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdTEzbGdsdTliWktLTUVkc1BBbmxBQklEd3VfQ2U0ZURUTTJ1bjNoTTRZM2x6ZUpfWkFxMlJZRmtKeDhySHNkQ1BRTGQ4bUdRd1oyZHdFVXZETmlnWnpiODVZWlpudUtCNzFjNFpZLW5Jc24wNDhrcndyejFtbmVackpPQnBvVF8zSDVXLUhpWS1FUDFUYi05T28wdmhQOVlnSm5WWnNmSnFWbVllU3pMY3VMN1hFeXMtT2YyZFhKWF8tSDlEQmRaazJvNy1VR1QydXRhZg?oc=5",
-        "pubDate": "Tue, 03 Nov 2026 02:43:11 GMT",
-        "source": "Compliance Week"
-      },
-      {
-        "title": "Fraud Operations: Financial Crime Managed Services",
-        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVEV1Ti1ETWhLS1FLbkRzbkR0c04yeHIzWjNDaGhFY2RaMm5lWnNhV3JFRDV4UzJmNlJkc1c4a3BDRTJFeEhraG9lLWdBc3BjbFRmZ05CbkhjTjFMTmFyaDJVZnN5NFlIOTdBdEF6ekVtTjZkblprS3N2WXFXQzEyZEgwdE5xZXdFLXlhWE4xWjVUXzd1cE9tMQ?oc=5",
-        "pubDate": "Fri, 31 Jul 2026 09:33:35 GMT",
-        "source": "EY"
-      },
-      {
-        "title": "New Fraud Division Flexes Might in Latest Enforcement Policy, Law360 – News",
-        "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNckZmZVVKWmdETUxpc3FCaGlVUUxYcnpHaDh6Y3dha1lDYzNoOTRPdDVoX2VhNG5qZ29vNVV4eExYX3ZwcjlRMXFVV2ZyTWJpY2VwSXhDQVFoWjlRYWNCQmhuRmJlLTRVdzBZbXI2Y3RGdFJUWHZ3d3hEQzkyb2xXeWdPQ2xHLWNYc0hIdF93Q2tBVGtwZGFOc1pwTEFDYnJQZVRoRHQ1MXVaaVAz?oc=5",
-        "pubDate": "Thu, 08 Oct 2026 07:00:00 GMT",
-        "source": "Morgan Lewis"
-      },
       {
         "title": "The implications of using AI in fraud prevention and detection",
         "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUFFTTXI0VWF6MjRMOFNKUXBVTFpkTTZOeEdHczhLUExNYW54MENXZ1k5RHVkYmY3bkY0MHN1c09VU0lWcjV2UnVoQ3ZvNUc3T2pvV29TMnJSTUVhMm42UmZFdUdRVEh6cTlUYldrUXBBWjRoX28zdW1pS1NyNXZNTjdkdlU5Q2R3SlhWd3FkUk1vTlZmV3doTkFHOXhlMUZIc0pJM0JtbVM3Z2NaVlhwZWV3TTY0RGZlamg2Zg?oc=5",
@@ -27,16 +9,22 @@
         "source": "kpmg.com"
       },
       {
-        "title": "Director addresses global anti-corruption conference",
-        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRnlDTmtuMURZZnpQdFNkUUJkUVJtVUtPblJWbldSRTB5aHhhZ242bm51eEtYbmt4NG15cndyLUZRS2Y4Rkk2aUVfNVl1d19SaHpmTVF2QmR2bDBwR0Nob0hydHlnc2VTd2hUMW9vUlowd1pzZUtXaGJseTYzdmhsRFZHTVRvSmdTLV9tN3lfQUVSLWJ0anc?oc=5",
-        "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
-        "source": "GOV.UK"
+        "title": "Anne Murray and Guy Singer join in white collar & government investigations practice",
+        "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOT2FXZUtRemNZYWZ6ODIyWG9VTVEtYjZ2a0VWVlRNTnB3OHE4NnFCRkx1YUtZNGhlSGphYlNpNmRMblplRkU4SV9iUHFtdzJaUXFvcU0zZ3JfM01FQ0twc1IyZW0xWHpaeDMwQkVEWFIwWnRfeTdMZ1BkY1psU0JGRnQwV0EtTlZxblFVekR0YmU0WU4zTktJQ2ZfT1AzTnJUam5JUF9Udm4tcnhQU2p2akJ1Uk15eTBhcW1oY3BB?oc=5",
+        "pubDate": "Thu, 25 Jun 2026 00:40:07 GMT",
+        "source": "Winston Taylor"
       },
       {
-        "title": "IRS Weighs Firing Key Fraud Investigator Over His Own Tax Return",
-        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPLWdWY1lCUmNnOW5aNjRuN1c4Qlk5NFBxSUZCUTlncGMweVRlMnl2U21hem8xM1hNcHlkR3JMVU9zN1RnYXYwYk80U2JURnRxcEswWVJPVkdZV1RmdWRGWFNmYmhwaE9ERXRNR2NGTkJYT0xfZWRESk9EZV9wS0ZDYnRxV1JvaGxzaE1VYTh1SGdIVXFSV3pqSkZPT29RTFR4dV9OcVhBbkJsYkRIZGNoMg?oc=5",
-        "pubDate": "Fri, 15 May 2026 07:00:00 GMT",
-        "source": "Bloomberg Tax"
+        "title": "Legal industry leaders in China explore compliance, ethics and trust risks in AI era",
+        "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNcEFmbnhRY2s1cVpnREpKOVVPcUtIM0ZVWVBBeFdTMUtwdlJnVHl5bHpxNzJOcVJ6M1VtQVJNanhxUG9ZSWZWRHR1OW5ySWo1VU9TNC1HN0xXcExOWDhVaVFwUG5zOExRYzRUOWpZWjFLWjloMDlDTFp6Z01LM21ncU1HZFhFcl96Q3V6cHFZX3BqRFJQdGJLSktJaFMwdV85R1dmUnhNTERTa3Z6LTJEUzkwdjBOMFlNNnhvS0Q5Z0hoOC1kV2FCbWI3ZDc?oc=5",
+        "pubDate": "Thu, 16 Jul 2026 07:00:00 GMT",
+        "source": "Wolters Kluwer"
+      },
+      {
+        "title": "Weaponized Compliance: When the Hotline Becomes a Sword",
+        "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNMHBOWXBQWl9Pd3FadTRsc3dmWE53NGNIREx3ZXFVdGdwdXdYb0NIM2lzTXJtQWxhVFRrWm5HQlUzZWZ5UGhQdHFGNW9GSVRDcnBka0FzR3B3dTF2ZTNHc3lYOXBMNWduYVlqMFg1S09DeFpCVVJ6Z2g3RE1yWllaQS1Ya1BXODhVUlY4TG9WWU5uTjVmeDFCQzJfUUxlZng2WnNoTG5UUlJXa1Z0aFpnVlo4Y3Z1a3F6WXFfNVBlNXY3NU1CRDNuV0JCLUZYV3d3UjRwRDRwWDYwRTg?oc=5",
+        "pubDate": "Mon, 15 Jun 2026 07:00:00 GMT",
+        "source": "ASIS International"
       },
       {
         "title": "Healthcare Fraud Enforcement and Compliance",
@@ -45,34 +33,46 @@
         "source": "FTI Consulting"
       },
       {
+        "title": "Director addresses global anti-corruption conference",
+        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRnlDTmtuMURZZnpQdFNkUUJkUVJtVUtPblJWbldSRTB5aHhhZ242bm51eEtYbmt4NG15cndyLUZRS2Y4Rkk2aUVfNVl1d19SaHpmTVF2QmR2bDBwR0Nob0hydHlnc2VTd2hUMW9vUlowd1pzZUtXaGJseTYzdmhsRFZHTVRvSmdTLV9tN3lfQUVSLWJ0anc?oc=5",
+        "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
+        "source": "GOV.UK"
+      },
+      {
+        "title": "Compliance and Corporate Ethics: the outlook for Brazil in 2026",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWGFvQjFhcklYVEZoRTBTdWtuX0xUWF9VMy05ekZXVFBoRWNnM3JHcmR1RlBnWlJuRWJ1SERFQUhnT2tTcmZGY2EteE9VYVVzT25CS3YxT3g4cUxWY1dvVEJCb25KRU43WEJ4ZDREWEtvcVRTZ3JtaGpCZW9xYkVXSGNFVlZQNVk?oc=5",
+        "pubDate": "Tue, 03 Feb 2026 08:00:00 GMT",
+        "source": "Mattos Filho"
+      },
+      {
+        "title": "States Push Back on the Clarity Act: What the Crypto Ethics and Enforcement Debate Means for Compliance Teams",
+        "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNVHdOUXk4b29wZFhpWGVzZEx5S1RZWFMwd3ZoVWM4cUlia2NLeG9VTnNkRnl3aWZyODUtc1hreVA0N2NrQkpQN0Rla2lmM0xrZ3BvdGRtb25qN3paSl8wemM1RWhFMmdNbTkwVThCemFNenNNQXB4MGJ3TWdBaVl6cFZhQkE5Vi1iZXlTTjlZaVdzSm9HTjcxQy04NUNLV3piV3l0dGJuQjlQU2E0RjE5LXNwYllsT2lGc0RWUXdCUW5LcW9WQXd5TmVSTG8yNEdKRkVJaFZkSlBMYVBjRG05aE9Db1NxWnMt?oc=5",
+        "pubDate": "Fri, 31 Jul 2026 07:00:00 GMT",
+        "source": "Regulatory Oversight"
+      },
+      {
+        "title": "FTI Consulting Appoints José Claudio Treviño to Lead Mexico",
+        "link": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxQMllkM093UmlpVVAxRHZpNXV4S3BGR2huOXVJQ2tXS3MxcHZkSF9QREtUR1dKRU9GeG12bmNFV19nMTBQc1RoMmt2dEpGeXRiQlVaTms5UVozZ0hNaUNHVmNWendBOVpRV0pTZkxrZFRKcU1aUDNqRjAzSkNaZ1A5dzM2R2VTdTA3MHloTmhtY3lrZ28xWGRMNy1FSHFCSHRGZTNOQnJqX3FRX21vVEV5a2NSRlRWRWlub3VRV2gzSVBCQ0c1N0VWbmdUcVRHOFp5VXpnaHNmdG1TM2tVTTBVQ29CblhxSkE0WWh4N0pQMVFWUWNCMlQ3VGE0bjBQN3Q2RlJQd0RsRFZwdE9lMkdPT01NbHpiX0VPQ1pCczhPeHhtcnJDV21hX3hXMlJHQ3M3VjRFMXYwRDlyNlpSZ3dSTmJrU01wekFIRGtkQ0NKOEhNVkxhYmxtcW5BMWs?oc=5",
+        "pubDate": "Mon, 28 Sep 2026 07:00:00 GMT",
+        "source": "GlobeNewswire"
+      },
+      {
+        "title": "Fraud Operations: Financial Crime Managed Services",
+        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVEV1Ti1ETWhLS1FLbkRzbkR0c04yeHIzWjNDaGhFY2RaMm5lWnNhV3JFRDV4UzJmNlJkc1c4a3BDRTJFeEhraG9lLWdBc3BjbFRmZ05CbkhjTjFMTmFyaDJVZnN5NFlIOTdBdEF6ekVtTjZkblprS3N2WXFXQzEyZEgwdE5xZXdFLXlhWE4xWjVUXzd1cE9tMQ?oc=5",
+        "pubDate": "Fri, 31 Jul 2026 09:33:35 GMT",
+        "source": "EY"
+      },
+      {
+        "title": "DOJ’s $1 Million Award to Antitrust Whistleblower: 4 Key Takeaways for Corporate Compliance Programs",
+        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPcy02QUVGNU85emcwS0phV19wM01TVGNCVFlVRUF2S0ZJSHJ5eG5TRGpQcXdHbkhObmFwdlhSSi0walZrTmtpOW1UUVFJdXJSYnJRMFI2LUFYNEZycGR5WVJPNEhsNEg2YkhfRE9Wdlp6VmpmRGlJUmlvNUM3UElEc3FCSm9BNW1uMWotTkoxc3hnbEN2dGxaei15aW1FNzljM0l0OENJSldPVVlMY2dVY2hJOU4xU3FxRnRzOVJLUHlvcXh6c3lacTdjU194ZGVMaG1CYWdSS2NmQ254NHB0ZFdGcw?oc=5",
+        "pubDate": "Wed, 04 Feb 2026 08:00:00 GMT",
+        "source": "Ogletree"
+      },
+      {
         "title": "WHO staff become certified fraud examiners at first-of-its-kind training",
         "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWmgzeXU2OGFuZU9PaVpzTHFuSGlIY1BnTFM2dDdydGJFYUM3QzJTdXdnbFFldXI5WTA3c21xdTNYcTVzbk9ja3RQYmYxOFAzc0phVGdOOUVlWGtiR1JkaDVnaFNfV0k0RGNLa1hRQWp0eDZ5SWJYTHpGZEVlN3F6WGJqdE42WkxTVHBNUExZZVZsMGRscGRmQmhXSTR4eTY5QmdqaGVkWjk3ZEZjRlBBYmlrdU9rSmxMa3BmY2JzWUlQUHc?oc=5",
         "pubDate": "Fri, 25 Oct 2024 07:00:00 GMT",
         "source": "World Health Organization (WHO)"
-      },
-      {
-        "title": "Internal audit’s role in AI fraud detection",
-        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVEpnUzZvR1NyZjdMVzYwejh4bm0ta1lOZ0x0SUxlbURkd2taRGE2U2VKRGRDN0VsM3BHZHlnU1M2a1V3R2NNSjVGRi1PamVBWjl0X1dHVUVhLWFuUEhrV2RVaThuNlQ4a0pYWUJDaUtWMUxxeDFHZmVhN1ZWSnpNeGpSdjhicTdjYzg1bC1xSWlyUQ?oc=5",
-        "pubDate": "Wed, 19 Feb 2025 08:00:00 GMT",
-        "source": "Wolters Kluwer"
-      },
-      {
-        "title": "Be prepared: A guide to internal and external fraud investigations",
-        "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQU24tQTRNc0dxVDlaTjdzZmtjZ1dZell0YVlManJZWVVSZ005Nzg4bHg5N0R0WkZxODJOWkUwcW4yMnpyVzR6R2F3eDFiLUlRRHBTOUo0ekp0V1BjNTZ2bTNlcHkwdkFmMVZ6U1FFTl9yOXIzUGd1Q2pkdFNvUDZhU1F1MXhhUE90MUFmT2VseEpjZnFuVmE4NkV1T25DeXZCY1I3RVQwRFhMMno0SXZyaXhkUjNQQmc1UlE?oc=5",
-        "pubDate": "Mon, 04 Dec 2023 08:00:00 GMT",
-        "source": "RSM US"
-      },
-      {
-        "title": "Fraud investigation: An overview",
-        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04bkFZSXphU01rZjhCcDBhZnNUT1d3c3BXUW1na2FldkNaY3Z5eUpfdjZzbWF2RFl1eS05R0oxTTNzWGk0UTEzZnpLcW1kem5SUFpsYTN1Mmpaci1aU0ZyTXBJbjdOT0ZxdFRVOG9ITWdsY3k1?oc=5",
-        "pubDate": "Tue, 26 Mar 2024 07:00:00 GMT",
-        "source": "Thomson Reuters Legal Solutions"
-      },
-      {
-        "title": "Strengthening Government Fraud Enforcement: Administrative False Claims Act Provides Agencies Tool to Bring Fraud Claims",
-        "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQV1JsWW9OTVZQdThwZmxQczVua09fZk8xcGZKQVVvYlVhQ1VFeEI2QTRMbnBHbUxXVV9fc2xEWUtkRlEwUTJPajh3VF80TFhYUEZCVjFNVU5FaEdpdjladVdRTGN3ZHZKMDNwZWZrMmxxS3NPUUVSR0NMM25QbEZCWlk4cXRvQWRFckhqRjh4a2tpUlg3bWtqTUswMEd0c3Jfb08xbkppdTZrZjRXNjh3MDNBS3VGSjViaHJZWTZYSlpuak82S0tCbEdQQ0FBOU9MYlBFNDJ1aHlteHN2Mmh5WmI3VWtoVnpuX3pwdGpkNkdnWXV6Tk10N01Jb3pnVl8w?oc=5",
-        "pubDate": "Tue, 01 Apr 2025 07:00:00 GMT",
-        "source": "Ogletree"
       }
     ],
     "artificial+intelligence+enterprise+automation": [
@@ -81,6 +81,12 @@
         "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNYllsS2d3YTJkREY2QUdaUkxCbC1ZUGxFcGpBS0d1NkVmV2NIZ29RVmVBQnFZd1BuTHNQTENUcXJtRm5RXzMxMUdoVm9ub3FPZDBFM0h6ZU9IVkVIWURuWXFfZENia3BtUmg2WkVpVFdGS0Q3MWdwYVhqWEZwQ3lMMUg0SDVhMjBUOVExemgxZklXNHIteFI0RmtuUTdFaUFyN05hQ2EyQzI3RUh4RWExZEtxR0RFeGl5RWJEYVhzZVh1Y0FwcmJ0RU5zRHhnZl9ldEhlNk5IemNWTEtvZ1MzQk1RczLSAeoBQVVfeXFMTzh6OUdhNU44SWF6RC1NVVVCY1ZYNEk4Nmg5bm5YeW9WMWY0eUJMUkIzeDVKLUpzOVgxdXdNc0tObzA4Nmp5cDhNV0NUczhlaWVTZGdkUGItV1VVNmo4aExPNDJVNkNoV29nUmlMMUgxekd2VXptTTFpVWxBRzZ3LXdvZ3FGZVh2cUNzUGVnUThBanlNYTRudGVsaHU1endsVE55T2ZEalZCWlRQTDB4V21lQUM1aHBNdUxUWmpIWW9QY2dYc1h1YTJoc1hzUVo5M19od3RrUGlRaGZxdXE3RGUtcmg1NHNpVEJ3?oc=5",
         "pubDate": "Mon, 02 Nov 2026 12:30:00 GMT",
         "source": "ET CIO"
+      },
+      {
+        "title": "Hackers Use ARTEX AI to Automate Enterprise Attacks at Machine Speed - Insights for Defenders",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1UN3NVTUJWdmtDbThwa01ucWVsRlowSHBGbmtncjQxR2hQRmw0UG1UU3N6aFFCZHAwLVlNYWxSRnU4QUdlam56REp6X1d5NUhnQV9aRlJ1d0VpSUFOUGlWSUFmdmRXN2liZXNkYVdmU05uVWMxMXfSAXtBVV95cUxOYjUzeVo5SmhPTWNWcG1CZDNzS2lMdFg3dzhhLW04TGtrUkUxc2Y5Q3plSExqN1VXZjBNYzNIRDhRV1A5bm5SSkNCa0JoRVpkb19CYzl0R1lycVZlRUg4YVBCZVJVQXpjUnBucjZVdWhjOURBTkx1Q0VPUUU?oc=5",
+        "pubDate": "Tue, 03 Nov 2026 13:58:16 GMT",
+        "source": "CyberSecurityNews"
       },
       {
         "title": "What is Artificial Intelligence (AI) in Business?",
@@ -141,12 +147,6 @@
         "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQM1FaWk5tbHlrWnBTclNTRnhvUDRHc1I3WEVEd1RWakkyOS1yYi1JTmdwMFRkUFdqbFNOQW02bHpfSmFsSDZFMndYSWo2aU5UeTBZV0F1allwZmwyMkMzUE9hNkh1LXQ5b1Z2LUR2bnRnN3N0LW1tU05GUzdlazloSVh5SzNxNFpIcHRZbENFcUg?oc=5",
         "pubDate": "Sat, 10 Jan 2026 05:21:42 GMT",
         "source": "Salesforce"
-      },
-      {
-        "title": "Meta enters enterprise AI race with new business agent",
-        "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQ0VmR0diTmJnejBXTlNDMTExQU9wWnh0U3ZWOXNOb0VHdTZScnFIR2w4dm8zcFNDdGk1ellycUpCUnh4NG51SVhOQ21RWGZtSlg0MHJtY0ZwU05ZbG5BR1V6b2hxeEJOTzR6VWEwZkwybWt1NC0wUl9qRHRXekM1RnM2VkxNR2M3OEtQQ0VKb3ZkUE95NEthYnR1eVZWczMtbWlMWTRyZ093dV9BamxIal91WXlhQXIyY21uU3ZR?oc=5",
-        "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
-        "source": "Reuters"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
