@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T02:29:23.661Z",
+  "generatedAt": "2026-11-05T10:56:59.666Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -119,6 +119,12 @@
         "source": "Bain & Company"
       },
       {
+        "title": "Enterprise AI Companies: Landscape Breakdown",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE81Q3hSaFRVQzNTanluNEpDZTNXbnJtNlhkVkhDOEVWanlRS2JHV0tvOWtrRWtYUGx4TmNfZ2VueXJlQ2NOc3FRaFBzLTNnVjZ2ZTk3bXp5bHh3UQ?oc=5",
+        "pubDate": "Mon, 20 Jul 2026 07:00:00 GMT",
+        "source": "AIMultiple"
+      },
+      {
         "title": "Aissist: Building the Agentic Operating Layer for Enterprise Customer Operations",
         "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1MTHJKeHFxb3FsZ1g3ZVhPT0FYbHN3dVY0MVI3T1BoN0M0b3hTeEpSMWxGc2JSZEhnV3RXekxTZGhDVjBMa1Q4STNGaTNoaXM?oc=5",
         "pubDate": "Thu, 25 Jun 2026 16:03:50 GMT",
@@ -131,22 +137,16 @@
         "source": "Salesforce"
       },
       {
-        "title": "Beyond RPA Bots: What Happens When Automation Gets a Brain?",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ybTBQMUxJcEVjVDZQTDJ3Qm1EMnZtTFdKbG9Ya2NrdHpBTXZoTE5yeUR0QXRSaFJINnVyTkY4dHN5NE1OUGp2MENKcDA2WlRtdzFKNXA0YmNjdzg2M0IzbmZNYW5tSDRYdms5Rjd5OVBSdw?oc=5",
-        "pubDate": "Wed, 04 Mar 2026 08:00:00 GMT",
-        "source": "Oracle"
-      },
-      {
-        "title": "Tessera Labs Raises $60M To Scale Multi-Agent AI Enterprise Transformation Platform",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNldFMVVyMTRSSHZHWHdpbGZzTUhXeHctQlhMQ3lDQkFNdjJzNkFZT3NtRVFKTUtUeXk4RmwwU3BBYlNpT3hnR2dxSExmelV4RFZvaU1kdDlvbzhvYWdPcXppR19Cb0llLUVoOUdYU2FwVWEzclFoTzFNZ0dsb0xOMmk2MFRqMExwSjRsbXBxTEsyTTZYeFd1LUR4QjQ3cExXdnFOdDYwdS1qME3SAasBQVVfeXFMTTZXRTFVcjE0Ukh2R1h3aWxmc01IV3h3LUJYTEN5Q0JBTXYyczZBWU9zbUVRSk1LVHl5OEZsMFNwQWJTaU94Z0dncUhMZnpVeERWb2lNZHQ5b284b2FnT3F6aUdfQm9JZS1FaDlHWFNhcFVhM3JRaE8xTWdHbG9MTjJpNjBUajBMcEo0bG1wcUxLMk02WHhXdS1EeEI0N3BMV3ZxTnQ2MHUtajBN?oc=5",
-        "pubDate": "Wed, 06 May 2026 07:00:00 GMT",
-        "source": "Ventureburn"
-      },
-      {
         "title": "OpenText Redefines Enterprise Automation And AI",
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNalhZcS1WLTQ2elRicmJkQUU1U3FteWJNLXJZTlZseHJ0YlRwYlRaTm4wNWRGZ29NbUV3VlFLLTF3VUphdXJ6MnpZUTlkUUZEa2J6dDV6UVRBeFZVM2ExS2ZzT3hzOG9MRW5qT0Z0MFpQT2ltQ3Y0TWRHUElrb283Z0FocUdLc2c?oc=5",
         "pubDate": "Mon, 24 Nov 2025 08:00:00 GMT",
         "source": "Forrester"
+      },
+      {
+        "title": "Beyond RPA Bots: What Happens When Automation Gets a Brain?",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ybTBQMUxJcEVjVDZQTDJ3Qm1EMnZtTFdKbG9Ya2NrdHpBTXZoTE5yeUR0QXRSaFJINnVyTkY4dHN5NE1OUGp2MENKcDA2WlRtdzFKNXA0YmNjdzg2M0IzbmZNYW5tSDRYdms5Rjd5OVBSdw?oc=5",
+        "pubDate": "Wed, 04 Mar 2026 08:00:00 GMT",
+        "source": "Oracle"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
@@ -199,12 +199,6 @@
         "source": "Business Today"
       },
       {
-        "title": "Corporate Bond Market in India",
-        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOcUo3bV9kcXlFZ2tmY1Ata1BhQzFKTURfRzhmVnhOVC1mR3c3U1Y5Q3MwNVl4b3JXckc3VlpETHp5dGx6c25jVVNzRkNQaTZ1a3NrbkhaQnY5Umo2NEtkbXFsWW1IakhuVnp0cGpSYU9EaU9sdy03QnNBUFhRQ01CRjhWU1pXMTVob2RUbEtMRmZuZEJPU3JaNDV2bFNqTGRhVUZ2dGpR?oc=5",
-        "pubDate": "Wed, 28 Jan 2026 08:00:00 GMT",
-        "source": "Vision IAS"
-      },
-      {
         "title": "SEBI and RBI working together on corporate bond index derivatives to deepen debt market: Tuhin Kanta Pandey",
         "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNRF94a3IybGFoUWo5WFdHSENjOWtkMWl2Mkk4YlN4S2tBc0lvdmNDRnZUVE1JNFhQTHZxRzNyZThvWkhxV29UbEVuaTlwNE5acnlkS29VMHE1Uk9BZ0l5YUp6OTA1T3A5YUFJQjZSR3p6S0NiV0pNNzNueVhSUEVlaEVILURYblA3dW1xa0FLRmZhSGxkdEIxRGI3Zzl6ZHdXOUVSSTZSaU12T3YzWU5PMmlYUG5oRy1udkthOFhKTURTSmVzcER5ckRMMEdINXd5ejVMTlhLNGt2VWFxX0w3VVpuUThKd25BUEVkcjRNUkVEXzU1V05qZ0MzZUZOdlZ60gGGAkFVX3lxTE1KU0RpNVppdGN2M1ZhVDVjYWtMeTF6dWNOaHZTYXJKQTFzS1JhMG5KQVlhbXNIZkNnNmVncV9LTWRySVZha1VoOS1qVW1BZElWTHhqazhrY2FfNGU4dnFDRzF0TzVuclppSHN4S3FRZEozODdiS1dOSl9qa1BwUlU1ZU9UbDFzazgxOUxWRTI3eWdjelRUNHNaS0xXay1sRmNZV2pIdzV1MHVsa1VPZi1OUEk0UDdGanl4aHkwTjNZMzc2a0xRYnZPYzhBUXZXNHRpdnd2aFhDTldPWGlOTUJsalZtcmJNLUJLR2tvVHhWX2NCNmdIOFlUcjBpZlp1TzlLdEs5ZHc?oc=5",
         "pubDate": "Mon, 08 Jun 2026 07:00:00 GMT",
@@ -221,6 +215,12 @@
         "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdGh5RnVJTnlhYlRQaGRxemF0SkdUZS0zcENPWHRCbkNXZUZKaHJNNGtjS3RSbXdXV0NHY0RmdGpiLW9IcUxYM0R1ZTRYRU9Ibi1JT3FyWnhmVzFKSWp4bFIxaFRSQTBCQXN3M2I4VTd6WHZTZlNORzVWZFgxTHhJNEIzU1N6bHMwcW0zRmxjVHZKTzNMNXR0MUVLVzNvcE1SYkp1cEF6QWtvcVZrc0Vwck5ETTN3bWJKR1BOdXNn?oc=5",
         "pubDate": "Thu, 12 Jun 2025 07:00:00 GMT",
         "source": "Invest India"
+      },
+      {
+        "title": "SEBI, RBI working on bond tokenisation project; pilot to test faster settlement",
+        "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOYzgtQ2pHQ2JRM19pVnVsTnBHd2taaTBoUlJVQzF2Qi1sRVNhRnVLT1lyWUxtbzNYZkQ4elVYTzNTXzZWMXNtZUJsSXExcThDZWxzSTVBeURQSjJfb3o2U2hHVHlxb2hWQlhEUUlGWWJrU2tVNkZiWWpVOXFIRlV0RmpjMkY0ci13Y1NvUENPa1l1MUNrOTAwNi04aXZJVWg1S3ZFUmRRM1ZxSjg4ZjhZMHY2cG0yMFBBSDVMNHlBMXRBMDVudmhqLXZpRTZZZmxpejVQbE5teVJrUQ?oc=5",
+        "pubDate": "Thu, 20 Aug 2026 07:00:00 GMT",
+        "source": "BusinessLine"
       }
     ],
     "data+privacy+GDPR+cybersecurity": [
@@ -241,12 +241,6 @@
         "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQ2xKakd1WVllSkhFeld4WVRBdGx6Z1BQRUdtdE1XQ1FJcnFaaHJ1WHd4b2xoNzBGZVZiem9fUzZnNHoxWDZxS0dqTmtzRU1ZMkNyY0RjMW50UllUNk9DdUxCVlVOOFM4Slp4enJZSmhtYVBKQ2tITDkzbUtoUk1HeHVPVGw2dEh0?oc=5",
         "pubDate": "Mon, 11 May 2026 07:00:00 GMT",
         "source": "IAPP"
-      },
-      {
-        "title": "Strengthening Data Protection Resilience Against Geopolitical Threats: A Call to Action",
-        "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQOU15emRuUmpQeDMxSEZLX1UwY0pvX3JPbFNwcGRmclQ3T3hOZGZ0ZHE4X3o4MU8tWEs2QTh4d0t0MWN5TVc0amxqTmtVd1h1R1Fya3g0RmJXMXVNZHdVbFhMZEQ0LVNjY2lMdm4waHZsZGxsNDg0dmlKaFVTNnE1U1Y2UGs1SE85Nmg4U2hwMUlQNmFYQW14aW96Yzl5dw?oc=5",
-        "pubDate": "Wed, 24 Jun 2026 07:00:00 GMT",
-        "source": "Verfassungsblog"
       },
       {
         "title": "What Is GDPR?",
@@ -295,6 +289,12 @@
         "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWGN1X3RqU1JfRGMzTDdSZnRYMnphOWltMHRnNEdnMzZXU09VODdwYW1oVkUyaTg1SXdvdDRHOGg0ejZmU1ZTNkRSaWJRNzJ6Zm9sQnNRbDFnTl9janl1ZEZ2UTJNY1h3VjJTcm5ITHZ5SkFtLVJRblRUUWhKNnFnbDVqXzZ1UUs4clpqaUhtTFAxTGZ3c29FZXVLMUR5cnhIczJFUXlLSC1Qb0pnQ28wcEk0emY0X2s?oc=5",
         "pubDate": "Mon, 20 Jul 2026 07:00:00 GMT",
         "source": "ICLG"
+      },
+      {
+        "title": "Data privacy in 2025: Key trends and challenges ahead",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOFhlRDNmdi1POWg5Z1A4VkhiNzQ5bmNsNmRMaWFaWlJncWEtZ3FtUV9TZURYRExLbE5rYTlqaUNKamZoMmVVeDRtVFBac1NyTTJJUmVGQkNfUTVGZ3g0U2RJMEUwaUZCQVROdTRQT2k1QjlVY0pTemJhaUNHQnBCaDVKVlplTWxZNmFvaUZ6YWhvQ1loNWltajFobk95bWZNMGpEQzZxcmo1dw?oc=5",
+        "pubDate": "Thu, 23 Jan 2025 08:00:00 GMT",
+        "source": "WeLiveSecurity"
       }
     ]
   }
