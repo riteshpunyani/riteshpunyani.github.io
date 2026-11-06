@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T07:56:15.881Z",
+  "generatedAt": "2026-11-06T15:55:45.103Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -77,6 +77,12 @@
     ],
     "artificial+intelligence+enterprise+automation": [
       {
+        "title": "Top 10 Best Artificial Intelligence Companies In India In 2027",
+        "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOX3ctQms1dXhFQmRJaEZMaXFsWmhINER4WnpUYVI1aG9vd1psM3cwUmZZVXpOOGJJSnlnaURmTmtIUU5fRUVJZFlYQXdFMEVRTDNIYjJCZDBGR2V1YmJuZXpXb1FzWWxqZ2hWTk5jaWlzRDNzYVFxTkV1QWd2QkhKYUw3RUhLSHRhSWg5T2hGN0FiV2tqUFVaZ1k1S3oyQXc?oc=5",
+        "pubDate": "Fri, 06 Nov 2026 07:43:22 GMT",
+        "source": "Inventiva"
+      },
+      {
         "title": "What is Artificial Intelligence (AI) in Business?",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5VNG1NRDgxaXVLSjZyZlowN210di03LXN6NnUwYWd2RDJmWFdIOHk1WlJiRjVIdUo1NllIMFo3OXJnTGZ2aTMzbUJCOG5lR2stZ2JlZ0xGZlpWWXlRRE5Ndy1Eb2JERFhFbTJWX2lObGxna2s?oc=5",
         "pubDate": "Fri, 05 Jun 2026 07:00:00 GMT",
@@ -141,12 +147,6 @@
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNalhZcS1WLTQ2elRicmJkQUU1U3FteWJNLXJZTlZseHJ0YlRwYlRaTm4wNWRGZ29NbUV3VlFLLTF3VUphdXJ6MnpZUTlkUUZEa2J6dDV6UVRBeFZVM2ExS2ZzT3hzOG9MRW5qT0Z0MFpQT2ltQ3Y0TWRHUElrb283Z0FocUdLc2c?oc=5",
         "pubDate": "Mon, 24 Nov 2025 08:00:00 GMT",
         "source": "Forrester"
-      },
-      {
-        "title": "AI-Powered Business Process Automation: When to Automate vs. Augment",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5CQlVGSENVcTE2QmZLTkhMaV9meVV0WEhDUzk5djVyMUMtRGFQamI0OGJoN3ZfOG9XWHJpRkgxWnRSSDNMMUFKTm1iUVB4cl8zUkdWclB5X0F4bG9QTnVUY19EbkZYc1YtLTdBag?oc=5",
-        "pubDate": "Tue, 20 Jan 2026 08:00:00 GMT",
-        "source": "Harvard Business School Online"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
@@ -227,7 +227,7 @@
       {
         "title": "Digital rulebook: Council agrees position to simplify data protection, privacy and cyber reporting rules",
         "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNRWRZX3pMLTUwSXFaYzRRZnNzRTRsSURBalpjVXpKcXNfRFhuOWI5LWo0R1dfeFFOYm90VVZNdDFqQm43ZF9qamwxbUpjaDNnMUtIOGxxU1BkZ3JfMU84dXM5LUpWaXdhZmFMUmtFSWFPVFl6SFlvZ3RVU2tta1ptWDVWNVVIYk5ILWh6Z3N4TjdPWWd2MFJUNDl0SUUtUWRwMjExQS1fSk9WZVZyck5LcjdjT0JXcWtGdXBiMk5fc3ExYVpOVzZRRU1IMzROc1EyeHhjU0NiRWUyUlZYSlR2dlhULTdaSk9tcUN4eUFiVjVadExkQWpQZzFkcmo3TXM?oc=5",
-        "pubDate": "Wed, 21 Oct 2026 07:00:00 GMT",
+        "pubDate": "Thu, 22 Oct 2026 07:00:00 GMT",
         "source": "Council, European Union"
       },
       {
@@ -241,6 +241,12 @@
         "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQ2xKakd1WVllSkhFeld4WVRBdGx6Z1BQRUdtdE1XQ1FJcnFaaHJ1WHd4b2xoNzBGZVZiem9fUzZnNHoxWDZxS0dqTmtzRU1ZMkNyY0RjMW50UllUNk9DdUxCVlVOOFM4Slp4enJZSmhtYVBKQ2tITDkzbUtoUk1HeHVPVGw2dEh0?oc=5",
         "pubDate": "Mon, 11 May 2026 07:00:00 GMT",
         "source": "IAPP"
+      },
+      {
+        "title": "Data Economy, Privacy and Cybersecurity Newsletter - April 2026",
+        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUElRT0dTX2hKZDRHeXlCSUZ2dG9tXzFiODJ6SUVqaGdmak1sRm9oLWMwQ3Nyb05XQkxUR0dlY1M5QzdGZWxYdms4eVRoSi1URHVCSGlzS3VzTjdUUmxUVDNSQk9Rb21FVEJsV0paYzM3VloxckN4WW5DVUw1QUk0cGhvUzlVbW5DSW4tamZ3YjFHTG0zcUNQRHAyeWg?oc=5",
+        "pubDate": "Tue, 28 Apr 2026 07:00:00 GMT",
+        "source": "Garrigues"
       },
       {
         "title": "What Is GDPR?",
@@ -289,12 +295,6 @@
         "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS1ZrV3dNUGZXRUxkbjR1dXpNdFMxenBOWTROUzMwYUhjdzJfbzlKU1V3bzI0ZlBSbE93QVcwSkJLOUpEYnB2V0NLVC1NNGxBZ1ZjWjQzOF9iN2daODNRUkc2S05nR0NrclVhT1NtcnM2LUhNb3cyTjZhZUp2R0s4MmRlY3RlNlM1QnJTakNIU0ZSLVdsWWduRU9xZ1Q2TFplbGx2cHZoRlJPdw?oc=5",
         "pubDate": "Wed, 19 Nov 2025 08:00:00 GMT",
         "source": "University of Miami News"
-      },
-      {
-        "title": "1 The Rapid Evolution of Data Protection Laws - Data Protection Laws and Regulations 2026",
-        "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWGN1X3RqU1JfRGMzTDdSZnRYMnphOWltMHRnNEdnMzZXU09VODdwYW1oVkUyaTg1SXdvdDRHOGg0ejZmU1ZTNkRSaWJRNzJ6Zm9sQnNRbDFnTl9janl1ZEZ2UTJNY1h3VjJTcm5ITHZ5SkFtLVJRblRUUWhKNnFnbDVqXzZ1UUs4clpqaUhtTFAxTGZ3c29FZXVLMUR5cnhIczJFUXlLSC1Qb0pnQ28wcEk0emY0X2s?oc=5",
-        "pubDate": "Mon, 20 Jul 2026 07:00:00 GMT",
-        "source": "ICLG"
       }
     ]
   }
