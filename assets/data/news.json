@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T20:14:39.241Z",
+  "generatedAt": "2026-11-07T23:40:31.604Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -113,12 +113,6 @@
         "source": "Amazon Web Services (AWS)"
       },
       {
-        "title": "Your AI Budget Is Growing. Your Returns Aren't. Here's Why.",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQeTdIaW9nWk5ybUVZZGpCdGhOWGlkeVRCVWVONnBtQVNIYU9kLU9kUzMyUGVSRlluOFZQQ3I2TGFtNGRrOXpkWnlZOGtDdldfT2NQcDRUY3lYbU93WXNwU09ibXhUT2J4VjhDTDdWS29lcEJ0WVVkVDU4eGg1MDRpOXBwcFp0Y0l6bTAxOTZ3?oc=5",
-        "pubDate": "Mon, 01 Jun 2026 07:00:00 GMT",
-        "source": "Bain & Company"
-      },
-      {
         "title": "Aissist: Building the Agentic Operating Layer for Enterprise Customer Operations",
         "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1MTHJKeHFxb3FsZ1g3ZVhPT0FYbHN3dVY0MVI3T1BoN0M0b3hTeEpSMWxGc2JSZEhnV3RXekxTZGhDVjBMa1Q4STNGaTNoaXM?oc=5",
         "pubDate": "Thu, 25 Jun 2026 16:03:50 GMT",
@@ -147,6 +141,12 @@
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5CQlVGSENVcTE2QmZLTkhMaV9meVV0WEhDUzk5djVyMUMtRGFQamI0OGJoN3ZfOG9XWHJpRkgxWnRSSDNMMUFKTm1iUVB4cl8zUkdWclB5X0F4bG9QTnVUY19EbkZYc1YtLTdBag?oc=5",
         "pubDate": "Tue, 20 Jan 2026 08:00:00 GMT",
         "source": "Harvard Business School Online"
+      },
+      {
+        "title": "C3.AI in talks to merge with software company Automation Anywhere, The Information reports",
+        "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOUlydFFnLVlCeE5TYWQwZUl1SGpFckx6QWlKeTNrZVpreDhNZVpPY0M4U0xDYjlCay1ibFRRb3ZHOHdMX3NMOWE3RFNIcHR2a0FqNkhLNVlXQUprUG5yNldBTVk4eTE5UDd0ZXUxWkt5RkFYWFdWaExtQ1U2VDBmZXA3VHhYVm04TmVudElBeTRpX3QyemxZdjd5dHdUc0ZDVXhZWnRpczY0cl9HaHdoX3BHM28?oc=5",
+        "pubDate": "Tue, 27 Jan 2026 08:00:00 GMT",
+        "source": "Reuters"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
