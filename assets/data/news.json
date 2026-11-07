@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T08:47:41.361Z",
+  "generatedAt": "2026-11-07T15:40:40.488Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -77,12 +77,6 @@
     ],
     "artificial+intelligence+enterprise+automation": [
       {
-        "title": "Top 10 Best Artificial Intelligence Companies In India In 2027",
-        "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOX3ctQms1dXhFQmRJaEZMaXFsWmhINER4WnpUYVI1aG9vd1psM3cwUmZZVXpOOGJJSnlnaURmTmtIUU5fRUVJZFlYQXdFMEVRTDNIYjJCZDBGR2V1YmJuZXpXb1FzWWxqZ2hWTk5jaWlzRDNzYVFxTkV1QWd2QkhKYUw3RUhLSHRhSWg5T2hGN0FiV2tqUFVaZ1k1S3oyQXc?oc=5",
-        "pubDate": "Fri, 06 Nov 2026 07:43:22 GMT",
-        "source": "Inventiva"
-      },
-      {
         "title": "What is Artificial Intelligence (AI) in Business?",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5VNG1NRDgxaXVLSjZyZlowN210di03LXN6NnUwYWd2RDJmWFdIOHk1WlJiRjVIdUo1NllIMFo3OXJnTGZ2aTMzbUJCOG5lR2stZ2JlZ0xGZlpWWXlRRE5Ndy1Eb2JERFhFbTJWX2lObGxna2s?oc=5",
         "pubDate": "Fri, 05 Jun 2026 07:00:00 GMT",
@@ -117,6 +111,12 @@
         "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPS04tVHpfaERBM2VWUDNXZ3FqdHlyQ2dKUGltLWRqbndLMVFHbl9DdnN4aGluR2tKSG9yc2NKOEdKbnJUaE5UZTBBeTcxbHJYVk51LVdFbFZNMFh6VmZUUTFXUllEaFZoZDBzMl84aDJ2MGJSYW9XTElpMDdBemF2STZuWE9oUDd6ZVJ2UmdWVm12LUdwMXE3bi15ZDZFVWk5RllHd0ZsNkdYOHRKWGFnM0Jsa2xlZw?oc=5",
         "pubDate": "Wed, 07 Oct 2026 07:00:00 GMT",
         "source": "Amazon Web Services (AWS)"
+      },
+      {
+        "title": "Your AI Budget Is Growing. Your Returns Aren't. Here's Why.",
+        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQeTdIaW9nWk5ybUVZZGpCdGhOWGlkeVRCVWVONnBtQVNIYU9kLU9kUzMyUGVSRlluOFZQQ3I2TGFtNGRrOXpkWnlZOGtDdldfT2NQcDRUY3lYbU93WXNwU09ibXhUT2J4VjhDTDdWS29lcEJ0WVVkVDU4eGg1MDRpOXBwcFp0Y0l6bTAxOTZ3?oc=5",
+        "pubDate": "Mon, 01 Jun 2026 07:00:00 GMT",
+        "source": "Bain & Company"
       },
       {
         "title": "Aissist: Building the Agentic Operating Layer for Enterprise Customer Operations",
