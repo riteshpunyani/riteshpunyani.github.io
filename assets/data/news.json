@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T01:56:55.075Z",
+  "generatedAt": "2026-11-07T08:47:41.361Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -119,12 +119,6 @@
         "source": "Amazon Web Services (AWS)"
       },
       {
-        "title": "Your AI Budget Is Growing. Your Returns Aren't. Here's Why.",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQeTdIaW9nWk5ybUVZZGpCdGhOWGlkeVRCVWVONnBtQVNIYU9kLU9kUzMyUGVSRlluOFZQQ3I2TGFtNGRrOXpkWnlZOGtDdldfT2NQcDRUY3lYbU93WXNwU09ibXhUT2J4VjhDTDdWS29lcEJ0WVVkVDU4eGg1MDRpOXBwcFp0Y0l6bTAxOTZ3?oc=5",
-        "pubDate": "Mon, 01 Jun 2026 07:00:00 GMT",
-        "source": "Bain & Company"
-      },
-      {
         "title": "Aissist: Building the Agentic Operating Layer for Enterprise Customer Operations",
         "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1MTHJKeHFxb3FsZ1g3ZVhPT0FYbHN3dVY0MVI3T1BoN0M0b3hTeEpSMWxGc2JSZEhnV3RXekxTZGhDVjBMa1Q4STNGaTNoaXM?oc=5",
         "pubDate": "Thu, 25 Jun 2026 16:03:50 GMT",
@@ -147,6 +141,12 @@
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNalhZcS1WLTQ2elRicmJkQUU1U3FteWJNLXJZTlZseHJ0YlRwYlRaTm4wNWRGZ29NbUV3VlFLLTF3VUphdXJ6MnpZUTlkUUZEa2J6dDV6UVRBeFZVM2ExS2ZzT3hzOG9MRW5qT0Z0MFpQT2ltQ3Y0TWRHUElrb283Z0FocUdLc2c?oc=5",
         "pubDate": "Mon, 24 Nov 2025 08:00:00 GMT",
         "source": "Forrester"
+      },
+      {
+        "title": "AI-Powered Business Process Automation: When to Automate vs. Augment",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5CQlVGSENVcTE2QmZLTkhMaV9meVV0WEhDUzk5djVyMUMtRGFQamI0OGJoN3ZfOG9XWHJpRkgxWnRSSDNMMUFKTm1iUVB4cl8zUkdWclB5X0F4bG9QTnVUY19EbkZYc1YtLTdBag?oc=5",
+        "pubDate": "Tue, 20 Jan 2026 08:00:00 GMT",
+        "source": "Harvard Business School Online"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
