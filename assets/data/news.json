@@ -1,7 +1,13 @@
 {
-  "generatedAt": "2026-11-08T18:50:01.164Z",
+  "generatedAt": "2026-11-08T22:53:25.661Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
+      {
+        "title": "The implications of using AI in fraud prevention and detection",
+        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUFFTTXI0VWF6MjRMOFNKUXBVTFpkTTZOeEdHczhLUExNYW54MENXZ1k5RHVkYmY3bkY0MHN1c09VU0lWcjV2UnVoQ3ZvNUc3T2pvV29TMnJSTUVhMm42UmZFdUdRVEh6cTlUYldrUXBBWjRoX28zdW1pS1NyNXZNTjdkdlU5Q2R3SlhWd3FkUk1vTlZmV3doTkFHOXhlMUZIc0pJM0JtbVM3Z2NaVlhwZWV3TTY0RGZlamg2Zg?oc=5",
+        "pubDate": "Thu, 21 May 2026 17:27:58 GMT",
+        "source": "kpmg.com"
+      },
       {
         "title": "Fraud Operations: Financial Crime Managed Services",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVEV1Ti1ETWhLS1FLbkRzbkR0c04yeHIzWjNDaGhFY2RaMm5lWnNhV3JFRDV4UzJmNlJkc1c4a3BDRTJFeEhraG9lLWdBc3BjbFRmZ05CbkhjTjFMTmFyaDJVZnN5NFlIOTdBdEF6ekVtTjZkblprS3N2WXFXQzEyZEgwdE5xZXdFLXlhWE4xWjVUXzd1cE9tMQ?oc=5",
@@ -9,10 +15,10 @@
         "source": "EY"
       },
       {
-        "title": "The implications of using AI in fraud prevention and detection",
-        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUFFTTXI0VWF6MjRMOFNKUXBVTFpkTTZOeEdHczhLUExNYW54MENXZ1k5RHVkYmY3bkY0MHN1c09VU0lWcjV2UnVoQ3ZvNUc3T2pvV29TMnJSTUVhMm42UmZFdUdRVEh6cTlUYldrUXBBWjRoX28zdW1pS1NyNXZNTjdkdlU5Q2R3SlhWd3FkUk1vTlZmV3doTkFHOXhlMUZIc0pJM0JtbVM3Z2NaVlhwZWV3TTY0RGZlamg2Zg?oc=5",
-        "pubDate": "Thu, 21 May 2026 17:27:58 GMT",
-        "source": "kpmg.com"
+        "title": "Healthcare Fraud Enforcement and Compliance",
+        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSmo4emViVnVrM3dtbXZpdF9xekxSZnoyRnRtMkdBdmQxMHZoWkx1Q0lWc3AtTVFtS29VZ2FuSGd2V0xUa05sRzZmb1lHcWNZMnNJeWNXV0dmSUc3NmZkNE9iMi0tWnQtbm9CTWg3SzAzdXg3M0lWTDN5V1g4c1pqYnY4YjVjWXJYcG1Qb0NWV0Q0d01CMWlveTRR?oc=5",
+        "pubDate": "Fri, 06 Feb 2026 08:00:00 GMT",
+        "source": "FTI Consulting"
       },
       {
         "title": "New Fraud Division Flexes Might in Latest Enforcement Policy, Law360 – News",
@@ -31,12 +37,6 @@
         "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPLWdWY1lCUmNnOW5aNjRuN1c4Qlk5NFBxSUZCUTlncGMweVRlMnl2U21hem8xM1hNcHlkR3JMVU9zN1RnYXYwYk80U2JURnRxcEswWVJPVkdZV1RmdWRGWFNmYmhwaE9ERXRNR2NGTkJYT0xfZWRESk9EZV9wS0ZDYnRxV1JvaGxzaE1VYTh1SGdIVXFSV3pqSkZPT29RTFR4dV9OcVhBbkJsYkRIZGNoMg?oc=5",
         "pubDate": "Fri, 15 May 2026 07:00:00 GMT",
         "source": "Bloomberg Tax"
-      },
-      {
-        "title": "Healthcare Fraud Enforcement and Compliance",
-        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSmo4emViVnVrM3dtbXZpdF9xekxSZnoyRnRtMkdBdmQxMHZoWkx1Q0lWc3AtTVFtS29VZ2FuSGd2V0xUa05sRzZmb1lHcWNZMnNJeWNXV0dmSUc3NmZkNE9iMi0tWnQtbm9CTWg3SzAzdXg3M0lWTDN5V1g4c1pqYnY4YjVjWXJYcG1Qb0NWV0Q0d01CMWlveTRR?oc=5",
-        "pubDate": "Fri, 06 Feb 2026 08:00:00 GMT",
-        "source": "FTI Consulting"
       },
       {
         "title": "WHO staff become certified fraud examiners at first-of-its-kind training",
@@ -151,12 +151,6 @@
     ],
     "SEBI+RBI+corporate+governance+India": [
       {
-        "title": "SEBI, RBI launch ‘Demat 2.0’ pilot for corporate bond tokenisation",
-        "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUjVGYjdIcHZOVzNBRmpCenVBU0JzalJBbHEwSXRrakc1WWMwOUlWUzNFdHdNbmVReTBrNWIyODRqeEFSY0w5S2hEN3FjYkJ6TGVVZ0VCZ2dJeExmNDZ3ZmMxY0F3NnhhU1hJalNPNnFTcW9vckxackczZXdKMTBHb2dEOXluS2dkbFhob1o5MTlEQkdQSFAyaVM5emgyYkJXN05IdVAtelhlVDBLVEJSUE9ZY1J5M3JUN3dmaXBnZTZvWGhGNEl6aHltWllDMmU5Z2fSAdgBQVVfeXFMTzlfQlppRHVFeVMxQkYxODlSbklma3VIRUttYVBERV9TV2FUT3JxLXJTNTNzTjZPZHpBU3RzNEpSYzJGVDJsUkJjcHR0ZlpwS2NvMWw5dVIxTnhNT3lYU0dwR3oxcTRGMUNaSnpGU3c1TkxxSjdIaElVOFFaUktnRUlrTE9JOXFTQlBkME83aEdUQnJaczI1VXhZOUM4UjdtaHhMRXFCYWY5NXhBU1IyYmI3cVc1U0YtN3QxaFVOTEI1OXhRbzhqYUFpM2tsMEpUemFoOGVvRlZw?oc=5",
-        "pubDate": "Thu, 10 Sep 2026 07:00:00 GMT",
-        "source": "The Indian Express"
-      },
-      {
         "title": "SEBI’s Regulatory Overhaul - Strengthening Corporate Governance and Deepening Capital Markets",
         "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNWHpNTU9ia01wSUxvZVYzbUF3WktLQW5JMFBLQWVyLUp5dUtudlpWU01qb0pKaDhlcFI2N2JOeDVwVEZxWExiSW1BQnROQ0hTR0hXNjhzWEgya1A5UDA4eUF3cExVWWx2OGpZdm4yeDc3cW9mU0JXZGdrV3RrR2dPV3ZDWXFmWlkzNDMzZmY4V0M3cTlCSzQ0YlExdE1uQzYtaFlGR3h5anJXNTZCSVNReWZWVjJmcHA5UWpKWlZBd3FrcXhiVllzeTBHbjJma2M?oc=5",
         "pubDate": "Sat, 13 Jun 2026 07:00:00 GMT",
@@ -221,6 +215,12 @@
         "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdGh5RnVJTnlhYlRQaGRxemF0SkdUZS0zcENPWHRCbkNXZUZKaHJNNGtjS3RSbXdXV0NHY0RmdGpiLW9IcUxYM0R1ZTRYRU9Ibi1JT3FyWnhmVzFKSWp4bFIxaFRSQTBCQXN3M2I4VTd6WHZTZlNORzVWZFgxTHhJNEIzU1N6bHMwcW0zRmxjVHZKTzNMNXR0MUVLVzNvcE1SYkp1cEF6QWtvcVZrc0Vwck5ETTN3bWJKR1BOdXNn?oc=5",
         "pubDate": "Thu, 12 Jun 2025 07:00:00 GMT",
         "source": "Invest India"
+      },
+      {
+        "title": "ETLegalWorld webinar on workforce security amid DPDPA, RBI, SEBI norms",
+        "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNaXhKS0lMTllpZjIzX0J2WGFBMERkWUhNeDc5X3lBQWtFOElRdUdVemtkM2hvQ3VKd1ZRcmpwZ3NzXzdGdkc5ZUdzcnU1Z0EzaTJXeWJJWXlFX1hLOFFKQW56YVdqR0tFbUhPRWR3dGlTYlVMY0x2ZXRNdGZrVVpkRk5MdkF5MnJhRzBXX2J2dnBHSFZuMGtXTWdsNUdZYjRmdVEyZndwcUFxS1dzVDE2WFc5LTRfRm1GVFB5Vkg0M3ZybHpaaTJZMFFrRHJjeGFJWW4wcUUydnFxM1JoMFZRa0tUZzM3VnBpSkRjdzh1TVNYeVJrMllYZGc2ckvSAYACQVVfeXFMUEpBczNqUWRfbWVQdTRTUDVQMEJ3QTZJNE9wdjY0MVBTb1p4b3U2cUtJV082czJmNmg4eExTaHJxTEtxYnNId0VESGx5SG1yaDdSQVV3MmVweGV3MXBpSE9uU1dPOGV0ZGtHZnM0Z3hvaU9UMFpERzBxcXNhY3JoVld6Z2ZEXzVJXzA3R3NIdFhSQ3VxaXJYTnpRYzZLOFg5cEstSUlyM3UyOV92d2xBRVg5d0staWJERmhKcng3TENWMGZrYzUxZlpjeFY1Yk9ubEFnX3NUakJ0T2ZwcmthSUg3LUNhNDN3UlZfejZBNl81THgySVdfeW5lb09sR0NpSw?oc=5",
+        "pubDate": "Tue, 14 Jul 2026 07:00:00 GMT",
+        "source": "ETLegalWorld.com"
       }
     ],
     "data+privacy+GDPR+cybersecurity": [
@@ -249,16 +249,16 @@
         "source": "Coursera"
       },
       {
-        "title": "What to Watch in 2026: Key EU Privacy & Cybersecurity Developments",
-        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWHg5cTU3c0txdmhXeU9TS0owdEVmRDFXY0Rlc0h6T3dTaTFXTU0zTWFEOG9penpOVGhTUjNMVk5MWGhTUDZNMDY3d0pKQlVwRThGUV9HOHBWSndOdGdDblZBMHFUaE54ZzZrUzdjd1M3dzRTM0Nta0hmRGRWR3ZQeldmVEV5Z3pld0UyX250dWZxTU5iZll2ODY4cWUyNGRnSjJmTm9SN29Kcnlwck9HNQ?oc=5",
-        "pubDate": "Tue, 27 Jan 2026 08:00:00 GMT",
-        "source": "Inside Privacy"
-      },
-      {
         "title": "10 Best GDPR Compliance Security Companies – 2026",
         "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE94dk1lamdyVWUtYzFPTzFLWG5mbjJ4MDBxcnBTVUFITmV1WVNPN2hVZG0tekV1SmQyUUlUbXVtUVE4YnJ0d2l2RDRRakFPSVFRZkhLWTUxc21uUFJqUVNfNjN4NnNxQQ?oc=5",
         "pubDate": "Wed, 14 Jan 2026 08:00:00 GMT",
         "source": "CyberSecurityNews"
+      },
+      {
+        "title": "What to Watch in 2026: Key EU Privacy & Cybersecurity Developments",
+        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWHg5cTU3c0txdmhXeU9TS0owdEVmRDFXY0Rlc0h6T3dTaTFXTU0zTWFEOG9penpOVGhTUjNMVk5MWGhTUDZNMDY3d0pKQlVwRThGUV9HOHBWSndOdGdDblZBMHFUaE54ZzZrUzdjd1M3dzRTM0Nta0hmRGRWR3ZQeldmVEV5Z3pld0UyX250dWZxTU5iZll2ODY4cWUyNGRnSjJmTm9SN29Kcnlwck9HNQ?oc=5",
+        "pubDate": "Tue, 27 Jan 2026 08:00:00 GMT",
+        "source": "Inside Privacy"
       },
       {
         "title": "Data, privacy, and cybersecurity developments we are watching in 2026",
