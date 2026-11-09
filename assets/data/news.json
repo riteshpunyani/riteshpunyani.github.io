@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-11-09T02:39:51.657Z",
+  "generatedAt": "2026-11-09T11:32:38.732Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
-      {
-        "title": "The implications of using AI in fraud prevention and detection",
-        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUFFTTXI0VWF6MjRMOFNKUXBVTFpkTTZOeEdHczhLUExNYW54MENXZ1k5RHVkYmY3bkY0MHN1c09VU0lWcjV2UnVoQ3ZvNUc3T2pvV29TMnJSTUVhMm42UmZFdUdRVEh6cTlUYldrUXBBWjRoX28zdW1pS1NyNXZNTjdkdlU5Q2R3SlhWd3FkUk1vTlZmV3doTkFHOXhlMUZIc0pJM0JtbVM3Z2NaVlhwZWV3TTY0RGZlamg2Zg?oc=5",
-        "pubDate": "Thu, 21 May 2026 17:27:58 GMT",
-        "source": "kpmg.com"
-      },
       {
         "title": "Fraud Operations: Financial Crime Managed Services",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVEV1Ti1ETWhLS1FLbkRzbkR0c04yeHIzWjNDaGhFY2RaMm5lWnNhV3JFRDV4UzJmNlJkc1c4a3BDRTJFeEhraG9lLWdBc3BjbFRmZ05CbkhjTjFMTmFyaDJVZnN5NFlIOTdBdEF6ekVtTjZkblprS3N2WXFXQzEyZEgwdE5xZXdFLXlhWE4xWjVUXzd1cE9tMQ?oc=5",
@@ -15,10 +9,10 @@
         "source": "EY"
       },
       {
-        "title": "Healthcare Fraud Enforcement and Compliance",
-        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSmo4emViVnVrM3dtbXZpdF9xekxSZnoyRnRtMkdBdmQxMHZoWkx1Q0lWc3AtTVFtS29VZ2FuSGd2V0xUa05sRzZmb1lHcWNZMnNJeWNXV0dmSUc3NmZkNE9iMi0tWnQtbm9CTWg3SzAzdXg3M0lWTDN5V1g4c1pqYnY4YjVjWXJYcG1Qb0NWV0Q0d01CMWlveTRR?oc=5",
-        "pubDate": "Fri, 06 Feb 2026 08:00:00 GMT",
-        "source": "FTI Consulting"
+        "title": "The implications of using AI in fraud prevention and detection",
+        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUFFTTXI0VWF6MjRMOFNKUXBVTFpkTTZOeEdHczhLUExNYW54MENXZ1k5RHVkYmY3bkY0MHN1c09VU0lWcjV2UnVoQ3ZvNUc3T2pvV29TMnJSTUVhMm42UmZFdUdRVEh6cTlUYldrUXBBWjRoX28zdW1pS1NyNXZNTjdkdlU5Q2R3SlhWd3FkUk1vTlZmV3doTkFHOXhlMUZIc0pJM0JtbVM3Z2NaVlhwZWV3TTY0RGZlamg2Zg?oc=5",
+        "pubDate": "Thu, 21 May 2026 17:27:58 GMT",
+        "source": "kpmg.com"
       },
       {
         "title": "New Fraud Division Flexes Might in Latest Enforcement Policy, Law360 – News",
@@ -37,6 +31,12 @@
         "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPLWdWY1lCUmNnOW5aNjRuN1c4Qlk5NFBxSUZCUTlncGMweVRlMnl2U21hem8xM1hNcHlkR3JMVU9zN1RnYXYwYk80U2JURnRxcEswWVJPVkdZV1RmdWRGWFNmYmhwaE9ERXRNR2NGTkJYT0xfZWRESk9EZV9wS0ZDYnRxV1JvaGxzaE1VYTh1SGdIVXFSV3pqSkZPT29RTFR4dV9OcVhBbkJsYkRIZGNoMg?oc=5",
         "pubDate": "Fri, 15 May 2026 07:00:00 GMT",
         "source": "Bloomberg Tax"
+      },
+      {
+        "title": "Healthcare Fraud Enforcement and Compliance",
+        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSmo4emViVnVrM3dtbXZpdF9xekxSZnoyRnRtMkdBdmQxMHZoWkx1Q0lWc3AtTVFtS29VZ2FuSGd2V0xUa05sRzZmb1lHcWNZMnNJeWNXV0dmSUc3NmZkNE9iMi0tWnQtbm9CTWg3SzAzdXg3M0lWTDN5V1g4c1pqYnY4YjVjWXJYcG1Qb0NWV0Q0d01CMWlveTRR?oc=5",
+        "pubDate": "Fri, 06 Feb 2026 08:00:00 GMT",
+        "source": "FTI Consulting"
       },
       {
         "title": "WHO staff become certified fraud examiners at first-of-its-kind training",
@@ -177,7 +177,7 @@
       {
         "title": "SEBI, RBI Launch ‘Demat 2.0’ Pilot for Tokenised Corporate Bonds, 3 Issuers Raise ₹1,025 Crore",
         "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZDJyUVNEV3A1ejJlOVhLLUQtUEFCN0R6cDNoSHR5QWNBamF0YkoxX1RZLTFDQndzX240QkUzUG1EM2NnUEVBTnhtNjVUaDdMMzkwdEJyNFI4MjdPWWRGLV9rN1J6Y3lKSzVuNjZHdEp4eWJ2aF9ncHBlZWZ5RDE3VEd4b2dHLTctSGxkbUwzbFpmNTNtNjl0Y3hKbml3MG5PbkRqdWhHZ1IySi1aQ3lwZWp2RklCRWo2UDFkQjFoZ1E5dGo1Q2dnLWE5VQ?oc=5",
-        "pubDate": "Fri, 11 Sep 2026 06:08:34 GMT",
+        "pubDate": "Fri, 11 Sep 2026 07:00:00 GMT",
         "source": "Moneylife"
       },
       {
