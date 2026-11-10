@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T22:22:20.826Z",
+  "generatedAt": "2026-11-10T04:38:21.803Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -77,6 +77,12 @@
     ],
     "artificial+intelligence+enterprise+automation": [
       {
+        "title": "Qantas Outsources 850 IT Jobs to India in AI-Driven Shift",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTUdRQnFERUU3bTA1aHI4RHNJSDBldTZDaE5QbXNLNGNXbmpoNndLMnhkVUpUdVBQZE56TnkzcWpQS1lOY0lMSkcwdDM2eHpxNmlDMWlLMVNaVE5tdUpLUmY3S05ady1sT0FHSVpwd0doUUZvc3hzYmtzRERkNllndkxVVElBQ3Zya0NvT0lhU3AyMmNa?oc=5",
+        "pubDate": "Tue, 10 Nov 2026 02:34:35 GMT",
+        "source": "The Tech Buzz"
+      },
+      {
         "title": "What is Artificial Intelligence (AI) in Business?",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5VNG1NRDgxaXVLSjZyZlowN210di03LXN6NnUwYWd2RDJmWFdIOHk1WlJiRjVIdUo1NllIMFo3OXJnTGZ2aTMzbUJCOG5lR2stZ2JlZ0xGZlpWWXlRRE5Ndy1Eb2JERFhFbTJWX2lObGxna2s?oc=5",
         "pubDate": "Fri, 05 Jun 2026 07:00:00 GMT",
@@ -111,12 +117,6 @@
         "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPS04tVHpfaERBM2VWUDNXZ3FqdHlyQ2dKUGltLWRqbndLMVFHbl9DdnN4aGluR2tKSG9yc2NKOEdKbnJUaE5UZTBBeTcxbHJYVk51LVdFbFZNMFh6VmZUUTFXUllEaFZoZDBzMl84aDJ2MGJSYW9XTElpMDdBemF2STZuWE9oUDd6ZVJ2UmdWVm12LUdwMXE3bi15ZDZFVWk5RllHd0ZsNkdYOHRKWGFnM0Jsa2xlZw?oc=5",
         "pubDate": "Wed, 07 Oct 2026 07:00:00 GMT",
         "source": "Amazon Web Services (AWS)"
-      },
-      {
-        "title": "Your AI Budget Is Growing. Your Returns Aren't. Here's Why.",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQeTdIaW9nWk5ybUVZZGpCdGhOWGlkeVRCVWVONnBtQVNIYU9kLU9kUzMyUGVSRlluOFZQQ3I2TGFtNGRrOXpkWnlZOGtDdldfT2NQcDRUY3lYbU93WXNwU09ibXhUT2J4VjhDTDdWS29lcEJ0WVVkVDU4eGg1MDRpOXBwcFp0Y0l6bTAxOTZ3?oc=5",
-        "pubDate": "Mon, 01 Jun 2026 07:00:00 GMT",
-        "source": "Bain & Company"
       },
       {
         "title": "Aissist: Building the Agentic Operating Layer for Enterprise Customer Operations",
@@ -181,12 +181,6 @@
         "source": "Moneylife"
       },
       {
-        "title": "SEBI, RBI working to launch derivatives on corporate bond indices: Tuhin Kanta Pandey",
-        "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOS0p4ZWkxYkQyRzRrOWtrSmRNNWNjdlpXbmU5RzJwZGk4UEM5c2dVbmxVMHlGOHFJbTVIQzBCY2hFSF8wT0phN3J6R0g2RmR1SGYwZHFDWmxmaDhkajY2c3JuYjBsUHdRRGVjR2J6dGtmQzMtMk1FLWN3eU5tdGh3d29vTFlVY1lOMVJKSVRMZGhKd2xvb1pxSzB4elhoYjg2MzA5alE3d1F1eGw1Q1FWcXEwYmt0cGExdnZmaTF6SXpUU0dHNDhDSFpJc3hvZGZhMW1YRDV6TzTSAd4BQVVfeXFMTnpoSnN6UXZUeFRnNlljaHNfSDVWTTBhd0hVa0thOHJQWGc4LXAyZFdkcWFHWTVCek1lM29ZQUhQTU9UaVNVMldLV29jN1lUaFFTeWJQMFdWUTB6LWVKYmoyV0pYU2FzbkVleHBvQjJuRU9PYTRTZHNjQ0FoemZDd3BqZU1hZklBNDJuck14RXBpc3EyUXFKUXJqMThSdWtrNlk4N2hNRzMyb2hET19JOEMwT21ndXh1ejhWVFZtTUR1T1FYVXkzQWpDZVBIOUFORWRBOHpWbnpvZEVhTEV3?oc=5",
-        "pubDate": "Mon, 08 Jun 2026 07:00:00 GMT",
-        "source": "Livemint"
-      },
-      {
         "title": "SEBI draws line between listing norms and RBI rules in guidance to PNB",
         "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOb21fSzFOWkhranJ3UlZnZzFUelVLSF83Z0NrelRoNldHT3JfT0c3dGU1dlh1SFQ4SXViSjNXYnlOaE1oU1JqaUFOaElNdU5MNWF5NzBYYUxnajIyb2s0SDY4R2F5eHhLbzhfN1dLTXVRd3JOVzNLN3JMRENsV1ZqRmVuSjlCM3YwNjItTG45QzRhNEVVREozS3ZSckk1YWJpM0F3TlVwTUcwUFl1OFhQeW5QRUF6SGk1Q25QLW5rZ2pNLVZNMHppeF9ld2U3ZURYTlA3Y0diWdIB3AFBVV95cUxOTHlucnNfTUJ2MHcwU0RUeExyMnRia2tFd2RLNW5sOTdvU25SaUprV0sxRllNWTVWY09VUWItWG5ZTl9uc1k1WHpnSlAxanhyVml1aUM2b3dhT2lUaTZmcnRYUFdJYlhOM2o1WVE3LXlzd0xmNm5pS3BnMlFuWWVOWlRnd1pnaGw3Zk9iUWJhTGhrMDN4WGlnR0Jpbzl0NDhJYlRkQ0s2Vi0xTTZuTHpjUzBlY2tnMGI0c1lmZ3VNWEtyYmlyX19LbkZib2h0OXdXdGoybVZhTGs1d0RM?oc=5",
         "pubDate": "Sun, 08 Feb 2026 08:00:00 GMT",
@@ -203,6 +197,12 @@
         "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOempEVkNlMS1iZ19JR29ZMGctUm9sLXN2R2lMdWUwYkdXWkZqU2VCS0hsOXJEcWt6QWl1M1pMUXdrWjUtT3ZSdmlRQVo0bmh5SDN6djdDTDhfME81UXF5M2k3WEFuMlRleDFxVWQ4cFI2NlB1eUVocEY1ejBQcEtmTFJwZ3U5b2t6enlZejFDcGxoNV9nZTlVYk9DeGV4U1VhbWlGRVNKUmotS0liUkJTbGR3MlU5MmxEZTZJbmtfZTdvaEYyZ1hjSk5yYzg3SXNncUJnTDVYOVNRTnRJcm1lb2NENTNQZ9IB6gFBVV95cUxPaHJiWUJsR21WeVptN0RCLUFzVktsYUlhZ0Mzc0JpTG5YVjJPOFo4VUtZSjJIR2ItTHVEeVNERk02d09GbmppU0l1cXAyZ3Rnbm00ZWdJQTBxejI5b3htSEpGcUR4S0UtREE0aEhsUHB5MlVZS2M4S3BoUldIRmlGY2ZoOFpsREo1WFdtVjNtcThnaDBNM2xIX3dqNkIxOEg0RkNiMzBuLVBTb2hzemlzT2FLVk5HU1JSNVprZ1o0dl9GZ2hrRkN4OEg5allVVnF3eUl1c2NtbGZ4R29obGpnaWRidGt3UFJpRGc?oc=5",
         "pubDate": "Wed, 05 Aug 2026 07:00:00 GMT",
         "source": "ETLegalWorld.com"
+      },
+      {
+        "title": "Enhancing the Interoperability of India’s Business Sustainability Reporting with International Standards",
+        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPLU9kY0RnT0JHOGFuZEQ2NVE3MWdfeFJzODRiS2hHRG0yVmQtOTd4RUczeWxRT1JvR3VHNHdTdDhVRG53NjI4bVhTc2N1ekU2c1BBZHF4LUdwdFl3d0hnblllQUNBcjFOc2pYdlN0NGRtWm1SMUUxcFdrcWxMOXlrTGw3c2ZGOS1yRmh0UTY1MWlFNmdRVW5xOWVyU1JYSnBmN1N1ZHRsXzNua2hJR1N3ZzNPZWxMbXJwTUJiMGhWNjhUT2hPNWdRQTVyWlJqVVVSb1c3Ql93?oc=5",
+        "pubDate": "Thu, 22 Jan 2026 08:00:00 GMT",
+        "source": "orfonline.org"
       },
       {
         "title": "RBI Bulletin",
@@ -267,12 +267,6 @@
         "source": "CyberSecurityNews"
       },
       {
-        "title": "Data, privacy, and cybersecurity developments we are watching in 2026",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeGRmTkN6VjdGdXN0QXlHMGVac3hQNmNNSWdPTHNpMTVsR2puNmpncmJ6Si0yNHJWSzh0NmRwa3dEQmN6bjVMclhRaUV3U0lvSjEwWTZLUHljSlV0MmNDeGhaYlBZNWNpeW5SdEFmZFhpQ21WbXJlcUM4aE1tNVpjZTlvS0RPQTBNOGdfWTdMTFNWcFZFQjZfV0FHMUNvbWw1eGVYRVdaX3c4Zw?oc=5",
-        "pubDate": "Mon, 15 Dec 2025 08:00:00 GMT",
-        "source": "McDermott Will & Schulte"
-      },
-      {
         "title": "Data Protection Update - November 2025",
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbU9yVkN4aWMzX1o0aEpFNXg3LXVISjlGN0poRTB5cDBzMzJrRDg4VFp0SWxRbThmYk9Fb1JyREdxREtoTXpMZTNKWWRobzEzQWdoaXJjM3EwOXB4X3czYS1MN3d0M2duZEc2bUNJM0FkRXdkd0lMMGR0Y1dac3BrV05POXh2ZFE?oc=5",
         "pubDate": "Wed, 19 Nov 2025 08:00:00 GMT",
@@ -295,6 +289,12 @@
         "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWGN1X3RqU1JfRGMzTDdSZnRYMnphOWltMHRnNEdnMzZXU09VODdwYW1oVkUyaTg1SXdvdDRHOGg0ejZmU1ZTNkRSaWJRNzJ6Zm9sQnNRbDFnTl9janl1ZEZ2UTJNY1h3VjJTcm5ITHZ5SkFtLVJRblRUUWhKNnFnbDVqXzZ1UUs4clpqaUhtTFAxTGZ3c29FZXVLMUR5cnhIczJFUXlLSC1Qb0pnQ28wcEk0emY0X2s?oc=5",
         "pubDate": "Mon, 20 Jul 2026 07:00:00 GMT",
         "source": "ICLG"
+      },
+      {
+        "title": "Privacy Disparity: U.S. vs. Europe",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS1ZrV3dNUGZXRUxkbjR1dXpNdFMxenBOWTROUzMwYUhjdzJfbzlKU1V3bzI0ZlBSbE93QVcwSkJLOUpEYnB2V0NLVC1NNGxBZ1ZjWjQzOF9iN2daODNRUkc2S05nR0NrclVhT1NtcnM2LUhNb3cyTjZhZUp2R0s4MmRlY3RlNlM1QnJTakNIU0ZSLVdsWWduRU9xZ1Q2TFplbGx2cHZoRlJPdw?oc=5",
+        "pubDate": "Wed, 19 Nov 2025 08:00:00 GMT",
+        "source": "University of Miami News"
       }
     ]
   }
