@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T13:29:05.442Z",
+  "generatedAt": "2026-11-10T20:50:00.457Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -31,12 +31,6 @@
         "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSmo4emViVnVrM3dtbXZpdF9xekxSZnoyRnRtMkdBdmQxMHZoWkx1Q0lWc3AtTVFtS29VZ2FuSGd2V0xUa05sRzZmb1lHcWNZMnNJeWNXV0dmSUc3NmZkNE9iMi0tWnQtbm9CTWg3SzAzdXg3M0lWTDN5V1g4c1pqYnY4YjVjWXJYcG1Qb0NWV0Q0d01CMWlveTRR?oc=5",
         "pubDate": "Fri, 06 Feb 2026 08:00:00 GMT",
         "source": "FTI Consulting"
-      },
-      {
-        "title": "IRS Weighs Firing Key Fraud Investigator Over His Own Tax Return",
-        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPLWdWY1lCUmNnOW5aNjRuN1c4Qlk5NFBxSUZCUTlncGMweVRlMnl2U21hem8xM1hNcHlkR3JMVU9zN1RnYXYwYk80U2JURnRxcEswWVJPVkdZV1RmdWRGWFNmYmhwaE9ERXRNR2NGTkJYT0xfZWRESk9EZV9wS0ZDYnRxV1JvaGxzaE1VYTh1SGdIVXFSV3pqSkZPT29RTFR4dV9OcVhBbkJsYkRIZGNoMg?oc=5",
-        "pubDate": "Fri, 15 May 2026 07:00:00 GMT",
-        "source": "Bloomberg Tax"
       },
       {
         "title": "WHO staff become certified fraud examiners at first-of-its-kind training",
@@ -73,6 +67,12 @@
         "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOaVJkUktOLTlVX0wwZTlpNXA2TXdoaXlvNThJQXlZbkc1aGhJUmtWMGFYZXNQdlN1Z1FFenF3aWpCRXduQnRwTGRZX1FwLTNFTXhRM3ZBR2ZoVUpCYUFueFBQNmtSQzJyUy1ULXVTZVZNd193c2hiMmJDSDJ0alQ0VkRjQTI2ZDktR3FjdzlEZkN0S08yeUNYTW5hVS03Qmp6?oc=5",
         "pubDate": "Wed, 02 Jul 2025 07:00:00 GMT",
         "source": "Holland & Knight"
+      },
+      {
+        "title": "Strengthening Government Fraud Enforcement: Administrative False Claims Act Provides Agencies Tool to Bring Fraud Claims",
+        "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQV1JsWW9OTVZQdThwZmxQczVua09fZk8xcGZKQVVvYlVhQ1VFeEI2QTRMbnBHbUxXVV9fc2xEWUtkRlEwUTJPajh3VF80TFhYUEZCVjFNVU5FaEdpdjladVdRTGN3ZHZKMDNwZWZrMmxxS3NPUUVSR0NMM25QbEZCWlk4cXRvQWRFckhqRjh4a2tpUlg3bWtqTUswMEd0c3Jfb08xbkppdTZrZjRXNjh3MDNBS3VGSjViaHJZWTZYSlpuak82S0tCbEdQQ0FBOU9MYlBFNDJ1aHlteHN2Mmh5WmI3VWtoVnpuX3pwdGpkNkdnWXV6Tk10N01Jb3pnVl8w?oc=5",
+        "pubDate": "Tue, 01 Apr 2025 07:00:00 GMT",
+        "source": "Ogletree"
       }
     ],
     "artificial+intelligence+enterprise+automation": [
@@ -137,16 +137,16 @@
         "source": "Salesforce"
       },
       {
+        "title": "How AI Is Reshaping the Future of Work",
+        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcWZxMjBRNXQteUx2UmlSWEt0cTY3OTBZUWxCN1FUQ1FNdHhlWTA0b29lZnhwalYwNFphYTB3R0tkSUNBMzlSZWlaQzBSV290ejVkTTB4MWVNSV9mSkt1dHE2WGdZdjIxS0hUUHZPLWtpTjZ5cWM5enFPR0c0a2RFeDRn?oc=5",
+        "pubDate": "Sat, 25 Apr 2026 16:49:15 GMT",
+        "source": "Stanford Graduate School of Business"
+      },
+      {
         "title": "Meta enters enterprise AI race with new business agent",
         "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQ0VmR0diTmJnejBXTlNDMTExQU9wWnh0U3ZWOXNOb0VHdTZScnFIR2w4dm8zcFNDdGk1ellycUpCUnh4NG51SVhOQ21RWGZtSlg0MHJtY0ZwU05ZbG5BR1V6b2hxeEJOTzR6VWEwZkwybWt1NC0wUl9qRHRXekM1RnM2VkxNR2M3OEtQQ0VKb3ZkUE95NEthYnR1eVZWczMtbWlMWTRyZ093dV9BamxIal91WXlhQXIyY21uU3ZR?oc=5",
         "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
         "source": "Reuters"
-      },
-      {
-        "title": "Beyond RPA Bots: What Happens When Automation Gets a Brain?",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ybTBQMUxJcEVjVDZQTDJ3Qm1EMnZtTFdKbG9Ya2NrdHpBTXZoTE5yeUR0QXRSaFJINnVyTkY4dHN5NE1OUGp2MENKcDA2WlRtdzFKNXA0YmNjdzg2M0IzbmZNYW5tSDRYdms5Rjd5OVBSdw?oc=5",
-        "pubDate": "Wed, 04 Mar 2026 08:00:00 GMT",
-        "source": "Oracle"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
