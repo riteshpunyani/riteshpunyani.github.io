@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T20:50:00.457Z",
+  "generatedAt": "2026-11-11T01:14:33.560Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -113,16 +113,16 @@
         "source": "Google Cloud"
       },
       {
-        "title": "What Is AI-Powered Business Automation?",
-        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVkVfQkJ2TzVPODdWSUZ2dnh0SEFvRWR3aFhkR1J4N19Iak9sOEpTR3BiLW1OVU1xSUpXcTZ4ZEhFTEJyRTZHRTZjVWViYllNTlVtTnIzRXRjZTJWbmp5Q3U1S0NmMHNYaFRUQS1fZHpqbHhaNG9LVFdtU1dpcVBiR2tB?oc=5",
-        "pubDate": "Mon, 12 Oct 2026 07:00:00 GMT",
-        "source": "U.S. Chamber of Commerce"
-      },
-      {
         "title": "Beyond hours saved: Building the business case for agentic automation | Amazon Web Services",
         "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPS04tVHpfaERBM2VWUDNXZ3FqdHlyQ2dKUGltLWRqbndLMVFHbl9DdnN4aGluR2tKSG9yc2NKOEdKbnJUaE5UZTBBeTcxbHJYVk51LVdFbFZNMFh6VmZUUTFXUllEaFZoZDBzMl84aDJ2MGJSYW9XTElpMDdBemF2STZuWE9oUDd6ZVJ2UmdWVm12LUdwMXE3bi15ZDZFVWk5RllHd0ZsNkdYOHRKWGFnM0Jsa2xlZw?oc=5",
         "pubDate": "Wed, 07 Oct 2026 07:00:00 GMT",
         "source": "Amazon Web Services (AWS)"
+      },
+      {
+        "title": "What Is AI-Powered Business Automation?",
+        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVkVfQkJ2TzVPODdWSUZ2dnh0SEFvRWR3aFhkR1J4N19Iak9sOEpTR3BiLW1OVU1xSUpXcTZ4ZEhFTEJyRTZHRTZjVWViYllNTlVtTnIzRXRjZTJWbmp5Q3U1S0NmMHNYaFRUQS1fZHpqbHhaNG9LVFdtU1dpcVBiR2tB?oc=5",
+        "pubDate": "Mon, 12 Oct 2026 07:00:00 GMT",
+        "source": "U.S. Chamber of Commerce"
       },
       {
         "title": "Aissist: Building the Agentic Operating Layer for Enterprise Customer Operations",
@@ -291,10 +291,10 @@
         "source": "ICLG"
       },
       {
-        "title": "Privacy Disparity: U.S. vs. Europe",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS1ZrV3dNUGZXRUxkbjR1dXpNdFMxenBOWTROUzMwYUhjdzJfbzlKU1V3bzI0ZlBSbE93QVcwSkJLOUpEYnB2V0NLVC1NNGxBZ1ZjWjQzOF9iN2daODNRUkc2S05nR0NrclVhT1NtcnM2LUhNb3cyTjZhZUp2R0s4MmRlY3RlNlM1QnJTakNIU0ZSLVdsWWduRU9xZ1Q2TFplbGx2cHZoRlJPdw?oc=5",
-        "pubDate": "Wed, 19 Nov 2025 08:00:00 GMT",
-        "source": "University of Miami News"
+        "title": "Data privacy in 2025: Key trends and challenges ahead",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOFhlRDNmdi1POWg5Z1A4VkhiNzQ5bmNsNmRMaWFaWlJncWEtZ3FtUV9TZURYRExLbE5rYTlqaUNKamZoMmVVeDRtVFBac1NyTTJJUmVGQkNfUTVGZ3g0U2RJMEUwaUZCQVROdTRQT2k1QjlVY0pTemJhaUNHQnBCaDVKVlplTWxZNmFvaUZ6YWhvQ1loNWltajFobk95bWZNMGpEQzZxcmo1dw?oc=5",
+        "pubDate": "Thu, 23 Jan 2025 08:00:00 GMT",
+        "source": "WeLiveSecurity"
       }
     ]
   }
