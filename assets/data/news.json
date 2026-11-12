@@ -1,7 +1,13 @@
 {
-  "generatedAt": "2026-11-11T22:42:43.313Z",
+  "generatedAt": "2026-11-12T03:49:27.711Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
+      {
+        "title": "When financial concerns become a crisis, early action and the right advisers matter",
+        "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOeEpka3Jfak5OeUZrWmRLRFJRUGZ5VnprT0ZYQkZDNG9LV2l5dDNpNExFNXNIdTFCZzNrOVJTaVpUc1hUSUtJLUtmUVh0MElEYkc4LW1Wb2Z1ZDMwakxHX2FQUGNTd3oyS1czbDJEZ2hUYUlQLVJnYmg4MEpYQVJ4SWNILWlVcWlneFpzN2FYOGdRUEhjZmpwYkhTNjZNd2ZzUUc5c0FsRExCM2tVLTE3djkzZjB4QmtNMDBvYlE3all6azR6bmRFVg?oc=5",
+        "pubDate": "Tue, 10 Nov 2026 23:59:48 GMT",
+        "source": "Compliance Week"
+      },
       {
         "title": "Fraud Operations: Financial Crime Managed Services",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVEV1Ti1ETWhLS1FLbkRzbkR0c04yeHIzWjNDaGhFY2RaMm5lWnNhV3JFRDV4UzJmNlJkc1c4a3BDRTJFeEhraG9lLWdBc3BjbFRmZ05CbkhjTjFMTmFyaDJVZnN5NFlIOTdBdEF6ekVtTjZkblprS3N2WXFXQzEyZEgwdE5xZXdFLXlhWE4xWjVUXzd1cE9tMQ?oc=5",
@@ -57,22 +63,16 @@
         "source": "Thomson Reuters Legal Solutions"
       },
       {
-        "title": "DOJ Provides Guidance on Corp. Compliance Programs",
-        "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOcGprTEFpYTJIMVlpWEQxSmhnUDhSZUxuVmEtSUtMOTcxN0p1Ykp2WDJ4NTVtc19oVm1kTno4TG5XNEpKUGd1ODZkNUdUQmlMbGR1alpsWXcxcjBWeWs5cVo1ZS1DM1BGZmZWUU9ZajVIamlmcjJZOWhERUZaUEFMa05ITlNDOVlyRFI5b0RqUDhLYTltMEthaHVadm9RQm9rbHdtVTVnVzg3SXJkX1ZUZzZTY19XYm9udGR1aXcwcXdlVUVhZG9DTk41bWh1ZGIxN2JLUTFGampfdw?oc=5",
-        "pubDate": "Wed, 08 Feb 2017 08:00:00 GMT",
-        "source": "Jones Day"
-      },
-      {
         "title": "SBA Announces Full-Scale Audit of 8(a) Program to Uncover Fraud and Bribery",
         "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOaVJkUktOLTlVX0wwZTlpNXA2TXdoaXlvNThJQXlZbkc1aGhJUmtWMGFYZXNQdlN1Z1FFenF3aWpCRXduQnRwTGRZX1FwLTNFTXhRM3ZBR2ZoVUpCYUFueFBQNmtSQzJyUy1ULXVTZVZNd193c2hiMmJDSDJ0alQ0VkRjQTI2ZDktR3FjdzlEZkN0S08yeUNYTW5hVS03Qmp6?oc=5",
         "pubDate": "Wed, 02 Jul 2025 07:00:00 GMT",
         "source": "Holland & Knight"
       },
       {
-        "title": "The Spy Who Loved Me: The Nvidia Scandal’s Lessons on CEO Risk",
-        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOR2N6aWRscnJ5QldJakZ3WWRJZDBxOVVWeHVDWFdzWGNZRl9CVWl5NXdFbmc0UFQ0Q2lBa19pdVBjWjBhbmk4UmFMcnhfZWdrQXhJbGpoZ2xhb0E0a25FQU5yeUNEY3hnTzZBMmZCV052am51TDd4TVZfVVNtbkZna3kyYmFUY3prY2RDcnA5Si1SZDY3U01reA?oc=5",
-        "pubDate": "Wed, 11 Nov 2026 12:00:47 GMT",
-        "source": "Corporate Compliance Insights"
+        "title": "Strengthening Government Fraud Enforcement: Administrative False Claims Act Provides Agencies Tool to Bring Fraud Claims",
+        "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQV1JsWW9OTVZQdThwZmxQczVua09fZk8xcGZKQVVvYlVhQ1VFeEI2QTRMbnBHbUxXVV9fc2xEWUtkRlEwUTJPajh3VF80TFhYUEZCVjFNVU5FaEdpdjladVdRTGN3ZHZKMDNwZWZrMmxxS3NPUUVSR0NMM25QbEZCWlk4cXRvQWRFckhqRjh4a2tpUlg3bWtqTUswMEd0c3Jfb08xbkppdTZrZjRXNjh3MDNBS3VGSjViaHJZWTZYSlpuak82S0tCbEdQQ0FBOU9MYlBFNDJ1aHlteHN2Mmh5WmI3VWtoVnpuX3pwdGpkNkdnWXV6Tk10N01Jb3pnVl8w?oc=5",
+        "pubDate": "Tue, 01 Apr 2025 07:00:00 GMT",
+        "source": "Ogletree"
       }
     ],
     "artificial+intelligence+enterprise+automation": [
@@ -81,12 +81,6 @@
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5VNG1NRDgxaXVLSjZyZlowN210di03LXN6NnUwYWd2RDJmWFdIOHk1WlJiRjVIdUo1NllIMFo3OXJnTGZ2aTMzbUJCOG5lR2stZ2JlZ0xGZlpWWXlRRE5Ndy1Eb2JERFhFbTJWX2lObGxna2s?oc=5",
         "pubDate": "Fri, 05 Jun 2026 07:00:00 GMT",
         "source": "IBM"
-      },
-      {
-        "title": "ServiceNow unveils new AI tools to speed enterprise automation",
-        "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQMVlHVGRwWXNVbXFQczEzY0NvTmFSQ29tU1M3dTQ4SlFJUk91ejcxWWY1Q0R6U1BiUlR3LXpWVXYwY0VHRy1LS2pzNXhrLU9OSnJWTnVHdTVmSmMwVFgyTHF5QW9RTmFWdnBMcEZlZVFoZ0huUk9COFI1UTAtM1JZTTlzZUZsWVJRb1lkSTFPU25MSzdXQnpGSHNSejZ2TnUxVjEyZGVRQ2NmektfOGNYVFdoUk83Zmw4SDJLN3dENGZ1OXRSdVBTTlZJdGw5V3JScUp4Sk52OEVnQdIB3wFBVV95cUxPbU13Sl83UHl2VjhMVE1TaWxxVHhXd2pvR0hrQjdRbTJBaUVISnloNjVSSHZkLVUydDhaQXhzU2pSMEhxeTVTenZpcVF5anVnYXh1ZWZDdERSbllOczl6Y3oxY0lYRHduT19LYXJtVWNnWkxfUHJzdk9xNTNuckZvR3Bydkl5WUZyX3JZNnhLSHRoaXVpRUplRDVYN3hhZ2NZTjh4ckpOeUlBWE1OZENDV1VMektMY08waTdQa3pQX1BxMU1LRjZPWlVfckNwdnBWN0d4bFlNUW83OVJuckln?oc=5",
-        "pubDate": "Tue, 06 Oct 2026 07:00:00 GMT",
-        "source": "ET CIO"
       },
       {
         "title": "Qantas Outsources 850 IT Jobs to India in AI-Driven Shift",
@@ -123,6 +117,12 @@
         "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVkVfQkJ2TzVPODdWSUZ2dnh0SEFvRWR3aFhkR1J4N19Iak9sOEpTR3BiLW1OVU1xSUpXcTZ4ZEhFTEJyRTZHRTZjVWViYllNTlVtTnIzRXRjZTJWbmp5Q3U1S0NmMHNYaFRUQS1fZHpqbHhaNG9LVFdtU1dpcVBiR2tB?oc=5",
         "pubDate": "Mon, 12 Oct 2026 07:00:00 GMT",
         "source": "U.S. Chamber of Commerce"
+      },
+      {
+        "title": "Your AI Budget Is Growing. Your Returns Aren't. Here's Why.",
+        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQeTdIaW9nWk5ybUVZZGpCdGhOWGlkeVRCVWVONnBtQVNIYU9kLU9kUzMyUGVSRlluOFZQQ3I2TGFtNGRrOXpkWnlZOGtDdldfT2NQcDRUY3lYbU93WXNwU09ibXhUT2J4VjhDTDdWS29lcEJ0WVVkVDU4eGg1MDRpOXBwcFp0Y0l6bTAxOTZ3?oc=5",
+        "pubDate": "Mon, 01 Jun 2026 07:00:00 GMT",
+        "source": "Bain & Company"
       },
       {
         "title": "Aissist: Building the Agentic Operating Layer for Enterprise Customer Operations",
@@ -163,6 +163,12 @@
         "source": "The New Indian Express"
       },
       {
+        "title": "Listing rules on corporate governance to prevail over RBI’s for listed banks, clarifies SEBI",
+        "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQX2JIOTF5U0podE81TWVCXzAtUDRQYm5zaC1MU0l1WUJyaWRNeE1kRF9JSDJqcGVBT1lIeC1qdFRiQWxKcG1RNGl1THNNUWJZaFlNTV9hdGxCVUQzRU1UZmhOeUhmejNURG1IRDE4OGNGZXRxQjR0d2llTFJONXQwMzNUSlVEWjc2ZFBwZDRmR0JRYXlEVU9WWEZQbEZFWERuRXI1aExpSldiZTJDcU85RE5KSF9idkJnQzhwNTFvM3Y4dWx6T2xLamhhTDdQQ3FGSDdDVmZ5MkZ3SUp0SklkR0pR0gHnAUFVX3lxTE1wby1QVExDbTlUeFdxY25vRzdLNUVnaEw4a3JJN0l5emFFak1iWDFvMFY0WE92THh6LWNSTno5a1VxYkNwX1d4NFZnSzNNc1k5MEhVQjFjelBjYlRQejl5RmM1cHBYc1paSjE1aF9ySG9lMGpVbmlKOW5qMFdDcnJxZVhlejFDSXQydFljUjdiN3M5LUlCcFdNY1VSTkxJZFlmT1BMWmUzYUZoeld6RG5JRWI2b21MOW9zYjY3V0kwTzdLN2NWRWtIRmZCVHozQU4zc3hQVVdvQkNjdFF4UzlsMlpNa3R0SQ?oc=5",
+        "pubDate": "Sun, 08 Feb 2026 08:00:00 GMT",
+        "source": "Moneycontrol.com"
+      },
+      {
         "title": "What DPDPA, RBI, and SEBI demand from the digital Indian workforce",
         "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOempEVkNlMS1iZ19JR29ZMGctUm9sLXN2R2lMdWUwYkdXWkZqU2VCS0hsOXJEcWt6QWl1M1pMUXdrWjUtT3ZSdmlRQVo0bmh5SDN6djdDTDhfME81UXF5M2k3WEFuMlRleDFxVWQ4cFI2NlB1eUVocEY1ejBQcEtmTFJwZ3U5b2t6enlZejFDcGxoNV9nZTlVYk9DeGV4U1VhbWlGRVNKUmotS0liUkJTbGR3MlU5MmxEZTZJbmtfZTdvaEYyZ1hjSk5yYzg3SXNncUJnTDVYOVNRTnRJcm1lb2NENTNQZ9IB6gFBVV95cUxPaHJiWUJsR21WeVptN0RCLUFzVktsYUlhZ0Mzc0JpTG5YVjJPOFo4VUtZSjJIR2ItTHVEeVNERk02d09GbmppU0l1cXAyZ3Rnbm00ZWdJQTBxejI5b3htSEpGcUR4S0UtREE0aEhsUHB5MlVZS2M4S3BoUldIRmlGY2ZoOFpsREo1WFdtVjNtcThnaDBNM2xIX3dqNkIxOEg0RkNiMzBuLVBTb2hzemlzT2FLVk5HU1JSNVprZ1o0dl9GZ2hrRkN4OEg5allVVnF3eUl1c2NtbGZ4R29obGpnaWRidGt3UFJpRGc?oc=5",
         "pubDate": "Wed, 05 Aug 2026 07:00:00 GMT",
@@ -175,10 +181,10 @@
         "source": "BusinessLine"
       },
       {
-        "title": "Listing rules on corporate governance to prevail over RBI’s for listed banks, clarifies SEBI",
-        "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQX2JIOTF5U0podE81TWVCXzAtUDRQYm5zaC1MU0l1WUJyaWRNeE1kRF9JSDJqcGVBT1lIeC1qdFRiQWxKcG1RNGl1THNNUWJZaFlNTV9hdGxCVUQzRU1UZmhOeUhmejNURG1IRDE4OGNGZXRxQjR0d2llTFJONXQwMzNUSlVEWjc2ZFBwZDRmR0JRYXlEVU9WWEZQbEZFWERuRXI1aExpSldiZTJDcU85RE5KSF9idkJnQzhwNTFvM3Y4dWx6T2xLamhhTDdQQ3FGSDdDVmZ5MkZ3SUp0SklkR0pR0gHnAUFVX3lxTE1wby1QVExDbTlUeFdxY25vRzdLNUVnaEw4a3JJN0l5emFFak1iWDFvMFY0WE92THh6LWNSTno5a1VxYkNwX1d4NFZnSzNNc1k5MEhVQjFjelBjYlRQejl5RmM1cHBYc1paSjE1aF9ySG9lMGpVbmlKOW5qMFdDcnJxZVhlejFDSXQydFljUjdiN3M5LUlCcFdNY1VSTkxJZFlmT1BMWmUzYUZoeld6RG5JRWI2b21MOW9zYjY3V0kwTzdLN2NWRWtIRmZCVHozQU4zc3hQVVdvQkNjdFF4UzlsMlpNa3R0SQ?oc=5",
+        "title": "SEBI draws line between listing norms and RBI rules in guidance to PNB",
+        "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOb21fSzFOWkhranJ3UlZnZzFUelVLSF83Z0NrelRoNldHT3JfT0c3dGU1dlh1SFQ4SXViSjNXYnlOaE1oU1JqaUFOaElNdU5MNWF5NzBYYUxnajIyb2s0SDY4R2F5eHhLbzhfN1dLTXVRd3JOVzNLN3JMRENsV1ZqRmVuSjlCM3YwNjItTG45QzRhNEVVREozS3ZSckk1YWJpM0F3TlVwTUcwUFl1OFhQeW5QRUF6SGk1Q25QLW5rZ2pNLVZNMHppeF9ld2U3ZURYTlA3Y0diWdIB3AFBVV95cUxOTHlucnNfTUJ2MHcwU0RUeExyMnRia2tFd2RLNW5sOTdvU25SaUprV0sxRllNWTVWY09VUWItWG5ZTl9uc1k1WHpnSlAxanhyVml1aUM2b3dhT2lUaTZmcnRYUFdJYlhOM2o1WVE3LXlzd0xmNm5pS3BnMlFuWWVOWlRnd1pnaGw3Zk9iUWJhTGhrMDN4WGlnR0Jpbzl0NDhJYlRkQ0s2Vi0xTTZuTHpjUzBlY2tnMGI0c1lmZ3VNWEtyYmlyX19LbkZib2h0OXdXdGoybVZhTGs1d0RM?oc=5",
         "pubDate": "Sun, 08 Feb 2026 08:00:00 GMT",
-        "source": "Moneycontrol.com"
+        "source": "Business Today"
       },
       {
         "title": "SEBI and RBI working together on corporate bond index derivatives to deepen debt market: Tuhin Kanta Pandey",
@@ -209,12 +215,6 @@
         "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVjZMcFlUWno1cXk5QXp1UU9rNU4xRS16REp3ZFpTYVAyMzFKTVo1YzBlZlpNek9nVGhhaGNKWTBJaEVubVh3V2VFc3YxX2RNdEdFUU9LNnJsaVItdEd6MnE0bWZWazhLWmxKSTN5M1lXUVM1RGtENXROWFVhLWs3cEo5Y3Q4cUhpZHg2OUJjVjNBUnRZUDcxQUtMclZCSVFRbU4zUWkzazZvaFNUN0xoaVNWc2FqblZiVE82N3B6THlId9IBxwFBVV95cUxNcVE2cFNNUGdLR1h6RFktb0xOVHlFbC04cElFRDV5WDdxWjNZQjlVdVFBWm1hZ3pLSzVsdTBia3NxZFpIbFRjSWZsaXF1S1QtNHdzNjlJLU1rcWdUR3kzT2lkUW5EZnBpbUhyVjB3UTdaMXVGV214SnZOeXBmMWYwQVNXaFQtY1RqN0t0Yk5hSVRQV1BjRlNBV2lieGhDakhGUVFIcnNUZFVwUlNDcWwwNmlDNElwZDFzRlIwOXRxSF9UYTRiTDhZ?oc=5",
         "pubDate": "Sat, 09 Mar 2024 08:00:00 GMT",
         "source": "ThePrint"
-      },
-      {
-        "title": "RBI gold loan guidelines 2025: Impact assessment and key changes",
-        "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQekFSRTZnbmtDNkRBRXphcjhwNFVvbm5XUEIxZlNtNVVua29fRWpJNFpTV2EtVTl0cjI4X0U3YTZfeVpJRjI5Z1JOX1FNaEE2QXA4YWMtUGp6Rk10ajRwU2psREdvcGNXTDl3YmN4OVQyYVVRc1lfWGZ5ZFVrRUhWRWl6anQxN1BNdDBpeFpRTjlCQU1wVmZsSzF3YVJhSVhwb2Z4SzN6WHU5WUhHTUpiRUF2MkdOTDlDZTdR?oc=5",
-        "pubDate": "Fri, 12 Sep 2025 07:00:00 GMT",
-        "source": "EY"
       },
       {
         "title": "RBI Bulletin",
@@ -291,10 +291,10 @@
         "source": "Cyril Amarchand Mangaldas"
       },
       {
-        "title": "Privacy Disparity: U.S. vs. Europe",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS1ZrV3dNUGZXRUxkbjR1dXpNdFMxenBOWTROUzMwYUhjdzJfbzlKU1V3bzI0ZlBSbE93QVcwSkJLOUpEYnB2V0NLVC1NNGxBZ1ZjWjQzOF9iN2daODNRUkc2S05nR0NrclVhT1NtcnM2LUhNb3cyTjZhZUp2R0s4MmRlY3RlNlM1QnJTakNIU0ZSLVdsWWduRU9xZ1Q2TFplbGx2cHZoRlJPdw?oc=5",
-        "pubDate": "Wed, 19 Nov 2025 08:00:00 GMT",
-        "source": "University of Miami News"
+        "title": "Cybersecurity: The Economic Benefits of GDPR",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5jTGhtNDUzQ3hsRFBlQTBCUGFUaVllam9jaTM3Um9tQnVkOGNuMHZNU21YVFhWbXlQS0RhNVhOdlNCWE9PSkgxeHVzcjc1dHZJSHZrZExmQmR2VkJnRGhpZi1WSV8xWGNrdFBn?oc=5",
+        "pubDate": "Tue, 24 Jun 2025 07:00:00 GMT",
+        "source": "CNIL"
       }
     ]
   }
