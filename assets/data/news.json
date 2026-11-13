@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T20:49:37.174Z",
+  "generatedAt": "2026-11-13T01:50:23.271Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -83,12 +83,6 @@
         "source": "IBM"
       },
       {
-        "title": "Qantas Outsources 850 IT Jobs to India in AI-Driven Shift",
-        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTUdRQnFERUU3bTA1aHI4RHNJSDBldTZDaE5QbXNLNGNXbmpoNndLMnhkVUpUdVBQZE56TnkzcWpQS1lOY0lMSkcwdDM2eHpxNmlDMWlLMVNaVE5tdUpLUmY3S05ady1sT0FHSVpwd0doUUZvc3hzYmtzRERkNllndkxVVElBQ3Zya0NvT0lhU3AyMmNa?oc=5",
-        "pubDate": "Tue, 10 Nov 2026 02:34:35 GMT",
-        "source": "The Tech Buzz"
-      },
-      {
         "title": "OpenAI Presence raises new questions about enterprise automation and jobs",
         "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWjFMZDF0TGpiRHdDcjNZSTZLcXhpMVlrNHpIOWZlZkVSVjhwT0tuN1NGd2VGa2pyRWxDVEd3MDVqYkJnZnlOWllVM3o1SWtGaTBqc05QWk9ETWJFNEZfYUxIM090bzMtc09vbWQtSE9nMm1fQU80MzkwMzM2ZE5EU0NHd0x4c1JOeWx4cFh6N2F5MVNOQlhZQ3lSWGgxbDdfTWpfd05YazZKNmdiazE4NmVCSDA?oc=5",
         "pubDate": "Thu, 23 Jul 2026 07:00:00 GMT",
@@ -119,12 +113,6 @@
         "source": "U.S. Chamber of Commerce"
       },
       {
-        "title": "Your AI Budget Is Growing. Your Returns Aren't. Here's Why.",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQeTdIaW9nWk5ybUVZZGpCdGhOWGlkeVRCVWVONnBtQVNIYU9kLU9kUzMyUGVSRlluOFZQQ3I2TGFtNGRrOXpkWnlZOGtDdldfT2NQcDRUY3lYbU93WXNwU09ibXhUT2J4VjhDTDdWS29lcEJ0WVVkVDU4eGg1MDRpOXBwcFp0Y0l6bTAxOTZ3?oc=5",
-        "pubDate": "Mon, 01 Jun 2026 07:00:00 GMT",
-        "source": "Bain & Company"
-      },
-      {
         "title": "Aissist: Building the Agentic Operating Layer for Enterprise Customer Operations",
         "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1MTHJKeHFxb3FsZ1g3ZVhPT0FYbHN3dVY0MVI3T1BoN0M0b3hTeEpSMWxGc2JSZEhnV3RXekxTZGhDVjBMa1Q4STNGaTNoaXM?oc=5",
         "pubDate": "Thu, 25 Jun 2026 16:03:50 GMT",
@@ -147,6 +135,18 @@
         "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE52UVlzbGQ1NU9NbEI5U0xMT2puUnJaVW56YldjbHVHVDlMcWZpUEg0Z3RqaEJhMFpyZjFfZGV1aTF3RjZoUFRnREZ1Sm9lR2tQNkxxQ3ZKUGlkVXRDTV9INHBHTVQtMXRJVC10RFp2YTFLY3l1aXJB?oc=5",
         "pubDate": "Wed, 04 Mar 2026 08:00:00 GMT",
         "source": "Oracle"
+      },
+      {
+        "title": "How AI Is Reshaping the Future of Work",
+        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcWZxMjBRNXQteUx2UmlSWEt0cTY3OTBZUWxCN1FUQ1FNdHhlWTA0b29lZnhwalYwNFphYTB3R0tkSUNBMzlSZWlaQzBSV290ejVkTTB4MWVNSV9mSkt1dHE2WGdZdjIxS0hUUHZPLWtpTjZ5cWM5enFPR0c0a2RFeDRn?oc=5",
+        "pubDate": "Sat, 25 Apr 2026 16:49:15 GMT",
+        "source": "Stanford Graduate School of Business"
+      },
+      {
+        "title": "Agentic AI, explained",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5nNkJMcjBySVgtWG5XemFIRzVObzZIaEpFZzNLZldpWGZGVWlfNWtONVhmSDlnNjh1ZXo0YkpjR0RnREJ3bXhxdUtkU2ltSnZqUHJnU2tBWXhvc0lqMnpma1JsSk9ONi05S1BBWk5XSFUyaTJH?oc=5",
+        "pubDate": "Wed, 18 Feb 2026 08:00:00 GMT",
+        "source": "MIT Sloan"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
@@ -217,19 +217,13 @@
         "source": "www.pib.gov.in"
       },
       {
-        "title": "RBI Bulletin",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5YanJEbnVVWDVCd1FuTnd5eHdjcDZaelVlMVRoWjBYVVppMHhQaFVEY29tNjJUY3dYZTNQYzVNVjBoaTVXazVpY0NZSmQwUHJnLWdIYkZXSk9WdVRHWXd6OWlJMi1hODQzQ2dHdQ?oc=5",
-        "pubDate": "Mon, 20 Oct 2025 07:00:00 GMT",
-        "source": "Reserve Bank of India"
+        "title": "RBI gold loan guidelines 2025: Impact assessment and key changes",
+        "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQekFSRTZnbmtDNkRBRXphcjhwNFVvbm5XUEIxZlNtNVVua29fRWpJNFpTV2EtVTl0cjI4X0U3YTZfeVpJRjI5Z1JOX1FNaEE2QXA4YWMtUGp6Rk10ajRwU2psREdvcGNXTDl3YmN4OVQyYVVRc1lfWGZ5ZFVrRUhWRWl6anQxN1BNdDBpeFpRTjlCQU1wVmZsSzF3YVJhSVhwb2Z4SzN6WHU5WUhHTUpiRUF2MkdOTDlDZTdR?oc=5",
+        "pubDate": "Fri, 12 Sep 2025 07:00:00 GMT",
+        "source": "EY"
       }
     ],
     "data+privacy+GDPR+cybersecurity": [
-      {
-        "title": "Data Economy, Privacy and Cybersecurity Newsletter - October 2026",
-        "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTldVQk1EeVV1X3J6WTQxcGs3cGFJV0FwbDd0Tm9JM190bDI1aC14SlR2ZHFjdDVBLTVLb1N0Snh5cmdUQ3hyTkNUOU5yVEdzV3JPUmFScUVzQjRmZV9tVjlvRGZERHBmYnFFN0xmN001VDdNVVFfRkdhMFhVMi1sbi1TX0xVZlZ4NHVnd2c4Wml6TmNXZEpXeHBuOElBS1E?oc=5",
-        "pubDate": "Wed, 11 Nov 2026 09:10:03 GMT",
-        "source": "Garrigues"
-      },
       {
         "title": "Digital rulebook: Council agrees position to simplify data protection, privacy and cyber reporting rules",
         "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNRWRZX3pMLTUwSXFaYzRRZnNzRTRsSURBalpjVXpKcXNfRFhuOWI5LWo0R1dfeFFOYm90VVZNdDFqQm43ZF9qamwxbUpjaDNnMUtIOGxxU1BkZ3JfMU84dXM5LUpWaXdhZmFMUmtFSWFPVFl6SFlvZ3RVU2tta1ptWDVWNVVIYk5ILWh6Z3N4TjdPWWd2MFJUNDl0SUUtUWRwMjExQS1fSk9WZVZyck5LcjdjT0JXcWtGdXBiMk5fc3ExYVpOVzZRRU1IMzROc1EyeHhjU0NiRWUyUlZYSlR2dlhULTdaSk9tcUN4eUFiVjVadExkQWpQZzFkcmo3TXM?oc=5",
@@ -243,16 +237,16 @@
         "source": "Stephenson Harwood"
       },
       {
-        "title": "What Is GDPR?",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MNlhEb0xuTDdYRC02S3lWVHUxYUlGQnE2UTJzRzg1Vk9kVF9ITE9uM1F6NmVhWEhIbldJYWdZZWFkd1EyOC1LS3lXNW1nbFRXOHNDVlhuaWMydw?oc=5",
-        "pubDate": "Sat, 27 Jun 2026 07:00:00 GMT",
-        "source": "Coursera"
-      },
-      {
         "title": "Top 12 data protection action items for global businesses",
         "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQ2xKakd1WVllSkhFeld4WVRBdGx6Z1BQRUdtdE1XQ1FJcnFaaHJ1WHd4b2xoNzBGZVZiem9fUzZnNHoxWDZxS0dqTmtzRU1ZMkNyY0RjMW50UllUNk9DdUxCVlVOOFM4Slp4enJZSmhtYVBKQ2tITDkzbUtoUk1HeHVPVGw2dEh0?oc=5",
         "pubDate": "Mon, 11 May 2026 07:00:00 GMT",
         "source": "IAPP"
+      },
+      {
+        "title": "What Is GDPR?",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MNlhEb0xuTDdYRC02S3lWVHUxYUlGQnE2UTJzRzg1Vk9kVF9ITE9uM1F6NmVhWEhIbldJYWdZZWFkd1EyOC1LS3lXNW1nbFRXOHNDVlhuaWMydw?oc=5",
+        "pubDate": "Sat, 27 Jun 2026 07:00:00 GMT",
+        "source": "Coursera"
       },
       {
         "title": "What to Watch in 2026: Key EU Privacy & Cybersecurity Developments",
@@ -265,6 +259,12 @@
         "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZmlVV2RtR2JRTENUXzlWZUxnYTI4RTh6MWZTdEd0dFV5d1o4ZlE2bnUzNWw5T094djFlZmZMUk9wZEw5eFNLM2o5Z1R2MEhCMmxKVFowNy1nTENtZWM0UVpRN0tYeC0yUVQ1eHYtb1NzMUVSbzFNd0pVTXZ3ZEJvYXVnWGxPcmlySFlOajRlUHUxWGJXVUZ4TVRPT3dxTFVFOC1EUFo0cnJ2azA?oc=5",
         "pubDate": "Fri, 25 Apr 2025 07:00:00 GMT",
         "source": "EY"
+      },
+      {
+        "title": "Data Protection Update - November 2025",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbU9yVkN4aWMzX1o0aEpFNXg3LXVISjlGN0poRTB5cDBzMzJrRDg4VFp0SWxRbThmYk9Fb1JyREdxREtoTXpMZTNKWWRobzEzQWdoaXJjM3EwOXB4X3czYS1MN3d0M2duZEc2bUNJM0FkRXdkd0lMMGR0Y1dac3BrV05POXh2ZFE?oc=5",
+        "pubDate": "Wed, 19 Nov 2025 08:00:00 GMT",
+        "source": "Stephenson Harwood"
       },
       {
         "title": "What You Really Need To Know About The General Data Protection Regulation (GDPR)",
@@ -291,10 +291,10 @@
         "source": "Cyril Amarchand Mangaldas"
       },
       {
-        "title": "Cybersecurity: The Economic Benefits of GDPR",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5jTGhtNDUzQ3hsRFBlQTBCUGFUaVllam9jaTM3Um9tQnVkOGNuMHZNU21YVFhWbXlQS0RhNVhOdlNCWE9PSkgxeHVzcjc1dHZJSHZrZExmQmR2VkJnRGhpZi1WSV8xWGNrdFBn?oc=5",
-        "pubDate": "Tue, 24 Jun 2025 07:00:00 GMT",
-        "source": "CNIL"
+        "title": "Data residency: What is it and why is it important?",
+        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE12ZXZLdWx1WG44NTNrcWVGNExEUnM1ZGszN2M5NDNxN1ppcmt6ZUt6MkVscGtTajRzN0pjc1BQRjNyLTlHanBIMVgzT3g1bzZyc09ZWGdpenBDMlEzRmVrUUJQNXp5cXdVUm1qLWljSmJaOG1NT25FSg?oc=5",
+        "pubDate": "Tue, 13 Feb 2024 08:00:00 GMT",
+        "source": "IBM"
       }
     ]
   }
