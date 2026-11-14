@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T23:34:58.242Z",
+  "generatedAt": "2026-11-14T06:24:03.732Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -63,25 +63,19 @@
         "source": "RSM US LLP"
       },
       {
-        "title": "Fraud investigation: An overview",
-        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04bkFZSXphU01rZjhCcDBhZnNUT1d3c3BXUW1na2FldkNaY3Z5eUpfdjZzbWF2RFl1eS05R0oxTTNzWGk0UTEzZnpLcW1kem5SUFpsYTN1Mmpaci1aU0ZyTXBJbjdOT0ZxdFRVOG9ITWdsY3k1?oc=5",
-        "pubDate": "Tue, 26 Mar 2024 07:00:00 GMT",
-        "source": "Thomson Reuters Legal Solutions"
-      },
-      {
         "title": "SBA Announces Full-Scale Audit of 8(a) Program to Uncover Fraud and Bribery",
         "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOaVJkUktOLTlVX0wwZTlpNXA2TXdoaXlvNThJQXlZbkc1aGhJUmtWMGFYZXNQdlN1Z1FFenF3aWpCRXduQnRwTGRZX1FwLTNFTXhRM3ZBR2ZoVUpCYUFueFBQNmtSQzJyUy1ULXVTZVZNd193c2hiMmJDSDJ0alQ0VkRjQTI2ZDktR3FjdzlEZkN0S08yeUNYTW5hVS03Qmp6?oc=5",
         "pubDate": "Wed, 02 Jul 2025 07:00:00 GMT",
         "source": "Holland & Knight"
+      },
+      {
+        "title": "Fraud investigation: An overview",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04bkFZSXphU01rZjhCcDBhZnNUT1d3c3BXUW1na2FldkNaY3Z5eUpfdjZzbWF2RFl1eS05R0oxTTNzWGk0UTEzZnpLcW1kem5SUFpsYTN1Mmpaci1aU0ZyTXBJbjdOT0ZxdFRVOG9ITWdsY3k1?oc=5",
+        "pubDate": "Tue, 26 Mar 2024 07:00:00 GMT",
+        "source": "Thomson Reuters Legal Solutions"
       }
     ],
     "artificial+intelligence+enterprise+automation": [
-      {
-        "title": "Raya Digital showcases integrated AI and automation solutions to drive enterprise performance",
-        "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPUjAwNjZiTUhPb0dzSF9nbHNsVUNLNGtKRXA2WGJHa3pudzQxZWFNVnoyQUM5WnR3Z19ZOV9mOVV3bUxYZ3RmYjhhUktVRTRwTVAxemVRdnFWdWFGNjRnel9sVmN0WXNiaFNpWHVVSER2SWlvbDVyRk5RRVdFbXRwLWZhVVN1OHlMYWtaZnJSaGgtaG9JcTVWUWhseDZmb2pEemMwc3paVUtWYkk2cUFNUGszMVc3TkptbHVtbllQRk1zbUlCRU9MQzZCclY?oc=5",
-        "pubDate": "Fri, 13 Nov 2026 14:53:12 GMT",
-        "source": "Egyptian Gazette"
-      },
       {
         "title": "What is Artificial Intelligence (AI) in Business?",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5VNG1NRDgxaXVLSjZyZlowN210di03LXN6NnUwYWd2RDJmWFdIOHk1WlJiRjVIdUo1NllIMFo3OXJnTGZ2aTMzbUJCOG5lR2stZ2JlZ0xGZlpWWXlRRE5Ndy1Eb2JERFhFbTJWX2lObGxna2s?oc=5",
@@ -147,6 +141,12 @@
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5nNkJMcjBySVgtWG5XemFIRzVObzZIaEpFZzNLZldpWGZGVWlfNWtONVhmSDlnNjh1ZXo0YkpjR0RnREJ3bXhxdUtkU2ltSnZqUHJnU2tBWXhvc0lqMnpma1JsSk9ONi05S1BBWk5XSFUyaTJH?oc=5",
         "pubDate": "Wed, 18 Feb 2026 08:00:00 GMT",
         "source": "MIT Sloan"
+      },
+      {
+        "title": "Tessera Labs Raises $60M To Scale Multi-Agent AI Enterprise Transformation Platform",
+        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNldFMVVyMTRSSHZHWHdpbGZzTUhXeHctQlhMQ3lDQkFNdjJzNkFZT3NtRVFKTUtUeXk4RmwwU3BBYlNpT3hnR2dxSExmelV4RFZvaU1kdDlvbzhvYWdPcXppR19Cb0llLUVoOUdYU2FwVWEzclFoTzFNZ0dsb0xOMmk2MFRqMExwSjRsbXBxTEsyTTZYeFd1LUR4QjQ3cExXdnFOdDYwdS1qME3SAasBQVVfeXFMTTZXRTFVcjE0Ukh2R1h3aWxmc01IV3h3LUJYTEN5Q0JBTXYyczZBWU9zbUVRSk1LVHl5OEZsMFNwQWJTaU94Z0dncUhMZnpVeERWb2lNZHQ5b284b2FnT3F6aUdfQm9JZS1FaDlHWFNhcFVhM3JRaE8xTWdHbG9MTjJpNjBUajBMcEo0bG1wcUxLMk02WHhXdS1EeEI0N3BMV3ZxTnQ2MHUtajBN?oc=5",
+        "pubDate": "Wed, 06 May 2026 07:00:00 GMT",
+        "source": "Ventureburn"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
