@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-11-15T02:39:48.533Z",
+  "generatedAt": "2026-11-15T10:54:25.154Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
-      {
-        "title": "Shs309m Bribe, Rolls-Royce Scandal: Inside the Cases That Cost URA Bosses Their Jobs",
-        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNejdVU0tfQzNGWmFnbFpVcjJWbmJnejdhczFqTENmTDBGTGt0dlVqbXNiMmhiM1RiU09NVzlTVGdWSVQ3ZENpYXZ4NDAxRW1VOTJuUjBmUEQtdTFiUE5idFhhWnlYcUNsZW1vYkU1SVp6MEZsd1p0MDVZSjlOOURERDQ1VFVZTlZfWnktUDRUSVBLckJsUktrbTlMN2lDNmtkTU5nc2JHckRWMjhCejBtekx6SUk1cUQ10gHAAUFVX3lxTE9ubENYemZPMTN5dmV2ZmJxdVRiQTZ1SFppWVBERUtkX1E1ejVoZmxMU1RfTFlva2xvMjdIYjVpb3Y3dURYYXptUGtnajMzM0xQd2ZPU0RBRkpXcTZ3NzFVTUZ0aWNoT3F4MFVEWWV6MXJBb0dYMUxQYXZoQ3lEUnh6Vy1ERUlLUVF0aldtNWJtajBIQU1TdHdvQmtRM0tUUWh3Y2NhbzhhMzlVdDdFLTU5WU1LeHpUQURtdWxLOUdudw?oc=5",
-        "pubDate": "Fri, 13 Nov 2026 11:18:45 GMT",
-        "source": "Nilepost"
-      },
       {
         "title": "Exclusive: Another URA Boss Fired Over Fraud Investigation",
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNX3BTeTR0S0ZZZ04yT1FPano2dmlwbk1hZ1h5MzdjdFM1NFZrUndjN2RDTXA5UHlNNVp6TmR2OTBiNmhtZzd1N21zUzlkcXBnOXpvdkEzVnBXclpLcUduNXczcmxTOXZzR1M1aXE0eTNacHVqSjI1bXNKdXVtYXdHbGJTSHFodlBMRy1J?oc=5",
@@ -19,6 +13,12 @@
         "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNckZmZVVKWmdETUxpc3FCaGlVUUxYcnpHaDh6Y3dha1lDYzNoOTRPdDVoX2VhNG5qZ29vNVV4eExYX3ZwcjlRMXFVV2ZyTWJpY2VwSXhDQVFoWjlRYWNCQmhuRmJlLTRVdzBZbXI2Y3RGdFJUWHZ3d3hEQzkyb2xXeWdPQ2xHLWNYc0hIdF93Q2tBVGtwZGFOc1pwTEFDYnJQZVRoRHQ1MXVaaVAz?oc=5",
         "pubDate": "Thu, 08 Oct 2026 07:00:00 GMT",
         "source": "Morgan Lewis"
+      },
+      {
+        "title": "Shs309m Bribe, Rolls-Royce Scandal: Inside the Cases That Cost URA Bosses Their Jobs",
+        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNejdVU0tfQzNGWmFnbFpVcjJWbmJnejdhczFqTENmTDBGTGt0dlVqbXNiMmhiM1RiU09NVzlTVGdWSVQ3ZENpYXZ4NDAxRW1VOTJuUjBmUEQtdTFiUE5idFhhWnlYcUNsZW1vYkU1SVp6MEZsd1p0MDVZSjlOOURERDQ1VFVZTlZfWnktUDRUSVBLckJsUktrbTlMN2lDNmtkTU5nc2JHckRWMjhCejBtekx6SUk1cUQ10gHAAUFVX3lxTE9ubENYemZPMTN5dmV2ZmJxdVRiQTZ1SFppWVBERUtkX1E1ejVoZmxMU1RfTFlva2xvMjdIYjVpb3Y3dURYYXptUGtnajMzM0xQd2ZPU0RBRkpXcTZ3NzFVTUZ0aWNoT3F4MFVEWWV6MXJBb0dYMUxQYXZoQ3lEUnh6Vy1ERUlLUVF0aldtNWJtajBIQU1TdHdvQmtRM0tUUWh3Y2NhbzhhMzlVdDdFLTU5WU1LeHpUQURtdWxLOUdudw?oc=5",
+        "pubDate": "Fri, 13 Nov 2026 11:18:45 GMT",
+        "source": "Nilepost"
       },
       {
         "title": "The implications of using AI in fraud prevention and detection",
@@ -89,22 +89,28 @@
         "source": "CIO"
       },
       {
-        "title": "real-world gen AI use cases from the world's leading organizations",
-        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNFZzcHc0ckFXSnFSMkVKZ3JyZmdlWmZpOGpOOFJWZUszN1dsaFl5MndRVWloX0Y3ZjRRanhhYTlqTGlLVjQwazVvQ2dyMlAwQU1SR3ZHSmxXYUlCSTZjblV0THNEaVlTM21XMGdwc0xYcnRyWUdZcFBmZHdIWXdfLWxRWUpnVm95WW9WLVZWcVFKMzU0RHdXR3ZKRQ?oc=5",
-        "pubDate": "Wed, 22 Apr 2026 07:00:00 GMT",
-        "source": "Google Cloud"
-      },
-      {
         "title": "5 Real-World Applications of Agentic AI in Enterprise Automation",
         "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSlBiWURXRUNKMFM5RDJub0Q5MFBra2lMLXBWNlVOY1R2WUVLQTg3QmU5QVB5NG1tanN0cmxpLUVhODNwTmZjLWN0QzNNc1cyQU5rTGRjTnhQWXU5aXhKMWF3a1gwbEtFU01BSzZHRExUVUJhc2dBZlBIMU1zTFZYMTZKaFJSdG90cFRETTJYTDNVZFFS?oc=5",
         "pubDate": "Wed, 02 Sep 2026 07:00:00 GMT",
         "source": "KDnuggets"
       },
       {
+        "title": "real-world gen AI use cases from the world's leading organizations",
+        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNFZzcHc0ckFXSnFSMkVKZ3JyZmdlWmZpOGpOOFJWZUszN1dsaFl5MndRVWloX0Y3ZjRRanhhYTlqTGlLVjQwazVvQ2dyMlAwQU1SR3ZHSmxXYUlCSTZjblV0THNEaVlTM21XMGdwc0xYcnRyWUdZcFBmZHdIWXdfLWxRWUpnVm95WW9WLVZWcVFKMzU0RHdXR3ZKRQ?oc=5",
+        "pubDate": "Wed, 22 Apr 2026 07:00:00 GMT",
+        "source": "Google Cloud"
+      },
+      {
         "title": "What Is AI-Powered Business Automation?",
         "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVkVfQkJ2TzVPODdWSUZ2dnh0SEFvRWR3aFhkR1J4N19Iak9sOEpTR3BiLW1OVU1xSUpXcTZ4ZEhFTEJyRTZHRTZjVWViYllNTlVtTnIzRXRjZTJWbmp5Q3U1S0NmMHNYaFRUQS1fZHpqbHhaNG9LVFdtU1dpcVBiR2tB?oc=5",
         "pubDate": "Mon, 12 Oct 2026 07:00:00 GMT",
         "source": "U.S. Chamber of Commerce"
+      },
+      {
+        "title": "Your AI Budget Is Growing. Your Returns Aren't. Here's Why.",
+        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQeTdIaW9nWk5ybUVZZGpCdGhOWGlkeVRCVWVONnBtQVNIYU9kLU9kUzMyUGVSRlluOFZQQ3I2TGFtNGRrOXpkWnlZOGtDdldfT2NQcDRUY3lYbU93WXNwU09ibXhUT2J4VjhDTDdWS29lcEJ0WVVkVDU4eGg1MDRpOXBwcFp0Y0l6bTAxOTZ3?oc=5",
+        "pubDate": "Mon, 01 Jun 2026 07:00:00 GMT",
+        "source": "Bain & Company"
       },
       {
         "title": "Beyond hours saved: Building the business case for agentic automation | Amazon Web Services",
@@ -126,7 +132,7 @@
       },
       {
         "title": "Beyond RPA Bots: What Happens When Automation Gets a Brain?",
-        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE52UVlzbGQ1NU9NbEI5U0xMT2puUnJaVW56YldjbHVHVDlMcWZpUEg0Z3RqaEJhMFpyZjFfZGV1aTF3RjZoUFRnREZ1Sm9lR2tQNkxxQ3ZKUGlkVXRDTV9INHBHTVQtMXRJVC10RFp2YTFLY3l1aXJB?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ybTBQMUxJcEVjVDZQTDJ3Qm1EMnZtTFdKbG9Ya2NrdHpBTXZoTE5yeUR0QXRSaFJINnVyTkY4dHN5NE1OUGp2MENKcDA2WlRtdzFKNXA0YmNjdzg2M0IzbmZNYW5tSDRYdms5Rjd5OVBSdw?oc=5",
         "pubDate": "Wed, 04 Mar 2026 08:00:00 GMT",
         "source": "Oracle"
       },
@@ -141,26 +147,20 @@
         "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNldFMVVyMTRSSHZHWHdpbGZzTUhXeHctQlhMQ3lDQkFNdjJzNkFZT3NtRVFKTUtUeXk4RmwwU3BBYlNpT3hnR2dxSExmelV4RFZvaU1kdDlvbzhvYWdPcXppR19Cb0llLUVoOUdYU2FwVWEzclFoTzFNZ0dsb0xOMmk2MFRqMExwSjRsbXBxTEsyTTZYeFd1LUR4QjQ3cExXdnFOdDYwdS1qME3SAasBQVVfeXFMTTZXRTFVcjE0Ukh2R1h3aWxmc01IV3h3LUJYTEN5Q0JBTXYyczZBWU9zbUVRSk1LVHl5OEZsMFNwQWJTaU94Z0dncUhMZnpVeERWb2lNZHQ5b284b2FnT3F6aUdfQm9JZS1FaDlHWFNhcFVhM3JRaE8xTWdHbG9MTjJpNjBUajBMcEo0bG1wcUxLMk02WHhXdS1EeEI0N3BMV3ZxTnQ2MHUtajBN?oc=5",
         "pubDate": "Wed, 06 May 2026 07:00:00 GMT",
         "source": "Ventureburn"
-      },
-      {
-        "title": "OpenText Redefines Enterprise Automation And AI",
-        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNalhZcS1WLTQ2elRicmJkQUU1U3FteWJNLXJZTlZseHJ0YlRwYlRaTm4wNWRGZ29NbUV3VlFLLTF3VUphdXJ6MnpZUTlkUUZEa2J6dDV6UVRBeFZVM2ExS2ZzT3hzOG9MRW5qT0Z0MFpQT2ltQ3Y0TWRHUElrb283Z0FocUdLc2c?oc=5",
-        "pubDate": "Mon, 24 Nov 2025 08:00:00 GMT",
-        "source": "Forrester"
       }
     ],
     "SEBI+RBI+corporate+governance+India": [
-      {
-        "title": "SEBI’s Regulatory Overhaul - Strengthening Corporate Governance and Deepening Capital Markets",
-        "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNWHpNTU9ia01wSUxvZVYzbUF3WktLQW5JMFBLQWVyLUp5dUtudlpWU01qb0pKaDhlcFI2N2JOeDVwVEZxWExiSW1BQnROQ0hTR0hXNjhzWEgya1A5UDA4eUF3cExVWWx2OGpZdm4yeDc3cW9mU0JXZGdrV3RrR2dPV3ZDWXFmWlkzNDMzZmY4V0M3cTlCSzQ0YlExdE1uQzYtaFlGR3h5anJXNTZCSVNReWZWVjJmcHA5UWpKWlZBd3FrcXhiVllzeTBHbjJma2M?oc=5",
-        "pubDate": "Sat, 13 Jun 2026 07:00:00 GMT",
-        "source": "Vajiram & Ravi"
-      },
       {
         "title": "What DPDPA, RBI, and SEBI demand from the digital Indian workforce",
         "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOempEVkNlMS1iZ19JR29ZMGctUm9sLXN2R2lMdWUwYkdXWkZqU2VCS0hsOXJEcWt6QWl1M1pMUXdrWjUtT3ZSdmlRQVo0bmh5SDN6djdDTDhfME81UXF5M2k3WEFuMlRleDFxVWQ4cFI2NlB1eUVocEY1ejBQcEtmTFJwZ3U5b2t6enlZejFDcGxoNV9nZTlVYk9DeGV4U1VhbWlGRVNKUmotS0liUkJTbGR3MlU5MmxEZTZJbmtfZTdvaEYyZ1hjSk5yYzg3SXNncUJnTDVYOVNRTnRJcm1lb2NENTNQZ9IB6gFBVV95cUxPaHJiWUJsR21WeVptN0RCLUFzVktsYUlhZ0Mzc0JpTG5YVjJPOFo4VUtZSjJIR2ItTHVEeVNERk02d09GbmppU0l1cXAyZ3Rnbm00ZWdJQTBxejI5b3htSEpGcUR4S0UtREE0aEhsUHB5MlVZS2M4S3BoUldIRmlGY2ZoOFpsREo1WFdtVjNtcThnaDBNM2xIX3dqNkIxOEg0RkNiMzBuLVBTb2hzemlzT2FLVk5HU1JSNVprZ1o0dl9GZ2hrRkN4OEg5allVVnF3eUl1c2NtbGZ4R29obGpnaWRidGt3UFJpRGc?oc=5",
         "pubDate": "Wed, 05 Aug 2026 07:00:00 GMT",
         "source": "ETLegalWorld.com"
+      },
+      {
+        "title": "SEBI’s Regulatory Overhaul - Strengthening Corporate Governance and Deepening Capital Markets",
+        "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNWHpNTU9ia01wSUxvZVYzbUF3WktLQW5JMFBLQWVyLUp5dUtudlpWU01qb0pKaDhlcFI2N2JOeDVwVEZxWExiSW1BQnROQ0hTR0hXNjhzWEgya1A5UDA4eUF3cExVWWx2OGpZdm4yeDc3cW9mU0JXZGdrV3RrR2dPV3ZDWXFmWlkzNDMzZmY4V0M3cTlCSzQ0YlExdE1uQzYtaFlGR3h5anJXNTZCSVNReWZWVjJmcHA5UWpKWlZBd3FrcXhiVllzeTBHbjJma2M?oc=5",
+        "pubDate": "Sat, 13 Jun 2026 07:00:00 GMT",
+        "source": "Vajiram & Ravi"
       },
       {
         "title": "SEBI, RBI working on derivatives linked to corporate bond indices: SEBI chief",
@@ -267,12 +267,6 @@
         "source": "Cybercrime Magazine"
       },
       {
-        "title": "Data Protection Update - November 2025",
-        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbU9yVkN4aWMzX1o0aEpFNXg3LXVISjlGN0poRTB5cDBzMzJrRDg4VFp0SWxRbThmYk9Fb1JyREdxREtoTXpMZTNKWWRobzEzQWdoaXJjM3EwOXB4X3czYS1MN3d0M2duZEc2bUNJM0FkRXdkd0lMMGR0Y1dac3BrV05POXh2ZFE?oc=5",
-        "pubDate": "Wed, 19 Nov 2025 08:00:00 GMT",
-        "source": "Stephenson Harwood"
-      },
-      {
         "title": "Comparing Global Privacy Regimes Under GDPR, DPDPA and US Data Protection Laws",
         "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOLUVFUXhGc1dtQ3ZidHp4MnhVQ1lUZXY5Z3BJa0RLTV9EVGR1ZUxYN2xRVXB3blRNZURzdVV5QWZjQ2pYQ1FaQWh2YWc0YVhOR2U4NkQ5emN1eU5CNEYxU0o4bmI3Ylh6c1hvTFhEMUhBTUxKZ2RmT09XWUlsUDNmVGNBRjN6ZkJsU0JQc2dXblRDZHFFOWVrdmJ6SGJPNlVHbnpoNDVkOTdYWS1FeVpTRUh1NVBxVEFwVWJjVWZSY3V0LXd5aGNB?oc=5",
         "pubDate": "Tue, 09 Jan 2024 08:00:00 GMT",
@@ -285,16 +279,22 @@
         "source": "ICLG"
       },
       {
+        "title": "Data Protection Update - November 2025",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbU9yVkN4aWMzX1o0aEpFNXg3LXVISjlGN0poRTB5cDBzMzJrRDg4VFp0SWxRbThmYk9Fb1JyREdxREtoTXpMZTNKWWRobzEzQWdoaXJjM3EwOXB4X3czYS1MN3d0M2duZEc2bUNJM0FkRXdkd0lMMGR0Y1dac3BrV05POXh2ZFE?oc=5",
+        "pubDate": "Wed, 19 Nov 2025 08:00:00 GMT",
+        "source": "Stephenson Harwood"
+      },
+      {
         "title": "Data privacy in 2025: Key trends and challenges ahead",
         "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOFhlRDNmdi1POWg5Z1A4VkhiNzQ5bmNsNmRMaWFaWlJncWEtZ3FtUV9TZURYRExLbE5rYTlqaUNKamZoMmVVeDRtVFBac1NyTTJJUmVGQkNfUTVGZ3g0U2RJMEUwaUZCQVROdTRQT2k1QjlVY0pTemJhaUNHQnBCaDVKVlplTWxZNmFvaUZ6YWhvQ1loNWltajFobk95bWZNMGpEQzZxcmo1dw?oc=5",
         "pubDate": "Thu, 23 Jan 2025 08:00:00 GMT",
         "source": "WeLiveSecurity"
       },
       {
-        "title": "Cybersecurity: The Economic Benefits of GDPR",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5jTGhtNDUzQ3hsRFBlQTBCUGFUaVllam9jaTM3Um9tQnVkOGNuMHZNU21YVFhWbXlQS0RhNVhOdlNCWE9PSkgxeHVzcjc1dHZJSHZrZExmQmR2VkJnRGhpZi1WSV8xWGNrdFBn?oc=5",
-        "pubDate": "Tue, 24 Jun 2025 07:00:00 GMT",
-        "source": "CNIL"
+        "title": "Data residency: What is it and why is it important?",
+        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE12ZXZLdWx1WG44NTNrcWVGNExEUnM1ZGszN2M5NDNxN1ppcmt6ZUt6MkVscGtTajRzN0pjc1BQRjNyLTlHanBIMVgzT3g1bzZyc09ZWGdpenBDMlEzRmVrUUJQNXp5cXdVUm1qLWljSmJaOG1NT25FSg?oc=5",
+        "pubDate": "Tue, 13 Feb 2024 08:00:00 GMT",
+        "source": "IBM"
       }
     ]
   }
