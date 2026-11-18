@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T04:22:02.898Z",
+  "generatedAt": "2026-11-18T13:58:51.325Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -33,16 +33,10 @@
         "source": "Morgan Lewis"
       },
       {
-        "title": "Exclusive: Another URA Boss Fired Over Fraud Investigation",
-        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNX3BTeTR0S0ZZZ04yT1FPano2dmlwbk1hZ1h5MzdjdFM1NFZrUndjN2RDTXA5UHlNNVp6TmR2OTBiNmhtZzd1N21zUzlkcXBnOXpvdkEzVnBXclpLcUduNXczcmxTOXZzR1M1aXE0eTNacHVqSjI1bXNKdXVtYXdHbGJTSHFodlBMRy1J?oc=5",
-        "pubDate": "Fri, 13 Nov 2026 11:27:18 GMT",
-        "source": "ChimpReports"
-      },
-      {
-        "title": "Shs309m Bribe, Rolls-Royce Scandal: Inside the Cases That Cost URA Bosses Their Jobs",
-        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNejdVU0tfQzNGWmFnbFpVcjJWbmJnejdhczFqTENmTDBGTGt0dlVqbXNiMmhiM1RiU09NVzlTVGdWSVQ3ZENpYXZ4NDAxRW1VOTJuUjBmUEQtdTFiUE5idFhhWnlYcUNsZW1vYkU1SVp6MEZsd1p0MDVZSjlOOURERDQ1VFVZTlZfWnktUDRUSVBLckJsUktrbTlMN2lDNmtkTU5nc2JHckRWMjhCejBtekx6SUk1cUQ10gHAAUFVX3lxTE9ubENYemZPMTN5dmV2ZmJxdVRiQTZ1SFppWVBERUtkX1E1ejVoZmxMU1RfTFlva2xvMjdIYjVpb3Y3dURYYXptUGtnajMzM0xQd2ZPU0RBRkpXcTZ3NzFVTUZ0aWNoT3F4MFVEWWV6MXJBb0dYMUxQYXZoQ3lEUnh6Vy1ERUlLUVF0aldtNWJtajBIQU1TdHdvQmtRM0tUUWh3Y2NhbzhhMzlVdDdFLTU5WU1LeHpUQURtdWxLOUdudw?oc=5",
-        "pubDate": "Fri, 13 Nov 2026 11:18:45 GMT",
-        "source": "Nilepost"
+        "title": "10 Global Compliance Concerns for 2026",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYWxvS1B5U3FXUThwY0l3MjZmc2lXUVYyUkJ6RlRRbFpTbTlWVjZoQ2QxemdFTklDenU3SF85SHhEVi1mNWhQUjFacmNjdFVrenJ6cUJ5NWVmY0xXTk53dDJYRWZEdkRHVHk3M2VKMlI5RERpc0JWUnpMbmUtSnZoNXJvTkxzM0E?oc=5",
+        "pubDate": "Wed, 10 Dec 2025 08:00:00 GMT",
+        "source": "Thomson Reuters"
       },
       {
         "title": "WHO staff become certified fraud examiners at first-of-its-kind training",
@@ -51,10 +45,10 @@
         "source": "World Health Organization (WHO)"
       },
       {
-        "title": "Internal audit’s role in AI fraud detection",
-        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVEpnUzZvR1NyZjdMVzYwejh4bm0ta1lOZ0x0SUxlbURkd2taRGE2U2VKRGRDN0VsM3BHZHlnU1M2a1V3R2NNSjVGRi1PamVBWjl0X1dHVUVhLWFuUEhrV2RVaThuNlQ4a0pYWUJDaUtWMUxxeDFHZmVhN1ZWSnpNeGpSdjhicTdjYzg1bC1xSWlyUQ?oc=5",
-        "pubDate": "Wed, 19 Feb 2025 08:00:00 GMT",
-        "source": "Wolters Kluwer"
+        "title": "Navigating the risk landscape to build fraud-resilient frameworks",
+        "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVVB2Q2dRVzBZa2xaZEZzbnNHd2NlQjlaSmNfNlNfZ3ZaRWw0UHhtdTFaNldBM1FKT21abHdyZ3hwelNVYml2OHBIXzVxTGFUeDJsRDZnM2RjNGRJbmxGN3RWZGVNcHk1VDBBbWFMWGZjWnRHTHV6cTZUMzNBQy12b1FmRHhvZ2NjQ0w0c2M2aDhqSHlmQ0dMRVFmMEtJY01zcTVOY18zTE9wX1lCN2lBTG5ac0R4OFpUaF9RX215b0o5YUIzTVE?oc=5",
+        "pubDate": "Tue, 14 Oct 2025 07:00:00 GMT",
+        "source": "EY"
       },
       {
         "title": "Be prepared: A guide to internal and external fraud investigations",
@@ -63,19 +57,31 @@
         "source": "RSM US"
       },
       {
+        "title": "Internal audit’s role in AI fraud detection",
+        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVEpnUzZvR1NyZjdMVzYwejh4bm0ta1lOZ0x0SUxlbURkd2taRGE2U2VKRGRDN0VsM3BHZHlnU1M2a1V3R2NNSjVGRi1PamVBWjl0X1dHVUVhLWFuUEhrV2RVaThuNlQ4a0pYWUJDaUtWMUxxeDFHZmVhN1ZWSnpNeGpSdjhicTdjYzg1bC1xSWlyUQ?oc=5",
+        "pubDate": "Wed, 19 Feb 2025 08:00:00 GMT",
+        "source": "Wolters Kluwer"
+      },
+      {
+        "title": "Strengthening Government Fraud Enforcement: Administrative False Claims Act Provides Agencies Tool to Bring Fraud Claims",
+        "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQV1JsWW9OTVZQdThwZmxQczVua09fZk8xcGZKQVVvYlVhQ1VFeEI2QTRMbnBHbUxXVV9fc2xEWUtkRlEwUTJPajh3VF80TFhYUEZCVjFNVU5FaEdpdjladVdRTGN3ZHZKMDNwZWZrMmxxS3NPUUVSR0NMM25QbEZCWlk4cXRvQWRFckhqRjh4a2tpUlg3bWtqTUswMEd0c3Jfb08xbkppdTZrZjRXNjh3MDNBS3VGSjViaHJZWTZYSlpuak82S0tCbEdQQ0FBOU9MYlBFNDJ1aHlteHN2Mmh5WmI3VWtoVnpuX3pwdGpkNkdnWXV6Tk10N01Jb3pnVl8w?oc=5",
+        "pubDate": "Tue, 01 Apr 2025 07:00:00 GMT",
+        "source": "Ogletree"
+      },
+      {
         "title": "Fraud investigation: An overview",
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04bkFZSXphU01rZjhCcDBhZnNUT1d3c3BXUW1na2FldkNaY3Z5eUpfdjZzbWF2RFl1eS05R0oxTTNzWGk0UTEzZnpLcW1kem5SUFpsYTN1Mmpaci1aU0ZyTXBJbjdOT0ZxdFRVOG9ITWdsY3k1?oc=5",
         "pubDate": "Tue, 26 Mar 2024 07:00:00 GMT",
         "source": "Thomson Reuters Legal Solutions"
-      },
-      {
-        "title": "SBA Announces Full-Scale Audit of 8(a) Program to Uncover Fraud and Bribery",
-        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOaVJkUktOLTlVX0wwZTlpNXA2TXdoaXlvNThJQXlZbkc1aGhJUmtWMGFYZXNQdlN1Z1FFenF3aWpCRXduQnRwTGRZX1FwLTNFTXhRM3ZBR2ZoVUpCYUFueFBQNmtSQzJyUy1ULXVTZVZNd193c2hiMmJDSDJ0alQ0VkRjQTI2ZDktR3FjdzlEZkN0S08yeUNYTW5hVS03Qmp6?oc=5",
-        "pubDate": "Wed, 02 Jul 2025 07:00:00 GMT",
-        "source": "Holland & Knight"
       }
     ],
     "artificial+intelligence+enterprise+automation": [
+      {
+        "title": "Cogent Security launches DefenseOs to automate enterprise vulnerability management",
+        "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdHRKVDcwWWV5R0hJanBOMkh0T0w1aTdzdDNDQmNHblI1M0c1X1BaWHZmWHM1MnQzZ3MwSWVQeWZDZ1Z1Zy05SnJlZE03ZkZBME9KcmF5dWNaLW1GN3IxUXlLXzJTdk9CWmJJVUNUQS1Sc3pDT05EOF9mTVl6M1dUSEhvSEVCUUVvQk0zSGlkMGROTGN2NmxPNnlxczMtX2dKakNKR1RGVTBxM1pUTlU1bHJn?oc=5",
+        "pubDate": "Wed, 18 Nov 2026 00:46:54 GMT",
+        "source": "SC Media"
+      },
       {
         "title": "What is Artificial Intelligence (AI) in Business?",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5VNG1NRDgxaXVLSjZyZlowN210di03LXN6NnUwYWd2RDJmWFdIOHk1WlJiRjVIdUo1NllIMFo3OXJnTGZ2aTMzbUJCOG5lR2stZ2JlZ0xGZlpWWXlRRE5Ndy1Eb2JERFhFbTJWX2lObGxna2s?oc=5",
@@ -125,12 +131,6 @@
         "source": "CIOReview"
       },
       {
-        "title": "How AI Is Reshaping the Future of Work",
-        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcWZxMjBRNXQteUx2UmlSWEt0cTY3OTBZUWxCN1FUQ1FNdHhlWTA0b29lZnhwalYwNFphYTB3R0tkSUNBMzlSZWlaQzBSV290ejVkTTB4MWVNSV9mSkt1dHE2WGdZdjIxS0hUUHZPLWtpTjZ5cWM5enFPR0c0a2RFeDRn?oc=5",
-        "pubDate": "Sat, 25 Apr 2026 16:49:15 GMT",
-        "source": "Stanford Graduate School of Business"
-      },
-      {
         "title": "20+ Best AI Tools for Business to Automate and Scale",
         "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQM1FaWk5tbHlrWnBTclNTRnhvUDRHc1I3WEVEd1RWakkyOS1yYi1JTmdwMFRkUFdqbFNOQW02bHpfSmFsSDZFMndYSWo2aU5UeTBZV0F1allwZmwyMkMzUE9hNkh1LXQ5b1Z2LUR2bnRnN3N0LW1tU05GUzdlazloSVh5SzNxNFpIcHRZbENFcUg?oc=5",
         "pubDate": "Sat, 10 Jan 2026 05:21:42 GMT",
@@ -169,6 +169,12 @@
         "source": "Moneycontrol.com"
       },
       {
+        "title": "What DPDPA, RBI, and SEBI demand from the digital Indian workforce",
+        "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOempEVkNlMS1iZ19JR29ZMGctUm9sLXN2R2lMdWUwYkdXWkZqU2VCS0hsOXJEcWt6QWl1M1pMUXdrWjUtT3ZSdmlRQVo0bmh5SDN6djdDTDhfME81UXF5M2k3WEFuMlRleDFxVWQ4cFI2NlB1eUVocEY1ejBQcEtmTFJwZ3U5b2t6enlZejFDcGxoNV9nZTlVYk9DeGV4U1VhbWlGRVNKUmotS0liUkJTbGR3MlU5MmxEZTZJbmtfZTdvaEYyZ1hjSk5yYzg3SXNncUJnTDVYOVNRTnRJcm1lb2NENTNQZ9IB6gFBVV95cUxPaHJiWUJsR21WeVptN0RCLUFzVktsYUlhZ0Mzc0JpTG5YVjJPOFo4VUtZSjJIR2ItTHVEeVNERk02d09GbmppU0l1cXAyZ3Rnbm00ZWdJQTBxejI5b3htSEpGcUR4S0UtREE0aEhsUHB5MlVZS2M4S3BoUldIRmlGY2ZoOFpsREo1WFdtVjNtcThnaDBNM2xIX3dqNkIxOEg0RkNiMzBuLVBTb2hzemlzT2FLVk5HU1JSNVprZ1o0dl9GZ2hrRkN4OEg5allVVnF3eUl1c2NtbGZ4R29obGpnaWRidGt3UFJpRGc?oc=5",
+        "pubDate": "Wed, 05 Aug 2026 07:00:00 GMT",
+        "source": "ETLegalWorld.com"
+      },
+      {
         "title": "Enhancing the Interoperability of India’s Business Sustainability Reporting with International Standards",
         "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPLU9kY0RnT0JHOGFuZEQ2NVE3MWdfeFJzODRiS2hHRG0yVmQtOTd4RUczeWxRT1JvR3VHNHdTdDhVRG53NjI4bVhTc2N1ekU2c1BBZHF4LUdwdFl3d0hnblllQUNBcjFOc2pYdlN0NGRtWm1SMUUxcFdrcWxMOXlrTGw3c2ZGOS1yRmh0UTY1MWlFNmdRVW5xOWVyU1JYSnBmN1N1ZHRsXzNua2hJR1N3ZzNPZWxMbXJwTUJiMGhWNjhUT2hPNWdRQTVyWlJqVVVSb1c3Ql93?oc=5",
         "pubDate": "Thu, 22 Jan 2026 08:00:00 GMT",
@@ -185,12 +191,6 @@
         "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdGh5RnVJTnlhYlRQaGRxemF0SkdUZS0zcENPWHRCbkNXZUZKaHJNNGtjS3RSbXdXV0NHY0RmdGpiLW9IcUxYM0R1ZTRYRU9Ibi1JT3FyWnhmVzFKSWp4bFIxaFRSQTBCQXN3M2I4VTd6WHZTZlNORzVWZFgxTHhJNEIzU1N6bHMwcW0zRmxjVHZKTzNMNXR0MUVLVzNvcE1SYkp1cEF6QWtvcVZrc0Vwck5ETTN3bWJKR1BOdXNn?oc=5",
         "pubDate": "Thu, 12 Jun 2025 07:00:00 GMT",
         "source": "Invest India"
-      },
-      {
-        "title": "What DPDPA, RBI, and SEBI demand from the digital Indian workforce",
-        "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOempEVkNlMS1iZ19JR29ZMGctUm9sLXN2R2lMdWUwYkdXWkZqU2VCS0hsOXJEcWt6QWl1M1pMUXdrWjUtT3ZSdmlRQVo0bmh5SDN6djdDTDhfME81UXF5M2k3WEFuMlRleDFxVWQ4cFI2NlB1eUVocEY1ejBQcEtmTFJwZ3U5b2t6enlZejFDcGxoNV9nZTlVYk9DeGV4U1VhbWlGRVNKUmotS0liUkJTbGR3MlU5MmxEZTZJbmtfZTdvaEYyZ1hjSk5yYzg3SXNncUJnTDVYOVNRTnRJcm1lb2NENTNQZ9IB6gFBVV95cUxPaHJiWUJsR21WeVptN0RCLUFzVktsYUlhZ0Mzc0JpTG5YVjJPOFo4VUtZSjJIR2ItTHVEeVNERk02d09GbmppU0l1cXAyZ3Rnbm00ZWdJQTBxejI5b3htSEpGcUR4S0UtREE0aEhsUHB5MlVZS2M4S3BoUldIRmlGY2ZoOFpsREo1WFdtVjNtcThnaDBNM2xIX3dqNkIxOEg0RkNiMzBuLVBTb2hzemlzT2FLVk5HU1JSNVprZ1o0dl9GZ2hrRkN4OEg5allVVnF3eUl1c2NtbGZ4R29obGpnaWRidGt3UFJpRGc?oc=5",
-        "pubDate": "Wed, 05 Aug 2026 07:00:00 GMT",
-        "source": "ETLegalWorld.com"
       },
       {
         "title": "Rethinking Open-Offer Financing: The Impact Of RBI’s Acquisition Financing Liberalisation",
