@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-11-20T03:15:52.963Z",
+  "generatedAt": "2026-11-20T12:54:30.980Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
-      {
-        "title": "CIFCFIN: Lack of forensic expertise could undermine prosecution of financial crimes",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT0hGZWpqTS1mR1lpNGZndjBnRzl4TGNNN1pNNnZ0ckdtMzVhY2dPalBwUVZxd094M19BdXFIMHRpc0NHbk5OTmhaZURLSHZOTGFNWHB3cGZEX2Uwd3dOT0M5cm10NzB3Qkl2VXVvQ1BwTjB5UW9EQ3ZvdzdxR1ByYUhMN1dBYktqbnN5SnJ2ZFRnMmlNcXdQRV9GZGpwRGhEX1ZhdXFMSjF3SjA?oc=5",
-        "pubDate": "Thu, 19 Nov 2026 21:07:00 GMT",
-        "source": "TheCable"
-      },
       {
         "title": "5 leading technology-driven techniques used to investigate fraud",
         "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQVkNNNUJSdVkxaGtDUXBBeEZTWDItdjFTYW9nWDFLOWVoQkhBZU9ic0MxMm9PQUJLd25FMTFBaUctUkhfR2Y4ckdoQ3Y5RXJ6c0xaazJzTDdncFlyQWxBY3lqSlFNV3dQcWRZMnlrek5ZX3R1amdUMHktUGJRZnM4bXJKV3dyNkZPOE5pZ2hoSl9lX0RmeWs3eXdkVW96MlBUTlJRWjlWS0ZMV1N5MEZtWlZkRzhSeWIyR3NPaEppdmZ6bmZTblNIWg?oc=5",
@@ -15,28 +9,16 @@
         "source": "RSM US"
       },
       {
+        "title": "CIFCFIN: Lack of forensic expertise could undermine prosecution of financial crimes",
+        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT0hGZWpqTS1mR1lpNGZndjBnRzl4TGNNN1pNNnZ0ckdtMzVhY2dPalBwUVZxd094M19BdXFIMHRpc0NHbk5OTmhaZURLSHZOTGFNWHB3cGZEX2Uwd3dOT0M5cm10NzB3Qkl2VXVvQ1BwTjB5UW9EQ3ZvdzdxR1ByYUhMN1dBYktqbnN5SnJ2ZFRnMmlNcXdQRV9GZGpwRGhEX1ZhdXFMSjF3SjA?oc=5",
+        "pubDate": "Thu, 19 Nov 2026 21:07:00 GMT",
+        "source": "TheCable"
+      },
+      {
         "title": "Fraud Operations: Financial Crime Managed Services",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVEV1Ti1ETWhLS1FLbkRzbkR0c04yeHIzWjNDaGhFY2RaMm5lWnNhV3JFRDV4UzJmNlJkc1c4a3BDRTJFeEhraG9lLWdBc3BjbFRmZ05CbkhjTjFMTmFyaDJVZnN5NFlIOTdBdEF6ekVtTjZkblprS3N2WXFXQzEyZEgwdE5xZXdFLXlhWE4xWjVUXzd1cE9tMQ?oc=5",
         "pubDate": "Fri, 31 Jul 2026 09:33:35 GMT",
         "source": "EY"
-      },
-      {
-        "title": "2026 International Fraud Week: Scale of Global Fraud Losses Alarming Says CIFCFIN",
-        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNN3JleGdzbzhKWkp2eVJMSTcyZldaRHgtZDBUcWhINGRaYVk3blRHc1BuYnJZX1U5LTR4c1liT0VzSFpRcWxyQVY1ODIxYjRIM2Jjc0Z2WGg1bXJ1dDBDTWtGSkx4aTVVUl9sVmtBeGx5MTNieHUwMldUN3ZFX1lnRGdUU2tham1XbTI3eGFZUHFGZFIxYkVvUk1nYXBNNHlTeUN6TEVNRUR6WFAtcXRPYWlxdXIzTmVPTTNUbQ?oc=5",
-        "pubDate": "Thu, 19 Nov 2026 05:28:21 GMT",
-        "source": "THISDAYLIVE"
-      },
-      {
-        "title": "New Fraud Division Flexes Might in Latest Enforcement Policy, Law360 – News",
-        "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNckZmZVVKWmdETUxpc3FCaGlVUUxYcnpHaDh6Y3dha1lDYzNoOTRPdDVoX2VhNG5qZ29vNVV4eExYX3ZwcjlRMXFVV2ZyTWJpY2VwSXhDQVFoWjlRYWNCQmhuRmJlLTRVdzBZbXI2Y3RGdFJUWHZ3d3hEQzkyb2xXeWdPQ2xHLWNYc0hIdF93Q2tBVGtwZGFOc1pwTEFDYnJQZVRoRHQ1MXVaaVAz?oc=5",
-        "pubDate": "Thu, 08 Oct 2026 07:00:00 GMT",
-        "source": "Morgan Lewis"
-      },
-      {
-        "title": "Director addresses global anti-corruption conference",
-        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRnlDTmtuMURZZnpQdFNkUUJkUVJtVUtPblJWbldSRTB5aHhhZ242bm51eEtYbmt4NG15cndyLUZRS2Y4Rkk2aUVfNVl1d19SaHpmTVF2QmR2bDBwR0Nob0hydHlnc2VTd2hUMW9vUlowd1pzZUtXaGJseTYzdmhsRFZHTVRvSmdTLV9tN3lfQUVSLWJ0anc?oc=5",
-        "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
-        "source": "GOV.UK"
       },
       {
         "title": "The implications of using AI in fraud prevention and detection",
@@ -51,16 +33,28 @@
         "source": "FTI Consulting"
       },
       {
+        "title": "Director addresses global anti-corruption conference",
+        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRnlDTmtuMURZZnpQdFNkUUJkUVJtVUtPblJWbldSRTB5aHhhZ242bm51eEtYbmt4NG15cndyLUZRS2Y4Rkk2aUVfNVl1d19SaHpmTVF2QmR2bDBwR0Nob0hydHlnc2VTd2hUMW9vUlowd1pzZUtXaGJseTYzdmhsRFZHTVRvSmdTLV9tN3lfQUVSLWJ0anc?oc=5",
+        "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
+        "source": "GOV.UK"
+      },
+      {
+        "title": "New Fraud Division Flexes Might in Latest Enforcement Policy, Law360 – News",
+        "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNckZmZVVKWmdETUxpc3FCaGlVUUxYcnpHaDh6Y3dha1lDYzNoOTRPdDVoX2VhNG5qZ29vNVV4eExYX3ZwcjlRMXFVV2ZyTWJpY2VwSXhDQVFoWjlRYWNCQmhuRmJlLTRVdzBZbXI2Y3RGdFJUWHZ3d3hEQzkyb2xXeWdPQ2xHLWNYc0hIdF93Q2tBVGtwZGFOc1pwTEFDYnJQZVRoRHQ1MXVaaVAz?oc=5",
+        "pubDate": "Thu, 08 Oct 2026 07:00:00 GMT",
+        "source": "Morgan Lewis"
+      },
+      {
+        "title": "URA sacks customs boss Kisitu and integrity chief Abola over corruption-related cases",
+        "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNTjh2MTlWRDFieEdLcXVnZmI3cXJJQnJBaXNWbVA3RXZmbmppclMtLXR2Q09WMjgzV0F1dDRmQnVYckZla29Hd1U3RUlIekM1MDlCVVU4WE12R0hYdjk5bG9fLXNiWVROaTVVRi0tS3pCMWJTUVBwT1FsR0h1Z0t2NGFuMmlqYkFxZnlWeHhKNEZDcEU2WVlobE1PeEFIYy1MbzZBdVFTYmpiN0lDQ1laSGlPT1hESGdrNjNqVmVtdUJnMW4xckJ0NmtabFNzSElkeG9QVHJrdjQ4OVU?oc=5",
+        "pubDate": "Fri, 13 Nov 2026 09:58:39 GMT",
+        "source": "Daily Monitor"
+      },
+      {
         "title": "Navigating the risk landscape to build fraud-resilient frameworks",
         "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVVB2Q2dRVzBZa2xaZEZzbnNHd2NlQjlaSmNfNlNfZ3ZaRWw0UHhtdTFaNldBM1FKT21abHdyZ3hwelNVYml2OHBIXzVxTGFUeDJsRDZnM2RjNGRJbmxGN3RWZGVNcHk1VDBBbWFMWGZjWnRHTHV6cTZUMzNBQy12b1FmRHhvZ2NjQ0w0c2M2aDhqSHlmQ0dMRVFmMEtJY01zcTVOY18zTE9wX1lCN2lBTG5ac0R4OFpUaF9RX215b0o5YUIzTVE?oc=5",
         "pubDate": "Tue, 14 Oct 2025 07:00:00 GMT",
         "source": "EY"
-      },
-      {
-        "title": "International Fraud Awareness Week 2026",
-        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbjlCNzdVam5BY1Ffcmg4alFqd2htX1JiWUxLdVBPZ3Q2OVZ2RnZiZmhGc2ZjaWcwOExWVGNtVEFVMmNIOFZ2MU5HNXdCblRsalYtR2d6TWFYQV85R0QzV21Ld1JfT2EyUUg5ZkFydmxseVB6U1ZLdDN5YVVUbjFrYUdlVjFyM3ZxUUE?oc=5",
-        "pubDate": "Wed, 18 Nov 2026 14:17:06 GMT",
-        "source": "kpmg.com"
       },
       {
         "title": "Internal audit’s role in AI fraud detection",
@@ -73,6 +67,12 @@
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04bkFZSXphU01rZjhCcDBhZnNUT1d3c3BXUW1na2FldkNaY3Z5eUpfdjZzbWF2RFl1eS05R0oxTTNzWGk0UTEzZnpLcW1kem5SUFpsYTN1Mmpaci1aU0ZyTXBJbjdOT0ZxdFRVOG9ITWdsY3k1?oc=5",
         "pubDate": "Tue, 26 Mar 2024 07:00:00 GMT",
         "source": "Thomson Reuters Legal Solutions"
+      },
+      {
+        "title": "Strengthening Government Fraud Enforcement: Administrative False Claims Act Provides Agencies Tool to Bring Fraud Claims",
+        "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQV1JsWW9OTVZQdThwZmxQczVua09fZk8xcGZKQVVvYlVhQ1VFeEI2QTRMbnBHbUxXVV9fc2xEWUtkRlEwUTJPajh3VF80TFhYUEZCVjFNVU5FaEdpdjladVdRTGN3ZHZKMDNwZWZrMmxxS3NPUUVSR0NMM25QbEZCWlk4cXRvQWRFckhqRjh4a2tpUlg3bWtqTUswMEd0c3Jfb08xbkppdTZrZjRXNjh3MDNBS3VGSjViaHJZWTZYSlpuak82S0tCbEdQQ0FBOU9MYlBFNDJ1aHlteHN2Mmh5WmI3VWtoVnpuX3pwdGpkNkdnWXV6Tk10N01Jb3pnVl8w?oc=5",
+        "pubDate": "Tue, 01 Apr 2025 07:00:00 GMT",
+        "source": "Ogletree"
       }
     ],
     "artificial+intelligence+enterprise+automation": [
@@ -131,16 +131,16 @@
         "source": "Salesforce"
       },
       {
-        "title": "Beyond RPA Bots: What Happens When Automation Gets a Brain?",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ybTBQMUxJcEVjVDZQTDJ3Qm1EMnZtTFdKbG9Ya2NrdHpBTXZoTE5yeUR0QXRSaFJINnVyTkY4dHN5NE1OUGp2MENKcDA2WlRtdzFKNXA0YmNjdzg2M0IzbmZNYW5tSDRYdms5Rjd5OVBSdw?oc=5",
-        "pubDate": "Wed, 04 Mar 2026 08:00:00 GMT",
-        "source": "Oracle"
-      },
-      {
         "title": "Agentic AI, explained",
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5nNkJMcjBySVgtWG5XemFIRzVObzZIaEpFZzNLZldpWGZGVWlfNWtONVhmSDlnNjh1ZXo0YkpjR0RnREJ3bXhxdUtkU2ltSnZqUHJnU2tBWXhvc0lqMnpma1JsSk9ONi05S1BBWk5XSFUyaTJH?oc=5",
         "pubDate": "Wed, 18 Feb 2026 08:00:00 GMT",
         "source": "MIT Sloan"
+      },
+      {
+        "title": "Beyond RPA Bots: What Happens When Automation Gets a Brain?",
+        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE52UVlzbGQ1NU9NbEI5U0xMT2puUnJaVW56YldjbHVHVDlMcWZpUEg0Z3RqaEJhMFpyZjFfZGV1aTF3RjZoUFRnREZ1Sm9lR2tQNkxxQ3ZKUGlkVXRDTV9INHBHTVQtMXRJVC10RFp2YTFLY3l1aXJB?oc=5",
+        "pubDate": "Wed, 04 Mar 2026 08:00:00 GMT",
+        "source": "Oracle"
       },
       {
         "title": "Tessera Labs Raises $60M To Scale Multi-Agent AI Enterprise Transformation Platform",
@@ -151,10 +151,10 @@
     ],
     "SEBI+RBI+corporate+governance+India": [
       {
-        "title": "Rethinking Open-Offer Financing: The Impact Of RBI’s Acquisition Financing Liberalisation",
-        "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPWTl1cmQwZGI2V2ozNnZMem15eGdWTWM5MFNxeTV6b213VU1tUWhIMFZNS21nWDhFR1VBaHYwdFFHOU5uQ3BXZ2RKUnJwczdpNGw3TzV1dy1jRm5nMGYtOHhhMVJxMTBMUWlCTXpmV3lFeC1lb3FvNXlIV1VRVzRsMUJPSExkcEJqc01Odjl4YXFaeTNESHgteUtKNnRKaG9IOFFqM3Q4YzFfZ1VPbnVScnVwYXVMTm52S0xlT1RKS3NCZUhOTDFRRTZYZHA2WmQxaV9Xdg?oc=5",
-        "pubDate": "Wed, 22 Jul 2026 07:00:00 GMT",
-        "source": "Cyril Amarchand Mangaldas"
+        "title": "SEBI chief says regulator is working with RBI and Finance Ministry to improve corporate bond secondary market liquidity",
+        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPTW9MVWxGT3N2WW14YTZVX3JZQ2pCNmY1cDQ5Mk55N3pvZ2s0RjFTUmZsTXE3Z1RBTUptOHlLaUlqcnVDbnRNYWdzQlNONDE3ZzAxX01SdG9GLWVCOEFjTzNDRWRyMm9XdTQ1ZUhPSENLZWVnRWttN3EtdzRzaTVtVDZaT21lWlZXRVVtekZGbFlTa2FPYndicEM5SE9iVXh4?oc=5",
+        "pubDate": "Wed, 18 Nov 2026 08:00:00 GMT",
+        "source": "Elets BFSI"
       },
       {
         "title": "SEBI and RBI working together on corporate bond index derivatives to deepen debt market: Tuhin Kanta Pandey",
@@ -169,10 +169,10 @@
         "source": "The New Indian Express"
       },
       {
-        "title": "RBI Bulletin",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5YanJEbnVVWDVCd1FuTnd5eHdjcDZaelVlMVRoWjBYVVppMHhQaFVEY29tNjJUY3dYZTNQYzVNVjBoaTVXazVpY0NZSmQwUHJnLWdIYkZXSk9WdVRHWXd6OWlJMi1hODQzQ2dHdQ?oc=5",
-        "pubDate": "Mon, 20 Oct 2025 07:00:00 GMT",
-        "source": "Reserve Bank of India"
+        "title": "Rethinking Open-Offer Financing: The Impact Of RBI’s Acquisition Financing Liberalisation",
+        "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPWTl1cmQwZGI2V2ozNnZMem15eGdWTWM5MFNxeTV6b213VU1tUWhIMFZNS21nWDhFR1VBaHYwdFFHOU5uQ3BXZ2RKUnJwczdpNGw3TzV1dy1jRm5nMGYtOHhhMVJxMTBMUWlCTXpmV3lFeC1lb3FvNXlIV1VRVzRsMUJPSExkcEJqc01Odjl4YXFaeTNESHgteUtKNnRKaG9IOFFqM3Q4YzFfZ1VPbnVScnVwYXVMTm52S0xlT1RKS3NCZUhOTDFRRTZYZHA2WmQxaV9Xdg?oc=5",
+        "pubDate": "Wed, 22 Jul 2026 07:00:00 GMT",
+        "source": "Cyril Amarchand Mangaldas"
       },
       {
         "title": "Listing rules on corporate governance to prevail over RBI’s for listed banks, clarifies SEBI",
@@ -181,16 +181,16 @@
         "source": "Moneycontrol.com"
       },
       {
+        "title": "RBI Bulletin",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5YanJEbnVVWDVCd1FuTnd5eHdjcDZaelVlMVRoWjBYVVppMHhQaFVEY29tNjJUY3dYZTNQYzVNVjBoaTVXazVpY0NZSmQwUHJnLWdIYkZXSk9WdVRHWXd6OWlJMi1hODQzQ2dHdQ?oc=5",
+        "pubDate": "Mon, 20 Oct 2025 07:00:00 GMT",
+        "source": "Reserve Bank of India"
+      },
+      {
         "title": "The role of regulatory bodies in India's financial sector: Wha...",
         "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdGh5RnVJTnlhYlRQaGRxemF0SkdUZS0zcENPWHRCbkNXZUZKaHJNNGtjS3RSbXdXV0NHY0RmdGpiLW9IcUxYM0R1ZTRYRU9Ibi1JT3FyWnhmVzFKSWp4bFIxaFRSQTBCQXN3M2I4VTd6WHZTZlNORzVWZFgxTHhJNEIzU1N6bHMwcW0zRmxjVHZKTzNMNXR0MUVLVzNvcE1SYkp1cEF6QWtvcVZrc0Vwck5ETTN3bWJKR1BOdXNn?oc=5",
         "pubDate": "Thu, 12 Jun 2025 07:00:00 GMT",
         "source": "Invest India"
-      },
-      {
-        "title": "Enhancing the Interoperability of India’s Business Sustainability Reporting with International Standards",
-        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPLU9kY0RnT0JHOGFuZEQ2NVE3MWdfeFJzODRiS2hHRG0yVmQtOTd4RUczeWxRT1JvR3VHNHdTdDhVRG53NjI4bVhTc2N1ekU2c1BBZHF4LUdwdFl3d0hnblllQUNBcjFOc2pYdlN0NGRtWm1SMUUxcFdrcWxMOXlrTGw3c2ZGOS1yRmh0UTY1MWlFNmdRVW5xOWVyU1JYSnBmN1N1ZHRsXzNua2hJR1N3ZzNPZWxMbXJwTUJiMGhWNjhUT2hPNWdRQTVyWlJqVVVSb1c3Ql93?oc=5",
-        "pubDate": "Thu, 22 Jan 2026 08:00:00 GMT",
-        "source": "orfonline.org"
       },
       {
         "title": "RBI Bulletin",
