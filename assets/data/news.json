@@ -1,7 +1,13 @@
 {
-  "generatedAt": "2026-11-20T21:05:42.517Z",
+  "generatedAt": "2026-11-21T02:15:43.042Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
+      {
+        "title": "The implications of using AI in fraud prevention and detection",
+        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUFFTTXI0VWF6MjRMOFNKUXBVTFpkTTZOeEdHczhLUExNYW54MENXZ1k5RHVkYmY3bkY0MHN1c09VU0lWcjV2UnVoQ3ZvNUc3T2pvV29TMnJSTUVhMm42UmZFdUdRVEh6cTlUYldrUXBBWjRoX28zdW1pS1NyNXZNTjdkdlU5Q2R3SlhWd3FkUk1vTlZmV3doTkFHOXhlMUZIc0pJM0JtbVM3Z2NaVlhwZWV3TTY0RGZlamg2Zg?oc=5",
+        "pubDate": "Thu, 21 May 2026 17:27:58 GMT",
+        "source": "kpmg.com"
+      },
       {
         "title": "Fraud Operations: Financial Crime Managed Services",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVEV1Ti1ETWhLS1FLbkRzbkR0c04yeHIzWjNDaGhFY2RaMm5lWnNhV3JFRDV4UzJmNlJkc1c4a3BDRTJFeEhraG9lLWdBc3BjbFRmZ05CbkhjTjFMTmFyaDJVZnN5NFlIOTdBdEF6ekVtTjZkblprS3N2WXFXQzEyZEgwdE5xZXdFLXlhWE4xWjVUXzd1cE9tMQ?oc=5",
@@ -15,22 +21,16 @@
         "source": "RSM US"
       },
       {
-        "title": "The implications of using AI in fraud prevention and detection",
-        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUFFTTXI0VWF6MjRMOFNKUXBVTFpkTTZOeEdHczhLUExNYW54MENXZ1k5RHVkYmY3bkY0MHN1c09VU0lWcjV2UnVoQ3ZvNUc3T2pvV29TMnJSTUVhMm42UmZFdUdRVEh6cTlUYldrUXBBWjRoX28zdW1pS1NyNXZNTjdkdlU5Q2R3SlhWd3FkUk1vTlZmV3doTkFHOXhlMUZIc0pJM0JtbVM3Z2NaVlhwZWV3TTY0RGZlamg2Zg?oc=5",
-        "pubDate": "Thu, 21 May 2026 17:27:58 GMT",
-        "source": "kpmg.com"
+        "title": "Healthcare Fraud Enforcement and Compliance",
+        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSmo4emViVnVrM3dtbXZpdF9xekxSZnoyRnRtMkdBdmQxMHZoWkx1Q0lWc3AtTVFtS29VZ2FuSGd2V0xUa05sRzZmb1lHcWNZMnNJeWNXV0dmSUc3NmZkNE9iMi0tWnQtbm9CTWg3SzAzdXg3M0lWTDN5V1g4c1pqYnY4YjVjWXJYcG1Qb0NWV0Q0d01CMWlveTRR?oc=5",
+        "pubDate": "Fri, 06 Feb 2026 08:00:00 GMT",
+        "source": "FTI Consulting"
       },
       {
         "title": "CIFCFIN: Lack of forensic expertise could undermine prosecution of financial crimes",
         "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT0hGZWpqTS1mR1lpNGZndjBnRzl4TGNNN1pNNnZ0ckdtMzVhY2dPalBwUVZxd094M19BdXFIMHRpc0NHbk5OTmhaZURLSHZOTGFNWHB3cGZEX2Uwd3dOT0M5cm10NzB3Qkl2VXVvQ1BwTjB5UW9EQ3ZvdzdxR1ByYUhMN1dBYktqbnN5SnJ2ZFRnMmlNcXdQRV9GZGpwRGhEX1ZhdXFMSjF3SjA?oc=5",
         "pubDate": "Thu, 19 Nov 2026 21:07:00 GMT",
         "source": "TheCable"
-      },
-      {
-        "title": "Healthcare Fraud Enforcement and Compliance",
-        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSmo4emViVnVrM3dtbXZpdF9xekxSZnoyRnRtMkdBdmQxMHZoWkx1Q0lWc3AtTVFtS29VZ2FuSGd2V0xUa05sRzZmb1lHcWNZMnNJeWNXV0dmSUc3NmZkNE9iMi0tWnQtbm9CTWg3SzAzdXg3M0lWTDN5V1g4c1pqYnY4YjVjWXJYcG1Qb0NWV0Q0d01CMWlveTRR?oc=5",
-        "pubDate": "Fri, 06 Feb 2026 08:00:00 GMT",
-        "source": "FTI Consulting"
       },
       {
         "title": "Director addresses global anti-corruption conference",
@@ -43,6 +43,12 @@
         "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNckZmZVVKWmdETUxpc3FCaGlVUUxYcnpHaDh6Y3dha1lDYzNoOTRPdDVoX2VhNG5qZ29vNVV4eExYX3ZwcjlRMXFVV2ZyTWJpY2VwSXhDQVFoWjlRYWNCQmhuRmJlLTRVdzBZbXI2Y3RGdFJUWHZ3d3hEQzkyb2xXeWdPQ2xHLWNYc0hIdF93Q2tBVGtwZGFOc1pwTEFDYnJQZVRoRHQ1MXVaaVAz?oc=5",
         "pubDate": "Thu, 08 Oct 2026 07:00:00 GMT",
         "source": "Morgan Lewis"
+      },
+      {
+        "title": "WHO staff become certified fraud examiners at first-of-its-kind training",
+        "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWmgzeXU2OGFuZU9PaVpzTHFuSGlIY1BnTFM2dDdydGJFYUM3QzJTdXdnbFFldXI5WTA3c21xdTNYcTVzbk9ja3RQYmYxOFAzc0phVGdOOUVlWGtiR1JkaDVnaFNfV0k0RGNLa1hRQWp0eDZ5SWJYTHpGZEVlN3F6WGJqdE42WkxTVHBNUExZZVZsMGRscGRmQmhXSTR4eTY5QmdqaGVkWjk3ZEZjRlBBYmlrdU9rSmxMa3BmY2JzWUlQUHc?oc=5",
+        "pubDate": "Fri, 25 Oct 2024 07:00:00 GMT",
+        "source": "World Health Organization (WHO)"
       },
       {
         "title": "Navigating the risk landscape to build fraud-resilient frameworks",
@@ -67,12 +73,6 @@
         "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQV1JsWW9OTVZQdThwZmxQczVua09fZk8xcGZKQVVvYlVhQ1VFeEI2QTRMbnBHbUxXVV9fc2xEWUtkRlEwUTJPajh3VF80TFhYUEZCVjFNVU5FaEdpdjladVdRTGN3ZHZKMDNwZWZrMmxxS3NPUUVSR0NMM25QbEZCWlk4cXRvQWRFckhqRjh4a2tpUlg3bWtqTUswMEd0c3Jfb08xbkppdTZrZjRXNjh3MDNBS3VGSjViaHJZWTZYSlpuak82S0tCbEdQQ0FBOU9MYlBFNDJ1aHlteHN2Mmh5WmI3VWtoVnpuX3pwdGpkNkdnWXV6Tk10N01Jb3pnVl8w?oc=5",
         "pubDate": "Tue, 01 Apr 2025 07:00:00 GMT",
         "source": "Ogletree"
-      },
-      {
-        "title": "Be prepared: A guide to internal and external fraud investigations",
-        "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQU24tQTRNc0dxVDlaTjdzZmtjZ1dZell0YVlManJZWVVSZ005Nzg4bHg5N0R0WkZxODJOWkUwcW4yMnpyVzR6R2F3eDFiLUlRRHBTOUo0ekp0V1BjNTZ2bTNlcHkwdkFmMVZ6U1FFTl9yOXIzUGd1Q2pkdFNvUDZhU1F1MXhhUE90MUFmT2VseEpjZnFuVmE4NkV1T25DeXZCY1I3RVQwRFhMMno0SXZyaXhkUjNQQmc1UlE?oc=5",
-        "pubDate": "Mon, 04 Dec 2023 08:00:00 GMT",
-        "source": "RSM US"
       }
     ],
     "artificial+intelligence+enterprise+automation": [
@@ -176,8 +176,8 @@
       },
       {
         "title": "RBI Bulletin",
-        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5vdXlGejY5ZFZFQ1hKVDlTTDJFSG83SDBlM3QxRzVMSC1VdmV1NzVXUFhVS0lId3p3bkRoXzkzT0tHcXFqYzBBLVBGMFo0c2loeDlkdzgwNmw5Uk5nRHU2dEJSYUhqdmNKR2JkUw?oc=5",
-        "pubDate": "Wed, 24 Sep 2025 07:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5YanJEbnVVWDVCd1FuTnd5eHdjcDZaelVlMVRoWjBYVVppMHhQaFVEY29tNjJUY3dYZTNQYzVNVjBoaTVXazVpY0NZSmQwUHJnLWdIYkZXSk9WdVRHWXd6OWlJMi1hODQzQ2dHdQ?oc=5",
+        "pubDate": "Mon, 20 Oct 2025 07:00:00 GMT",
         "source": "Reserve Bank of India"
       },
       {
@@ -200,8 +200,8 @@
       },
       {
         "title": "RBI Bulletin",
-        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE42cmZjVlJQWDBXNno2YUJERTAtRDFRcWMxRVhqODZwYnJHeXdjN21xZ3VnWHVGQ1FCT0duN1prNFdEU244RTlGYmExQWh3Vk4xeDBCUXZVQVhiV0xLX2ppSGlXSEtDRUU?oc=5",
-        "pubDate": "Tue, 25 Aug 2026 07:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5vdXlGejY5ZFZFQ1hKVDlTTDJFSG83SDBlM3QxRzVMSC1VdmV1NzVXUFhVS0lId3p3bkRoXzkzT0tHcXFqYzBBLVBGMFo0c2loeDlkdzgwNmw5Uk5nRHU2dEJSYUhqdmNKR2JkUw?oc=5",
+        "pubDate": "Wed, 24 Sep 2025 07:00:00 GMT",
         "source": "Reserve Bank of India"
       },
       {
@@ -225,16 +225,16 @@
     ],
     "data+privacy+GDPR+cybersecurity": [
       {
-        "title": "Digital rulebook: Council agrees position to simplify data protection, privacy and cyber reporting rules",
-        "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNRWRZX3pMLTUwSXFaYzRRZnNzRTRsSURBalpjVXpKcXNfRFhuOWI5LWo0R1dfeFFOYm90VVZNdDFqQm43ZF9qamwxbUpjaDNnMUtIOGxxU1BkZ3JfMU84dXM5LUpWaXdhZmFMUmtFSWFPVFl6SFlvZ3RVU2tta1ptWDVWNVVIYk5ILWh6Z3N4TjdPWWd2MFJUNDl0SUUtUWRwMjExQS1fSk9WZVZyck5LcjdjT0JXcWtGdXBiMk5fc3ExYVpOVzZRRU1IMzROc1EyeHhjU0NiRWUyUlZYSlR2dlhULTdaSk9tcUN4eUFiVjVadExkQWpQZzFkcmo3TXM?oc=5",
-        "pubDate": "Thu, 22 Oct 2026 07:00:00 GMT",
-        "source": "Council, European Union"
-      },
-      {
         "title": "Data Economy, Privacy and Cybersecurity Newsletter - October 2026",
         "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTldVQk1EeVV1X3J6WTQxcGs3cGFJV0FwbDd0Tm9JM190bDI1aC14SlR2ZHFjdDVBLTVLb1N0Snh5cmdUQ3hyTkNUOU5yVEdzV3JPUmFScUVzQjRmZV9tVjlvRGZERHBmYnFFN0xmN001VDdNVVFfRkdhMFhVMi1sbi1TX0xVZlZ4NHVnd2c4Wml6TmNXZEpXeHBuOElBS1E?oc=5",
         "pubDate": "Wed, 11 Nov 2026 09:10:03 GMT",
         "source": "Garrigues"
+      },
+      {
+        "title": "Digital rulebook: Council agrees position to simplify data protection, privacy and cyber reporting rules",
+        "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNRWRZX3pMLTUwSXFaYzRRZnNzRTRsSURBalpjVXpKcXNfRFhuOWI5LWo0R1dfeFFOYm90VVZNdDFqQm43ZF9qamwxbUpjaDNnMUtIOGxxU1BkZ3JfMU84dXM5LUpWaXdhZmFMUmtFSWFPVFl6SFlvZ3RVU2tta1ptWDVWNVVIYk5ILWh6Z3N4TjdPWWd2MFJUNDl0SUUtUWRwMjExQS1fSk9WZVZyck5LcjdjT0JXcWtGdXBiMk5fc3ExYVpOVzZRRU1IMzROc1EyeHhjU0NiRWUyUlZYSlR2dlhULTdaSk9tcUN4eUFiVjVadExkQWpQZzFkcmo3TXM?oc=5",
+        "pubDate": "Thu, 22 Oct 2026 07:00:00 GMT",
+        "source": "Council, European Union"
       },
       {
         "title": "Data and Cyber Update - August 2026",
@@ -291,10 +291,10 @@
         "source": "The Record from Recorded Future News"
       },
       {
-        "title": "U.S. Supreme Court FTC Ruling Prompts Fresh Scrutiny of EU-U.S. Data Privacy Framework",
-        "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQb3VOOHBXQmQ5VXBua2FRU1RfY0N6V1B2MlRsYW5uUk95dTFESWdCNVJpTXFJcEp1VGJpOUxLZ3VmLXhEMFZLUHgzRUhKNktBeHBydHM0NWRFODRDRmtEcGZ5bnI1ZzUyYkU4a3JyeXNwbnpTTGxMbnpPVjNYM045ZENUM1dRSld2OHJrQWVtQmQxY3JFY29RdnYxcE5UTFhXVWRzYTZ3dVdJcjhpZ0sycDhpdFR3elJWNnVvdV9PTlpMUnBlN2ZDcjdUeDJuTUt2RWcxVGZseklFZw?oc=5",
-        "pubDate": "Thu, 02 Jul 2026 07:00:00 GMT",
-        "source": "Hunton Andrews Kurth LLP"
+        "title": "Data, privacy, and cybersecurity developments we are watching in 2026",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeGRmTkN6VjdGdXN0QXlHMGVac3hQNmNNSWdPTHNpMTVsR2puNmpncmJ6Si0yNHJWSzh0NmRwa3dEQmN6bjVMclhRaUV3U0lvSjEwWTZLUHljSlV0MmNDeGhaYlBZNWNpeW5SdEFmZFhpQ21WbXJlcUM4aE1tNVpjZTlvS0RPQTBNOGdfWTdMTFNWcFZFQjZfV0FHMUNvbWw1eGVYRVdaX3c4Zw?oc=5",
+        "pubDate": "Mon, 15 Dec 2025 08:00:00 GMT",
+        "source": "McDermott Will & Schulte"
       }
     ]
   }
