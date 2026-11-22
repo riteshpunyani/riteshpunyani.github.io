@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T15:17:56.574Z",
+  "generatedAt": "2026-11-22T21:46:33.162Z",
   "feeds": {
     "fraud+investigation+compliance+ethics": [
       {
@@ -7,12 +7,6 @@
         "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQVkNNNUJSdVkxaGtDUXBBeEZTWDItdjFTYW9nWDFLOWVoQkhBZU9ic0MxMm9PQUJLd25FMTFBaUctUkhfR2Y4ckdoQ3Y5RXJ6c0xaazJzTDdncFlyQWxBY3lqSlFNV3dQcWRZMnlrek5ZX3R1amdUMHktUGJRZnM4bXJKV3dyNkZPOE5pZ2hoSl9lX0RmeWs3eXdkVW96MlBUTlJRWjlWS0ZMV1N5MEZtWlZkRzhSeWIyR3NPaEppdmZ6bmZTblNIWg?oc=5",
         "pubDate": "Sun, 25 Oct 2026 00:29:45 GMT",
         "source": "RSM US"
-      },
-      {
-        "title": "CIFCFIN: Global Fraud Losses Reach Alarming Levels, Threaten Economies And Governance",
-        "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOQ2JoM1dTbXpzSnVHVDd0WEhwVU9kZk1ucVEwS1NsVjJ0TWVPOWhBTERKbWpRRnIwdlFSRk9seGRWT1Y2Nkp3UUJoZnNmc0ItSHg5X0pZS0hXSloxTlpmeEJrbzkzWlRjTkRwOHBlTkNaQnVLN0NfRFBsR2llUTk2TXpKMmthRy15VHpZTENVVmVEMHd2OC1GLVpIV01JNXNhUEo5SDZOd0M?oc=5",
-        "pubDate": "Fri, 20 Nov 2026 06:57:14 GMT",
-        "source": "Arise News"
       },
       {
         "title": "Fraud Operations: Financial Crime Managed Services",
@@ -73,6 +67,12 @@
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04bkFZSXphU01rZjhCcDBhZnNUT1d3c3BXUW1na2FldkNaY3Z5eUpfdjZzbWF2RFl1eS05R0oxTTNzWGk0UTEzZnpLcW1kem5SUFpsYTN1Mmpaci1aU0ZyTXBJbjdOT0ZxdFRVOG9ITWdsY3k1?oc=5",
         "pubDate": "Tue, 26 Mar 2024 07:00:00 GMT",
         "source": "Thomson Reuters Legal Solutions"
+      },
+      {
+        "title": "Strengthening Government Fraud Enforcement: Administrative False Claims Act Provides Agencies Tool to Bring Fraud Claims",
+        "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQV1JsWW9OTVZQdThwZmxQczVua09fZk8xcGZKQVVvYlVhQ1VFeEI2QTRMbnBHbUxXVV9fc2xEWUtkRlEwUTJPajh3VF80TFhYUEZCVjFNVU5FaEdpdjladVdRTGN3ZHZKMDNwZWZrMmxxS3NPUUVSR0NMM25QbEZCWlk4cXRvQWRFckhqRjh4a2tpUlg3bWtqTUswMEd0c3Jfb08xbkppdTZrZjRXNjh3MDNBS3VGSjViaHJZWTZYSlpuak82S0tCbEdQQ0FBOU9MYlBFNDJ1aHlteHN2Mmh5WmI3VWtoVnpuX3pwdGpkNkdnWXV6Tk10N01Jb3pnVl8w?oc=5",
+        "pubDate": "Tue, 01 Apr 2025 07:00:00 GMT",
+        "source": "Ogletree"
       }
     ],
     "artificial+intelligence+enterprise+automation": [
@@ -231,16 +231,16 @@
         "source": "Council, European Union"
       },
       {
-        "title": "Top 12 data protection action items for global businesses",
-        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQ2xKakd1WVllSkhFeld4WVRBdGx6Z1BQRUdtdE1XQ1FJcnFaaHJ1WHd4b2xoNzBGZVZiem9fUzZnNHoxWDZxS0dqTmtzRU1ZMkNyY0RjMW50UllUNk9DdUxCVlVOOFM4Slp4enJZSmhtYVBKQ2tITDkzbUtoUk1HeHVPVGw2dEh0?oc=5",
-        "pubDate": "Mon, 11 May 2026 07:00:00 GMT",
-        "source": "IAPP"
-      },
-      {
         "title": "Data and Cyber Update - June 2026",
         "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOSldWYzZJNE9pMjJjTndwZ002SThQb1NpZzlvUG93QWVvYWxVdy1HdmJIY2ItMklKc08zRUFIUG5fZ0ZVWUdfbjJJdUYzMDFiLWVRczkzU2xUSGZhUklRQkgzMXR4R2tfb3hsSzlZQmJnYmZUTnlIbGNidlo1akpiMA?oc=5",
         "pubDate": "Thu, 02 Jul 2026 13:06:38 GMT",
         "source": "Stephenson Harwood"
+      },
+      {
+        "title": "Top 12 data protection action items for global businesses",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQ2xKakd1WVllSkhFeld4WVRBdGx6Z1BQRUdtdE1XQ1FJcnFaaHJ1WHd4b2xoNzBGZVZiem9fUzZnNHoxWDZxS0dqTmtzRU1ZMkNyY0RjMW50UllUNk9DdUxCVlVOOFM4Slp4enJZSmhtYVBKQ2tITDkzbUtoUk1HeHVPVGw2dEh0?oc=5",
+        "pubDate": "Mon, 11 May 2026 07:00:00 GMT",
+        "source": "IAPP"
       },
       {
         "title": "What Is GDPR?",
@@ -261,12 +261,6 @@
         "source": "Zscaler"
       },
       {
-        "title": "Redefining global privacy: The critical role of India’s GCCs",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZmlVV2RtR2JRTENUXzlWZUxnYTI4RTh6MWZTdEd0dFV5d1o4ZlE2bnUzNWw5T094djFlZmZMUk9wZEw5eFNLM2o5Z1R2MEhCMmxKVFowNy1nTENtZWM0UVpRN0tYeC0yUVQ1eHYtb1NzMUVSbzFNd0pVTXZ3ZEJvYXVnWGxPcmlySFlOajRlUHUxWGJXVUZ4TVRPT3dxTFVFOC1EUFo0cnJ2azA?oc=5",
-        "pubDate": "Fri, 25 Apr 2025 07:00:00 GMT",
-        "source": "EY"
-      },
-      {
         "title": "Data privacy in 2025: Key trends and challenges ahead",
         "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOFhlRDNmdi1POWg5Z1A4VkhiNzQ5bmNsNmRMaWFaWlJncWEtZ3FtUV9TZURYRExLbE5rYTlqaUNKamZoMmVVeDRtVFBac1NyTTJJUmVGQkNfUTVGZ3g0U2RJMEUwaUZCQVROdTRQT2k1QjlVY0pTemJhaUNHQnBCaDVKVlplTWxZNmFvaUZ6YWhvQ1loNWltajFobk95bWZNMGpEQzZxcmo1dw?oc=5",
         "pubDate": "Thu, 23 Jan 2025 08:00:00 GMT",
@@ -279,22 +273,28 @@
         "source": "Cybercrime Magazine"
       },
       {
-        "title": "Comparing Global Privacy Regimes Under GDPR, DPDPA and US Data Protection Laws",
-        "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOLUVFUXhGc1dtQ3ZidHp4MnhVQ1lUZXY5Z3BJa0RLTV9EVGR1ZUxYN2xRVXB3blRNZURzdVV5QWZjQ2pYQ1FaQWh2YWc0YVhOR2U4NkQ5emN1eU5CNEYxU0o4bmI3Ylh6c1hvTFhEMUhBTUxKZ2RmT09XWUlsUDNmVGNBRjN6ZkJsU0JQc2dXblRDZHFFOWVrdmJ6SGJPNlVHbnpoNDVkOTdYWS1FeVpTRUh1NVBxVEFwVWJjVWZSY3V0LXd5aGNB?oc=5",
-        "pubDate": "Tue, 09 Jan 2024 08:00:00 GMT",
-        "source": "Cyril Amarchand Mangaldas"
-      },
-      {
         "title": "1 The Rapid Evolution of Data Protection Laws - Data Protection Laws and Regulations 2026",
         "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWGN1X3RqU1JfRGMzTDdSZnRYMnphOWltMHRnNEdnMzZXU09VODdwYW1oVkUyaTg1SXdvdDRHOGg0ejZmU1ZTNkRSaWJRNzJ6Zm9sQnNRbDFnTl9janl1ZEZ2UTJNY1h3VjJTcm5ITHZ5SkFtLVJRblRUUWhKNnFnbDVqXzZ1UUs4clpqaUhtTFAxTGZ3c29FZXVLMUR5cnhIczJFUXlLSC1Qb0pnQ28wcEk0emY0X2s?oc=5",
         "pubDate": "Mon, 20 Jul 2026 07:00:00 GMT",
         "source": "ICLG"
       },
       {
+        "title": "Comparing Global Privacy Regimes Under GDPR, DPDPA and US Data Protection Laws",
+        "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOLUVFUXhGc1dtQ3ZidHp4MnhVQ1lUZXY5Z3BJa0RLTV9EVGR1ZUxYN2xRVXB3blRNZURzdVV5QWZjQ2pYQ1FaQWh2YWc0YVhOR2U4NkQ5emN1eU5CNEYxU0o4bmI3Ylh6c1hvTFhEMUhBTUxKZ2RmT09XWUlsUDNmVGNBRjN6ZkJsU0JQc2dXblRDZHFFOWVrdmJ6SGJPNlVHbnpoNDVkOTdYWS1FeVpTRUh1NVBxVEFwVWJjVWZSY3V0LXd5aGNB?oc=5",
+        "pubDate": "Tue, 09 Jan 2024 08:00:00 GMT",
+        "source": "Cyril Amarchand Mangaldas"
+      },
+      {
         "title": "Cybersecurity: The Economic Benefits of GDPR",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5jTGhtNDUzQ3hsRFBlQTBCUGFUaVllam9jaTM3Um9tQnVkOGNuMHZNU21YVFhWbXlQS0RhNVhOdlNCWE9PSkgxeHVzcjc1dHZJSHZrZExmQmR2VkJnRGhpZi1WSV8xWGNrdFBn?oc=5",
         "pubDate": "Tue, 24 Jun 2025 07:00:00 GMT",
         "source": "CNIL"
+      },
+      {
+        "title": "UK GDPR Regulator Fines Data Processor After Ransomware Attack",
+        "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQlBwcTdBaUxGcm5mVjZOMFR1Y2dzWldEd1pEMEFfTGJnOXptbFpEMTlaSURlSU5LaTZrdjVXOWtWY0t3YkhjNmhMZ0dpa2pqcXlmQUZ4T01vZGhDSWYzbUpfMmhMMlo5UWp2eHIzTkZETTRRQi1QMmhCcXFuUFpKbWhMZHpRS3VmbWhuSTl0Z1B5eXJhUDAtWFhZRmFMb285STVjMkhJTGtGWDdaMUxzRDZUQWJCSG8?oc=5",
+        "pubDate": "Tue, 01 Apr 2025 07:00:00 GMT",
+        "source": "Skadden, Arps, Slate, Meagher & Flom"
       }
     ]
   }
